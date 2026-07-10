@@ -1,5 +1,6 @@
 "use client";
 
+import Reviews from "@/components/reviews";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
@@ -297,6 +298,8 @@ export default function Home() {
 
   </div>
 </section>
+
+<Reviews />
 
 <footer className="relative mt-24 overflow-hidden bg-blue-950 text-white py-1">
 
