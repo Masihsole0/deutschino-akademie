@@ -21,6 +21,10 @@ export default function Navbar() {
       {/* MENU */}
       <div className="flex items-center gap-3 md:gap-8">
 
+        <a href="#reviews" className="text-gray-700 hover:text-blue-900 text-sm md:text-base">
+          نظرات
+        </a>
+
         <a href="#why-us" className="text-gray-700 hover:text-blue-900 text-sm md:text-base">
           چرا ما؟
         </a>
@@ -31,10 +35,6 @@ export default function Navbar() {
 
         <a href="#courses" className="text-gray-700 hover:text-blue-900 text-sm md:text-base">
           دوره‌ها
-        </a>
-
-        <a href="#" className="text-gray-700 hover:text-blue-900 text-sm md:text-base">
-          خانه
         </a>
 
       </div>

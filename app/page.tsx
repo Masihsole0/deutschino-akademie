@@ -299,7 +299,9 @@ export default function Home() {
   </div>
 </section>
 
-<Reviews />
+<section id="reviews">
+  <Reviews />
+</section>
 
 <footer className="relative mt-24 overflow-hidden bg-blue-950 text-white py-1">
 
