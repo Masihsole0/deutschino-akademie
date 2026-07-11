@@ -7,13 +7,16 @@ type Review = {
   full_name: string;
   comment: string;
   level: string;
+  avatar_url: string | null;
 };
 
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
 
   const [active, setActive] = useState(0);
   const [showForm, setShowForm] = useState(false);
+  const [selectedImageName, setSelectedImageName] = useState("");
 
   const [name, setName] = useState("");
 const [level, setLevel] = useState("");
@@ -48,25 +51,52 @@ useEffect(() => {
   };
 
   const submitReview = async () => {
-    if (!/^09\d{9}$/.test(phone.trim())) {
-  alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
+  const convertedPhone = phone.trim().replace(/[۰-۹]/g, function (d) {
+    return String("۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+  });
+
+  if (!/^09\d{9}$/.test(convertedPhone)) {
+    alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
+    return;
+  }
+
+  const { data: existingReview, error: checkError } = await supabase
+  .from("reviews")
+  .select("phone")
+  .eq("phone", convertedPhone)
+  .limit(1);
+
+if (checkError) {
+  console.log(checkError);
+  alert("خطا در بررسی شماره");
   return;
 }
-  const { data, error: checkError } = await supabase
-    .from("reviews")
-    .select("phone")
-    .eq("phone", phone);
 
-  if (checkError) {
-    alert("خطا در بررسی شماره");
-    console.log(checkError);
+if (existingReview && existingReview.length > 0) {
+  alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
+  return;
+}
+  let avatarUrl = "";
+
+if (selectedImage) {
+  const fileName = `${Date.now()}-${selectedImage.name}`;
+
+  const { error: uploadError } = await supabase.storage
+    .from("review-images")
+    .upload(fileName, selectedImage);
+
+  if (uploadError) {
+    alert("خطا در آپلود عکس");
+    console.log(uploadError);
     return;
   }
 
-  if (data && data.length > 0) {
-    alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
-    return;
-  }
+  const { data } = supabase.storage
+    .from("review-images")
+    .getPublicUrl(fileName);
+
+  avatarUrl = data.publicUrl;
+}
 
   const { error } = await supabase
     .from("reviews")
@@ -75,7 +105,8 @@ useEffect(() => {
         full_name: name,
         level,
         comment: text,
-        phone,
+        phone: convertedPhone,
+        avatar_url: avatarUrl,
       },
     ]);
 
@@ -145,15 +176,31 @@ useEffect(() => {
 </p>
 </div>
 
-  <div className="pt-6">
-    <h3 className="font-bold text-blue-900">
-      {review.full_name}
-    </h3>
+  <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
 
-    <span className="text-gray-500 text-sm">
-      سطح {review.level}
-    </span>
-  </div>
+  {review.avatar_url ? (
+    <img
+      src={review.avatar_url}
+      alt={review.full_name}
+      className="w-12 h-12 rounded-full object-cover border"
+    />
+  ) : (
+    <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
+      {review.full_name?.charAt(0)}
+    </div>
+  )}
+
+  <div className="flex flex-col order-2">
+  <h3 className="font-bold text-blue-900">
+    {review.full_name}
+  </h3>
+
+  <span className="text-gray-500 text-sm">
+    سطح {review.level}
+  </span>
+</div>
+
+</div>
 
 </div>
           </div>
@@ -235,14 +282,30 @@ useEffect(() => {
   className="w-full border rounded-xl p-3 h-32 mb-4"
 />
 
-    <button
+<label className="w-full border rounded-xl p-3 mb-2 block text-gray-600 cursor-pointer text-center">
+  {selectedImageName ? "عکس انتخاب شد ✅" : "انتخاب پروفایل (اختیاری)"}
+
+  <input
+    type="file"
+    accept="image/*"
+    onChange={(e) => {
+      if (e.target.files?.[0]) {
+        setSelectedImage(e.target.files[0]);
+        setSelectedImageName(e.target.files[0].name);
+      }
+    }}
+    className="hidden"
+  />
+</label>
+
+<button
   onClick={submitReview}
   className="w-full bg-blue-900 text-white py-3 rounded-xl"
 >
   ارسال نظر
 </button>
 
-  </div>
+</div>
 )}
 
 
