@@ -148,6 +148,10 @@ export default function A1Page() {
   ثبت‌نام دوره خصوصی
 </a>
 
+<p className="mt-2 text-xs text-gray-700 text-center">
+  ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را روشن کنید 
+</p>
+
 </div>
 
 </div>
@@ -244,6 +248,10 @@ export default function A1Page() {
               >
                 ثبت‌نام دوره گروهی
               </a>
+
+              <p className="mt-2 text-xs text-gray-700 text-center">
+  ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را روشن کنید 
+</p>
 
             </div>
 

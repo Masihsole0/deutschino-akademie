@@ -124,39 +124,44 @@ export default function A1Page() {
            {/* بخش ثبت‌نام */}
 <div className="mt-8 rounded-2xl border border-gray-200 shadow-lg overflow-hidden bg-white">
 
-  <div className="flex items-center justify-between px-6 py-4">
+  <div className="px-6 py-4">
 
-    {/* سمت راست */}
+    <div className="flex justify-between items-center">
 
     {/* قیمت */}
     <div className="text-center">
       <p className="text-2xl font-extrabold text-green-700">
         ۹۰۰,۰۰۰
       </p>
-      <span className="text-gray-500 text-l">
+      <span className="text-gray-500 text-lg">
         تومان
       </span>
     </div>
 
     {/* مدت جلسه */}
-    <div className="text-center">
+    <div className="text-center mt-4">
       <p className="text-lg font-semibold text-[#0A2540]">
         هر جلسه
       </p>
       <span className="text-gray-500">
-  <bdi>۶۰ دقیقه‌ای</bdi>
-</span>
+        <bdi>۶۰ دقیقه‌ای</bdi>
+      </span>
+    </div>
     </div>
 
     {/* دکمه */}
-<a
-  href="https://wa.me/989130061984?text=سلام میخواهم کلاس مکالمه ثبت نام کنم."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-[#0A2540] hover:bg-[#12385c] text-white px-8 py-3 rounded-xl font-bold transition inline-block"
->
-  ثبت‌نام
-</a>
+    <a
+      href="https://wa.me/989130061984?text=سلام میخواهم کلاس مکالمه ثبت نام کنم."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-6 mx-auto flex w-fit justify-center block bg-[#0A2540] hover:bg-[#12385c] text-white px-16 py-3 rounded-xl font-bold transition"
+    >
+      ثبت‌نام
+    </a>
+
+    <p className="mt-2 text-xs text-gray-700 text-center">
+      ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را روشن کنید.
+    </p>
 
   </div>
 

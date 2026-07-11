@@ -18,6 +18,7 @@ export default function Reviews() {
   const [name, setName] = useState("");
 const [level, setLevel] = useState("");
 const [text, setText] = useState("");
+const [phone, setPhone] = useState("");
 
 useEffect(() => {
   const getReviews = async () => {
@@ -47,6 +48,26 @@ useEffect(() => {
   };
 
   const submitReview = async () => {
+    if (!/^09\d{9}$/.test(phone.trim())) {
+  alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
+  return;
+}
+  const { data, error: checkError } = await supabase
+    .from("reviews")
+    .select("phone")
+    .eq("phone", phone);
+
+  if (checkError) {
+    alert("خطا در بررسی شماره");
+    console.log(checkError);
+    return;
+  }
+
+  if (data && data.length > 0) {
+    alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
+    return;
+  }
+
   const { error } = await supabase
     .from("reviews")
     .insert([
@@ -54,6 +75,7 @@ useEffect(() => {
         full_name: name,
         level,
         comment: text,
+        phone,
       },
     ]);
 
@@ -68,64 +90,83 @@ useEffect(() => {
   setName("");
   setLevel("");
   setText("");
+  setPhone("");
 };
-  return (
-    <section className="py-20 px-6 bg-gray-50 text-center overflow-hidden">
+ return (
+  <section className="py-20 px-6 bg-gray-50 text-center overflow-hidden">
 
-      <h2 className="text-3xl font-bold text-blue-900 mb-12">
-        نظرات زبان‌آموزان
-      </h2>
+    <h2 className="text-3xl font-bold text-blue-900 mb-12">
+      نظرات زبان‌آموزان
+    </h2>
 
-      <div className="relative flex justify-center items-center h-80">
+    <div className="relative flex justify-center items-center h-[380px] md:h-80">
 
-        {reviews.map((review, index) => {
+      {reviews.map((review, index) => {
 
-          let position = "";
+        let position = ""
 
-          if (index === active) {
-            position =
-              "translate-x-0 scale-100 opacity-100 blur-0 z-20";
-          } 
-          else if (
-            index === (active + 1) % reviews.length
-          ) {
-            position =
-              "translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
-          } 
-          else {
-            position =
-              "-translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
-          }
+        if (index === active) {
+          position =
+            "translate-x-0 scale-100 opacity-100 blur-0 z-20";
+        } else if (
+          index === (active + 1) % reviews.length
+        ) {
+          position =
+            "translate-x-40 md:translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
+        } else {
+          position =
+            "-translate-x-40 md:-translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
+        }
 
-          return (
-            <div
-              key={index}
-              className={`
-                absolute w-80 bg-white rounded-3xl 
-                shadow-xl p-8
-                transition-all duration-700 ease-in-out
-                ${position}
-              `}
-            >
+        return (
+          <div
+            key={index}
+            className={`
+              absolute
+              w-[85vw] max-w-[300px] h-[300px]
+              md:w-80 md:h-[300px]
+              bg-white rounded-3xl
+              shadow-xl p-8
+              transition-all duration-700 ease-in-out
+              ${position}
+            `}
+          >
+            <div className="flex flex-col h-full">
 
-              <p className="text-gray-700 mb-6 leading-7">
-                "{review.comment}"
-              </p>
+  <div className="flex-1 flex justify-center items-center">
+    <div className="absolute top-4 left-5 text-6xl text-blue-200 font-serif opacity-80 select-none">
+  ❝
+</div>
+  <p
+  className="w-full text-center text-gray-700 leading-7 break-words whitespace-normal"
+  dir="rtl"
+>
+  "{review.comment}"
+</p>
+</div>
 
-              <h3 className="font-bold text-blue-900">
-                {review.full_name}
-              </h3>
+  <div className="pt-6">
+    <h3 className="font-bold text-blue-900">
+      {review.full_name}
+    </h3>
 
-              <span className="text-gray-500 text-sm">
-                سطح {review.level}
-              </span>
+    <span className="text-gray-500 text-sm">
+      سطح {review.level}
+    </span>
+  </div>
 
-            </div>
-          );
-        })}
+</div>
+          </div>
+        );
+      })}
 
-      </div>
+    </div>
 
+    <div className="mt-8 flex justify-center">
+  <span className="px-4 py-1 rounded-full bg-white shadow text-gray-600 text-sm font-medium">
+    {active + 1} / {reviews.length}
+  </span>
+</div>
 
       <div className="flex justify-center gap-4 mt-8">
 
@@ -164,6 +205,14 @@ useEffect(() => {
   placeholder="نام و نام خانوادگی"
   value={name}
   onChange={(e) => setName(e.target.value)}
+  className="w-full border rounded-xl p-3 mb-4"
+/>
+
+    <input
+  type="text"
+  placeholder="شماره تلفن"
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
   className="w-full border rounded-xl p-3 mb-4"
 />
 
