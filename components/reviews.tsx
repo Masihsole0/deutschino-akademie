@@ -59,6 +59,7 @@ useEffect(() => {
 
   if (!/^09\d{9}$/.test(convertedPhone)) {
     alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
+    setIsSubmitting(false);
     return;
   }
 
@@ -71,11 +72,13 @@ useEffect(() => {
 if (checkError) {
   console.log(checkError);
   alert("خطا در بررسی شماره");
+  setIsSubmitting(false);
   return;
 }
 
 if (existingReview && existingReview.length > 0) {
   alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
+  setIsSubmitting(false);
   return;
 }
   let avatarUrl = "";
@@ -90,6 +93,7 @@ if (selectedImage) {
   if (uploadError) {
     alert("خطا در آپلود عکس");
     console.log(uploadError);
+    setIsSubmitting(false);
     return;
   }
 
