@@ -22,6 +22,7 @@ export default function Reviews() {
 const [level, setLevel] = useState("");
 const [text, setText] = useState("");
 const [phone, setPhone] = useState("");
+const [isSubmitting, setIsSubmitting] = useState(false)
 
 useEffect(() => {
   const getReviews = async () => {
@@ -51,6 +52,7 @@ useEffect(() => {
   };
 
   const submitReview = async () => {
+    setIsSubmitting(true)
   const convertedPhone = phone.trim().replace(/[۰-۹]/g, function (d) {
     return String("۰۱۲۳۴۵۶۷۸۹".indexOf(d));
   });
@@ -122,6 +124,8 @@ if (selectedImage) {
   setLevel("");
   setText("");
   setPhone("");
+
+  setIsSubmitting(false);
 };
  return (
   <section className="py-20 px-6 bg-gray-50 text-center overflow-hidden">
@@ -300,9 +304,10 @@ if (selectedImage) {
 
 <button
   onClick={submitReview}
-  className="w-full bg-blue-900 text-white py-3 rounded-xl"
+  disabled={isSubmitting}
+  className="w-full bg-blue-900 text-white py-3 rounded-xl disabled:opacity-50"
 >
-  ارسال نظر
+  {isSubmitting ? "در حال ارسال..." : "ارسال نظر"}
 </button>
 
 </div>
