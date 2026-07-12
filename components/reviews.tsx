@@ -157,7 +157,7 @@ if (selectedImage) {
       نظرات زبان‌آموزان
     </h2>
 
-    <div className="relative flex justify-center items-center h-[380px] md:h-80">
+    <div className="relative flex flex-row-reverse justify-center items-center h-[380px] md:h-80">
 
   {reviews.length === 0 ? (
     <p className="text-gray-500">
@@ -270,7 +270,7 @@ if (selectedImage) {
   </span>
 </div>
 
-      <div className="flex justify-center gap-4 mt-8">
+      <div className="flex flex-row-reverse justify-center gap-4 mt-8">
 
   <button
     onClick={prevReview}

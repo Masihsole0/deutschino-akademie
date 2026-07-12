@@ -14,3 +14,11 @@ body {
 html {
   scroll-behavior: smooth;
 } 
+html {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}

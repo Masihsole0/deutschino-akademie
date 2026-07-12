@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between px-1 md:pr-12 py-1">
+    <div className="flex flex-row-reverse items-center justify-between px-2 py-1.5">
 
       {/* LOGO */}
-      <div className="flex items-center gap-1">
+      <div className="flex flex-row-reverse items-center gap-0">
         <Image
           src="/logot.png"
           width={80}
@@ -13,22 +13,21 @@ export default function Navbar() {
           alt="logo"
         />
 
-        <span className="font-bold text-blue-900 text-sm md:text-xl">
-          Deutschino Akademie
-        </span>
+        <span className="font-bold text-blue-900 text-sm md:text-xl -mr-10 text-left">
+  <span className="block md:inline">
+    Deutschino
+  </span>{" "}
+  <span className="block md:inline">
+    Akademie
+  </span>
+</span>
       </div>
 
       {/* MENU */}
 <div className="flex items-center gap-1.5 md:gap-8">
 
-  <a href="#reviews" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
-    نظرات
-  </a>
-
-  <span className="md:hidden text-black">|</span>
-
-  <a href="#why-us" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
-    چرا ما؟
+  <a href="#" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
+    خانه
   </a>
 
   <span className="md:hidden text-black">|</span>
@@ -39,8 +38,14 @@ export default function Navbar() {
 
   <span className="md:hidden text-black">|</span>
 
-  <a href="#courses" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
-    دوره‌ها
+  <a href="#why-us" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
+    چرا ما؟
+  </a>
+
+  <span className="md:hidden text-black">|</span>
+
+  <a href="#reviews" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
+    نظرات
   </a>
 
 </div>

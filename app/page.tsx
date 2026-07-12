@@ -3,17 +3,8 @@
 import Reviews from "@/components/reviews";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [reviews, setReviews] = useState<any[]>([]);
-  const router = useRouter();
-
-  useEffect(() => {
-    setReviews([]);
-  }, []);
-
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
 
@@ -38,8 +29,8 @@ export default function Home() {
             Deutschino Akademie
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base md:text-xl text-gray-200">
-         آموزش زبان آلمانی در آکادمی دویچینو از صفر تا هدف با مدرس زبان آلمانی در اصفهان
+          <p className="mt-6 max-w-2xl text-base md:text-xl text-gray-200 dir=rtl">
+        آموزش زبان آلمانی از صفر تا هدف به صورت خصوصی و گروهی در آکادمی دویچینو در اصفهان
           </p>
 
          <button
@@ -57,11 +48,11 @@ export default function Home() {
       </section>
 
       {/* COURSES SECTION */}
-      <section id="courses" className="py-24 px-6 bg-gray-50">
+      <section id="courses" className="py-24 px-6 bg-gray-50 md:[direction:ltr]">
         <div className="max-w-6xl mx-auto text-center">
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-           دوره‌های آموزش خصوصی و گروهی
+           دوره‌های آموزش زبان آلمانی
           </h2>
 
           <p className="mt-4 text-gray-600">
@@ -136,7 +127,7 @@ export default function Home() {
 {/* ABOUT TEACHER SECTION */}
 
 <section id="about" className="py-24 px-6 bg-white">
-  <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+  <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row-reverse items-center gap-10">
 
     {/* TEXT */}
     <div className="flex-1 text-center md:text-right">
@@ -194,11 +185,11 @@ export default function Home() {
       </h2>
 
       <p className="max-w-3xl mx-auto text-base md:text-lg text-blue-100 leading-9">
-       : ما در آکادمی دویچینو باور داریم که 
+       ما در آکادمی دویچینو باور داریم که :
         <br />
         تفاوت بین کسی که فقط آلمانی می‌خواند و کسی که آلمانی را اصولی یاد می‌گیرد و مهاجرت می‌کند
         <br />
-       !در مسیر آموزشی‌ای است که انتخاب می‌کند
+      در مسیر آموزشی‌ای است که انتخاب می‌کند !
       </p>
       {/* Divider */}
 <div className="flex items-center justify-center mt-10 mb-2">
@@ -213,7 +204,7 @@ export default function Home() {
     </div>
 
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 [direction:ltr]">
 
       {/* Card 1 */}
       <div className="bg-white rounded-2xl p-8 text-center shadow-2xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
@@ -313,21 +304,22 @@ export default function Home() {
 
   <div className="relative max-w-7xl mx-auto px-6 py-10">
 
-    <div className="grid md:grid-cols-2 gap-10">
+    <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-10">
 
-      {/* سمت راست */}
-      <div>
 
-        <div className="flex items-center gap-4">
+      {/* معرفی آکادمی */}
+      <div className="order-2 md:order-2">
+
+        <div className="flex flex-col md:flex-row-reverse items-center md:items-center gap-2">
 
           <img
             src="/logo.png"
             alt="Deutschino Akademie"
-            className="w-30 h-30 object-contain"
+            className="w-27 h-27 md:w-30 md:h-30 object-contain"
           />
 
-          <div>
-            <h2 className="text-3xl font-bold">
+          <div className="text-center md:text-right">
+            <h2 className="text-xl md:text-3xl font-bold">
               Deutschino Akademie
             </h2>
 
@@ -338,24 +330,30 @@ export default function Home() {
 
         </div>
 
-        <p className="mt-5 text-blue-100 leading-8 max-w-md">
-  آموزش زبان آلمانی از صفر تا سطح هدف
-  <br />
-  همراه با آموزش کاربردی برای
-  <br />
-  مهاجرت , تحصیل , کار , مکالمه و آزمون
-</p>
+
+        <p className="mt-5 text-blue-100 leading-8 max-w-md text-center md:text-right">
+          آموزش زبان آلمانی از صفر تا سطح هدف
+          <br />
+          همراه با آموزش کاربردی برای
+          <br />
+          مهاجرت، تحصیل، کار، مکالمه و آزمون
+        </p>
+
 
       </div>
 
-      {/* سمت چپ */}
-      <div className="text-right">
+
+
+      {/* اطلاعات تماس */}
+      <div className="text-right order-1 md:order-1">
 
         <h3 className="text-2xl font-bold mb-6">
           اطلاعات تماس
         </h3>
 
+
         <div className="space-y-5 text-blue-100 leading-8">
+
 
           <div>
             <p className="font-semibold text-white mb-1">
@@ -368,6 +366,7 @@ export default function Home() {
               اولین کوچه سمت راست (میدان کوچک ۱۰)
             </p>
           </div>
+
 
           <div>
             <p className="font-semibold text-white mb-1">
@@ -382,17 +381,23 @@ export default function Home() {
             </a>
           </div>
 
+
         </div>
+
 
       </div>
 
+
     </div>
+
 
     <div className="border-t border-blue-800 mt-8 pt-5 text-center text-blue-300 text-sm">
-      © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
+      ©️ 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
     </div>
 
+
   </div>
+
 
 </footer>
 
