@@ -1,7 +1,7 @@
 "use client";
 
 import { supabase } from "@/lib/supabase";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type Review = {
   full_name: string;
@@ -13,10 +13,13 @@ type Review = {
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const commentRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   const [active, setActive] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [selectedImageName, setSelectedImageName] = useState("");
+  const [expandedReview, setExpandedReview] = useState<number | null>(null);
+  const [longReviews, setLongReviews] = useState<number[]>([]);
 
   const [name, setName] = useState("");
 const [level, setLevel] = useState("");
@@ -40,6 +43,22 @@ useEffect(() => {
 
   getReviews();
 }, []);
+
+useEffect(() => {
+  const checkLongReviews = () => {
+    const long: number[] = [];
+
+    commentRefs.current.forEach((el, index) => {
+      if (el && el.scrollHeight > el.clientHeight) {
+        long.push(index);
+      }
+    });
+
+    setLongReviews(long);
+  };
+
+  checkLongReviews();
+}, [reviews]);
 
   const nextReview = () => {
     setActive((prev) => (prev + 1) % reviews.length);
@@ -168,27 +187,46 @@ if (selectedImage) {
         key={index}
         className={`
           absolute
-          w-[85vw] max-w-[300px] h-[350px]
-          md:w-80 md:h-[300px]
+          w-[85vw] max-w-[300px] min-h-[350px]
+          md:w-80 md:min-h-[300px]
           bg-white rounded-3xl
           shadow-xl p-8
           transition-all duration-700 ease-in-out
           ${position}
         `}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col">
 
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-1 flex justify-center items-center pt-16">
             <div className="absolute top-4 left-5 text-6xl text-blue-200 font-serif opacity-80 select-none">
               ❝
             </div>
 
-            <p
-              className="w-full text-center text-gray-700 leading-7 break-words whitespace-normal"
-              dir="rtl"
-            >
-              "{review.comment}"
-            </p>
+            <div className="w-full text-center" dir="rtl">
+  <p
+  ref={(el) => {
+  commentRefs.current[index] = el;
+}}
+  className={`text-gray-700 leading-7 break-words whitespace-normal px-2 ${
+    expandedReview === index ? "mt-6" : "line-clamp-7"
+  }`}
+>
+    "{review.comment}"
+  </p>
+
+  {longReviews.includes(index) && (
+    <button
+      onClick={() =>
+        setExpandedReview(
+          expandedReview === index ? null : index
+        )
+      }
+      className="text-blue-600 text-sm mt-2"
+    >
+      {expandedReview === index ? "بستن" : "ادامه مطلب"}
+    </button>
+  )}
+</div>
           </div>
 
           <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
