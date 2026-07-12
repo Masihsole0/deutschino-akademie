@@ -162,7 +162,7 @@ if (selectedImage) {
             key={index}
             className={`
               absolute
-              w-[85vw] max-w-[300px] h-[300px]
+              w-[85vw] max-w-[300px] h-[350px]
               md:w-80 md:h-[300px]
               bg-white rounded-3xl
               shadow-xl p-8

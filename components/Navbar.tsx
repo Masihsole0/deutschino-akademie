@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between px-1 md:pr-12 py-2">
+    <div className="flex items-center justify-between px-1 md:pr-12 py-1">
 
       {/* LOGO */}
       <div className="flex items-center gap-1">
@@ -19,7 +19,7 @@ export default function Navbar() {
       </div>
 
       {/* MENU */}
-<div className="flex items-center gap-2 md:gap-8">
+<div className="flex items-center gap-1.5 md:gap-8">
 
   <a href="#reviews" className="text-gray-700 hover:text-blue-900 text-sm md:text-base whitespace-nowrap">
     نظرات
