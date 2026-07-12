@@ -140,82 +140,91 @@ if (selectedImage) {
 
     <div className="relative flex justify-center items-center h-[380px] md:h-80">
 
-      {reviews.map((review, index) => {
-
-        let position = ""
-
-        if (index === active) {
-          position =
-            "translate-x-0 scale-100 opacity-100 blur-0 z-20";
-        } else if (
-          index === (active + 1) % reviews.length
-        ) {
-          position =
-            "translate-x-40 md:translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
-        } else {
-          position =
-            "-translate-x-40 md:-translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
-        }
-
-        return (
-          <div
-            key={index}
-            className={`
-              absolute
-              w-[85vw] max-w-[300px] h-[350px]
-              md:w-80 md:h-[300px]
-              bg-white rounded-3xl
-              shadow-xl p-8
-              transition-all duration-700 ease-in-out
-              ${position}
-            `}
-          >
-            <div className="flex flex-col h-full">
-
-  <div className="flex-1 flex justify-center items-center">
-    <div className="absolute top-4 left-5 text-6xl text-blue-200 font-serif opacity-80 select-none">
-  ❝
-</div>
-  <p
-  className="w-full text-center text-gray-700 leading-7 break-words whitespace-normal"
-  dir="rtl"
->
-  "{review.comment}"
-</p>
-</div>
-
-  <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
-
-  {review.avatar_url ? (
-    <img
-      src={review.avatar_url}
-      alt={review.full_name}
-      className="w-12 h-12 rounded-full object-cover border"
-    />
+  {reviews.length === 0 ? (
+    <p className="text-gray-500">
+     ... در حال بارگذاری نظرات 
+    </p>
   ) : (
-    <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
-      {review.full_name?.charAt(0)}
-    </div>
+
+  reviews.map((review, index) => {
+
+    let position = ""
+
+    if (index === active) {
+      position =
+        "translate-x-0 scale-100 opacity-100 blur-0 z-20";
+    } else if (
+      index === (active + 1) % reviews.length
+    ) {
+      position =
+        "translate-x-40 md:translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
+    } else {
+      position =
+        "-translate-x-40 md:-translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
+    }
+
+    return (
+      <div
+        key={index}
+        className={`
+          absolute
+          w-[85vw] max-w-[300px] h-[350px]
+          md:w-80 md:h-[300px]
+          bg-white rounded-3xl
+          shadow-xl p-8
+          transition-all duration-700 ease-in-out
+          ${position}
+        `}
+      >
+        <div className="flex flex-col h-full">
+
+          <div className="flex-1 flex justify-center items-center">
+            <div className="absolute top-4 left-5 text-6xl text-blue-200 font-serif opacity-80 select-none">
+              ❝
+            </div>
+
+            <p
+              className="w-full text-center text-gray-700 leading-7 break-words whitespace-normal"
+              dir="rtl"
+            >
+              "{review.comment}"
+            </p>
+          </div>
+
+          <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
+
+            {review.avatar_url ? (
+              <img
+                src={review.avatar_url}
+                alt={review.full_name}
+                className="w-12 h-12 rounded-full object-cover border"
+              />
+            ) : (
+              <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
+                {review.full_name?.charAt(0)}
+              </div>
+            )}
+
+            <div className="flex flex-col order-2">
+              <h3 className="font-bold text-blue-900">
+                {review.full_name}
+              </h3>
+
+              <span className="text-gray-500 text-sm">
+                سطح {review.level}
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    );
+  })
+
   )}
 
-  <div className="flex flex-col order-2">
-  <h3 className="font-bold text-blue-900">
-    {review.full_name}
-  </h3>
-
-  <span className="text-gray-500 text-sm">
-    سطح {review.level}
-  </span>
 </div>
-
-</div>
-
-</div>
-          </div>
-        );
-      })}
-
-    </div>
 
     <div className="mt-8 flex justify-center">
   <span className="px-4 py-1 rounded-full bg-white shadow text-gray-600 text-sm font-medium">
@@ -311,7 +320,7 @@ if (selectedImage) {
   disabled={isSubmitting}
   className="w-full bg-blue-900 text-white py-3 rounded-xl disabled:opacity-50"
 >
-  {isSubmitting ? "در حال ارسال..." : "ارسال نظر"}
+  {isSubmitting ? "... در حال ارسال" : "ارسال نظر"}
 </button>
 
 </div>
