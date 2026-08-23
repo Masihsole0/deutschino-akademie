@@ -129,7 +129,7 @@ export default function A1Page() {
 
                 <div>
   <p className="text-3xl font-bold text-green-700">
-    ۸۹۰٬۰۰۰
+    ۹۸۰٬۰۰۰
   </p>
 
   <span className="text-gray-500">
