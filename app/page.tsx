@@ -26,23 +26,34 @@ export default function Home() {
         <div className="relative z-10">
 
           <h1 className="text-3xl md:text-6xl font-bold text-white">
-            Deutschino Akademie
-          </h1>
+  آموزش زبان آلمانی در اصفهان
+</h1>
 
-          <p className="mt-6 max-w-2xl text-base md:text-xl text-gray-200 dir=rtl">
-        آموزش زبان آلمانی از صفر تا هدف به صورت خصوصی و گروهی در آکادمی دویچینو در اصفهان
-          </p>
+          <p className="mt-6 max-w-2xl text-base md:text-xl text-gray-200">
+  کلاس‌های خصوصی و گروهی زبان آلمانی با مسیح سلیمانی در آکادمی دویچینو، به‌صورت حضوری و آنلاین در اصفهان
+</p>
 
-         <button
-  onClick={() => {
-    document.getElementById("courses")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }}
-  className="mt-10 rounded-xl bg-blue-900 px-8 py-4 text-lg text-white hover:bg-blue-800 transition"
->
-  شروع یادگیری
-</button>
+         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+  <button
+    onClick={() => {
+      document.getElementById("courses")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }}
+    className="rounded-xl bg-blue-900 px-8 py-4 text-lg text-white hover:bg-blue-800 transition"
+  >
+    شروع یادگیری
+  </button>
+
+  <a
+    href="https://wa.me/989130061984?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%D9%88%20%D8%AB%D8%A8%D8%AA%E2%80%8C%D9%86%D8%A7%D9%85%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%B2%D8%A8%D8%A7%D9%86%20%D8%A2%D9%84%D9%85%D8%A7%D9%86%DB%8C%20%D9%BE%DB%8C%D8%A7%D9%85%20%D8%AF%D8%A7%D8%B1%D9%85."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-xl bg-green-800 px-8 py-4 text-lg text-white hover:bg-green-800 transition"
+  >
+    مشاوره و ثبت‌نام در واتساپ
+  </a>
+</div>
 
         </div>
       </section>
@@ -52,12 +63,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-           دوره‌های آموزش زبان آلمانی
-          </h2>
+  دوره‌های آموزش زبان آلمانی
+</h2>
 
-          <p className="mt-4 text-gray-600">
-            بهترین دوره‌های زبان آلمانی از سطح مبتدی تا پیشرفته
-          </p>
+<p dir="rtl" className="mt-4 max-w-3xl mx-auto text-gray-600 leading-8">
+  در آکادمی دویچینو، می‌توانید یادگیری زبان آلمانی را از سطح{" "}
+  <span dir="ltr" className="inline-block">A1</span>
+  {" "}شروع کنید و یا دانش خود را در سطح‌های{" "}
+  <span dir="ltr" className="inline-block">A2</span>
+  {" "}و{" "}
+  <span dir="ltr" className="inline-block">B1</span>
+  {" "}تقویت کنید. کلاس‌ها به‌صورت خصوصی و گروهی برگزار می‌شوند و متناسب با سطح و هدف زبان‌آموز پیش می‌روند.
+</p>
 
           {/* CARDS */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">

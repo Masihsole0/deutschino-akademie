@@ -11,6 +11,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: "https://deutschino.ir/courses/a1",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://deutschino.ir/courses/a2",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://deutschino.ir/courses/b1",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://deutschino.ir/courses/conversation",
+      lastModified: new Date(),
+    },
+    {
       url: "https://deutschino.ir/about",
       lastModified: new Date(),
     },
