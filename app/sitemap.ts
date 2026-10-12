@@ -7,10 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: "https://www.deutschino.ir/courses",
-      lastModified: new Date(),
-    },
-    {
       url: "https://www.deutschino.ir/courses/a1",
       lastModified: new Date(),
     },
@@ -24,10 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.deutschino.ir/courses/conversation",
-      lastModified: new Date(),
-    },
-    {
-      url: "https://www.deutschino.ir/about",
       lastModified: new Date(),
     },
   ];
