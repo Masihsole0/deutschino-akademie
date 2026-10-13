@@ -1,51 +1,44 @@
+const websiteUrl = "https://www.deutschino.ir";
+
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "EducationalOrganization",
-      "name": "آکادمی دویچینو",
-      "alternateName": "Deutschino Akademie",
-      "url": "https://www.deutschino.ir",
-      "logo": "https://www.deutschino.ir/logo.png",
-      "description":
+      "@id": `${websiteUrl}/#organization`,
+      name: "آکادمی دویچینو",
+      alternateName: "Deutschino Akademie",
+      url: websiteUrl,
+      logo: `${websiteUrl}/logo.png`,
+      description:
         "آموزش زبان آلمانی در اصفهان به صورت خصوصی و گروهی برای مهاجرت، کار، تحصیل و آمادگی آزمون.",
-      
-      "address": {
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "اصفهان",
-        "addressCountry": "IR"
+        addressLocality: "اصفهان",
+        addressCountry: "IR",
       },
-
-      "founder": {
-        "@type": "Person",
-        "name": "مسیح سلیمانی"
-      }
+      founder: {
+        "@id": `${websiteUrl}/#instructor`,
+      },
     },
-
-
     {
       "@type": "Person",
-      "name": "مسیح سلیمانی",
-      "jobTitle": "مدرس زبان آلمانی",
-      "worksFor": {
-        "@type": "EducationalOrganization",
-        "name": "آکادمی دویچینو"
-      }
+      "@id": `${websiteUrl}/#instructor`,
+      name: "مسیح سلیمانی",
+      jobTitle: "مدرس زبان آلمانی",
+      worksFor: {
+        "@id": `${websiteUrl}/#organization`,
+      },
     },
-
-
     {
       "@type": "Course",
-      "name": "دوره آموزش زبان آلمانی A1 تا B2",
-      "description":
-        "آموزش زبان آلمانی از سطح مبتدی تا پیشرفته برای مهاجرت، تحصیل، کار و آمادگی آزمون‌های بین‌المللی.",
-      "provider": {
-        "@type": "EducationalOrganization",
-        "name": "آکادمی دویچینو",
-        "url": "https://www.deutschino.ir"
-      }
-    }
-
-  ]
+      "@id": `${websiteUrl}/#german-courses`,
+      name: "دوره‌های آموزش زبان آلمانی",
+      description:
+        "دوره‌های آموزش زبان آلمانی در سطوح مختلف برای تقویت مهارت‌های زبانی و آمادگی آزمون.",
+      provider: {
+        "@id": `${websiteUrl}/#organization`,
+      },
+    },
+  ],
 };
