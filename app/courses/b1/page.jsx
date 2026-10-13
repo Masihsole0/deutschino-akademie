@@ -9,7 +9,13 @@ import {
   Wallet,
 } from "lucide-react";
 
-export default function A1Page() {
+export const metadata = {
+  alternates: {
+    canonical: "https://www.deutschino.ir/courses/b1",
+  },
+};
+
+export default function B1Page() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <div className="max-w-7xl mx-auto px-6 py-10">

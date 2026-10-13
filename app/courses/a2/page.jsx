@@ -9,11 +9,17 @@ import {
   Wallet,
 } from "lucide-react";
 
-export default function A1Page() {
+export const metadata = {
+  alternates: {
+    canonical: "https://www.deutschino.ir/courses/a2",
+  },
+};
+
+export default function A2Page() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <div className="max-w-7xl mx-auto px-6 py-10">
-
+        
         {/* Logo */}
         <div className="flex justify-center mb-10">
           <Image

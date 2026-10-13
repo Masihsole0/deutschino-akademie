@@ -8,7 +8,13 @@ import {
   Headphones,
 } from "lucide-react";
 
-export default function A1Page() {
+export const metadata = {
+  alternates: {
+    canonical: "https://www.deutschino.ir/courses/conversation",
+  },
+};
+
+export default function ConversationPage() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <div className="max-w-5xl mx-auto px-6 pt-0 pb-10">
