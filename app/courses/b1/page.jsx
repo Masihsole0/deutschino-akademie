@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
+  title: "کلاس زبان آلمانی B1 در اصفهان | دویچینو",
+  description:
+    "کلاس زبان آلمانی B1 در آکادمی دویچینو با تمرکز بر گرامر، واژگان و تقویت مهارت‌های خواندن، شنیدن، صحبت کردن و نوشتن؛ حضوری و آنلاین.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/b1",
   },

@@ -9,6 +9,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
+  title: "کلاس مکالمه زبان آلمانی در اصفهان | دویچینو",
+  description:
+    "کلاس مکالمه زبان آلمانی در آکادمی دویچینو با تمرکز بر تمرین صحبت کردن، افزایش روانی گفتار و استفاده از زبان آلمانی در موقعیت‌های روزمره؛ حضوری و آنلاین.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/conversation",
   },

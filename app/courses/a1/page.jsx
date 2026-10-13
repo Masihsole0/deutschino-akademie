@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
+  title: "کلاس زبان آلمانی A1 در اصفهان | دویچینو",
+  description:
+    "آموزش زبان آلمانی از سطح A1 در آکادمی دویچینو؛ شروع یادگیری از پایه با تمرین گرامر، واژگان و مهارت‌های زبان آلمانی، به‌صورت حضوری و آنلاین.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/a1",
   },

@@ -10,6 +10,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
+  title: "کلاس زبان آلمانی A2 در اصفهان | دویچینو",
+  description:
+    "کلاس زبان آلمانی A2 در آکادمی دویچینو با تمرکز بر تقویت گرامر، واژگان و مهارت‌های زبان آلمانی، به‌صورت حضوری و آنلاین.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/a2",
   },
@@ -19,7 +22,7 @@ export default function A2Page() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <div className="max-w-7xl mx-auto px-6 py-10">
-        
+
         {/* Logo */}
         <div className="flex justify-center mb-10">
           <Image
