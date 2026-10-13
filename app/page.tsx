@@ -184,7 +184,7 @@ export default function Home() {
 <div className="flex-shrink-0">
   <img
     src="/mee.jpg"
-    alt="teacher"
+    alt="مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو اصفهان"
     className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-blue-900 shadow-lg"
   />
 </div>
