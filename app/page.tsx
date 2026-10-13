@@ -362,50 +362,40 @@ export default function Home() {
 
 
       {/* اطلاعات تماس */}
-      <div className="text-right order-1 md:order-1">
+<div className="text-right order-1 md:order-1">
+  <h3 className="text-2xl font-bold mb-6">
+    اطلاعات تماس
+  </h3>
 
-        <h3 className="text-2xl font-bold mb-6">
-          اطلاعات تماس
-        </h3>
+  <div className="space-y-5 text-blue-100 leading-8">
+    <div>
+      <p className="font-semibold text-white mb-1">
+        📍 آدرس آکادمی دویچینو
+      </p>
 
-
-        <div className="space-y-5 text-blue-100 leading-8">
-
-
-          <div>
-            <p className="font-semibold text-white mb-1">
-              📍 آدرس
-            </p>
-
-            <p>
-              اصفهان، حکیم نظامی، از سمت پل فلزی،
-              بعد از چهارراه حکیم نظامی،
-              اولین کوچه سمت راست (میدان کوچک ۱۰)
-            </p>
-          </div>
-
-
-          <div>
-            <p className="font-semibold text-white mb-1">
-              📞 شماره تماس
-            </p>
-
-            <a
-              href="tel:09130061984"
-              className="hover:text-white transition"
-            >
-              ۰۹۱۳۰۰۶۱۹۸۴
-            </a>
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
+      <p>
+        اصفهان، خیابان حکیم نظامی، از سمت پل فلزی،
+        بعد از چهارراه نظر، اولین کوچه سمت راست
+        (میدان کوچک ۱۰)، بالای کافه قهوینه،
+        آکادمی دویچینو
+      </p>
     </div>
+
+    <div>
+      <p className="font-semibold text-white mb-1">
+        📞 شماره تماس
+      </p>
+
+      <a
+        href="tel:09130061984"
+        className="hover:text-white transition"
+      >
+        ۰۹۱۳۰۰۶۱۹۸۴
+      </a>
+    </div>
+  </div>
+</div>
+</div>
 
 
     <div className="border-t border-blue-800 mt-8 pt-5 text-center text-blue-300 text-sm">
