@@ -48,7 +48,7 @@ export default function A2Page() {
         {/* Logo */}
         <div className="flex justify-center mb-10">
           <Image
-            src="/logot.png"
+            src="/logo.webp"
             alt="لوگوی آکادمی دویچینو"
             width={120}
             height={120}

@@ -9,7 +9,7 @@ export const organizationSchema = {
       name: "آکادمی دویچینو",
       alternateName: "Deutschino Akademie",
       url: websiteUrl,
-      logo: `${websiteUrl}/logo.png`,
+      logo: `${websiteUrl}/logo.webp`,
       description:
         "آموزش زبان آلمانی در اصفهان به صورت خصوصی و گروهی برای مهاجرت، کار، تحصیل و آمادگی آزمون.",
       address: {
