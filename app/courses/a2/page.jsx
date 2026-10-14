@@ -157,7 +157,7 @@ export default function A2Page() {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
-                    ۸۹۰٬۰۰۰
+                    ۹۴۰٬۰۰۰
                   </p>
                   <span className="text-gray-500">تومان / هر جلسه</span>
                 </div>
