@@ -319,7 +319,6 @@ if (selectedImage) {
 
           <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
 
-            ```tsx
 {review.avatar_url ? (
   <img
     src={review.avatar_url}
