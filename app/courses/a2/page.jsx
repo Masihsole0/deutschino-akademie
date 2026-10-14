@@ -105,7 +105,7 @@ export default function A2Page() {
 
             <div className="divide-y">
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۲۵ جلسه</span>
+                <span className="font-bold">بدون محدودیت جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
                   <span>تعداد جلسات</span>
@@ -113,7 +113,7 @@ export default function A2Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۳۸ ساعت</span>
+                <span className="font-bold">بدون محدودیتی زمانی</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
                   <span>مدت زمان</span>
@@ -129,7 +129,7 @@ export default function A2Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Starten Wir A2</span>
+                <span className="font-bold">Menschen A2.1 / Menschen A2.2</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
@@ -157,7 +157,7 @@ export default function A2Page() {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
-                    ۹۸۰٬۰۰۰
+                    ۸۹۰٬۰۰۰
                   </p>
                   <span className="text-gray-500">تومان / هر جلسه</span>
                 </div>
@@ -190,7 +190,7 @@ export default function A2Page() {
 
             <div className="divide-y">
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">بدون محدودیت جلسه</span>
+                <span className="font-bold">۳۵ جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
                   <span>تعداد جلسات</span>
@@ -198,7 +198,7 @@ export default function A2Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">بدون محدودیت زمانی</span>
+                <span className="font-bold">۵۳ ساعت</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
                   <span>مدت زمان</span>
