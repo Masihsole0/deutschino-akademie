@@ -10,7 +10,7 @@ export default function Navbar() {
           src="/logo.jpg"
           width={80}
           height={80}
-          alt="logo"
+          alt="لوگوی آکادمی دویچینو"
         />
 
         <span className="font-bold text-blue-900 text-sm md:text-xl -mr-10 text-left">
