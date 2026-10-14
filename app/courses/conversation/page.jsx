@@ -47,7 +47,7 @@ export default function ConversationPage() {
         {/* Logo */}
         <div className="flex justify-center mb-10">
           <Image
-            src="/logo.webp"
+            src="/logo.jpg"
             alt="لوگوی آکادمی دویچینو"
             width={100}
             height={100}

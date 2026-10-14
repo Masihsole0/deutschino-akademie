@@ -7,7 +7,7 @@ export default function Navbar() {
       {/* LOGO */}
       <div className="flex flex-row-reverse items-center gap-0">
         <Image
-          src="/logo.webp"
+          src="/logo.jpg"
           width={80}
           height={80}
           alt="logo"

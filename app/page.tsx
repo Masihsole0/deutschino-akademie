@@ -339,7 +339,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row-reverse items-center md:items-center gap-2">
 
           <img
-            src="/logo.webp"
+            src="/logo.jpg"
             alt="Deutschino Akademie"
             className="w-27 h-27 md:w-30 md:h-30 object-contain"
           />
