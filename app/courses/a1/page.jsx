@@ -53,13 +53,15 @@ export default function A1Page() {
     دوره زبان آلمانی A1
   </h1>
 
-  <p dir="rtl" className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center">
-    در این دوره زبان‌آموز آلمانی را از صفر یاد می‌گیرد و برای سطح <span dir="ltr">A2</span> آماده می‌شود.
-  </p>
+  
+<p dir="rtl" className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center">
+  در دوره زبان آلمانی A1 آکادمی دویچینو، یادگیری را از پایه شروع می‌کنید و با واژگان پرکاربرد، گرامر مقدماتی و مکالمه‌های روزمره آشنا می‌شوید.
+</p>
 
-  <p dir="rtl" className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center">
-    مباحث در این سطح به صورت کاملا روان با حداکثر یادگیری آموزش داده می‌شود.
-  </p>
+<p dir="rtl" className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center">
+  این دوره به‌صورت خصوصی و گروهی ارائه می‌شود و امکان شرکت در کلاس آنلاین نیز وجود دارد. در پایان سطح A1، برای ادامه یادگیری در سطح A2 آماده‌تر خواهید بود.
+</p>
+
 </div>
         {/* Tables */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">

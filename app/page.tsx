@@ -34,16 +34,25 @@ export default function Home() {
 </p>
 
          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-  <button
-    onClick={() => {
-      document.getElementById("courses")?.scrollIntoView({
+  
+<button
+  onClick={() => {
+    const coursesSection = document.getElementById("courses");
+
+    if (coursesSection) {
+      coursesSection.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
-    }}
-    className="rounded-xl bg-blue-900 px-8 py-4 text-lg text-white hover:bg-blue-800 transition"
-  >
-    شروع یادگیری
-  </button>
+    } else {
+      window.location.href = "/#courses";
+    }
+  }}
+  className="rounded-xl bg-blue-900 px-8 py-4 text-lg text-white hover:bg-blue-800 transition"
+>
+  شروع یادگیری
+</button>
+
 
   <a
     href="https://wa.me/989130061984?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%D9%88%20%D8%AB%D8%A8%D8%AA%E2%80%8C%D9%86%D8%A7%D9%85%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%B2%D8%A8%D8%A7%D9%86%20%D8%A2%D9%84%D9%85%D8%A7%D9%86%DB%8C%20%D9%BE%DB%8C%D8%A7%D9%85%20%D8%AF%D8%A7%D8%B1%D9%85."
