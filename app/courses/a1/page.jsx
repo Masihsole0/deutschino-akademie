@@ -48,7 +48,7 @@ export default function A1Page() {
         {/* Logo */}
         <div className="flex justify-center mb-10">
           <Image
-            src="/logot.webp"
+            src="/logo.webp"
             alt="لوگوی آکادمی دویچینو"
             width={120}
             height={120}
