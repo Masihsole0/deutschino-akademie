@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "کلاس زبان آلمانی A1 در اصفهان | دویچینو",
   description:
-    "آموزش زبان آلمانی از سطح A1 در آکادمی دویچینو؛ شروع یادگیری از پایه با تمرین گرامر، واژگان و مهارت‌های زبان آلمانی، به‌صورت حضوری و آنلاین.",
+  "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری و آنلاین، همراه با تمرین گرامر، واژگان و مکالمه‌های روزمره برای شروع یادگیری زبان آلمانی.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/a1",
   },
@@ -27,7 +27,7 @@ export default function A1Page() {
         <div className="flex justify-center mb-10">
           <Image
             src="/logot.png"
-            alt="Logo"
+            alt="لوگوی آکادمی دویچینو"
             width={120}
             height={120}
             className="w-auto h-28"
@@ -39,7 +39,7 @@ export default function A1Page() {
         <div className="flex justify-center">
           <Image
             src="/books.jpg"
-            alt="Banner"
+            alt="کتاب آموز زبان آلمانی سطح A1"
             width={900}
             height={350}
             className="rounded-3xl shadow-xl object-cover"
@@ -78,7 +78,7 @@ export default function A1Page() {
             <div className="divide-y">
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۲۵ جلسه</span>
+                <span className="font-bold">بدون محدودیت جلسه</span>
 
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18}/>
@@ -87,7 +87,7 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۳۸ ساعت</span>
+                <span className="font-bold">بدون محدودیت زمانی</span>
 
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18}/>
@@ -105,7 +105,7 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Starten Wir A1</span>
+                <span className="font-bold">menschen A1.1 / menschen A1.2</span>
 
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18}/>
@@ -139,7 +139,7 @@ export default function A1Page() {
 
                 <div>
   <p className="text-3xl font-bold text-green-700">
-    ۹۸۰٬۰۰۰
+    ۸۹۰٬۰۰۰
   </p>
 
   <span className="text-gray-500">
