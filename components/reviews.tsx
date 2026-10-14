@@ -334,7 +334,6 @@ if (selectedImage) {
     {review.full_name?.charAt(0)}
   </div>
 )}
-```
 
             <div className="flex flex-col order-2">
               <h3 className="font-bold text-blue-900">
