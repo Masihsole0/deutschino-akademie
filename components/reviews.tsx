@@ -10,6 +10,46 @@ type Review = {
   avatar_url: string | null;
 };
 
+async function compressImage(file: File): Promise<File> {
+  const bitmap = await createImageBitmap(file);
+
+  try {
+    const maxSize = 512;
+    const scale = Math.min(
+      1,
+      maxSize / Math.max(bitmap.width, bitmap.height)
+    );
+
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+    canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("Image processing failed");
+
+    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob(
+        (result) =>
+          result
+            ? resolve(result)
+            : reject(new Error("Image compression failed")),
+        "image/webp",
+        0.75
+      );
+    });
+
+    const name = file.name.replace(/\.[^.]+$/, "") || "avatar";
+
+    return new File([blob], `${name}.webp`, {
+      type: "image/webp",
+    });
+  } finally {
+    bitmap.close();
+  }
+}
+
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -103,24 +143,72 @@ if (existingReview && existingReview.length > 0) {
   let avatarUrl = "";
 
 if (selectedImage) {
-  const fileName = `${Date.now()}-${selectedImage.name}`;
+  try {
+    const bitmap = await createImageBitmap(selectedImage);
+    const maxSize = 512;
+    const scale = Math.min(
+      1,
+      maxSize / Math.max(bitmap.width, bitmap.height)
+    );
 
-  const { error: uploadError } = await supabase.storage
-    .from("review-images")
-    .upload(fileName, selectedImage);
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+    canvas.height = Math.max(1, Math.round(bitmap.height * scale));
 
-  if (uploadError) {
-    alert("خطا در آپلود عکس");
-    console.log(uploadError);
+    const context = canvas.getContext("2d");
+
+    if (!context) {
+      bitmap.close();
+      throw new Error("Image processing failed");
+    }
+
+    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    bitmap.close();
+
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob(
+        (result) =>
+          result
+            ? resolve(result)
+            : reject(new Error("Image compression failed")),
+        "image/webp",
+        0.75
+      );
+    });
+
+    const imageName =
+      selectedImage.name.replace(/\.[^.]+$/, "") || "avatar";
+
+    const compressedImage = new File([blob], `${imageName}.webp`, {
+      type: "image/webp",
+    });
+
+    const fileName = `${Date.now()}-${compressedImage.name}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from("review-images")
+      .upload(fileName, compressedImage, {
+        contentType: "image/webp",
+      });
+
+    if (uploadError) {
+      console.error(uploadError);
+      alert("خطا در آپلود عکس");
+      setIsSubmitting(false);
+      return;
+    }
+
+    const { data } = supabase.storage
+      .from("review-images")
+      .getPublicUrl(fileName);
+
+    avatarUrl = data.publicUrl;
+  } catch (error) {
+    console.error(error);
+    alert("خطا در فشرده‌سازی عکس");
     setIsSubmitting(false);
     return;
   }
-
-  const { data } = supabase.storage
-    .from("review-images")
-    .getPublicUrl(fileName);
-
-  avatarUrl = data.publicUrl;
 }
 
   const { error } = await supabase
@@ -231,17 +319,23 @@ if (selectedImage) {
 
           <div className="absolute top-4 right-5 flex flex-row-reverse items-center gap-3" dir="ltr">
 
-            {review.avatar_url ? (
-              <img
-                src={review.avatar_url}
-                alt={review.full_name}
-                className="w-12 h-12 rounded-full object-cover border"
-              />
-            ) : (
-              <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
-                {review.full_name?.charAt(0)}
-              </div>
-            )}
+            ```tsx
+{review.avatar_url ? (
+  <img
+    src={review.avatar_url}
+    alt={review.full_name}
+    width={48}
+    height={48}
+    loading="lazy"
+    decoding="async"
+    className="w-12 h-12 rounded-full object-cover border"
+  />
+) : (
+  <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
+    {review.full_name?.charAt(0)}
+  </div>
+)}
+```
 
             <div className="flex flex-col order-2">
               <h3 className="font-bold text-blue-900">
