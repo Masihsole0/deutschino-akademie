@@ -18,9 +18,30 @@ export const metadata = {
   },
 };
 
+const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "دوره آموزش زبان آلمانی A1",
+  description:
+    "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری و آنلاین.",
+  provider: {
+    "@type": "Organization",
+    name: "آکادمی دویچینو",
+    url: "https://www.deutschino.ir",
+  },
+  inLanguage: "de",
+  educationalLevel: "A1",
+};
+
 export default function A1Page() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(courseSchema),
+  }}
+/>
       <div className="max-w-7xl mx-auto px-6 py-10">
 
         {/* Logo */}
@@ -105,7 +126,7 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">menschen A1.1 / menschen A1.2</span>
+                <span className="font-bold">Menschen A1.1 / Menschen A1.2</span>
 
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18}/>
@@ -206,7 +227,7 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Starten Wir A1</span>
+                <span className="font-bold">Menschen A1.1 / Menschen A1.2</span>
 
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18}/>
