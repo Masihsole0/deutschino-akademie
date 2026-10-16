@@ -114,7 +114,7 @@ export default function Home() {
                   window.location.href = "/#courses";
                 }
               }}
-              className="rounded-xl bg-blue-900 px-8 py-4 text-lg text-white transition hover:bg-blue-800"
+              className="rounded-xl bg-blue-900 px-6 py-4 text-lg text-white transition hover:bg-blue-800"
             >
               مشاهده دوره‌ها
             </button>
