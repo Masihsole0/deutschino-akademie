@@ -99,43 +99,53 @@ export default function Home() {
             دویچینو؛ حضوری در اصفهان و آنلاین.
           </p>
 
-          
+          {/* QUICK NAVIGATION BUTTONS */}
+          <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4">
+            <button
+              type="button"
+              onClick={() => {
+                const coursesSection = document.getElementById("courses");
 
+                if (coursesSection) {
+                  coursesSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                } else {
+                  window.location.href = "/#courses";
+                }
+              }}
+              className="flex min-h-11 items-center justify-center rounded-lg bg-blue-900 px-3 py-3 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              کلاس‌ها
+            </button>
 
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+              className="flex min-h-11 items-center justify-center rounded-lg bg-green-800 px-3 py-3 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              مشاوره و ثبت‌نام
+            </a>
 
+            <a
+              href="#about"
+              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              درباره مدرس
+            </a>
 
-<div className="mt-8 flex flex-col items-center justify-center gap-2 sm:mt-10 sm:flex-row sm:gap-4">
-  <button
-    type="button"
-    onClick={() => {
-      const coursesSection = document.getElementById("courses");
-
-      if (coursesSection) {
-        coursesSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      } else {
-        window.location.href = "/#courses";
-      }
-    }}
-    className="w-fit rounded-lg bg-blue-900 px-4 py-2 text-base text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
-  >
-    مشاهده دوره‌ها
-  </button>
-
-  <a
-    href={whatsappUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-    className="w-fit rounded-lg bg-green-800 px-4 py-2 text-base text-white transition hover:bg-green-700 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
-  >
-    مشاوره و ثبت‌نام در واتساپ
-  </a>
-</div>
-</div>
-</section>
+            <a
+              href="#reviews"
+              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              نظرات زبان‌آموزان
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* COURSES SECTION */}
       <section
