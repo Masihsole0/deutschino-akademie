@@ -11,10 +11,10 @@ export default function Navbar() {
 
         <Image
           src="/logo.jpg"
-          width={80}
-          height={80}
+          width={64}
+          height={64}
           alt="لوگوی آکادمی دویچینو"
-          className="h-12 w-12 object-contain md:h-16 md:w-16"
+          className="h-15 w-15 object-contain md:h-19 md:w-19"
         />
 
         <span className="font-bold text-blue-900 text-lg md:text-2xl">
