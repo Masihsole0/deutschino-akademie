@@ -115,9 +115,10 @@ export default function Home() {
                   window.location.href = "/#courses";
                 }
               }}
-              className="flex min-h-11 items-center justify-center rounded-lg bg-blue-900 px-3 py-3 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-blue-900 px-3 py-3 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-5 sm:text-base"
             >
-              کلاس‌ها
+              <span aria-hidden="true">📚</span>
+              <span>کلاس‌ها</span>
             </button>
 
             <a
@@ -125,23 +126,26 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="flex min-h-11 items-center justify-center rounded-lg bg-green-800 px-3 py-3 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-green-800 px-3 py-3 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-5 sm:text-base"
             >
-              مشاوره و ثبت‌نام
+              <span aria-hidden="true">💬</span>
+              <span>مشاوره و ثبت‌نام</span>
             </a>
 
             <a
               href="#about"
-              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
             >
-              درباره مدرس
+              <span aria-hidden="true">👨‍🏫</span>
+              <span>درباره مدرس</span>
             </a>
 
             <a
               href="#reviews"
-              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
             >
-              نظرات زبان‌آموزان
+              <span aria-hidden="true">⭐</span>
+              <span>نظرات زبان‌آموزان</span>
             </a>
           </div>
         </div>
