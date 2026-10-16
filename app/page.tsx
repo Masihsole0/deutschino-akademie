@@ -99,38 +99,40 @@ export default function Home() {
             دویچینو؛ حضوری در اصفهان و آنلاین.
           </p>
 
-          <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
-            <button
-              type="button"
-              onClick={() => {
-                const coursesSection = document.getElementById("courses");
+          
+<div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
+  <button
+    type="button"
+    onClick={() => {
+      const coursesSection = document.getElementById("courses");
 
-                if (coursesSection) {
-                  coursesSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                } else {
-                  window.location.href = "/#courses";
-                }
-              }}
-              className="rounded-xl bg-blue-900 px-6 py-4 text-lg text-white transition hover:bg-blue-800"
-            >
-              مشاهده دوره‌ها
-            </button>
+      if (coursesSection) {
+        coursesSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        window.location.href = "/#courses";
+      }
+    }}
+    className="rounded-xl bg-blue-900 px-6 py-3 text-base text-white transition hover:bg-blue-800"
+  >
+    مشاهده دوره‌ها
+  </button>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="rounded-xl bg-green-800 px-8 py-4 text-lg text-white transition hover:bg-green-700"
-            >
-              مشاوره و ثبت‌نام در واتساپ
-            </a>
-          </div>
-        </div>
-      </section>
+  <a
+    href={whatsappUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+    className="rounded-xl bg-green-800 px-6 py-3 text-base text-white transition hover:bg-green-700"
+  >
+    مشاوره و ثبت‌نام در واتساپ
+  </a>
+</div>
+</div>
+</section>
+
 
       {/* COURSES SECTION */}
       <section
