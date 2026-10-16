@@ -100,7 +100,8 @@ export default function Home() {
           </p>
 
           
-<div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
+
+<div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
   <button
     type="button"
     onClick={() => {
@@ -115,7 +116,7 @@ export default function Home() {
         window.location.href = "/#courses";
       }
     }}
-    className="rounded-xl bg-blue-900 px-6 py-3 text-base text-white transition hover:bg-blue-800"
+    className="rounded-xl bg-blue-900 px-5 py-3 text-base text-white transition hover:bg-blue-800 sm:px-8 sm:py-4 sm:text-lg"
   >
     مشاهده دوره‌ها
   </button>
@@ -125,14 +126,13 @@ export default function Home() {
     target="_blank"
     rel="noopener noreferrer"
     aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-    className="rounded-xl bg-green-800 px-6 py-3 text-base text-white transition hover:bg-green-700"
+    className="rounded-xl bg-green-800 px-5 py-3 text-base text-white transition hover:bg-green-700 sm:px-8 sm:py-4 sm:text-lg"
   >
     مشاوره و ثبت‌نام در واتساپ
   </a>
 </div>
 </div>
 </section>
-
 
       {/* COURSES SECTION */}
       <section
