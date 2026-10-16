@@ -91,7 +91,7 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
-          <h1 className="text-3xl font-bold leading-relaxed text-white md:text-6xl">
+          <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
             آموزش زبان آلمانی در اصفهان
           </h1>
 
