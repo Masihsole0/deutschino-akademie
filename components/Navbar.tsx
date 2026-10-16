@@ -11,8 +11,8 @@ export default function Navbar() {
 
         <Image
           src="/logo.jpg"
-          width={64}
-          height={64}
+          width={256}
+          height={256}
           alt="لوگوی آکادمی دویچینو"
           className="h-20 w-20 object-contain md:h-25 md:w-25"
         />
