@@ -14,7 +14,7 @@ export default function Navbar() {
           width={64}
           height={64}
           alt="لوگوی آکادمی دویچینو"
-          className="h-15 w-15 object-contain md:h-19 md:w-19"
+          className="h-20 w-20 object-contain md:h-25 md:w-25"
         />
 
         <span className="font-bold text-blue-900 text-lg md:text-2xl">
