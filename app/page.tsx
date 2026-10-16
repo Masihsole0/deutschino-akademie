@@ -102,7 +102,8 @@ export default function Home() {
           
 
 
-<div className="mt-8 flex flex-col items-stretch justify-center gap-2 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
+
+<div className="mt-8 flex flex-col items-center justify-center gap-2 sm:mt-10 sm:flex-row sm:gap-4">
   <button
     type="button"
     onClick={() => {
@@ -117,7 +118,7 @@ export default function Home() {
         window.location.href = "/#courses";
       }
     }}
-    className="rounded-lg bg-blue-900 px-3 py-2 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
+    className="w-fit rounded-lg bg-blue-900 px-4 py-2 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
   >
     مشاهده دوره‌ها
   </button>
@@ -127,7 +128,7 @@ export default function Home() {
     target="_blank"
     rel="noopener noreferrer"
     aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-    className="rounded-lg bg-green-800 px-3 py-2 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
+    className="w-fit rounded-lg bg-green-800 px-4 py-2 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-8 sm:py-4 sm:text-lg"
   >
     مشاوره و ثبت‌نام در واتساپ
   </a>
