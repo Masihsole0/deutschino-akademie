@@ -4,6 +4,7 @@
 import Reviews from "@/components/reviews";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   const whatsappUrl =
@@ -489,6 +490,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <BackToTop />
     </main>
   );
 }
