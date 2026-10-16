@@ -132,14 +132,14 @@ export default function Home() {
 
             <a
               href="#about"
-              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-gray-100 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
             >
               درباره مدرس
             </a>
 
             <a
               href="#reviews"
-              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-gray-100 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-100 sm:rounded-xl sm:px-5 sm:text-base"
             >
               نظرات زبان‌آموزان
             </a>
