@@ -13,7 +13,7 @@ import {
 export const metadata = {
   title: "کلاس زبان آلمانی B1 در اصفهان | دویچینو",
   description:
-    "کلاس زبان آلمانی B1 در آکادمی دویچینو با تمرکز بر گرامر، واژگان و تقویت مهارت‌های خواندن، شنیدن، صحبت کردن و نوشتن؛ حضوری و آنلاین.",
+    "آموزش زبان آلمانی B1 در اصفهان و آنلاین؛ کلاس خصوصی و گروهی با تمرکز بر گرامر، واژگان، مکالمه و تقویت چهار مهارت زبان آلمانی در آکادمی دویچینو.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/b1",
   },
@@ -24,7 +24,7 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره آموزش زبان آلمانی B1",
   description:
-    "آموزش زبان آلمانی سطح B1 در آکادمی دویچینو، با کلاس‌های خصوصی و گروهی، حضوری و آنلاین، با تمرکز بر گرامر، واژگان، خواندن، شنیدن، صحبت کردن و نوشتن.",
+    "آموزش زبان آلمانی سطح B1 در آکادمی دویچینو، با کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین، با تمرکز بر گرامر، واژگان، خواندن، شنیدن، صحبت کردن و نوشتن.",
   provider: {
     "@type": "Organization",
     name: "آکادمی دویچینو",
@@ -79,18 +79,18 @@ export default function B1Page() {
             dir="rtl"
             className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
           >
-            در دوره زبان آلمانی B1 آکادمی دویچینو، مهارت‌های خود را در ادامه
-            سطح A2 تقویت می‌کنید و با گرامر، واژگان و موضوعات متنوع‌تری آشنا
-            می‌شوید.
+            در دوره زبان آلمانی B1 آکادمی دویچینو، دانش خود را از سطح A2
+            گسترش می‌دهید و با گرامر، واژگان و موضوعات متنوع‌تری آشنا می‌شوید.
           </p>
 
           <p
             dir="rtl"
             className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
           >
-            این دوره به‌صورت خصوصی و گروهی برگزار می‌شود و امکان شرکت آنلاین
-            نیز وجود دارد. هدف دوره، تقویت مهارت‌های خواندن، شنیدن، صحبت کردن
-            و نوشتن و آماده‌شدن برای ادامه یادگیری در سطح B2 است.
+            این دوره به‌صورت خصوصی و گروهی برگزار می‌شود و امکان شرکت
+            حضوری در اصفهان یا آنلاین نیز وجود دارد. هدف دوره، تقویت
+            مهارت‌های خواندن، شنیدن، صحبت‌کردن و نوشتن و آماده‌شدن برای
+            ادامه یادگیری در سطح B2 است.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export default function B1Page() {
             </div>
 
             <div className="divide-y">
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">بدون محدودیت جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
@@ -113,7 +113,7 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">بدون محدودیت زمانی</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
@@ -121,7 +121,7 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">B1</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <GraduationCap size={18} />
@@ -129,23 +129,25 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen B1.1 / Menschen B1.2</span>
-                <div className="flex flex-row-reverse items-center gap-3">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold break-words">
+                  Menschen B1.1 / Menschen B1.2
+                </span>
+                <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">A2 سطح</span>
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold">سطح A2</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <CircleHelp size={18} />
                   <span>پیش‌نیاز</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold text-green-600">دارد</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Headphones size={18} />
@@ -155,7 +157,7 @@ export default function B1Page() {
             </div>
 
             <div className="bg-gray-50 border-t p-8">
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center gap-3 mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
                     ۱,۳۰۰٬۰۰۰
@@ -176,7 +178,7 @@ export default function B1Page() {
 
               <p className="mt-2 text-xs text-gray-700 text-center">
                 ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را
-                روشن کنید
+                روشن کنید.
               </p>
             </div>
           </div>
@@ -190,7 +192,7 @@ export default function B1Page() {
             </div>
 
             <div className="divide-y">
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">۳۵ جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
@@ -198,7 +200,7 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">۵۳ ساعت</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
@@ -206,7 +208,7 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">B1</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <GraduationCap size={18} />
@@ -214,23 +216,25 @@ export default function B1Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen B1.1 / Menschen B1.2</span>
-                <div className="flex flex-row-reverse items-center gap-3">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold break-words">
+                  Menschen B1.1 / Menschen B1.2
+                </span>
+                <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">A2 سطح</span>
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold">سطح A2</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <CircleHelp size={18} />
                   <span>پیش‌نیاز</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold text-green-600">دارد</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Headphones size={18} />
@@ -240,7 +244,7 @@ export default function B1Page() {
             </div>
 
             <div className="bg-gray-50 border-t p-8">
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center gap-3 mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
                     ۱۳,۷۰۰٬۰۰۰
@@ -259,13 +263,82 @@ export default function B1Page() {
                 ثبت‌نام دوره گروهی
               </a>
 
-              <p className="flex flex-col mt-auto text-xs text-gray-700 text-center">
+              <p className="mt-2 text-xs text-gray-700 text-center">
                 ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را
-                روشن کنید
+                روشن کنید.
               </p>
             </div>
           </div>
         </div>
+
+        {/* SEO Content */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-16 mb-12 text-right"
+        >
+          <h2 className="text-2xl font-bold mb-5">
+            آموزش حضوری زبان آلمانی B1 در اصفهان و آنلاین
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            اگر سطح A2 زبان آلمانی را گذرانده‌اید، دوره B1 در آکادمی
+            دویچینو به شما کمک می‌کند توانایی ارتباط به زبان آلمانی را
+            در موقعیت‌های مختلف تقویت کنید. این دوره به‌صورت خصوصی و
+            گروهی، حضوری در اصفهان و آنلاین برگزار می‌شود.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            در سطح B1 چه مهارت‌هایی تقویت می‌شوند؟
+          </h2>
+
+          <p className="text-base leading-9 mb-4">
+            در سطح B1، علاوه بر گسترش گرامر و واژگان، روی بیان نظر،
+            توضیح تجربه‌ها، صحبت درباره موضوعات آشنا و درک متن‌ها و
+            مکالمه‌های روزمره کار می‌کنید. تمرین منظم چهار مهارت به
+            شما کمک می‌کند برای استفاده مستقل‌تر از زبان آلمانی آماده شوید.
+          </p>
+
+          <ul className="list-disc pr-6 space-y-3 leading-8 mb-6">
+            <li>تقویت گرامر و واژگان کاربردی سطح B1</li>
+            <li>تمرین مکالمه و بیان نظر به زبان آلمانی</li>
+            <li>تقویت مهارت شنیدن و درک مکالمه‌ها</li>
+            <li>خواندن متن‌ها و تمرین درک مطلب</li>
+            <li>تمرین نوشتن متن‌ها و پیام‌های کاربردی</li>
+            <li>آمادگی برای ادامه یادگیری در سطح B2</li>
+          </ul>
+
+          <h2 className="text-xl font-bold mb-4">
+            کلاس خصوصی یا گروهی B1؛ کدام مناسب شماست؟
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            کلاس خصوصی برای افرادی مناسب است که می‌خواهند با برنامه و
+            سرعت متناسب با نیازهای خود پیش بروند. در کلاس گروهی نیز
+            فرصت تعامل با دیگر زبان‌آموزان و تمرین مکالمه فراهم می‌شود.
+            برای انتخاب دوره متناسب با هدف و زمان خود، می‌توانید از طریق
+            واتساپ مشورت بگیرید.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            پیش‌نیاز شرکت در دوره B1
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            برای شروع دوره B1، آشنایی با مطالب سطح A2 زبان آلمانی لازم
+            است. اگر درباره سطح فعلی خود مطمئن نیستید، پیش از ثبت‌نام
+            می‌توانید درباره تعیین سطح و انتخاب کلاس مناسب سؤال کنید.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            ثبت‌نام کلاس زبان آلمانی B1 در دویچینو
+          </h2>
+
+          <p className="text-base leading-9">
+            برای اطلاع از زمان برگزاری کلاس‌های خصوصی و گروهی، هزینه
+            دوره و امکان شرکت حضوری در اصفهان یا آنلاین، از دکمه‌های
+            ثبت‌نام همین صفحه استفاده کنید.
+          </p>
+        </section>
       </div>
     </main>
   );

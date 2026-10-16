@@ -13,7 +13,7 @@ import {
 export const metadata = {
   title: "کلاس زبان آلمانی A1 در اصفهان | دویچینو",
   description:
-    "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری و آنلاین، همراه با تمرین گرامر، واژگان و مکالمه‌های روزمره برای شروع یادگیری زبان آلمانی.",
+    "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین، همراه با تمرین گرامر، واژگان و مکالمه‌های روزمره.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/a1",
   },
@@ -24,7 +24,7 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره آموزش زبان آلمانی A1",
   description:
-    "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری و آنلاین.",
+    "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
   provider: {
     "@type": "Organization",
     name: "آکادمی دویچینو",
@@ -69,7 +69,7 @@ export default function A1Page() {
           />
         </div>
 
-        {/* Title */}
+        {/* Main Title */}
         <div className="text-center mt-12">
           <h1 className="text-3xl md:text-4xl font-bold">
             دوره زبان آلمانی A1
@@ -89,14 +89,14 @@ export default function A1Page() {
             className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
           >
             این دوره به‌صورت خصوصی و گروهی ارائه می‌شود و امکان شرکت در کلاس
-            آنلاین نیز وجود دارد. در پایان سطح A1، برای ادامه یادگیری در سطح A2
-            آماده‌تر خواهید بود.
+            حضوری در اصفهان یا آنلاین نیز وجود دارد. در پایان سطح A1، برای
+            ادامه یادگیری در سطح A2 آماده‌تر خواهید بود.
           </p>
         </div>
 
-        {/* Tables */}
+        {/* Course Tables */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
-          {/* Private */}
+          {/* Private Course */}
           <div className="bg-white rounded-3xl shadow-xl border overflow-hidden">
             <div className="bg-[#F4F8FF] border-b px-6 py-4">
               <h2 className="text-xl font-bold text-right">
@@ -130,7 +130,9 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen A1.1 / Menschen A1.2</span>
+                <span className="font-bold">
+                  Menschen A1.1 / Menschen A1.2
+                </span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
@@ -176,7 +178,7 @@ export default function A1Page() {
 
               <p className="mt-2 text-xs text-gray-700 text-center">
                 ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را
-                روشن کنید
+                روشن کنید.
               </p>
             </div>
           </div>
@@ -215,7 +217,9 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen A1.1 / Menschen A1.2</span>
+                <span className="font-bold">
+                  Menschen A1.1 / Menschen A1.2
+                </span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
@@ -261,11 +265,86 @@ export default function A1Page() {
 
               <p className="mt-2 text-xs text-gray-700 text-center">
                 ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را
-                روشن کنید
+                روشن کنید.
               </p>
             </div>
           </div>
         </div>
+
+        {/* SEO Content */}
+        <section
+          dir="rtl"
+          className="mt-16 max-w-4xl mx-auto text-right"
+          aria-labelledby="a1-course-guide"
+        >
+          <h2
+            id="a1-course-guide"
+            className="text-2xl md:text-3xl font-bold mb-6"
+          >
+            آموزش حضوری زبان آلمانی A1 در اصفهان و آنلاین
+          </h2>
+
+          <p className="text-base md:text-lg leading-9 mb-5">
+            اگر می‌خواهید یادگیری زبان آلمانی را از صفر شروع کنید، دوره A1
+            آکادمی دویچینو برای آشنایی با واژگان پایه، گرامر مقدماتی و
+            مکالمه‌های روزمره مناسب است. در این سطح یاد می‌گیرید خودتان را
+            معرفی کنید، درباره خانواده و علایق خود صحبت کنید، سؤال‌های ساده
+            بپرسید و در موقعیت‌های روزمره ارتباط برقرار کنید.
+          </p>
+
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
+            کلاس زبان آلمانی A1 به‌صورت خصوصی و گروهی
+          </h2>
+
+          <p className="text-base md:text-lg leading-9 mb-5">
+            در دویچینو می‌توانید با توجه به شرایط و برنامه خود، کلاس خصوصی یا
+            گروهی انتخاب کنید. کلاس خصوصی امکان تمرکز بیشتر بر نیازهای فردی را
+            فراهم می‌کند و در کلاس گروهی فرصت تمرین و تعامل با زبان‌آموزان دیگر
+            را دارید.
+          </p>
+
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
+            کلاس حضوری آلمانی در اصفهان یا آنلاین
+          </h2>
+
+          <p className="text-base md:text-lg leading-9 mb-5">
+            کلاس‌های A1 آکادمی دویچینو به‌صورت حضوری در اصفهان و همچنین آنلاین
+            برگزار می‌شوند. بنابراین، چه در اصفهان باشید و چه امکان حضور در
+            کلاس را نداشته باشید، می‌توانید متناسب با شرایط خود یادگیری زبان
+            آلمانی را شروع کنید.
+          </p>
+
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
+            در دوره آلمانی A1 چه چیزهایی یاد می‌گیرید؟
+          </h2>
+
+          <ul className="list-disc pr-6 space-y-2 text-base md:text-lg leading-8">
+            <li>معرفی خود و دیگران و صحبت درباره اطلاعات شخصی</li>
+            <li>واژگان مربوط به خانواده، کار، خرید و زندگی روزمره</li>
+            <li>گرامر پایه و ساخت جمله‌های ساده آلمانی</li>
+            <li>پرسیدن و پاسخ دادن به سؤال‌های متداول</li>
+            <li>تمرین مکالمه و درک جمله‌های ساده آلمانی</li>
+          </ul>
+
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
+            آیا برای شرکت در دوره A1 به پیش‌نیاز نیاز دارم؟
+          </h2>
+
+          <p className="text-base md:text-lg leading-9 mb-5">
+            خیر. این دوره برای افرادی طراحی شده است که می‌خواهند زبان آلمانی
+            را از ابتدا شروع کنند و به دانش قبلی زبان آلمانی نیاز ندارند.
+          </p>
+
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
+            ثبت‌نام کلاس زبان آلمانی A1
+          </h2>
+
+          <p className="text-base md:text-lg leading-9">
+            برای انتخاب کلاس خصوصی یا گروهی و دریافت اطلاعات بیشتر درباره شروع
+            دوره، می‌توانید از طریق دکمه‌های ثبت‌نام همین صفحه با آکادمی
+            دویچینو در ارتباط باشید.
+          </p>
+        </section>
       </div>
     </main>
   );

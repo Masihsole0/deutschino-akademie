@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { Vazirmatn } from "next/font/google";
@@ -7,65 +8,62 @@ const vazir = Vazirmatn({
   subsets: ["arabic"],
 });
 
+const siteTitle = "آموزش زبان آلمانی در اصفهان | مسیح سلیمانی";
+const siteDescription =
+  "کلاس زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی در آکادمی دویچینو. آشنایی با دوره‌های A1، A2، B1 و مکالمه، مشاهده جزئیات کلاس‌ها و انتخاب دوره متناسب با هدف شما.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.deutschino.ir"),
 
-  title: "آموزش زبان آلمانی در اصفهان | مسیح سلیمانی – دویچینو",
+  title: siteTitle,
 
-description:
-  "آموزش زبان آلمانی در اصفهان، به صورت حضوری و آنلاین با مسیح سلیمانی در آکادمی دویچینو؛ کلاس‌های خصوصی و گروهی، تقویت مکالمه و آمادگی آزمون‌های بین‌المللی زبان آلمانی.",
+  description: siteDescription,
+
   applicationName: "آکادمی دویچینو",
 
-authors: [
-  {
-    name: "مسیح سلیمانی",
-    url: "https://www.deutschino.ir",
-  },
-],
+  authors: [
+    {
+      name: "مسیح سلیمانی",
+      url: "https://www.deutschino.ir",
+    },
+  ],
 
-creator: "مسیح سلیمانی",
+  creator: "مسیح سلیمانی",
+  publisher: "آکادمی دویچینو",
 
-publisher: "آکادمی دویچینو",
-
-robots: {
-  index: true,
-  follow: true,
-  googleBot: {
+  robots: {
     index: true,
     follow: true,
-    "max-video-preview": -1,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-  },
-},
-    alternates: {
-    canonical: "/",
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   keywords: [
-    "آموزش زبان آلمانی",
-    "زبان آلمانی",
-    "زبان المانی",
-    "مدرس زبان آلمانی",
-    "مدرس آلمانی",
-    "بهترین مدرس زبان آلمانی",
-    "آکادمی دویچینو",
-    "دویچینو",
     "آموزش زبان آلمانی اصفهان",
     "مدرس زبان آلمانی اصفهان",
-    "بهترین مدرس آلمانی اصفهان",
-    "کلاس زبان آلمانی",
-    "کلاس خصوصی آلمانی",
-    "کلاس گروهی آلمانی",
-    "آزمون گوته",
-    "مهاجرت به آلمان",
-    "تحصیل در آلمان",
-    "کار در آلمان",
-    "آلمانی",
-    "المانی",
-    "موسسه آلمانی",
-    "موسسه المانی",
+    "مسیح سلیمانی",
+    "کلاس زبان آلمانی در اصفهان",
+    "کلاس خصوصی زبان آلمانی",
+    "کلاس آنلاین زبان آلمانی",
+    "آکادمی دویچینو",
+    "دوره زبان آلمانی A1",
+    "دوره زبان آلمانی A2",
+    "دوره زبان آلمانی B1",
+    "کلاس مکالمه آلمانی",
   ],
+
+  openGraph: {
+    type: "website",
+    locale: "fa_IR",
+    siteName: "آکادمی دویچینو",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
@@ -76,17 +74,15 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={vazir.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(organizationSchema),
-    }}
-  />
-
-  {children}
-
-</body>
+        {children}
+      </body>
     </html>
   );
 }

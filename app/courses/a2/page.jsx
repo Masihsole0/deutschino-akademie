@@ -13,7 +13,7 @@ import {
 export const metadata = {
   title: "کلاس زبان آلمانی A2 در اصفهان | دویچینو",
   description:
-    "کلاس زبان آلمانی A2 در آکادمی دویچینو با تمرکز بر تقویت گرامر، واژگان و مهارت‌های زبان آلمانی، به‌صورت حضوری و آنلاین.",
+    "آموزش زبان آلمانی A2 در اصفهان و آنلاین؛ کلاس خصوصی و گروهی با تمرکز بر گرامر، واژگان، مکالمه و تقویت چهار مهارت زبان آلمانی در آکادمی دویچینو.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/a2",
   },
@@ -24,7 +24,7 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره آموزش زبان آلمانی A2",
   description:
-    "آموزش زبان آلمانی سطح A2 در آکادمی دویچینو، به‌صورت خصوصی و گروهی، حضوری و آنلاین، با تمرکز بر گرامر، واژگان و مهارت‌های زبان آلمانی.",
+    "آموزش زبان آلمانی سطح A2 در آکادمی دویچینو، به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین، با تمرکز بر گرامر، واژگان و مهارت‌های زبان آلمانی.",
   provider: {
     "@type": "Organization",
     name: "آکادمی دویچینو",
@@ -79,17 +79,17 @@ export default function A2Page() {
             dir="rtl"
             className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
           >
-            در دوره زبان آلمانی A2 آکادمی دویچینو، دانش آموخته‌های سطح A1 را
-            تقویت می‌کنید و با گرامر، واژگان و مکالمه‌های متنوع‌تر آشنا می‌شوید.
+            در دوره زبان آلمانی A2 آکادمی دویچینو، مطالب سطح A1 را تقویت
+            می‌کنید و با گرامر، واژگان و مکالمه‌های متنوع‌تر آشنا می‌شوید.
           </p>
 
           <p
             dir="rtl"
             className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
           >
-            این دوره به‌صورت خصوصی و گروهی برگزار می‌شود و امکان شرکت آنلاین
-            نیز وجود دارد. هدف دوره، تقویت مهارت‌های زبان آلمانی و آماده‌شدن
-            برای ادامه یادگیری در سطح B1 است.
+            این دوره به‌صورت خصوصی و گروهی برگزار می‌شود و امکان شرکت
+            حضوری در اصفهان یا آنلاین نیز وجود دارد. هدف دوره، تقویت
+            مهارت‌های زبان آلمانی و آماده‌شدن برای ادامه یادگیری در سطح B1 است.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function A2Page() {
             </div>
 
             <div className="divide-y">
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">بدون محدودیت جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
@@ -112,15 +112,15 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">بدون محدودیتی زمانی</span>
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold">بدون محدودیت زمانی</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
                   <span>مدت زمان</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">A2</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <GraduationCap size={18} />
@@ -128,15 +128,17 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen A2.1 / Menschen A2.2</span>
-                <div className="flex flex-row-reverse items-center gap-3">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold break-words">
+                  Menschen A2.1 / Menschen A2.2
+                </span>
+                <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">سطح A1</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <CircleHelp size={18} />
@@ -144,7 +146,7 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold text-green-600">دارد</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Headphones size={18} />
@@ -154,7 +156,7 @@ export default function A2Page() {
             </div>
 
             <div className="bg-gray-50 border-t p-8">
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center gap-3 mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
                     ۹۴۰٬۰۰۰
@@ -189,7 +191,7 @@ export default function A2Page() {
             </div>
 
             <div className="divide-y">
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">۳۵ جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
@@ -197,7 +199,7 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">۵۳ ساعت</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
@@ -205,7 +207,7 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">A2</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <GraduationCap size={18} />
@@ -213,15 +215,17 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">Menschen A2.1 / Menschen A2.2</span>
-                <div className="flex flex-row-reverse items-center gap-3">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
+                <span className="font-bold break-words">
+                  Menschen A2.1 / Menschen A2.2
+                </span>
+                <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />
                   <span>کتاب آموزشی</span>
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold">سطح A1</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <CircleHelp size={18} />
@@ -229,7 +233,7 @@ export default function A2Page() {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center px-8 py-5">
+              <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold text-green-600">دارد</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Headphones size={18} />
@@ -239,7 +243,7 @@ export default function A2Page() {
             </div>
 
             <div className="bg-gray-50 border-t p-8">
-              <div className="flex justify-between items-center mb-6">
+              <div className="flex justify-between items-center gap-3 mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
                     ۱۰,۷۰۰٬۰۰۰
@@ -265,6 +269,75 @@ export default function A2Page() {
             </div>
           </div>
         </div>
+
+        {/* SEO Content */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-16 mb-12 text-right"
+        >
+          <h2 className="text-2xl font-bold mb-5">
+            آموزش حضوری زبان آلمانی A2 در اصفهان و آنلاین
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            اگر سطح A1 زبان آلمانی را گذرانده‌اید، دوره A2 در آکادمی
+            دویچینو به شما کمک می‌کند دانش زبانی خود را گسترش دهید و
+            برای برقراری ارتباط در موقعیت‌های روزمره آماده‌تر شوید.
+            این دوره به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین برگزار می‌شود.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            در سطح A2 چه چیزهایی یاد می‌گیرید؟
+          </h2>
+
+          <p className="text-base leading-9 mb-4">
+            در این سطح، گرامر و واژگان زبان آلمانی را عمیق‌تر یاد
+            می‌گیرید و برای صحبت‌کردن درباره موضوعات روزمره، تجربه‌ها،
+            برنامه‌ها و نیازهای شخصی تمرین می‌کنید. تمرکز کلاس فقط بر
+            کتاب نیست و تقویت مهارت‌های شنیدن، صحبت‌کردن، خواندن و
+            نوشتن نیز اهمیت دارد.
+          </p>
+
+          <ul className="list-disc pr-6 space-y-3 leading-8 mb-6">
+            <li>تقویت گرامر و ساختار جمله در سطح A2</li>
+            <li>افزایش دایره واژگان کاربردی زبان آلمانی</li>
+            <li>تمرین مکالمه در موقعیت‌های روزمره</li>
+            <li>تقویت مهارت‌های شنیدن، خواندن و نوشتن</li>
+            <li>آمادگی برای ادامه مسیر یادگیری در سطح B1</li>
+          </ul>
+
+          <h2 className="text-xl font-bold mb-4">
+            کلاس خصوصی یا گروهی A2؛ کدام مناسب شماست؟
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            در کلاس خصوصی می‌توانید با توجه به زمان، سرعت یادگیری و
+            نیازهای خود پیش بروید. کلاس گروهی نیز فرصت تمرین مکالمه و
+            تعامل با زبان‌آموزان دیگر را فراهم می‌کند. برای انتخاب
+            دوره مناسب، می‌توانید از طریق واتساپ درباره شرایط کلاس‌ها سؤال کنید.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            پیش‌نیاز شرکت در دوره A2
+          </h2>
+
+          <p className="text-base leading-9 mb-6">
+            برای شروع این دوره، آشنایی با مطالب سطح A1 زبان آلمانی
+            لازم است. اگر مدتی از مطالعه شما گذشته یا درباره سطح فعلی
+            خود مطمئن نیستید، پیش از ثبت‌نام می‌توانید درباره تعیین
+            سطح و انتخاب دوره مناسب مشورت بگیرید.
+          </p>
+
+          <h2 className="text-xl font-bold mb-4">
+            ثبت‌نام کلاس زبان آلمانی A2 در دویچینو
+          </h2>
+
+          <p className="text-base leading-9">
+            برای اطلاع از زمان برگزاری کلاس‌های خصوصی و گروهی، هزینه
+            دوره و امکان شرکت حضوری در اصفهان یا آنلاین، از دکمه‌های
+            ثبت‌نام همین صفحه استفاده کنید.
+          </p>
+        </section>
       </div>
     </main>
   );
