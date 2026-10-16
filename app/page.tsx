@@ -155,7 +155,7 @@ export default function Home() {
       {/* COURSES SECTION */}
       <section
         id="courses"
-        className="scroll-mt-20 bg-gray-50 px-6 pt-5 py-24"
+        className="scroll-mt-20 bg-gray-50 px-6 pt-10 py-24"
       >
         <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
