@@ -395,6 +395,7 @@ export default function Home() {
         <Reviews />
       </section>
 
+      
       {/* FOOTER */}
       <footer className="relative mt-24 overflow-hidden bg-blue-950 py-1 text-white">
         <img
@@ -451,6 +452,29 @@ export default function Home() {
                     نظر، اولین کوچه سمت راست (میدان کوچک ۱۰)، بالای کافه
                     قهوینه، آکادمی دویچینو
                   </address>
+
+                  {/* GOOGLE MAP - BUILDING LOCATION */}
+                  <div className="mt-4 w-full overflow-hidden rounded-xl">
+                    <iframe
+                      src="https://maps.google.com/maps?q=32.63556027577545,51.653918485331474&z=18&output=embed"
+                      width="100%"
+                      height="280"
+                      style={{ border: 0, pointerEvents: "none" }}
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      title="موقعیت آکادمی دویچینو در اصفهان"
+                    />
+                  </div>
+
+                  {/* DIRECTIONS BUTTON */}
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=32.63556027577545%2C51.653918485331474"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center justify-center rounded-lg bg-green-700 px-5 py-3 text-white transition hover:bg-green-800"
+                  >
+                    مسیریابی به آکادمی دویچینو
+                  </a>
                 </div>
 
                 <div>
@@ -490,6 +514,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
       <BackToTop />
     </main>
   );
