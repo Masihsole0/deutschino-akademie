@@ -63,6 +63,12 @@ export const metadata: Metadata = {
     siteName: "آکادمی دویچینو",
     title: siteTitle,
     description: siteDescription,
+    images: [
+      {
+        url: "/mee.jpg",
+        alt: "مسیح سلیمانی، مدرس زبان آلمانی و چهره آکادمی دویچینو",
+      },
+    ],
   },
 };
 

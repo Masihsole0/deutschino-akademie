@@ -21,15 +21,22 @@ export const organizationSchema = {
         "@id": `${websiteUrl}/#instructor`,
       },
     },
-    {
-      "@type": "Person",
-      "@id": `${websiteUrl}/#instructor`,
-      name: "مسیح سلیمانی",
-      jobTitle: "مدرس زبان آلمانی",
-      worksFor: {
-        "@id": `${websiteUrl}/#organization`,
-      },
-    },
+    
+{
+  "@type": "Person",
+  "@id": `${websiteUrl}/#instructor`,
+  name: "مسیح سلیمانی",
+  alternateName: "Masih Soleimani",
+  url: `${websiteUrl}/#instructor`,
+  image: {
+    "@type": "ImageObject",
+    url: `${websiteUrl}/mee.jpg`,
+  },
+  jobTitle: "مدرس زبان آلمانی",
+  worksFor: {
+    "@id": `${websiteUrl}/#organization`,
+  },
+},
     {
       "@type": "Course",
       "@id": `${websiteUrl}/#german-courses`,
