@@ -92,7 +92,7 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش زبان آلمانی در اصفهان
+            آموزش حرفه‌ای زبان آلمانی با متود تخصصی
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
@@ -215,7 +215,7 @@ export default function Home() {
           {/* ADDITIONAL COURSE INFORMATION */}
           <div className="mx-auto mt-16 max-w-4xl text-right">
             <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
-              کلاس زبان آلمانی حضوری در اصفهان و آنلاین
+              کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
             </h3>
 
             <p className="mt-4 leading-9 text-gray-700">
