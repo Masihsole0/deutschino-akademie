@@ -212,71 +212,74 @@ export default function Home() {
             ))}
           </div>
 
-          {/* ADDITIONAL COURSE INFORMATION */}
-          <div className="mx-auto mt-16 max-w-4xl text-right">
-            <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
-              کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
-            </h3>
+          
+{/* ADDITIONAL COURSE INFORMATION */}
+<div className="mx-auto mt-16 max-w-4xl text-right">
+  <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
+    کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
+  </h3>
 
-            <p className="mt-4 leading-9 text-gray-700">
-              اگر قصد دارید زبان آلمانی را برای ادامه تحصیل، کار، مهاجرت یا
-              ارتباط روزمره یاد بگیرید، انتخاب سطح مناسب و داشتن برنامه‌ای
-              منظم می‌تواند مسیر یادگیری را روشن‌تر کند. در آکادمی دویچینو،
-              امکان بررسی دوره‌های مختلف و انتخاب کلاس متناسب با سطح و هدف
-              شما وجود دارد.
-            </p>
+  <p className="mt-4 leading-9 text-gray-700">
+    اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
+    هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
+    را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
+    زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
+    می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
+    و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
+    زبان آلمانی داشته باشید.
+  </p>
 
-            <p className="mt-3 leading-9 text-gray-700">
-              اگر در ابتدای مسیر هستید، دوره{" "}
-              <Link
-                href="/courses/a1"
-                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-              >
-                زبان آلمانی A1
-              </Link>{" "}
-              برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
-              می‌توانید اطلاعات{" "}
-              <Link
-                href="/courses/a2"
-                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-              >
-                دوره A2
-              </Link>{" "}
-              و{" "}
-              <Link
-                href="/courses/b1"
-                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-              >
-                دوره B1
-              </Link>{" "}
-              را ببینید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید، صفحه{" "}
-              <Link
-                href="/courses/conversation"
-                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-              >
-                کلاس مکالمه زبان آلمانی
-              </Link>{" "}
-              را بررسی کنید.
-            </p>
+  <p className="mt-3 leading-9 text-gray-700">
+    اگر در ابتدای مسیر هستید، دوره{" "}
+    <Link
+      href="/courses/a1"
+      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+    >
+      زبان آلمانی A1
+    </Link>{" "}
+    برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
+    می‌توانید اطلاعات{" "}
+    <Link
+      href="/courses/a2"
+      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+    >
+      دوره A2
+    </Link>{" "}
+    و{" "}
+    <Link
+      href="/courses/b1"
+      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+    >
+      دوره B1
+    </Link>{" "}
+    را ببینید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید، صفحه{" "}
+    <Link
+      href="/courses/conversation"
+      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+    >
+      کلاس مکالمه زبان آلمانی
+    </Link>{" "}
+    را بررسی کنید.
+  </p>
 
-            <p className="mt-3 leading-9 text-gray-700">
-              برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
-              طریق واتساپ پیام بدهید.
-            </p>
+  <p className="mt-3 leading-9 text-gray-700">
+    برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
+    طریق واتساپ پیام بدهید.
+  </p>
 
-            <div className="mt-6">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
-              >
-                دریافت مشاوره و انتخاب دوره
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="mt-6">
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
+    >
+      دریافت مشاوره و انتخاب دوره
+    </a>
+  </div>
+</div>
+</div>
+</section>
 
       {/* ABOUT TEACHER SECTION */}
       <section id="about" className="scroll-mt-20 bg-white px-6 py-24">

@@ -8,11 +8,11 @@ const vazir = Vazirmatn({
   subsets: ["arabic"],
 });
 
-const siteTitle = "آموزش زبان آلمانی در اصفهان | مسیح سلیمانی";
+const siteTitle = "آموزش زبان آلمانی در اصفهان | آکادمی دویچینو";
 const siteDescription =
-  "کلاس زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی در آکادمی دویچینو. آشنایی با دوره‌های A1، A2، B1 و مکالمه، مشاهده جزئیات کلاس‌ها و انتخاب دوره متناسب با هدف شما.";
+  "آموزش زبان آلمانی در اصفهان و آنلاین با آکادمی دویچینو. آشنایی با دوره‌های A1، A2، B1 و مکالمه، بررسی جزئیات کلاس‌ها و انتخاب دوره مناسب برای یادگیری زبان آلمانی.";
 
-export const metadata: Metadata = {
+  export const metadata: Metadata = {
   metadataBase: new URL("https://www.deutschino.ir"),
 
   title: siteTitle,
