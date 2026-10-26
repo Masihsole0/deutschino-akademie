@@ -1,7 +1,6 @@
 
 "use client";
 
-import { supabase } from "@/lib/supabase";
 import { useEffect, useRef, useState } from "react";
 
 type Review = {
@@ -11,7 +10,7 @@ type Review = {
   avatar_url: string | null;
 };
 
-// فشرده‌سازی عکس‌های جدید قبل از آپلود
+// فشرده‌سازی عکس قبل از ارسال
 async function compressImage(file: File): Promise<File> {
   const bitmap = await createImageBitmap(file);
 
@@ -58,6 +57,21 @@ async function compressImage(file: File): Promise<File> {
   }
 }
 
+// تبدیل اعداد فارسی و عربی به انگلیسی
+function normalizePhone(value: string): string {
+  return value.trim().replace(/[۰-۹٠-٩]/g, (digit) => {
+    const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+    const arabicDigits = "٠١٢٣٤٥٦٧٨٩";
+    const persianIndex = persianDigits.indexOf(digit);
+
+    return String(
+      persianIndex !== -1
+        ? persianIndex
+        : arabicDigits.indexOf(digit)
+    );
+  });
+}
+
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -88,6 +102,7 @@ export default function Reviews() {
       try {
         const response = await fetch("/api/reviews", {
           cache: "no-store",
+          signal: AbortSignal.timeout(15000),
         });
 
         if (!response.ok) {
@@ -96,20 +111,23 @@ export default function Reviews() {
 
         const data: Review[] = await response.json();
 
-        if (isMounted) {
-          const loadedReviews = data ?? [];
-          setReviews(loadedReviews);
+        if (!isMounted) return;
 
-          if (loadedReviews.length === 0) {
-            activeIndexRef.current = 0;
-            setActive(0);
-          } else if (activeIndexRef.current >= loadedReviews.length) {
-            activeIndexRef.current = 0;
-            setActive(0);
-          }
+        const loadedReviews = Array.isArray(data) ? data : [];
+
+        setReviews(loadedReviews);
+
+        if (
+          loadedReviews.length === 0 ||
+          activeIndexRef.current >= loadedReviews.length
+        ) {
+          activeIndexRef.current = 0;
+          setActive(0);
         }
       } catch (error) {
-        console.error("خطای دریافت نظرات:", error);
+        if (isMounted) {
+          console.error("خطای دریافت نظرات:", error);
+        }
       } finally {
         if (isMounted) {
           setIsLoadingReviews(false);
@@ -124,7 +142,7 @@ export default function Reviews() {
     };
   }, []);
 
-  // تشخیص نظرات طولانی برای نمایش دکمه «ادامه مطلب»
+  // تشخیص نظرات طولانی برای نمایش «ادامه مطلب»
   useEffect(() => {
     const checkLongReviews = () => {
       const long: number[] = [];
@@ -138,8 +156,15 @@ export default function Reviews() {
       setLongReviews(long);
     };
 
-    checkLongReviews();
-  }, [reviews]);
+    const frame = requestAnimationFrame(checkLongReviews);
+
+    window.addEventListener("resize", checkLongReviews);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("resize", checkLongReviews);
+    };
+  }, [reviews, active, expandedReview]);
 
   // انتخاب تصادفی نظر هنگام ورود دوباره به بخش نظرات
   useEffect(() => {
@@ -155,9 +180,7 @@ export default function Reviews() {
       (entries) => {
         const entry = entries[0];
 
-        if (!entry) {
-          return;
-        }
+        if (!entry) return;
 
         if (entry.isIntersecting && !wasVisible) {
           const currentIndex =
@@ -191,9 +214,7 @@ export default function Reviews() {
 
     observer.observe(trigger);
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, [reviews.length]);
 
   // نظر بعدی
@@ -221,111 +242,81 @@ export default function Reviews() {
     setExpandedReview(null);
   };
 
-  // ثبت نظر
+  // ثبت نظر از طریق API سرور
   const submitReview = async () => {
     if (isSubmitting) return;
+
+    const cleanName = name.trim();
+    const cleanComment = text.trim();
+    const convertedPhone = normalizePhone(phone);
+
+    if (!cleanName || !level || !cleanComment || !convertedPhone) {
+      alert("لطفاً همه فیلدهای ضروری را تکمیل کنید.");
+      return;
+    }
+
+    if (!/^09\d{9}$/.test(convertedPhone)) {
+      alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
+      return;
+    }
+
+    if (!["A1", "A2", "B1", "B2"].includes(level)) {
+      alert("لطفاً سطح زبان را انتخاب کنید.");
+      return;
+    }
+
+    if (selectedImage && selectedImage.size > 10 * 1024 * 1024) {
+      alert("حجم عکس اولیه نباید بیشتر از ۱۰ مگابایت باشد.");
+      return;
+    }
 
     setIsSubmitting(true);
 
     try {
-      // تبدیل اعداد فارسی و عربی به انگلیسی
-      const convertedPhone = phone.trim().replace(
-        /[۰-۹٠-٩]/g,
-        (digit) => {
-          const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
-          const arabicDigits = "٠١٢٣٤٥٦٧٨٩";
+      let imageToUpload: File | null = selectedImage;
 
-          const persianIndex = persianDigits.indexOf(digit);
-
-          return String(
-            persianIndex !== -1
-              ? persianIndex
-              : arabicDigits.indexOf(digit)
-          );
-        }
-      );
-
-      if (!/^09\d{9}$/.test(convertedPhone)) {
-        alert("شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود.");
-        return;
-      }
-
-      // بررسی شماره‌های ثبت‌شده قبلی
-      const { data: existingReview, error: checkError } =
-        await supabase
-          .from("reviews")
-          .select("phone")
-          .eq("phone", convertedPhone)
-          .limit(1);
-
-      if (checkError) {
-        console.error("خطا در بررسی شماره:", checkError);
-        alert("خطا در بررسی شماره");
-        return;
-      }
-
-      if (existingReview && existingReview.length > 0) {
-        alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
-        return;
-      }
-
-      let avatarUrl = "";
-
-      // فشرده‌سازی و آپلود عکس پروفایل
       if (selectedImage) {
-        let compressedImage: File;
-
         try {
-          compressedImage = await compressImage(selectedImage);
+          imageToUpload = await compressImage(selectedImage);
         } catch (error) {
           console.error("خطا در فشرده‌سازی عکس:", error);
           alert("تبدیل عکس ناموفق بود. لطفاً عکس دیگری انتخاب کنید.");
           return;
         }
-
-        const fileName = `${Date.now()}-${compressedImage.name}`;
-
-        const { error: uploadError } = await supabase.storage
-          .from("review-images")
-          .upload(fileName, compressedImage, {
-            contentType: "image/webp",
-            cacheControl: "31536000",
-            upsert: false,
-          });
-
-        if (uploadError) {
-          console.error("خطا در آپلود عکس:", uploadError);
-          alert("خطا در آپلود عکس");
-          return;
-        }
-
-        const { data } = supabase.storage
-          .from("review-images")
-          .getPublicUrl(fileName);
-
-        avatarUrl = data.publicUrl;
       }
 
-      // ذخیره نظر در دیتابیس
-      const { error: insertError } = await supabase
-        .from("reviews")
-        .insert([
-          {
-            full_name: name.trim(),
-            level,
-            comment: text.trim(),
-            phone: convertedPhone,
-            avatar_url: avatarUrl,
-          },
-        ]);
+      const formData = new FormData();
+      formData.append("name", cleanName);
+      formData.append("level", level);
+      formData.append("comment", cleanComment);
+      formData.append("phone", convertedPhone);
 
-      if (insertError) {
-        console.error("خطا در ثبت نظر:", insertError);
-        alert("خطا در ثبت نظر");
+      if (imageToUpload) {
+        formData.append("image", imageToUpload);
+      }
+
+      const response = await fetch("/api/reviews", {
+        method: "POST",
+        body: formData,
+        signal: AbortSignal.timeout(30000),
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        if (response.status === 409) {
+          alert("شما قبلاً با این شماره نظر ثبت کرده‌اید.");
+        } else {
+          alert(
+            result?.error ||
+              "ثبت نظر ناموفق بود. لطفاً دوباره تلاش کنید."
+          );
+        }
+
         return;
       }
 
-      alert("نظر شما ثبت شد");
+      alert("نظر شما با موفقیت ثبت شد.");
 
       setName("");
       setLevel("");
@@ -334,9 +325,36 @@ export default function Reviews() {
       setSelectedImage(null);
       setSelectedImageName("");
       setShowForm(false);
+
+      // دریافت دوباره نظرات برای نمایش اطلاعات تازه
+      try {
+        const refreshResponse = await fetch("/api/reviews", {
+          cache: "no-store",
+          signal: AbortSignal.timeout(15000),
+        });
+
+        if (refreshResponse.ok) {
+          const updatedReviews: Review[] = await refreshResponse.json();
+
+          if (Array.isArray(updatedReviews)) {
+            setReviews(updatedReviews);
+          }
+        }
+      } catch (refreshError) {
+        console.error("خطا در به‌روزرسانی نظرات:", refreshError);
+      }
     } catch (error) {
-      console.error("خطای غیرمنتظره در ثبت نظر:", error);
-      alert("خطایی رخ داد. لطفاً دوباره تلاش کنید.");
+      console.error("خطای ثبت نظر:", error);
+
+      if (error instanceof Error && error.name === "TimeoutError") {
+        alert(
+          "زمان درخواست تمام شد. قبل از تلاش دوباره، بررسی کن که نظر ثبت نشده باشد."
+        );
+      } else {
+        alert(
+          "ارتباط با سرور برقرار نشد. لطفاً اتصال را بررسی و دوباره تلاش کنید."
+        );
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -368,9 +386,7 @@ export default function Reviews() {
             if (index === active) {
               position =
                 "translate-x-0 scale-100 opacity-100 blur-0 z-20";
-            } else if (
-              index === (active + 1) % reviews.length
-            ) {
+            } else if (index === (active + 1) % reviews.length) {
               position =
                 "translate-x-40 md:translate-x-72 scale-95 opacity-70 blur-[1px] z-10";
             } else {
@@ -380,7 +396,7 @@ export default function Reviews() {
 
             return (
               <div
-                key={index}
+                key={`${review.full_name}-${index}`}
                 className={`
                   absolute
                   w-[85vw] max-w-[300px] min-h-[350px]
@@ -413,6 +429,7 @@ export default function Reviews() {
 
                       {longReviews.includes(index) && (
                         <button
+                          type="button"
                           onClick={() =>
                             setExpandedReview(
                               expandedReview === index ? null : index
@@ -440,6 +457,9 @@ export default function Reviews() {
                         height={48}
                         loading="lazy"
                         decoding="async"
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
                         className="w-12 h-12 rounded-full object-cover border"
                       />
                     ) : (
@@ -473,6 +493,7 @@ export default function Reviews() {
 
       <div className="flex flex-row-reverse justify-center gap-4 mt-8">
         <button
+          type="button"
           onClick={prevReview}
           disabled={reviews.length <= 1}
           className="bg-gray-200 px-6 py-3 rounded-full disabled:opacity-50"
@@ -481,6 +502,7 @@ export default function Reviews() {
         </button>
 
         <button
+          type="button"
           onClick={nextReview}
           disabled={reviews.length <= 1}
           className="bg-blue-900 text-white px-6 py-3 rounded-full disabled:opacity-50"
@@ -489,6 +511,7 @@ export default function Reviews() {
         </button>
 
         <button
+          type="button"
           onClick={() => setShowForm((previous) => !previous)}
           className="border border-blue-900 text-blue-900 px-6 py-3 rounded-full"
         >
@@ -506,14 +529,17 @@ export default function Reviews() {
             type="text"
             placeholder="نام و نام خانوادگی"
             value={name}
+            maxLength={100}
             onChange={(event) => setName(event.target.value)}
             className="w-full border rounded-xl p-3 mb-4"
           />
 
           <input
-            type="text"
+            type="tel"
+            inputMode="tel"
             placeholder="شماره تلفن"
             value={phone}
+            maxLength={15}
             onChange={(event) => setPhone(event.target.value)}
             className="w-full border rounded-xl p-3 mb-4"
           />
@@ -533,6 +559,7 @@ export default function Reviews() {
           <textarea
             placeholder="نظر شما"
             value={text}
+            maxLength={3000}
             onChange={(event) => setText(event.target.value)}
             className="w-full border rounded-xl p-3 h-32 mb-4"
           />
@@ -544,7 +571,7 @@ export default function Reviews() {
 
             <input
               type="file"
-              accept="image/*"
+              accept="image/jpeg,image/png,image/webp"
               onChange={(event) => {
                 const file = event.target.files?.[0];
 
@@ -558,11 +585,12 @@ export default function Reviews() {
           </label>
 
           <button
+            type="button"
             onClick={submitReview}
             disabled={isSubmitting}
             className="w-full bg-blue-900 text-white py-3 rounded-xl disabled:opacity-50"
           >
-            {isSubmitting ? "... در حال ارسال" : "ارسال نظر"}
+            {isSubmitting ? "در حال ارسال..." : "ارسال نظر"}
           </button>
         </div>
       )}
