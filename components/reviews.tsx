@@ -80,27 +80,26 @@ export default function Reviews() {
   const activeIndexRef = useRef(0);
   const hasRandomizedRef = useRef(false);
 
-  // دریافت نظرات از Supabase
+  // دریافت نظرات از API سایت
   useEffect(() => {
     let isMounted = true;
 
     const getReviews = async () => {
       try {
-        const { data, error } = await supabase
-          .from("reviews")
-          .select("*");
+        const response = await fetch("/api/reviews", {
+          cache: "no-store",
+        });
 
-        if (error) {
-          console.error("خطا در دریافت نظرات:", error);
-          return;
+        if (!response.ok) {
+          throw new Error(`خطا در دریافت نظرات: ${response.status}`);
         }
 
+        const data: Review[] = await response.json();
+
         if (isMounted) {
-          const loadedReviews = (data ?? []) as Review[];
+          const loadedReviews = data ?? [];
           setReviews(loadedReviews);
 
-          // اگر به هر دلیلی تعداد نظرات تغییر کرد،
-          // شاخص فعلی را در محدوده معتبر نگه می‌داریم.
           if (loadedReviews.length === 0) {
             activeIndexRef.current = 0;
             setActive(0);
@@ -143,7 +142,6 @@ export default function Reviews() {
   }, [reviews]);
 
   // انتخاب تصادفی نظر هنگام ورود دوباره به بخش نظرات
-  // مرجع روی عنوان قرار دارد تا خروج و ورود دوباره راحت‌تر تشخیص داده شود.
   useEffect(() => {
     const trigger = randomTriggerRef.current;
 
@@ -168,10 +166,8 @@ export default function Reviews() {
           let nextIndex: number;
 
           if (!hasRandomizedRef.current) {
-            // بار اول، هر نظری می‌تواند انتخاب شود.
             nextIndex = Math.floor(Math.random() * reviews.length);
           } else {
-            // دفعات بعد، نظر جدید با نظر فعلی متفاوت خواهد بود.
             const randomIndex = Math.floor(
               Math.random() * (reviews.length - 1)
             );
@@ -283,9 +279,7 @@ export default function Reviews() {
           compressedImage = await compressImage(selectedImage);
         } catch (error) {
           console.error("خطا در فشرده‌سازی عکس:", error);
-          alert(
-            "تبدیل عکس ناموفق بود. لطفاً عکس دیگری انتخاب کنید."
-          );
+          alert("تبدیل عکس ناموفق بود. لطفاً عکس دیگری انتخاب کنید.");
           return;
         }
 
@@ -362,9 +356,7 @@ export default function Reviews() {
 
       <div className="relative flex flex-row-reverse justify-center items-center h-[380px] md:h-80">
         {isLoadingReviews ? (
-          <p className="text-gray-500">
-            در حال بارگذاری نظرات...
-          </p>
+          <p className="text-gray-500">در حال بارگذاری نظرات...</p>
         ) : reviews.length === 0 ? (
           <p className="text-gray-500">
             هنوز نظری برای نمایش وجود ندارد.
@@ -423,9 +415,7 @@ export default function Reviews() {
                         <button
                           onClick={() =>
                             setExpandedReview(
-                              expandedReview === index
-                                ? null
-                                : index
+                              expandedReview === index ? null : index
                             )
                           }
                           className="text-blue-600 text-sm mt-2"
