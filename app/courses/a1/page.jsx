@@ -58,16 +58,18 @@ export default function A1Page() {
         </div>
 
         {/* Banner */}
-        <div className="flex justify-center">
-          <Image
-            src="/books.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی سطح A1"
-            width={900}
-            height={350}
-            className="rounded-2xl shadow-xl object-cover"
-            priority
-          />
-        </div>
+        
+<div className="flex justify-center">
+  <Image
+    src="/books.jpg"
+    alt="کتاب‌های آموزش زبان آلمانی سطح A1"
+    width={900}
+    height={350}
+    className="rounded-2xl shadow-xl object-cover md:max-w-[650px] md:w-full"
+    priority
+  />
+</div>
+
 
         {/* Main Title */}
         <div className="text-center mt-12">
