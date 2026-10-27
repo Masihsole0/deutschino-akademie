@@ -63,9 +63,9 @@ export default function A2Page() {
             src="/books2.jpg"
             alt="کتاب‌های آموزش زبان آلمانی سطح A2"
             width={900}
-            height={350}
-            className="rounded-3xl shadow-xl object-cover"
-            priority
+    height={350}
+    className="rounded-2xl shadow-xl object-cover md:max-w-[650px] md:w-full"
+    priority
           />
         </div>
 
