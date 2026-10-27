@@ -64,7 +64,7 @@ export default function A1Page() {
             alt="کتاب‌های آموزش زبان آلمانی سطح A1"
             width={900}
             height={350}
-            className="rounded-3xl shadow-xl object-cover"
+            className="rounded-2xl shadow-xl object-cover"
             priority
           />
         </div>
