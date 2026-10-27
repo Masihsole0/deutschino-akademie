@@ -70,32 +70,6 @@ export default function A1Page() {
   />
 </div>
 
-
-        {/* Main Title */}
-        <div className="text-center mt-12">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            دوره زبان آلمانی A1
-          </h1>
-
-          <p
-            dir="rtl"
-            className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            در دوره زبان آلمانی A1 آکادمی دویچینو، یادگیری را از پایه شروع
-            می‌کنید و با واژگان پرکاربرد، گرامر مقدماتی و مکالمه‌های روزمره
-            آشنا می‌شوید.
-          </p>
-
-          <p
-            dir="rtl"
-            className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            این دوره به‌صورت خصوصی و گروهی ارائه می‌شود و امکان شرکت در کلاس
-            حضوری در اصفهان یا آنلاین نیز وجود دارد. در پایان سطح A1، برای
-            ادامه یادگیری در سطح A2 آماده‌تر خواهید بود.
-          </p>
-        </div>
-
         {/* SEO Content */}
         <section
           dir="rtl"
