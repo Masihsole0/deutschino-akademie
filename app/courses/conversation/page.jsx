@@ -193,7 +193,7 @@ export default function ConversationPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]">ندارد</span>
+              <span className="font-bold text-[#0A2540]">hören sprechen B1</span>
               <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
                 <Book size={18} />
                 <span className="font-semibold">کتاب آموزشی</span>

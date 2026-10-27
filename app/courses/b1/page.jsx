@@ -200,7 +200,7 @@ export default function B1Page() {
 
               <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold break-words">
-                  Menschen B1.1 / Menschen B1.2
+                  Menschen B1.1 / B1.2
                 </span>
                 <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />
@@ -287,7 +287,7 @@ export default function B1Page() {
 
               <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
                 <span className="font-bold break-words">
-                  Menschen B1.1 / Menschen B1.2
+                  Menschen B1.1 / B1.2
                 </span>
                 <div className="flex flex-row-reverse items-center gap-3 shrink-0">
                   <Book size={18} />

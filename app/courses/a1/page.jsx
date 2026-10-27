@@ -206,7 +206,7 @@ export default function A1Page() {
 
               <div className="flex justify-between items-center px-8 py-5">
                 <span className="font-bold">
-                  Menschen A1.1 / Menschen A1.2
+                  Menschen A1.1 / A1.2
                 </span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18} />
@@ -293,7 +293,7 @@ export default function A1Page() {
 
               <div className="flex justify-between items-center px-8 py-5">
                 <span className="font-bold">
-                  Menschen A1.1 / Menschen A1.2
+                  Menschen A1.1 / A1.2
                 </span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Book size={18} />
