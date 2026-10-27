@@ -148,6 +148,22 @@ export default function Home() {
               <span aria-hidden="true">⭐</span>
               <span>نظرات زبان‌آموزان</span>
             </a>
+
+            <a
+              href="#why-us"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              <span aria-hidden="true">✨</span>
+              <span>چرا دویچینو؟</span>
+            </a>
+
+            <a
+              href="#contact"
+              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
+            >
+              <span aria-hidden="true">📍</span>
+              <span>ارتباط با ما</span>
+            </a>
           </div>
         </div>
       </section>
@@ -212,74 +228,73 @@ export default function Home() {
             ))}
           </div>
 
-          
-{/* ADDITIONAL COURSE INFORMATION */}
-<div className="mx-auto mt-16 max-w-4xl text-right">
-  <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
-    کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
-  </h3>
+          {/* ADDITIONAL COURSE INFORMATION */}
+          <div className="mx-auto mt-16 max-w-4xl text-right">
+            <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
+              کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
+            </h3>
 
-  <p className="mt-4 leading-9 text-gray-700">
-    اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
-    هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
-    را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
-    زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
-    می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
-    و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
-    زبان آلمانی داشته باشید.
-  </p>
+            <p className="mt-4 leading-9 text-gray-700">
+              اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
+              هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
+              را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
+              زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
+              می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
+              و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
+              زبان آلمانی داشته باشید.
+            </p>
 
-  <p className="mt-3 leading-9 text-gray-700">
-    اگر در ابتدای مسیر هستید، دوره{" "}
-    <Link
-      href="/courses/a1"
-      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-    >
-      زبان آلمانی A1
-    </Link>{" "}
-    برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
-    می‌توانید اطلاعات{" "}
-    <Link
-      href="/courses/a2"
-      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-    >
-      دوره A2
-    </Link>{" "}
-    و{" "}
-    <Link
-      href="/courses/b1"
-      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-    >
-      دوره B1
-    </Link>{" "}
-    را ببینید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید، صفحه{" "}
-    <Link
-      href="/courses/conversation"
-      className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
-    >
-      کلاس مکالمه زبان آلمانی
-    </Link>{" "}
-    را بررسی کنید.
-  </p>
+            <p className="mt-3 leading-9 text-gray-700">
+              اگر در ابتدای مسیر هستید، دوره{" "}
+              <Link
+                href="/courses/a1"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                زبان آلمانی A1
+              </Link>{" "}
+              برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
+              می‌توانید اطلاعات{" "}
+              <Link
+                href="/courses/a2"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره A2
+              </Link>{" "}
+              و{" "}
+              <Link
+                href="/courses/b1"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره B1
+              </Link>{" "}
+              را ببینید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید، صفحه{" "}
+              <Link
+                href="/courses/conversation"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                کلاس مکالمه زبان آلمانی
+              </Link>{" "}
+              را بررسی کنید.
+            </p>
 
-  <p className="mt-3 leading-9 text-gray-700">
-    برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
-    طریق واتساپ پیام بدهید.
-  </p>
+            <p className="mt-3 leading-9 text-gray-700">
+              برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
+              طریق واتساپ پیام بدهید.
+            </p>
 
-  <div className="mt-6">
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
-    >
-      دریافت مشاوره و انتخاب دوره
-    </a>
-  </div>
-</div>
-</div>
-</section>
+            <div className="mt-6">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
+              >
+                دریافت مشاوره و انتخاب دوره
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT TEACHER SECTION */}
       <section id="about" className="scroll-mt-20 bg-white px-6 py-24">
@@ -398,11 +413,11 @@ export default function Home() {
         <Reviews />
       </section>
 
-      
-      
-      
       {/* FOOTER */}
-      <footer className="relative mt-24 overflow-hidden bg-blue-950 py-1 text-white">
+      <footer
+        id="contact"
+        className="relative mt-24 overflow-hidden bg-blue-950 py-1 text-white"
+      >
         <img
           src="/footer-bg.png"
           alt=""
@@ -524,5 +539,3 @@ export default function Home() {
     </main>
   );
 }
-
-
