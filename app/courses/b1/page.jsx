@@ -69,31 +69,6 @@ export default function B1Page() {
           />
         </div>
 
-        {/* Title */}
-        <div className="text-center mt-12">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            دوره زبان آلمانی B1
-          </h1>
-
-          <p
-            dir="rtl"
-            className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            در دوره زبان آلمانی B1 آکادمی دویچینو، دانش خود را از سطح A2
-            گسترش می‌دهید و با گرامر، واژگان و موضوعات متنوع‌تری آشنا می‌شوید.
-          </p>
-
-          <p
-            dir="rtl"
-            className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            این دوره به‌صورت خصوصی و گروهی برگزار می‌شود و امکان شرکت
-            حضوری در اصفهان یا آنلاین نیز وجود دارد. هدف دوره، تقویت
-            مهارت‌های خواندن، شنیدن، صحبت‌کردن و نوشتن و آماده‌شدن برای
-            ادامه یادگیری در سطح B2 است.
-          </p>
-        </div>
-
         {/* SEO Content */}
         <section
           dir="rtl"

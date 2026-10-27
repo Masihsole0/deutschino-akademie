@@ -68,31 +68,6 @@ export default function ConversationPage() {
           />
         </div>
 
-        {/* Title */}
-        <div className="text-center mt-12">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#0A2540]">
-            دوره مکالمه زبان آلمانی
-          </h1>
-
-          <p
-            dir="rtl"
-            className="mt-5 text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            در دوره مکالمه زبان آلمانی آکادمی دویچینو، برای صحبت‌کردن
-            در موقعیت‌های روزمره و کاری تمرین می‌کنید و توانایی بیان
-            منظور خود را به زبان آلمانی تقویت می‌کنید.
-          </p>
-
-          <p
-            dir="rtl"
-            className="text-base md:text-lg leading-9 max-w-3xl mx-auto text-center"
-          >
-            تمرین‌ها بر صحبت‌کردن، افزایش روانی گفتار و استفاده از
-            عبارت‌های کاربردی تمرکز دارند. این دوره برای زبان‌آموزانی
-            طراحی شده است که سطح B1 زبان آلمانی را دارند.
-          </p>
-        </div>
-
         {/* SEO Content */}
         <section
           dir="rtl"
