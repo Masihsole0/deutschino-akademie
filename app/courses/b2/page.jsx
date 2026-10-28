@@ -236,7 +236,7 @@ export default function B2Page() {
 
             <div className="divide-y">
               <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
-                <span className="font-bold">با هماهنگی مدرس</span>
+                <span className="font-bold">بدون محدودیت جلسه‌</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
                   <span>تعداد جلسات</span>
@@ -244,7 +244,7 @@ export default function B2Page() {
               </div>
 
               <div className="flex flex-wrap justify-between items-center gap-3 px-8 py-5">
-                <span className="font-bold">با هماهنگی مدرس</span>
+                <span className="font-bold">بدون محدودیت زمانی</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
                   <span>مدت زمان</span>
