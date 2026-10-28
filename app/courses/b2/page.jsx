@@ -60,7 +60,7 @@ export default function B2Page() {
         {/* Banner */}
         <div className="flex justify-center">
           <Image
-            src="/books3.jpg"
+            src="/books4.jpg"
             alt="کتاب‌های آموزش زبان آلمانی سطح B2"
             width={900}
             height={350}

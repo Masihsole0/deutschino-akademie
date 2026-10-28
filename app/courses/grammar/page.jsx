@@ -59,7 +59,7 @@ export default function GrammarPage() {
         {/* Banner */}
         <div className="flex justify-center">
           <Image
-            src="/books3.jpg"
+            src="/books5.jpg"
             alt="دوره گرامر زبان آلمانی A1 تا B2 در آکادمی دویچینو"
             width={700}
             height={240}
