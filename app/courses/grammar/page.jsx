@@ -229,7 +229,7 @@ export default function GrammarPage() {
                     هر جلسه
                   </p>
                   <span className="text-gray-500">
-                    با هماهنگی قبلی
+                    ۹۰ دقیقه‌ای
                   </span>
                 </div>
               </div>
