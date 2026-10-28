@@ -28,9 +28,19 @@ export default function Home() {
       href: "/courses/b1",
     },
     {
+      title: "B2 پیشرفته",
+      description: "تقویت مهارت‌های زبان آلمانی در سطح پیشرفته",
+      href: "/courses/b2",
+    },
+    {
       title: "کلاس مکالمه",
       description: "تمرین مکالمه و افزایش توانایی صحبت‌کردن به زبان آلمانی",
       href: "/courses/conversation",
+    },
+    {
+      title: "گرامر A1 تا B2",
+      description: "یادگیری و تقویت گرامر آلمانی از پایه تا پیشرفته",
+      href: "/courses/grammar",
     },
   ];
 
@@ -200,26 +210,28 @@ export default function Home() {
 
           <div
             dir="ltr"
-            className="mt-12 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-4"
+            className="mt-8 grid grid-cols-2 items-stretch gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5"
           >
-            {courses.map((course) => (
+            {courses.map((course, index) => (
               <article
                 key={course.href}
                 dir="rtl"
-                className="flex h-full flex-col rounded-2xl border border-transparent bg-white p-6 text-center shadow-md transition-all duration-300 hover:scale-[1.02] hover:border-blue-400 hover:shadow-xl"
+                className={`flex h-full flex-col rounded-xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md sm:rounded-2xl sm:p-4 lg:p-5 ${
+                  index >= 4 ? "lg:col-span-2" : ""
+                }`}
               >
-                <h3 className="text-xl font-semibold text-blue-900 md:text-2xl">
+                <h3 className="text-base font-semibold leading-7 text-blue-900 sm:text-lg md:text-xl">
                   {course.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-gray-600">
+                <p className="mt-2 text-sm leading-6 text-gray-600 sm:mt-3 sm:leading-7">
                   {course.description}
                 </p>
 
-                <div className="mt-auto pt-6">
+                <div className="mt-auto pt-4 sm:pt-5">
                   <Link
                     href={course.href}
-                    className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
+                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-4 sm:py-2.5"
                   >
                     مشاهده دوره
                   </Link>
