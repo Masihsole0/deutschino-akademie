@@ -244,7 +244,7 @@ export default function A1Page() {
 
             <div className="divide-y">
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۳۰ جلسه</span>
+                <span className="font-bold">بدون محدودیت جلسه</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <BookOpen size={18} />
                   <span>تعداد جلسات</span>
@@ -252,7 +252,7 @@ export default function A1Page() {
               </div>
 
               <div className="flex justify-between items-center px-8 py-5">
-                <span className="font-bold">۴۵ ساعت</span>
+                <span className="font-bold">بدون محدودیت زمانی</span>
                 <div className="flex flex-row-reverse items-center gap-3">
                   <Clock3 size={18} />
                   <span>مدت زمان</span>
@@ -298,9 +298,9 @@ export default function A1Page() {
               <div className="flex justify-between items-center mb-6">
                 <div>
                   <p className="text-3xl font-bold text-green-700">
-                    ۱۰,۷۰۰٬۰۰۰
+                    ۳۹۰,۰۰۰
                   </p>
-                  <span className="text-gray-500">تومان / ترمیک</span>
+                  <span className="text-gray-500">تومان / جلسه‌ای</span>
                 </div>
                 <Wallet size={30} />
               </div>
