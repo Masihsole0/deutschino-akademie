@@ -38,7 +38,7 @@ export default function Home() {
       href: "/courses/conversation",
     },
     {
-      title: "گرامر A1 تا B2",
+      title: "گرامر A1 تا B1",
       description: "یادگیری و تقویت گرامر آلمانی از پایه تا پیشرفته",
       href: "/courses/grammar",
     },
@@ -187,26 +187,6 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
             دوره‌های آموزش زبان آلمانی
           </h2>
-
-          <p
-            dir="rtl"
-            className="mx-auto mt-4 max-w-3xl leading-8 text-gray-600"
-          >
-            در آکادمی دویچینو می‌توانید یادگیری زبان آلمانی را از سطح{" "}
-            <span dir="ltr" className="inline-block">
-              A1
-            </span>{" "}
-            شروع کنید، در سطح‌های{" "}
-            <span dir="ltr" className="inline-block">
-              A2
-            </span>{" "}
-            و{" "}
-            <span dir="ltr" className="inline-block">
-              B1
-            </span>{" "}
-            ادامه دهید یا در کلاس مکالمه، مهارت صحبت‌کردن خود را تقویت کنید.
-            دوره‌ها با توجه به سطح و هدف زبان‌آموز انتخاب می‌شوند.
-          </p>
 
           <div
             dir="rtl"
