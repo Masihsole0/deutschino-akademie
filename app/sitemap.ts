@@ -20,6 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: "https://www.deutschino.ir/courses/b2",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://www.deutschino.ir/courses/grammar",
+      lastModified: new Date(),
+    },
+    {
       url: "https://www.deutschino.ir/courses/conversation",
       lastModified: new Date(),
     },
