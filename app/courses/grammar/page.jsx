@@ -74,7 +74,7 @@ export default function GrammarPage() {
           className="max-w-4xl mx-auto mt-16 mb-12 text-right"
         >
           <h1 className="text-2xl font-bold mb-5">
-            کلاس گرامر زبان آلمانی از A1 تا B2 در اصفهان و آنلاین
+            کلاس گرامر زبان آلمانی از A1 تا B1 در اصفهان و آنلاین
           </h1>
 
           <p className="text-base leading-9 mb-6">
@@ -188,7 +188,7 @@ export default function GrammarPage() {
 
             <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
               <span className="font-bold text-[#0A2540]">
-                منابع متناسب با سطح
+                Grammatik Aktiv A1-B1
               </span>
               <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
                 <Book size={18} />
@@ -197,7 +197,7 @@ export default function GrammarPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]">A1 تا B2</span>
+              <span className="font-bold text-[#0A2540]">A1 تا B1</span>
               <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
                 <CircleHelp size={18} />
                 <span className="font-semibold">سطوح آموزشی</span>
