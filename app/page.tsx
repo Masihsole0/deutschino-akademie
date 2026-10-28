@@ -1,9 +1,9 @@
 
 "use client";
 
-import Reviews from "@/components/reviews";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Reviews from "@/components/reviews";
 import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
@@ -88,7 +88,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
+      <section className="relative flex min-h-[560px] flex-col items-center justify-center px-5 py-16 text-center sm:px-6 md:min-h-[600px] md:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/germany.jpg')" }}
@@ -96,83 +96,38 @@ export default function Home() {
         />
 
         <div
-          className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
+          className="absolute inset-0 bg-black/50"
           aria-hidden="true"
         />
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش حرفه‌ای زبان آلمانی با متد تخصصی
+            کلاس زبان آلمانی در اصفهان و آنلاین
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-100 md:mt-6 md:text-xl">
             کلاس‌های خصوصی و گروهی زبان آلمانی با مسیح سلیمانی در آکادمی
-            دویچینو؛ حضوری در اصفهان و آنلاین.
+            دویچینو؛ از یادگیری پایه تا تقویت مهارت‌های زبان آلمانی.
           </p>
 
-          {/* QUICK NAVIGATION BUTTONS */}
-          <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4">
-            <button
-              type="button"
-              onClick={() => {
-                const coursesSection = document.getElementById("courses");
-
-                if (coursesSection) {
-                  coursesSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                } else {
-                  window.location.href = "/#courses";
-                }
-              }}
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-blue-900 px-3 py-3 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-5 sm:text-base"
+          <div className="mx-auto mt-8 grid w-full max-w-lg grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+            <Link
+              href="#courses"
+              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-900 px-5 py-3 text-base font-medium text-white transition hover:bg-blue-800"
             >
               <span aria-hidden="true">📚</span>
-              <span>کلاس‌ها</span>
-            </button>
+              مشاهده دوره‌ها
+            </Link>
 
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-green-800 px-3 py-3 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-5 sm:text-base"
+              className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-green-700 px-5 py-3 text-base font-medium text-white transition hover:bg-green-800"
             >
               <span aria-hidden="true">💬</span>
-              <span>مشاوره و ثبت‌نام</span>
-            </a>
-
-            <a
-              href="#about"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">👨‍🏫</span>
-              <span>درباره مدرس</span>
-            </a>
-
-            <a
-              href="#reviews"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">⭐</span>
-              <span>نظرات زبان‌آموزان</span>
-            </a>
-
-            <a
-              href="#why-us"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">✨</span>
-              <span>چرا دویچینو؟</span>
-            </a>
-
-            <a
-              href="#contact"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">📍</span>
-              <span>ارتباط با ما</span>
+              مشاوره و ثبت‌نام
             </a>
           </div>
         </div>
@@ -181,58 +136,60 @@ export default function Home() {
       {/* COURSES SECTION */}
       <section
         id="courses"
-        className="scroll-mt-20 bg-gray-50 px-6 pt-10 py-24"
+        className="scroll-mt-20 bg-gray-50 px-5 py-16 sm:px-6 md:py-20"
       >
         <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
+          <h2 className="text-2xl font-bold leading-relaxed text-gray-900 md:text-4xl">
             دوره‌های آموزش زبان آلمانی
           </h2>
 
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-gray-600 md:text-base">
+            دوره مناسب خود را انتخاب کنید و برای اطلاع از شرایط کلاس‌ها
+            و ثبت‌نام اقدام کنید.
+          </p>
+
           <div
             dir="rtl"
-            className="mt-8 grid grid-cols-2 items-stretch gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5"
+            className="mt-7 grid grid-cols-2 items-stretch gap-3 sm:mt-9 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4"
           >
-            {courses.map((course, index) => (
+            {courses.map((course) => (
               <article
                 key={course.href}
-                className={`flex h-full flex-col rounded-xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md sm:rounded-2xl sm:p-4 lg:p-5 ${
-                  index >= 4 ? "lg:col-span-2" : ""
-                }`}
+                className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-3 text-center shadow-sm transition duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md sm:rounded-2xl sm:p-4"
               >
-                <h3 className="text-base font-semibold leading-7 text-blue-900 sm:text-lg md:text-xl">
+                <h3 className="text-base font-bold leading-7 text-blue-900 sm:text-lg">
                   {course.title}
                 </h3>
 
-                <div className="mt-auto pt-4 sm:pt-5">
-                  <Link
-                    href={course.href}
-                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-4 sm:py-2.5"
-                  >
-                    مشاهده دوره
-                  </Link>
-                </div>
+                <p className="mt-2 flex-1 text-sm leading-6 text-gray-600">
+                  {course.description}
+                </p>
+
+                <Link
+                  href={course.href}
+                  className="mt-4 inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm font-medium text-white transition hover:bg-blue-800 sm:mt-5 sm:rounded-xl sm:px-3"
+                >
+                  مشاهده دوره
+                </Link>
               </article>
             ))}
           </div>
 
-          
-{/* ADDITIONAL COURSE INFORMATION */}
-          <div className="mx-auto mt-16 max-w-4xl text-right">
-            <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
+          {/* ADDITIONAL COURSE INFORMATION */}
+          <div className="mx-auto mt-12 max-w-4xl text-right md:mt-16">
+            <h3 className="text-xl font-bold leading-relaxed text-blue-900 md:text-2xl">
               کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
             </h3>
 
-            <p className="mt-4 leading-9 text-gray-700">
+            <p className="mt-4 leading-8 text-gray-700 md:leading-9">
               اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
               هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
               را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
               زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
-              می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
-              و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
-              زبان آلمانی داشته باشید.
+              می‌توانید دوره مناسب خود را بررسی کنید.
             </p>
 
-            <p className="mt-3 leading-9 text-gray-700">
+            <p className="mt-3 leading-8 text-gray-700 md:leading-9">
               اگر در ابتدای مسیر هستید، دوره{" "}
               <Link
                 href="/courses/a1"
@@ -262,8 +219,7 @@ export default function Home() {
               >
                 دوره B2
               </Link>{" "}
-              را ببینید. اگر می‌خواهید گرامر زبان آلمانی را از سطح پایه تا
-              پیشرفته یاد بگیرید، صفحه{" "}
+              را ببینید. اگر می‌خواهید گرامر زبان آلمانی را یاد بگیرید، صفحه{" "}
               <Link
                 href="/courses/grammar"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
@@ -278,22 +234,17 @@ export default function Home() {
               >
                 کلاس مکالمه زبان آلمانی
               </Link>{" "}
-              را بررسی کنید.
+              را ببینید.
             </p>
 
-            <p className="mt-3 leading-9 text-gray-700">
-              برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
-              طریق واتساپ پیام بدهید.
-            </p>
-
-            <div className="mt-6">
+            <div className="mt-5">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 font-medium text-white transition hover:bg-blue-800 sm:w-auto"
               >
-                دریافت مشاوره و انتخاب دوره
+                مشاوره و انتخاب دوره
               </a>
             </div>
           </div>
@@ -301,14 +252,17 @@ export default function Home() {
       </section>
 
       {/* ABOUT TEACHER SECTION */}
-      <section id="about" className="scroll-mt-20 bg-white px-6 py-24">
-        <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse">
-          <div className="flex-1 text-center md:text-right">
-            <h2 className="text-3xl font-bold leading-relaxed text-blue-900 md:text-4xl">
+      <section
+        id="about"
+        className="scroll-mt-20 bg-white px-5 py-16 sm:px-6 md:py-20"
+      >
+        <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-8 md:flex-row-reverse md:gap-12">
+          <div className="min-w-0 flex-1 text-center md:text-right">
+            <h2 className="text-2xl font-bold leading-relaxed text-blue-900 md:text-4xl">
               مسیح سلیمانی؛ مدرس زبان آلمانی در اصفهان
             </h2>
 
-            <div className="mt-6 space-y-4 text-base leading-8 text-gray-600 md:text-lg">
+            <div className="mt-5 space-y-4 text-base leading-8 text-gray-600 md:mt-6 md:text-lg">
               <p className="font-semibold text-gray-800">سلام 👋🏻</p>
 
               <p>
@@ -338,7 +292,7 @@ export default function Home() {
               <a
                 href="tel:+989130061984"
                 aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
-                className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
+                className="inline-flex min-h-11 items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
               >
                 تماس با مسیح سلیمانی
               </a>
@@ -352,58 +306,61 @@ export default function Home() {
               width={320}
               height={320}
               loading="lazy"
-              className="h-64 w-64 rounded-full border-4 border-blue-900 object-cover shadow-lg md:h-80 md:w-80"
+              className="h-56 w-56 rounded-full border-4 border-blue-900 object-cover shadow-lg sm:h-64 sm:w-64 md:h-80 md:w-80"
             />
           </div>
         </div>
       </section>
 
       {/* WHY DEUTSCHINO */}
-      <section id="why-us" className="bg-blue-900 pb-24 pt-10">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-8 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
+      <section
+        id="why-us"
+        className="scroll-mt-20 bg-blue-900 py-16 md:py-20"
+      >
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold leading-relaxed text-white md:text-4xl">
               چرا آکادمی دویچینو؟
             </h2>
 
-            <p className="mx-auto max-w-3xl text-base leading-9 text-blue-100 md:text-lg">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-blue-100 md:mt-6 md:text-lg md:leading-9">
               یادگیری زبان آلمانی فقط حفظ واژگان و مطالعه گرامر نیست. تمرین
               مستمر، استفاده از زبان در موقعیت‌های واقعی و داشتن مسیر آموزشی
               متناسب با هدف، به پیشرفت بهتر کمک می‌کند.
             </p>
 
-            <div className="mb-2 mt-10 flex items-center justify-center">
-              <div className="h-px w-24 bg-blue-300/40" />
+            <div className="mb-2 mt-8 flex items-center justify-center md:mt-10">
+              <div className="h-px w-16 bg-blue-300/40 sm:w-24" />
 
               <div className="mx-4 flex h-5 w-5 rotate-45 items-center justify-center rounded-sm border-2 border-blue-300">
                 <div className="h-2 w-2 rounded-sm bg-blue-300" />
               </div>
 
-              <div className="h-px w-24 bg-blue-300/40" />
+              <div className="h-px w-16 bg-blue-300/40 sm:w-24" />
             </div>
           </div>
 
           <div
             dir="rtl"
-            className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6"
           >
             {benefits.map((benefit) => (
               <article
                 key={benefit.title}
-                className="rounded-2xl bg-white p-8 text-center shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="rounded-2xl bg-white p-5 text-center shadow-lg transition duration-200 hover:-translate-y-1 hover:shadow-xl sm:p-6 md:p-7"
               >
                 <div
-                  className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-3xl leading-none"
+                  className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-3xl leading-none sm:h-16 sm:w-16"
                   aria-hidden="true"
                 >
                   {benefit.icon}
                 </div>
 
-                <h3 className="mb-3 text-xl font-bold text-blue-900">
+                <h3 className="mb-3 text-lg font-bold leading-7 text-blue-900 sm:text-xl">
                   {benefit.title}
                 </h3>
 
-                <p className="leading-8 text-gray-600">
+                <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
                   {benefit.description}
                 </p>
               </article>
@@ -420,7 +377,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         id="contact"
-        className="relative mt-24 overflow-hidden bg-blue-950 py-1 text-white"
+        className="relative mt-16 overflow-hidden bg-blue-950 py-1 text-white md:mt-24"
       >
         <img
           src="/footer-bg.png"
@@ -430,8 +387,8 @@ export default function Home() {
           className="pointer-events-none absolute right-0 top-0 h-64 w-full object-cover opacity-10"
         />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-10">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="relative mx-auto max-w-7xl px-5 py-8 sm:px-6 md:py-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
             {/* ACADEMY INFORMATION */}
             <div className="order-2 md:order-2">
               <div className="flex flex-col items-center gap-3 md:flex-row-reverse md:items-center">
@@ -463,7 +420,9 @@ export default function Home() {
 
             {/* CONTACT INFORMATION */}
             <div className="order-1 text-right">
-              <h2 className="mb-6 text-2xl font-bold">اطلاعات تماس</h2>
+              <h2 className="mb-5 text-xl font-bold md:mb-6 md:text-2xl">
+                اطلاعات تماس
+              </h2>
 
               <div className="space-y-5 leading-8 text-blue-100">
                 <div>
@@ -477,7 +436,6 @@ export default function Home() {
                     قهوینه، آکادمی دویچینو
                   </address>
 
-                  {/* GOOGLE MAP */}
                   <div className="mt-3 w-full max-w-sm overflow-hidden rounded-xl">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d839.9743064287111!2d51.653918485331474!3d32.63556027577545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2s!4v1792160428117!5m2!1sde!2s"
@@ -490,12 +448,11 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* DIRECTIONS BUTTON */}
                   <a
                     href="https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
+                    className="mt-3 inline-flex min-h-10 items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
                   >
                     مسیریابی به آکادمی دویچینو
                   </a>
