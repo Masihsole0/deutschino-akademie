@@ -209,13 +209,12 @@ export default function Home() {
           </p>
 
           <div
-            dir="ltr"
+            dir="rtl"
             className="mt-8 grid grid-cols-2 items-stretch gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5"
           >
             {courses.map((course, index) => (
               <article
                 key={course.href}
-                dir="rtl"
                 className={`flex h-full flex-col rounded-xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md sm:rounded-2xl sm:p-4 lg:p-5 ${
                   index >= 4 ? "lg:col-span-2" : ""
                 }`}
@@ -223,10 +222,6 @@ export default function Home() {
                 <h3 className="text-base font-semibold leading-7 text-blue-900 sm:text-lg md:text-xl">
                   {course.title}
                 </h3>
-
-                <p className="mt-2 text-sm leading-6 text-gray-600 sm:mt-3 sm:leading-7">
-                  {course.description}
-                </p>
 
                 <div className="mt-auto pt-4 sm:pt-5">
                   <Link
