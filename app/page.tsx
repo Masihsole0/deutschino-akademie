@@ -12,12 +12,12 @@ export default function Home() {
 
   const courses = [
     {
-      title: "A1 مقدماتی",
+      title: "A1",
       description: "شروع یادگیری زبان آلمانی از صفر و ساختن پایه‌ای قوی",
       href: "/courses/a1",
     },
     {
-      title: "A2 متوسط",
+      title: "A2",
       description: "تقویت گرامر، واژگان و مکالمه در موقعیت‌های روزمره",
       href: "/courses/a2",
     },
@@ -28,7 +28,7 @@ export default function Home() {
       href: "/courses/b1",
     },
     {
-      title: "B2 پیشرفته",
+      title: "B2",
       description: "تقویت مهارت‌های زبان آلمانی در سطح پیشرفته",
       href: "/courses/b2",
     },
