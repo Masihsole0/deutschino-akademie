@@ -8,15 +8,16 @@ const vazir = Vazirmatn({
   subsets: ["arabic"],
 });
 
-const siteTitle = "آموزش زبان آلمانی در اصفهان | آکادمی دویچینو";
-const siteDescription =
-  "آموزش زبان آلمانی در اصفهان و آنلاین با آکادمی دویچینو. آشنایی با دوره‌های A1، A2، B1 و مکالمه، بررسی جزئیات کلاس‌ها و انتخاب دوره مناسب برای یادگیری زبان آلمانی.";
+const siteTitle =
+  "آموزش زبان آلمانی در اصفهان | مسیح سلیمانی و آکادمی دویچینو";
 
-  export const metadata: Metadata = {
+const siteDescription =
+  "آموزش زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی و آکادمی دویچینو؛ کلاس‌های A1، A2، B1 و B2، آموزش گرامر آلمانی، مکالمه و کلاس‌های خصوصی و گروهی متناسب با هدف زبان‌آموز.";
+
+export const metadata: Metadata = {
   metadataBase: new URL("https://www.deutschino.ir"),
 
   title: siteTitle,
-
   description: siteDescription,
 
   applicationName: "آکادمی دویچینو",
@@ -47,6 +48,7 @@ const siteDescription =
     "آموزش زبان آلمانی اصفهان",
     "مدرس زبان آلمانی اصفهان",
     "مسیح سلیمانی",
+    "مدرس زبان آلمانی مسیح سلیمانی",
     "کلاس زبان آلمانی در اصفهان",
     "کلاس خصوصی زبان آلمانی",
     "کلاس آنلاین زبان آلمانی",
@@ -54,6 +56,9 @@ const siteDescription =
     "دوره زبان آلمانی A1",
     "دوره زبان آلمانی A2",
     "دوره زبان آلمانی B1",
+    "دوره زبان آلمانی B2",
+    "آموزش گرامر زبان آلمانی",
+    "گرامر آلمانی از پایه",
     "کلاس مکالمه آلمانی",
   ],
 
@@ -63,10 +68,23 @@ const siteDescription =
     siteName: "آکادمی دویچینو",
     title: siteTitle,
     description: siteDescription,
+    url: "/",
     images: [
       {
         url: "/mee.jpg",
-        alt: "مسیح سلیمانی، مدرس زبان آلمانی و چهره آکادمی دویچینو",
+        alt: "مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/mee.jpg",
+        alt: "مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو",
       },
     ],
   },
