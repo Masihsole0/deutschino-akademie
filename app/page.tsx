@@ -215,7 +215,8 @@ export default function Home() {
             ))}
           </div>
 
-          {/* ADDITIONAL COURSE INFORMATION */}
+          
+{/* ADDITIONAL COURSE INFORMATION */}
           <div className="mx-auto mt-16 max-w-4xl text-right">
             <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
               کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
@@ -254,7 +255,23 @@ export default function Home() {
               >
                 دوره B1
               </Link>{" "}
-              را ببینید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید، صفحه{" "}
+              و همچنین{" "}
+              <Link
+                href="/courses/b2"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره B2
+              </Link>{" "}
+              را ببینید. اگر می‌خواهید گرامر زبان آلمانی را از سطح پایه تا
+              پیشرفته یاد بگیرید، صفحه{" "}
+              <Link
+                href="/courses/grammar"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                کلاس گرامر A1 تا B2
+              </Link>{" "}
+              را بررسی کنید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید،
+              صفحه{" "}
               <Link
                 href="/courses/conversation"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
