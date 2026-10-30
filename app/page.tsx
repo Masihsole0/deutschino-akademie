@@ -350,7 +350,7 @@ export default function Home() {
       {/* WHY DEUTSCHINO */}
       <section
         id="why-us"
-        className="scroll-mt-[-90px] bg-blue-900 pb-24 pt-10"
+        className="scroll-mt-[-20px] bg-blue-900 pb-24 pt-10"
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-8 text-center">
@@ -405,14 +405,14 @@ export default function Home() {
       </section>
 
       {/* REVIEWS */}
-      <section id="reviews" className="scroll-mt-[-90px]">
+      <section id="reviews" className="scroll-mt-[-30px]">
         <Reviews />
       </section>
 
       {/* FOOTER */}
       <footer
         id="contact"
-        className="relative mt-16 scroll-mt-[-10px] overflow-hidden bg-blue-950 text-white"
+        className="relative mt-16 scroll-mt-[-30px] overflow-hidden bg-blue-950 text-white"
       >
         {/* BACKGROUND IMAGE */}
         <img
