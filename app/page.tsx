@@ -188,6 +188,10 @@ export default function Home() {
             دوره‌های آموزش زبان آلمانی
           </h2>
 
+          <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
+            دوره مناسب خودت رو انتخاب کن
+          </p>
+
           <div
             dir="rtl"
             className="mt-8 grid grid-cols-2 items-stretch gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5"
@@ -199,24 +203,27 @@ export default function Home() {
                   index >= 4 ? "lg:col-span-2" : ""
                 }`}
               >
-                <h3 className="text-base font-semibold leading-7 text-blue-900 sm:text-lg md:text-xl">
+                <h3 className="text-base font-bold leading-7 text-blue-900 sm:text-lg md:text-xl">
                   {course.title}
                 </h3>
 
-                <div className="mt-auto pt-4 sm:pt-5">
+                <p className="mt-3 flex-1 text-sm leading-7 text-gray-600 sm:text-base">
+                  {course.description}
+                </p>
+
+                <div className="mt-5">
                   <Link
                     href={course.href}
-                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-4 sm:py-2.5"
+                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm font-medium text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-4 sm:py-2.5"
                   >
-                    مشاهده دوره
+                    مشاهده دوره ←
                   </Link>
                 </div>
               </article>
             ))}
           </div>
 
-          
-{/* ADDITIONAL COURSE INFORMATION */}
+          {/* ADDITIONAL COURSE INFORMATION */}
           <div className="mx-auto mt-16 max-w-4xl text-right">
             <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
               کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
