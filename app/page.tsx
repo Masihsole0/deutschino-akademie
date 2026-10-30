@@ -132,71 +132,133 @@ export default function Home() {
       </section>
 
       {/* COURSES SECTION */}
-<section
-  id="courses"
-  className="scroll-mt-[-90px] bg-gray-50 px-6 py-20"
->
-  <div className="mx-auto max-w-6xl text-center">
+      <section
+        id="courses"
+        className="scroll-mt-[-90px] bg-gray-50 px-6 pt-10 py-24"
+      >
+        <div className="mx-auto max-w-6xl text-center">
+          <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
+            دوره‌های آموزش زبان آلمانی
+          </h2>
 
-    <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
-      دوره‌های آموزش زبان آلمانی
-    </h2>
+          <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
+            دوره مناسب خودت رو انتخاب کن
+          </p>
 
-    <p className="mt-3 text-sm text-gray-600 md:text-base">
-      دوره مناسب سطح و هدفت رو انتخاب کن
-    </p>
+          <div
+            dir="rtl"
+            className="mt-8 grid grid-cols-2 items-stretch gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-4 lg:gap-5"
+          >
+            {courses.map((course, index) => (
+              <article
+                key={course.href}
+                className={`flex h-full flex-col rounded-xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md sm:rounded-2xl sm:p-4 lg:p-5 ${
+                  index >= 4 ? "lg:col-span-2" : ""
+                }`}
+              >
+                <h3 className="text-base font-bold leading-7 text-blue-900 sm:text-lg md:text-xl">
+                  {course.title}
+                </h3>
 
-    <div
-      dir="rtl"
-      className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 lg:gap-5"
-    >
-      {courses.map((course) => (
-        <article
-          key={course.href}
-          className="flex flex-col items-center justify-between rounded-xl border border-gray-100 bg-white p-4 text-center transition-all duration-300 hover:border-blue-200 hover:shadow-sm sm:rounded-2xl sm:p-6"
-        >
-          <div>
-            <h3 className="text-base font-bold text-blue-900 sm:text-xl">
-              {course.title}
-            </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-gray-600 sm:text-base">
+                  {course.description}
+                </p>
 
-            <p className="mt-2 text-xs leading-6 text-gray-500 sm:text-sm">
-              {course.description}
-            </p>
+                <div className="mt-5">
+                  <Link
+                    href={course.href}
+                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-blue-900 px-2 py-2 text-sm font-medium text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-4 sm:py-2.5"
+                  >
+                    مشاهده دوره ←
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
 
-          <Link
-            href={course.href}
-            className="mt-4 text-sm font-semibold text-blue-900 transition hover:text-blue-700"
-          >
-            مشاهده دوره ←
-          </Link>
-        </article>
-      ))}
-    </div>
+          {/* ADDITIONAL COURSE INFORMATION */}
+          <div className="mx-auto mt-16 max-w-4xl text-right">
+            <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
+              کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
+            </h3>
 
-    {/* COURSE GUIDANCE */}
-    <div className="mx-auto mt-10 max-w-2xl text-center">
+            <p className="mt-4 leading-9 text-gray-700">
+              اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
+              هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
+              را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
+              زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
+              می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
+              و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
+              زبان آلمانی داشته باشید.
+            </p>
 
-      <h3 className="text-lg font-bold text-gray-900 md:text-xl">
-        برای انتخاب دوره مناسب راهنمایی می‌خوای؟
-      </h3>
+            <p className="mt-3 leading-9 text-gray-700">
+              اگر در ابتدای مسیر هستید، دوره{" "}
+              <Link
+                href="/courses/a1"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                زبان آلمانی A1
+              </Link>{" "}
+              برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
+              می‌توانید اطلاعات{" "}
+              <Link
+                href="/courses/a2"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره A2
+              </Link>{" "}
+              و{" "}
+              <Link
+                href="/courses/b1"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره B1
+              </Link>{" "}
+              و همچنین{" "}
+              <Link
+                href="/courses/b2"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                دوره B2
+              </Link>{" "}
+              را ببینید. اگر می‌خواهید گرامر زبان آلمانی را از سطح پایه تا
+              پیشرفته یاد بگیرید، صفحه{" "}
+              <Link
+                href="/courses/grammar"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                کلاس گرامر A1 تا B2
+              </Link>{" "}
+              را بررسی کنید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید،
+              صفحه{" "}
+              <Link
+                href="/courses/conversation"
+                className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
+              >
+                کلاس مکالمه زبان آلمانی
+              </Link>{" "}
+              را بررسی کنید.
+            </p>
 
-      <p className="mt-2 text-sm text-gray-600">
-        برای مشاوره و ثبت‌نام با ما در ارتباط باش.
-      </p>
+            <p className="mt-3 leading-9 text-gray-700">
+              برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
+              طریق واتساپ پیام بدهید.
+            </p>
 
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center justify-center rounded-xl bg-[#0A2540] px-7 py-3 text-sm font-semibold text-white transition hover:bg-blue-900"
-      >
-        مشاوره و انتخاب دوره
-      </a>
-    </div>
-  </div>
-</section>
+            <div className="mt-6">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
+              >
+                دریافت مشاوره و انتخاب دوره
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT TEACHER SECTION */}
       <section
