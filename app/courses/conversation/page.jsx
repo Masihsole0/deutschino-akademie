@@ -4,9 +4,10 @@ import {
   BookOpen,
   Clock3,
   GraduationCap,
+  Headphones,
   Book,
   CircleHelp,
-  Headphones,
+  Wallet,
 } from "lucide-react";
 
 export const metadata = {
@@ -33,6 +34,8 @@ const courseSchema = {
   educationalLevel: "B1",
 };
 
+const whatsappNumber = "989130061984";
+
 export default function ConversationPage() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
@@ -43,15 +46,15 @@ export default function ConversationPage() {
         }}
       />
 
-      <div className="max-w-5xl mx-auto px-6 pt-0 pb-10">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         {/* Logo */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-3 md:mb-6">
           <Image
             src="/logo.jpg"
             alt="لوگوی آکادمی دویچینو"
-            width={100}
-            height={100}
-            className="h-28 w-auto"
+            width={120}
+            height={120}
+            className="w-auto h-20 md:h-24"
             priority
           />
         </div>
@@ -61,23 +64,191 @@ export default function ConversationPage() {
           <Image
             src="/conv.jpg"
             alt="کلاس مکالمه زبان آلمانی در آکادمی دویچینو"
-            width={700}
-            height={240}
-            className="w-full max-w-[700px] rounded-3xl shadow-xl object-cover"
+            width={900}
+            height={350}
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
             priority
           />
         </div>
 
+        {/* Course Introduction */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
+        >
+          <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
+            کلاس مکالمه زبان آلمانی در اصفهان
+          </h1>
+
+          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
+            تمرین هدفمند مکالمه زبان آلمانی به‌صورت حضوری در اصفهان و آنلاین؛
+            مناسب زبان‌آموزانی که می‌خواهند روان‌تر صحبت کنند و آموخته‌های
+            خود را در گفت‌وگوهای روزمره و کاری به کار ببرند.
+          </p>
+        </section>
+
+        {/* Course Features */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-6 grid grid-cols-2 md:grid-cols-4 gap-3"
+        >
+          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
+            <Clock3 size={25} className="mx-auto mb-2 text-[#0A2540]" />
+            <p className="font-bold mb-1">مدت هر جلسه</p>
+            <p className="text-sm text-gray-600">۶۰ دقیقه</p>
+          </div>
+
+          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
+            <GraduationCap
+              size={25}
+              className="mx-auto mb-2 text-[#0A2540]"
+            />
+            <p className="font-bold mb-1">پیش‌نیاز</p>
+            <p className="text-sm text-gray-600">سطح B1</p>
+          </div>
+
+          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
+            <Headphones size={25} className="mx-auto mb-2 text-[#0A2540]" />
+            <p className="font-bold mb-1">پشتیبانی</p>
+            <p className="text-sm text-gray-600">خارج از ساعات کلاس</p>
+          </div>
+
+          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
+            <BookOpen size={25} className="mx-auto mb-2 text-[#0A2540]" />
+            <p className="font-bold mb-1">منابع آموزشی</p>
+            <p className="text-sm text-gray-600">hören sprechen B1</p>
+          </div>
+        </section>
+
+        {/* Learning Outcomes */}
+        <section dir="rtl" className="max-w-4xl mx-auto mt-12">
+          <h2 className="text-xl md:text-2xl font-bold mb-5">
+            در کلاس مکالمه آلمانی چه مهارت‌هایی تقویت می‌شوند؟
+          </h2>
+
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base leading-8">
+            <li className="flex items-start gap-2">
+              <span className="text-green-600">✓</span>
+              تمرین گفت‌وگو درباره موضوعات روزمره و آشنا
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-600">✓</span>
+              بیان نظرها، تجربه‌ها و برنامه‌های شخصی به زبان آلمانی
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-600">✓</span>
+              گسترش واژگان و استفاده از عبارت‌های پرکاربرد
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-600">✓</span>
+              تقویت روانی گفتار و ساختن جمله هنگام صحبت‌کردن
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-green-600">✓</span>
+              تمرین مکالمه در موقعیت‌های اجتماعی و کاری
+            </li>
+          </ul>
+        </section>
+
+        {/* Pricing */}
+        <section dir="rtl" className="max-w-4xl mx-auto mt-14">
+          <h2 className="text-2xl font-bold text-center mb-2">
+            هزینه کلاس مکالمه زبان آلمانی
+          </h2>
+
+          <p className="text-gray-600 text-center mb-7">
+            دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است.
+          </p>
+
+          <div className="grid grid-cols-2 gap-3 md:gap-5">
+            <div className="border rounded-2xl overflow-hidden shadow-sm">
+              <div className="bg-[#F4F8FF] px-3 md:px-5 py-3 md:py-4">
+                <h3 className="text-base md:text-xl font-bold">
+                  دوره مکالمه
+                </h3>
+              </div>
+
+              <div className="p-3 md:p-6">
+                <div className="flex items-center justify-between gap-1 mb-4 md:mb-5">
+                  <div>
+                    <p className="text-xl md:text-3xl font-bold text-green-700">
+                      ۹۰۰٬۰۰۰
+                    </p>
+                    <span className="text-xs md:text-sm text-gray-500">
+                      تومان برای هر جلسه
+                    </span>
+                  </div>
+                  <Wallet
+                    size={21}
+                    className="shrink-0 md:w-7 md:h-7"
+                  />
+                </div>
+
+                <a
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                    "سلام، می‌خواهم برای کلاس مکالمه زبان آلمانی ثبت‌نام کنم."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-center text-xs md:text-base py-3 md:py-4 px-1 rounded-xl font-bold transition-colors"
+                >
+                  ثبت‌نام از طریق واتساپ
+                </a>
+              </div>
+            </div>
+
+            <div className="border rounded-2xl overflow-hidden shadow-sm">
+              <div className="bg-[#F4F8FF] px-3 md:px-5 py-3 md:py-4">
+                <h3 className="text-base md:text-xl font-bold">
+                  مشخصات دوره
+                </h3>
+              </div>
+
+              <div className="p-3 md:p-6 space-y-3">
+                <div className="flex items-center justify-between gap-1">
+                  <span className="text-sm md:text-base font-bold">
+                    ۱۰ جلسه
+                  </span>
+                  <BookOpen size={21} className="shrink-0" />
+                </div>
+
+                <div className="flex items-center justify-between gap-1">
+                  <span className="text-sm md:text-base font-bold">
+                    ۶۰ دقیقه
+                  </span>
+                  <Clock3 size={21} className="shrink-0" />
+                </div>
+
+                <div className="flex items-center justify-between gap-1">
+                  <span className="text-sm md:text-base font-bold">
+                    سطح B1
+                  </span>
+                  <GraduationCap size={21} className="shrink-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-600 text-center leading-8 mt-5">
+            مجموع دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است. امکان شرکت در کلاس به‌صورت
+            حضوری در اصفهان و آنلاین وجود دارد.
+          </p>
+        </section>
+
         {/* SEO Content */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-16 mb-12 text-right"
+          className="mt-16 max-w-4xl mx-auto text-right"
+          aria-labelledby="conversation-course-guide"
         >
-          <h2 className="text-2xl font-bold mb-5">
+          <h2
+            id="conversation-course-guide"
+            className="text-2xl md:text-3xl font-bold mb-6"
+          >
             کلاس حضوری مکالمه زبان آلمانی در اصفهان و آنلاین
           </h2>
 
-          <p className="text-base leading-9 mb-6">
+          <p className="text-base md:text-lg leading-9 mb-5">
             اگر گرامر و واژگان زبان آلمانی را می‌دانید اما هنگام صحبت‌کردن
             مکث می‌کنید یا برای پیدا کردن کلمات مناسب مشکل دارید، تمرین
             هدفمند مکالمه می‌تواند به شما کمک کند. در دوره مکالمه دویچینو،
@@ -85,11 +256,11 @@ export default function ConversationPage() {
             کلاس‌ها به‌صورت حضوری در اصفهان و آنلاین برگزار می‌شوند.
           </p>
 
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
             در کلاس مکالمه آلمانی چه تمرین‌هایی انجام می‌دهید؟
           </h2>
 
-          <ul className="list-disc pr-6 space-y-3 leading-8 mb-6">
+          <ul className="list-disc pr-6 space-y-2 text-base md:text-lg leading-8">
             <li>تمرین گفت‌وگو درباره موضوعات روزمره و آشنا</li>
             <li>بیان نظرها، تجربه‌ها و برنامه‌های شخصی به زبان آلمانی</li>
             <li>گسترش واژگان و استفاده از عبارت‌های پرکاربرد</li>
@@ -97,138 +268,38 @@ export default function ConversationPage() {
             <li>تمرین مکالمه در موقعیت‌های اجتماعی و کاری</li>
           </ul>
 
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
             این دوره برای چه کسانی مناسب است؟
           </h2>
 
-          <p className="text-base leading-9 mb-6">
+          <p className="text-base md:text-lg leading-9 mb-5">
             این دوره برای زبان‌آموزانی مناسب است که پایه زبان آلمانی
             دارند و می‌خواهند راحت‌تر و روان‌تر صحبت کنند. آشنایی با
             سطح B1 پیش‌نیاز اعلام‌شده این دوره است. اگر درباره سطح خود
             مطمئن نیستید، پیش از ثبت‌نام برای انتخاب دوره مناسب مشورت بگیرید.
           </p>
 
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
             کلاس مکالمه خصوصی یا آنلاین
           </h2>
 
-          <p className="text-base leading-9 mb-6">
+          <p className="text-base md:text-lg leading-9 mb-5">
             امکان شرکت آنلاین به شما اجازه می‌دهد بدون نیاز به حضور
             فیزیکی در کلاس، تمرین مکالمه را دنبال کنید. اگر در اصفهان
             هستید، امکان شرکت حضوری نیز وجود دارد. برای اطلاع از زمان
             برگزاری و جزئیات کلاس، از طریق واتساپ پیام دهید.
           </p>
 
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
             ثبت‌نام دوره مکالمه زبان آلمانی
           </h2>
 
-          <p className="text-base leading-9">
+          <p className="text-base md:text-lg leading-9">
             دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است. هزینه هر جلسه ۹۰۰ هزار
             تومان است. برای پرسیدن سؤال یا ثبت‌نام، از دکمه واتساپ همین
             صفحه استفاده کنید.
           </p>
         </section>
-
-        {/* Course Information */}
-        <div className="mt-16 max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-          <div className="px-6 py-4 border-b bg-[#F4F8FF]">
-            <h2 className="text-xl font-bold text-[#0A2540] text-right">
-              اطلاعات دوره
-            </h2>
-          </div>
-
-          <div className="divide-y divide-gray-200">
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]" dir="rtl">
-                ۱۰ جلسه
-              </span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <BookOpen size={18} />
-                <span className="font-semibold">تعداد جلسات</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]" dir="rtl">
-                ۱۰ ساعت
-              </span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <Clock3 size={18} />
-                <span className="font-semibold">مدت زمان دوره</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]">مکالمه</span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <GraduationCap size={18} />
-                <span className="font-semibold">نوع دوره</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]">hören sprechen B1</span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <Book size={18} />
-                <span className="font-semibold">کتاب آموزشی</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-[#0A2540]">سطح B1</span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <CircleHelp size={18} />
-                <span className="font-semibold">پیش‌نیاز</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-3 px-8 py-5 hover:bg-[#F8FBFF] transition">
-              <span className="font-bold text-green-600">دارد</span>
-              <div className="flex flex-row-reverse items-center gap-3 text-[#0A2540]">
-                <Headphones size={18} />
-                <span className="font-semibold">پشتیبانی</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Registration */}
-          <div className="mt-8 rounded-2xl border border-gray-200 shadow-lg overflow-hidden bg-white">
-            <div className="px-6 py-4">
-              <div className="flex flex-wrap justify-between items-center gap-5">
-                <div className="text-center">
-                  <p className="text-2xl font-extrabold text-green-700">
-                    ۹۰۰,۰۰۰
-                  </p>
-                  <span className="text-gray-500 text-lg">تومان</span>
-                </div>
-
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-[#0A2540]">
-                    هر جلسه
-                  </p>
-                  <span className="text-gray-500">
-                    <bdi>۶۰ دقیقه‌ای</bdi>
-                  </span>
-                </div>
-              </div>
-
-              <a
-                href="https://wa.me/989130061984?text=سلام میخواهم کلاس مکالمه ثبت نام کنم."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 mx-auto flex w-full sm:w-fit justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-16 py-3 rounded-xl font-bold transition"
-              >
-                ثبت‌نام
-              </a>
-
-              <p className="mt-2 text-xs text-gray-700 text-center">
-                ثبت‌نام از طریق واتساپ انجام می‌شود. لطفاً فیلترشکن خود را
-                روشن کنید.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   );
