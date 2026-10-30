@@ -3,24 +3,61 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-center px-2 py-0.5">
-      <div className="flex items-center justify-center gap-2">
-        <span className="font-bold text-blue-900 text-lg md:text-2xl">
-          Akademie
-        </span>
+    <header className="w-full bg-white px-3 py-2">
+      <div className="flex flex-col items-center">
+        {/* LOGO */}
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-lg font-bold text-blue-900 md:text-2xl">
+            Akademie
+          </span>
 
-        <Image
-          src="/logo.jpg"
-          width={256}
-          height={256}
-          alt="لوگوی آکادمی دویچینو"
-          className="h-18 w-18 object-contain md:h-23 md:w-23"
-        />
+          <Image
+            src="/logo.jpg"
+            width={256}
+            height={256}
+            alt="لوگوی آکادمی دویچینو"
+            className="h-16 w-16 object-contain md:h-20 md:w-20"
+          />
 
-        <span className="font-bold text-blue-900 text-lg md:text-2xl">
-          Deutschino
-        </span>
+          <span className="text-lg font-bold text-blue-900 md:text-2xl">
+            Deutschino
+          </span>
+        </div>
+
+        {/* NAVIGATION LINKS */}
+        <nav
+          aria-label="دسترسی سریع"
+          className="mt-2 flex w-full max-w-3xl flex-wrap items-center justify-center gap-x-5 gap-y-3 border-t border-gray-100 pt-3"
+        >
+          <a
+            href="#why-us"
+            className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
+          >
+            چرا دویچینو؟
+          </a>
+
+          <a
+            href="#about"
+            className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
+          >
+            درباره مدرس
+          </a>
+
+          <a
+            href="#reviews"
+            className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
+          >
+            نظرات زبان‌آموزان
+          </a>
+
+          <a
+            href="#contact"
+            className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
+          >
+            ارتباط با ما
+          </a>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }
