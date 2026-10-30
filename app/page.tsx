@@ -87,56 +87,54 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      
+      {/* HERO SECTION */}
+      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/germany.jpg')" }}
+          aria-hidden="true"
+        />
 
-{/* HERO SECTION */}
-<section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{ backgroundImage: "url('/germany.jpg')" }}
-    aria-hidden="true"
-  />
+        <div
+          className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
+          aria-hidden="true"
+        />
 
-  <div
-    className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
-    aria-hidden="true"
-  />
+        <div className="relative z-10 mx-auto w-full max-w-5xl">
+          <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
+            یادگیری زبان آلمانی در اصفهان حضوری و آنلاین
+          </h1>
 
-  <div className="relative z-10 mx-auto w-full max-w-5xl">
-    <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-      یادگیری زبان آلمانی در اصفهان حضوری و آنلاین
-    </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
+            با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی زبان آلمانی از A1 تا B2
+            در آکادمی دویچینو.
+          </p>
 
-    <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
-      با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی زبان آلمانی از A1 تا B2
-      در آکادمی دویچینو.
-    </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+              className="inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700 sm:w-auto"
+            >
+              مشاوره و ثبت‌نام در واتساپ
+            </a>
 
-    <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-        className="inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700 sm:w-auto"
-      >
-        مشاوره و ثبت‌نام در واتساپ
-      </a>
-
-      <a
-        href="#courses"
-        className="text-base font-medium text-white underline underline-offset-8 transition hover:text-gray-200"
-      >
-        مشاهده دوره‌ها ↓
-      </a>
-    </div>
-  </div>
-</section>
+            <a
+              href="#courses"
+              className="text-base font-medium text-white underline underline-offset-8 transition hover:text-gray-200"
+            >
+              مشاهده دوره‌ها ↓
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* COURSES SECTION */}
       <section
         id="courses"
-        className="scroll-mt-20 bg-gray-50 px-6 pt-10 py-24"
+        className="scroll-mt-28 bg-gray-50 px-6 pt-10 py-24"
       >
         <div className="mx-auto max-w-6xl text-center">
           <h2 className="text-2xl font-bold text-gray-900 md:text-4xl">
@@ -262,93 +260,98 @@ export default function Home() {
         </div>
       </section>
 
-      
-{/* ABOUT TEACHER SECTION */}
-<section id="about" className="scroll-mt-20 bg-white px-6 py-24">
-  <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse">
-    <div className="flex-1 text-center md:text-right">
-      <h2 className="text-3xl font-bold leading-relaxed text-blue-900 md:text-4xl">
-        مسیح سلیمانی؛ مدرس زبان آلمانی در اصفهان
-      </h2>
+      {/* ABOUT TEACHER SECTION */}
+      <section
+        id="about"
+        className="scroll-mt-28 bg-white px-6 py-24"
+      >
+        <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse">
+          <div className="flex-1 text-center md:text-right">
+            <h2 className="text-3xl font-bold leading-relaxed text-blue-900 md:text-4xl">
+              مسیح سلیمانی؛ مدرس زبان آلمانی در اصفهان
+            </h2>
 
-      <div className="mt-6 space-y-4 text-base leading-8 text-gray-600 md:text-lg">
-        <p className="font-semibold text-gray-800">سلام 👋🏻</p>
+            <div className="mt-6 space-y-4 text-base leading-8 text-gray-600 md:text-lg">
+              <p className="font-semibold text-gray-800">سلام 👋🏻</p>
 
-        <p>
-          من مسیح سلیمانی هستم؛ مدرس زبان آلمانی در اصفهان با بیش از
-          ۳ سال تجربه تدریس در آموزشگاه‌های زبان.
-        </p>
+              <p>
+                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی در اصفهان با بیش از
+                ۳ سال تجربه تدریس در آموزشگاه‌های زبان.
+              </p>
 
-        {/* TEACHER CREDENTIALS */}
-        <div
-          dir="rtl"
-          className="grid grid-cols-2 gap-3 py-2 text-center"
-        >
-          <div className="rounded-lg bg-gray-50 px-3 py-3">
-            <p className="text-2xl font-bold text-blue-900">۳+</p>
-            <p className="mt-1 text-sm text-gray-600">سال تجربه تدریس</p>
+              {/* TEACHER CREDENTIALS */}
+              <div
+                dir="rtl"
+                className="grid grid-cols-2 gap-3 py-2 text-center"
+              >
+                <div className="rounded-lg bg-gray-50 px-3 py-3">
+                  <p className="text-2xl font-bold text-blue-900">۳+</p>
+                  <p className="mt-1 text-sm text-gray-600">سال تجربه تدریس</p>
+                </div>
+
+                <div className="rounded-lg bg-gray-50 px-3 py-3">
+                  <p className="text-2xl font-bold text-blue-900">۵۱</p>
+                  <p className="mt-1 text-sm text-gray-600">زبان‌آموز</p>
+                </div>
+
+                <div className="rounded-lg bg-gray-50 px-3 py-3">
+                  <p className="text-2xl font-bold text-blue-900">telc B2</p>
+                  <p className="mt-1 text-sm text-gray-600">مدرک زبان آلمانی</p>
+                </div>
+
+                <div className="rounded-lg bg-gray-50 px-3 py-3">
+                  <p className="text-2xl font-bold text-blue-900">A1–B2</p>
+                  <p className="mt-1 text-sm text-gray-600">سطوح تدریس</p>
+                </div>
+              </div>
+
+              <p>
+                حدود ۵ سال است که به‌صورت جدی با زبان آلمانی درگیرم و با
+                چالش‌هایی که زبان‌آموزان در مسیر یادگیری این زبان تجربه
+                می‌کنند آشنا هستم. هدفم این است که یادگیری زبان آلمانی را
+                ساده‌تر، کاربردی‌تر و لذت‌بخش‌تر کنم.
+              </p>
+
+              <p>
+                در کلاس‌های من فقط به مطالعه کتاب اکتفا نمی‌کنیم؛ بلکه روی
+                مهارت‌هایی کار می‌کنیم که برای مکالمه و استفاده از زبان
+                آلمانی در موقعیت‌های واقعی اهمیت دارند.
+              </p>
+
+              <p>
+                اگر برای یادگیری زبان آلمانی به برنامه‌ای منظم، بازخورد و
+                پشتیبانی نیاز دارید، می‌توانید برای بررسی شرایط کلاس‌ها با
+                من در ارتباط باشید.
+              </p>
+
+              <a
+                href="tel:+989130061984"
+                aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
+                className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
+              >
+                تماس با مسیح سلیمانی
+              </a>
+            </div>
           </div>
 
-          <div className="rounded-lg bg-gray-50 px-3 py-3">
-            <p className="text-2xl font-bold text-blue-900">۵۱</p>
-            <p className="mt-1 text-sm text-gray-600">زبان‌آموز</p>
-          </div>
-
-          <div className="rounded-lg bg-gray-50 px-3 py-3">
-            <p className="text-2xl font-bold text-blue-900">telc B2</p>
-            <p className="mt-1 text-sm text-gray-600">مدرک زبان آلمانی</p>
-          </div>
-
-          <div className="rounded-lg bg-gray-50 px-3 py-3">
-            <p className="text-2xl font-bold text-blue-900">A1–B2</p>
-            <p className="mt-1 text-sm text-gray-600">سطوح تدریس</p>
+          <div className="shrink-0">
+            <img
+              src="/mee.jpg"
+              alt="مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو اصفهان"
+              width={320}
+              height={320}
+              loading="lazy"
+              className="h-64 w-64 rounded-full border-4 border-blue-900 object-cover shadow-lg md:h-80 md:w-80"
+            />
           </div>
         </div>
-
-        <p>
-          حدود ۵ سال است که به‌صورت جدی با زبان آلمانی درگیرم و با
-          چالش‌هایی که زبان‌آموزان در مسیر یادگیری این زبان تجربه
-          می‌کنند آشنا هستم. هدفم این است که یادگیری زبان آلمانی را
-          ساده‌تر، کاربردی‌تر و لذت‌بخش‌تر کنم.
-        </p>
-
-        <p>
-          در کلاس‌های من فقط به مطالعه کتاب اکتفا نمی‌کنیم؛ بلکه روی
-          مهارت‌هایی کار می‌کنیم که برای مکالمه و استفاده از زبان
-          آلمانی در موقعیت‌های واقعی اهمیت دارند.
-        </p>
-
-        <p>
-          اگر برای یادگیری زبان آلمانی به برنامه‌ای منظم، بازخورد و
-          پشتیبانی نیاز دارید، می‌توانید برای بررسی شرایط کلاس‌ها با
-          من در ارتباط باشید.
-        </p>
-
-        <a
-          href="tel:+989130061984"
-          aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
-          className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
-        >
-          تماس با مسیح سلیمانی
-        </a>
-      </div>
-    </div>
-
-    <div className="shrink-0">
-      <img
-        src="/mee.jpg"
-        alt="مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو اصفهان"
-        width={320}
-        height={320}
-        loading="lazy"
-        className="h-64 w-64 rounded-full border-4 border-blue-900 object-cover shadow-lg md:h-80 md:w-80"
-      />
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* WHY DEUTSCHINO */}
-      <section id="why-us" className="bg-blue-900 pb-24 pt-10">
+      <section
+        id="why-us"
+        className="scroll-mt-28 bg-blue-900 pb-24 pt-10"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-8 text-center">
             <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
@@ -402,146 +405,145 @@ export default function Home() {
       </section>
 
       {/* REVIEWS */}
-      <section id="reviews" className="scroll-mt-20">
+      <section id="reviews" className="scroll-mt-28">
         <Reviews />
       </section>
 
-      
-{/* FOOTER */}
-<footer
-  id="contact"
-  className="relative mt-16 overflow-hidden bg-blue-950 text-white"
->
-  {/* BACKGROUND IMAGE */}
-  <img
-    src="/footer-bg.png"
-    alt=""
-    aria-hidden="true"
-    loading="lazy"
-    className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-15"
-  />
+      {/* FOOTER */}
+      <footer
+        id="contact"
+        className="relative mt-16 scroll-mt-28 overflow-hidden bg-blue-950 text-white"
+      >
+        {/* BACKGROUND IMAGE */}
+        <img
+          src="/footer-bg.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-15"
+        />
 
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-blue-950/60" />
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-blue-950/60" />
 
-  <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-9">
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+        <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-9">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
 
-      {/* ACADEMY INFORMATION */}
-      <div className="order-2 flex flex-col items-center justify-center md:order-2">
-        <div className="flex flex-col items-center gap-3 md:flex-row-reverse">
-          <img
-            src="/logo.jpg"
-            alt="لوگوی آکادمی دویچینو"
-            width={100}
-            height={100}
-            loading="lazy"
-            className="h-20 w-20 object-contain md:h-24 md:w-24"
-          />
+            {/* ACADEMY INFORMATION */}
+            <div className="order-2 flex flex-col items-center justify-center md:order-2">
+              <div className="flex flex-col items-center gap-3 md:flex-row-reverse">
+                <img
+                  src="/logo.jpg"
+                  alt="لوگوی آکادمی دویچینو"
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                  className="h-20 w-20 object-contain md:h-24 md:w-24"
+                />
 
-          <div className="text-center md:text-right">
-            <h2 className="text-xl font-bold md:text-2xl">
-              Deutschino Akademie
-            </h2>
-            <p className="mt-1 text-sm text-blue-200">
-              German Language Academy
-            </p>
-          </div>
-        </div>
+                <div className="text-center md:text-right">
+                  <h2 className="text-xl font-bold md:text-2xl">
+                    Deutschino Akademie
+                  </h2>
+                  <p className="mt-1 text-sm text-blue-200">
+                    German Language Academy
+                  </p>
+                </div>
+              </div>
 
-        <p className="mt-4 max-w-md text-center text-sm leading-7 text-blue-100 md:text-right">
-          آموزش زبان آلمانی از سطح مقدماتی تا سطح هدف، با تمرکز بر
-          یادگیری کاربردی برای مکالمه، تحصیل، کار و مهاجرت.
-        </p>
-      </div>
-
-      {/* CONTACT INFORMATION */}
-      <div className="order-1 text-right">
-        <h2 className="mb-4 text-xl font-bold">
-          اطلاعات تماس
-        </h2>
-
-        <div className="space-y-4 text-sm leading-7 text-blue-100">
-
-          {/* ADDRESS */}
-          <div>
-            <p className="mb-1 font-semibold text-white">
-              📍 آدرس آکادمی دویچینو
-            </p>
-
-            <address className="not-italic">
-              اصفهان، خیابان حکیم نظامی، از سمت پل فلزی، بعد از چهارراه
-              نظر، اولین کوچه سمت راست (میدان کوچک ۱۰)، بالای کافه
-              قهوینه، آکادمی دویچینو
-            </address>
-
-            {/* GOOGLE MAP */}
-            <div className="mt-3 w-full max-w-sm overflow-hidden rounded-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d839.9743064287111!2d51.653918485331474!3d32.63556027577545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2s!4v1792160428117!5m2!1sde!2s"
-                width="100%"
-                height="150"
-                style={{ border: 0, pointerEvents: "none" }}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                title="موقعیت آکادمی دویچینو"
-              />
+              <p className="mt-4 max-w-md text-center text-sm leading-7 text-blue-100 md:text-right">
+                آموزش زبان آلمانی از سطح مقدماتی تا سطح هدف، با تمرکز بر
+                یادگیری کاربردی برای مکالمه، تحصیل، کار و مهاجرت.
+              </p>
             </div>
 
-            {/* DIRECTIONS */}
-            <a
-              href="https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
-            >
-              مسیریابی به آکادمی دویچینو
-            </a>
+            {/* CONTACT INFORMATION */}
+            <div className="order-1 text-right">
+              <h2 className="mb-4 text-xl font-bold">
+                اطلاعات تماس
+              </h2>
+
+              <div className="space-y-4 text-sm leading-7 text-blue-100">
+
+                {/* ADDRESS */}
+                <div>
+                  <p className="mb-1 font-semibold text-white">
+                    📍 آدرس آکادمی دویچینو
+                  </p>
+
+                  <address className="not-italic">
+                    اصفهان، خیابان حکیم نظامی، از سمت پل فلزی، بعد از چهارراه
+                    نظر، اولین کوچه سمت راست (میدان کوچک ۱۰)، بالای کافه
+                    قهوینه، آکادمی دویچینو
+                  </address>
+
+                  {/* GOOGLE MAP */}
+                  <div className="mt-3 w-full max-w-sm overflow-hidden rounded-lg">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d839.9743064287111!2d51.653918485331474!3d32.63556027577545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2s!4v1792160428117!5m2!1sde!2s"
+                      width="100%"
+                      height="150"
+                      style={{ border: 0, pointerEvents: "none" }}
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      title="موقعیت آکادمی دویچینو"
+                    />
+                  </div>
+
+                  {/* DIRECTIONS */}
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
+                  >
+                    مسیریابی به آکادمی دویچینو
+                  </a>
+                </div>
+
+                {/* PHONE */}
+                <div>
+                  <p className="mb-1 font-semibold text-white">
+                    📞 شماره تماس
+                  </p>
+
+                  <a
+                    href="tel:+989130061984"
+                    dir="ltr"
+                    className="inline-block hover:text-white"
+                  >
+                    09130061984
+                  </a>
+                </div>
+
+                {/* WHATSAPP */}
+                <div>
+                  <p className="mb-1 font-semibold text-white">
+                    💬 مشاوره و ثبت‌نام
+                  </p>
+
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block underline underline-offset-4 transition hover:text-white"
+                  >
+                    پیام در واتساپ
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
 
-          {/* PHONE */}
-          <div>
-            <p className="mb-1 font-semibold text-white">
-              📞 شماره تماس
-            </p>
-
-            <a
-              href="tel:+989130061984"
-              dir="ltr"
-              className="inline-block hover:text-white"
-            >
-              09130061984
-            </a>
+          {/* COPYRIGHT */}
+          <div className="mt-7 border-t border-blue-800/80 pt-4 text-center text-xs text-blue-300">
+            © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
           </div>
-
-          {/* WHATSAPP */}
-          <div>
-            <p className="mb-1 font-semibold text-white">
-              💬 مشاوره و ثبت‌نام
-            </p>
-
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block underline underline-offset-4 transition hover:text-white"
-            >
-              پیام در واتساپ
-            </a>
-          </div>
-
         </div>
-      </div>
-    </div>
+      </footer>
 
-    {/* COPYRIGHT */}
-    <div className="mt-7 border-t border-blue-800/80 pt-4 text-center text-xs text-blue-300">
-      © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
-    </div>
-  </div>
-</footer>
-
-<BackToTop />
-</main>
+      <BackToTop />
+    </main>
   );
 }
