@@ -87,96 +87,76 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/germany.jpg')" }}
-          aria-hidden="true"
-        />
+      
+{/* HERO SECTION */}
+<section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/germany.jpg')" }}
+    aria-hidden="true"
+  />
 
-        <div
-          className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
-          aria-hidden="true"
-        />
+  <div
+    className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
+    aria-hidden="true"
+  />
 
-        <div className="relative z-10 mx-auto w-full max-w-5xl">
-          <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش حرفه‌ای زبان آلمانی با متد تخصصی
-          </h1>
+  <div className="relative z-10 mx-auto w-full max-w-5xl">
+    <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
+      یادگیری زبان آلمانی در اصفهان و آنلاین
+    </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
-            کلاس‌های خصوصی و گروهی زبان آلمانی با مسیح سلیمانی در آکادمی
-            دویچینو؛ حضوری در اصفهان و آنلاین.
-          </p>
+    <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
+      با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی زبان آلمانی از A1 تا B2
+      در آکادمی دویچینو.
+    </p>
 
-          {/* QUICK NAVIGATION BUTTONS */}
-          <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4">
-            <button
-              type="button"
-              onClick={() => {
-                const coursesSection = document.getElementById("courses");
+    {/* MAIN CTA */}
+    <div className="mt-8">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+        className="inline-flex min-h-12 items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700"
+      >
+        مشاوره و ثبت‌نام در واتساپ
+      </a>
+    </div>
 
-                if (coursesSection) {
-                  coursesSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                } else {
-                  window.location.href = "/#courses";
-                }
-              }}
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-blue-900 px-3 py-3 text-sm text-white transition hover:bg-blue-800 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">📚</span>
-              <span>کلاس‌ها</span>
-            </button>
+    {/* QUICK NAVIGATION */}
+    <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4">
+      <a
+        href="#why-us"
+        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
+      >
+        چرا دویچینو؟
+      </a>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-green-800 px-3 py-3 text-sm text-white transition hover:bg-green-700 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">💬</span>
-              <span>مشاوره و ثبت‌نام</span>
-            </a>
+      <a
+        href="#about"
+        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
+      >
+        درباره مدرس
+      </a>
 
-            <a
-              href="#about"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">👨‍🏫</span>
-              <span>درباره مدرس</span>
-            </a>
+      <a
+        href="#reviews"
+        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
+      >
+        نظرات زبان‌آموزان
+      </a>
 
-            <a
-              href="#reviews"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">⭐</span>
-              <span>نظرات زبان‌آموزان</span>
-            </a>
+      <a
+        href="#contact"
+        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
+      >
+        ارتباط با ما
+      </a>
+    </div>
+  </div>
+</section>
 
-            <a
-              href="#why-us"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">✨</span>
-              <span>چرا دویچینو؟</span>
-            </a>
-
-            <a
-              href="#contact"
-              className="flex min-h-11 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-gray-300 px-3 py-3 text-sm text-blue-900 transition hover:bg-gray-300 sm:rounded-xl sm:px-5 sm:text-base"
-            >
-              <span aria-hidden="true">📍</span>
-              <span>ارتباط با ما</span>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* COURSES SECTION */}
       <section
