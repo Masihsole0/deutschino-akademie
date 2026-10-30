@@ -348,61 +348,99 @@ export default function Home() {
       </section>
 
       {/* WHY DEUTSCHINO */}
-      <section
-        id="why-us"
-        className="scroll-mt-[-20px] bg-blue-900 pb-24 pt-10"
-      >
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-8 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
-              چرا آکادمی دویچینو؟
-            </h2>
+<section
+  id="why-us"
+  className="scroll-mt-[-20px] bg-blue-900 pb-24 pt-10"
+>
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="mb-10 text-center">
+      <h2 className="mb-5 text-3xl font-bold text-white md:text-4xl">
+        چرا آکادمی دویچینو؟
+      </h2>
 
-            <p className="mx-auto max-w-3xl text-base leading-9 text-blue-100 md:text-lg">
-              یادگیری زبان آلمانی فقط حفظ واژگان و مطالعه گرامر نیست. تمرین
-              مستمر، استفاده از زبان در موقعیت‌های واقعی و داشتن مسیر آموزشی
-              متناسب با هدف، به پیشرفت بهتر کمک می‌کند.
-            </p>
+      <p className="mx-auto max-w-3xl text-base leading-9 text-blue-100 md:text-lg">
+        در دویچینو یادگیری زبان آلمانی فقط به حضور در کلاس محدود
+        نمی‌شود؛ با منابع آموزشی متنوع، جزوه‌های اختصاصی، آزمون‌های
+        استاندارد و پشتیبانی مستمر همراه شما هستیم.
+      </p>
 
-            <div className="mb-2 mt-10 flex items-center justify-center">
-              <div className="h-px w-24 bg-blue-300/40" />
+      <div className="mb-2 mt-8 flex items-center justify-center">
+        <div className="h-px w-24 bg-blue-300/40" />
 
-              <div className="mx-4 flex h-5 w-5 rotate-45 items-center justify-center rounded-sm border-2 border-blue-300">
-                <div className="h-2 w-2 rounded-sm bg-blue-300" />
-              </div>
-
-              <div className="h-px w-24 bg-blue-300/40" />
-            </div>
-          </div>
-
-          <div
-            dir="rtl"
-            className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {benefits.map((benefit) => (
-              <article
-                key={benefit.title}
-                className="rounded-2xl bg-white p-8 text-center shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div
-                  className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-3xl leading-none"
-                  aria-hidden="true"
-                >
-                  {benefit.icon}
-                </div>
-
-                <h3 className="mb-3 text-xl font-bold text-blue-900">
-                  {benefit.title}
-                </h3>
-
-                <p className="leading-8 text-gray-600">
-                  {benefit.description}
-                </p>
-              </article>
-            ))}
-          </div>
+        <div className="mx-4 flex h-5 w-5 rotate-45 items-center justify-center rounded-sm border-2 border-blue-300">
+          <div className="h-2 w-2 rounded-sm bg-blue-300" />
         </div>
-      </section>
+
+        <div className="h-px w-24 bg-blue-300/40" />
+      </div>
+    </div>
+
+    <div
+      dir="rtl"
+      className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4"
+    >
+      <article className="rounded-2xl bg-white p-4 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-2xl sm:h-16 sm:w-16 sm:text-3xl">
+          📚
+        </div>
+
+        <h3 className="mb-3 text-base font-bold text-blue-900 sm:text-xl">
+          آموزش با ۳ کتاب
+        </h3>
+
+        <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+          استفاده از سه کتاب و منبع آموزشی به‌جای محدود شدن به یک کتاب،
+          برای یادگیری عمیق‌تر زبان آلمانی.
+        </p>
+      </article>
+
+      <article className="rounded-2xl bg-white p-4 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-2xl sm:h-16 sm:w-16 sm:text-3xl">
+          📝
+        </div>
+
+        <h3 className="mb-3 text-base font-bold text-blue-900 sm:text-xl">
+          جزوه‌های اختصاصی
+        </h3>
+
+        <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+          دریافت جزوه‌های آموزشی برای مرور مطالب کلاس، تمرین بیشتر و
+          تثبیت آموخته‌ها.
+        </p>
+      </article>
+
+      <article className="rounded-2xl bg-white p-4 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-2xl sm:h-16 sm:w-16 sm:text-3xl">
+          🎯
+        </div>
+
+        <h3 className="mb-3 text-base font-bold text-blue-900 sm:text-xl">
+          آزمون‌های Goethe و telc
+        </h3>
+
+        <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+          آشنایی و ارزیابی زبان‌آموزان با نمونه آزمون‌های Goethe و telc
+          در تمام سطوح آموزشی.
+        </p>
+      </article>
+
+      <article className="rounded-2xl bg-white p-4 text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-2xl sm:h-16 sm:w-16 sm:text-3xl">
+          💬
+        </div>
+
+        <h3 className="mb-3 text-base font-bold text-blue-900 sm:text-xl">
+          پشتیبانی خارج از کلاس
+        </h3>
+
+        <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
+          امکان پرسیدن سؤال و دریافت راهنمایی از مدرس حتی خارج از
+          ساعات برگزاری کلاس.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
       {/* REVIEWS */}
       <section id="reviews" className="scroll-mt-[-30px]">
