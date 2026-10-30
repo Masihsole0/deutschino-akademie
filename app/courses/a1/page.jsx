@@ -5,8 +5,6 @@ import {
   Clock3,
   GraduationCap,
   Headphones,
-  Book,
-  CircleHelp,
   Wallet,
 } from "lucide-react";
 
@@ -46,78 +44,100 @@ export default function A1Page() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6">
         {/* Logo */}
-<div className="flex justify-center mb-3 md:mb-6">
-  <Image
-    src="/logo.jpg"
-    alt="لوگوی آکادمی دویچینو"
-    width={120}
-    height={120}
-    className="w-auto h-20 md:h-24"
-    priority
-  />
-</div>
+        <div className="flex justify-center mb-3 md:mb-6">
+          <Image
+            src="/logo.jpg"
+            alt="لوگوی آکادمی دویچینو"
+            width={120}
+            height={120}
+            className="w-auto h-20 md:h-24"
+            priority
+          />
+        </div>
 
-{/* Banner */}
-<div className="flex justify-center">
-  <Image
-    src="/books.jpg"
-    alt="کتاب‌های آموزش زبان آلمانی سطح A1"
-    width={900}
-    height={350}
-    className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
-    priority
-  />
-</div>
+        {/* Banner */}
+        <div className="flex justify-center">
+          <Image
+            src="/books.jpg"
+            alt="کتاب‌های آموزش زبان آلمانی سطح A1"
+            width={900}
+            height={350}
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+            priority
+          />
+        </div>
 
-{/* Course Introduction */}
-<section dir="rtl" className="max-w-4xl mx-auto mt-4 md:mt-8 text-center">
-  <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
-    کلاس زبان آلمانی A1 از صفر
-  </h1>
+        {/* Course Introduction */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
+        >
+          <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
+            کلاس زبان آلمانی A1 از صفر
+          </h1>
 
-  <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-    آموزش زبان آلمانی به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین؛
-    مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
-  </p>
-</section>
+          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
+            آموزش زبان آلمانی به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین؛
+            مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
+          </p>
+        </section>
 
         {/* Course Features */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-6 grid grid-cols-2 md:grid-cols-4 gap-3"
+          className="max-w-4xl mx-auto mt-4 md:mt-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3"
         >
-          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
-            <Clock3 size={25} className="mx-auto mb-2 text-[#0A2540]" />
-            <p className="font-bold mb-1">مدت هر جلسه</p>
-            <p className="text-sm text-gray-600">۹۰ دقیقه</p>
-          </div>
-
-          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
-            <GraduationCap
-              size={25}
-              className="mx-auto mb-2 text-[#0A2540]"
+          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
+            <Clock3
+              size={22}
+              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
             />
-            <p className="font-bold mb-1">پیش‌نیاز</p>
-            <p className="text-sm text-gray-600">ندارد؛ شروع از صفر</p>
+            <p className="font-bold text-sm md:text-base mb-1">
+              مدت هر جلسه
+            </p>
+            <p className="text-xs md:text-sm text-gray-600">۹۰ دقیقه</p>
           </div>
 
-          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
-            <Headphones size={25} className="mx-auto mb-2 text-[#0A2540]" />
-            <p className="font-bold mb-1">پشتیبانی</p>
-            <p className="text-sm text-gray-600">خارج از ساعات کلاس</p>
+          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
+            <GraduationCap
+              size={22}
+              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
+            />
+            <p className="font-bold text-sm md:text-base mb-1">پیش‌نیاز</p>
+            <p className="text-xs md:text-sm text-gray-600">
+              ندارد؛ شروع از صفر
+            </p>
           </div>
 
-          <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
-            <BookOpen size={25} className="mx-auto mb-2 text-[#0A2540]" />
-            <p className="font-bold mb-1">منابع آموزشی</p>
-            <p className="text-sm text-gray-600">۳ کتاب و جزوه</p>
+          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
+            <Headphones
+              size={22}
+              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
+            />
+            <p className="font-bold text-sm md:text-base mb-1">پشتیبانی</p>
+            <p className="text-xs md:text-sm text-gray-600">
+              خارج از ساعات کلاس
+            </p>
+          </div>
+
+          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
+            <BookOpen
+              size={22}
+              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
+            />
+            <p className="font-bold text-sm md:text-base mb-1">
+              منابع آموزشی
+            </p>
+            <p className="text-xs md:text-sm text-gray-600">
+              ۳ کتاب و جزوه
+            </p>
           </div>
         </section>
 
         {/* Learning Outcomes */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-12">
+        <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
           <h2 className="text-xl md:text-2xl font-bold mb-5">
             در دوره زبان آلمانی A1 چه چیزهایی یاد می‌گیرید؟
           </h2>
@@ -147,34 +167,41 @@ export default function A1Page() {
         </section>
 
         {/* Pricing */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-14">
-          <h2 className="text-2xl font-bold text-center mb-2">
+        <section
+          dir="rtl"
+          className="max-w-3xl mx-auto mt-10 md:mt-14"
+        >
+          <h2 className="text-xl md:text-2xl font-bold text-center mb-2">
             هزینه کلاس زبان آلمانی A1
           </h2>
 
-          <p className="text-gray-600 text-center mb-7">
+          <p className="text-xs md:text-sm text-gray-600 text-center mb-4">
             امکان انتخاب کلاس خصوصی یا گروهی متناسب با شرایط شما
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-3 md:gap-5">
             {/* Private */}
-            <div className="border rounded-2xl overflow-hidden shadow-sm">
-              <div className="bg-[#F4F8FF] px-5 py-4">
-                <h3 className="text-xl font-bold">کلاس خصوصی A1</h3>
+            <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+              <div className="bg-[#F4F8FF] px-2 py-3 md:px-5 md:py-4 text-center">
+                <h3 className="text-sm md:text-xl font-bold">
+                  کلاس خصوصی A1
+                </h3>
               </div>
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-5">
-                  <div>
-                    <p className="text-3xl font-bold text-green-700">
-                      ۸۹۰٬۰۰۰
-                    </p>
-                    <span className="text-sm text-gray-500">
-                      تومان برای هر جلسه
-                    </span>
-                  </div>
-                  <Wallet size={30} />
+              <div className="p-3 md:p-5 text-center">
+                <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
+                  <Wallet
+                    size={21}
+                    className="shrink-0 md:w-7 md:h-7"
+                  />
+                  <p className="text-lg md:text-2xl font-bold text-green-700">
+                    ۸۹۰٬۰۰۰
+                  </p>
                 </div>
+
+                <p className="text-[11px] md:text-sm text-gray-500 mb-3">
+                  تومان برای هر جلسه
+                </p>
 
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -182,7 +209,7 @@ export default function A1Page() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-center py-4 rounded-xl font-bold transition-colors"
+                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
                 >
                   ثبت‌نام از طریق واتساپ
                 </a>
@@ -190,23 +217,27 @@ export default function A1Page() {
             </div>
 
             {/* Group */}
-            <div className="border rounded-2xl overflow-hidden shadow-sm">
-              <div className="bg-[#F4F8FF] px-5 py-4">
-                <h3 className="text-xl font-bold">کلاس گروهی A1</h3>
+            <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+              <div className="bg-[#F4F8FF] px-2 py-3 md:px-5 md:py-4 text-center">
+                <h3 className="text-sm md:text-xl font-bold">
+                  کلاس گروهی A1
+                </h3>
               </div>
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-5">
-                  <div>
-                    <p className="text-3xl font-bold text-green-700">
-                      ۳۹۰٬۰۰۰
-                    </p>
-                    <span className="text-sm text-gray-500">
-                      تومان برای هر جلسه
-                    </span>
-                  </div>
-                  <Wallet size={30} />
+              <div className="p-3 md:p-5 text-center">
+                <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
+                  <Wallet
+                    size={21}
+                    className="shrink-0 md:w-7 md:h-7"
+                  />
+                  <p className="text-lg md:text-2xl font-bold text-green-700">
+                    ۳۹۰٬۰۰۰
+                  </p>
                 </div>
+
+                <p className="text-[11px] md:text-sm text-gray-500 mb-3">
+                  تومان برای هر جلسه
+                </p>
 
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -214,7 +245,7 @@ export default function A1Page() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-center py-4 rounded-xl font-bold transition-colors"
+                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
                 >
                   ثبت‌نام از طریق واتساپ
                 </a>
@@ -222,7 +253,7 @@ export default function A1Page() {
             </div>
           </div>
 
-          <p className="text-sm text-gray-600 text-center leading-8 mt-5">
+          <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-3">
             تعداد جلسات ثابت نیست و متناسب با روند یادگیری و پیشرفت زبان‌آموز
             تعیین می‌شود. مدت هر جلسه ۹۰ دقیقه است.
           </p>
