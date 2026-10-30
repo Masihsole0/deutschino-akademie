@@ -1,4 +1,3 @@
-
 const websiteUrl = "https://www.deutschino.ir";
 
 export const organizationSchema = {
@@ -23,6 +22,7 @@ export const organizationSchema = {
       url: websiteUrl,
       description:
         "آموزش زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی، آموزش گرامر و مکالمه و دوره‌های A1 تا B2.",
+      priceRange: "متوسط",
       logo: {
         "@type": "ImageObject",
         url: `${websiteUrl}/logo.jpg`,
