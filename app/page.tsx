@@ -88,6 +88,7 @@ export default function Home() {
       <Navbar />
 
       
+
 {/* HERO SECTION */}
 <section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
   <div
@@ -111,52 +112,26 @@ export default function Home() {
       در آکادمی دویچینو.
     </p>
 
-    {/* MAIN CTA */}
-    <div className="mt-8">
+    <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-        className="inline-flex min-h-12 items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700"
+        className="inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700 sm:w-auto"
       >
         مشاوره و ثبت‌نام در واتساپ
       </a>
-    </div>
-
-    {/* QUICK NAVIGATION */}
-    <div className="mx-auto mt-8 grid w-full max-w-xl grid-cols-2 gap-3 sm:mt-10 sm:gap-4">
-      <a
-        href="#why-us"
-        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
-      >
-        چرا دویچینو؟
-      </a>
 
       <a
-        href="#about"
-        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
+        href="#courses"
+        className="text-base font-medium text-white underline underline-offset-8 transition hover:text-gray-200"
       >
-        درباره مدرس
-      </a>
-
-      <a
-        href="#reviews"
-        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
-      >
-        نظرات زبان‌آموزان
-      </a>
-
-      <a
-        href="#contact"
-        className="flex min-h-12 items-center justify-center rounded-xl border border-white/40 bg-white/90 px-3 py-3 text-sm font-medium text-blue-900 transition hover:bg-white sm:text-base"
-      >
-        ارتباط با ما
+        مشاهده دوره‌ها ↓
       </a>
     </div>
   </div>
 </section>
-
 
       {/* COURSES SECTION */}
       <section
