@@ -26,10 +26,8 @@ const courseSchema = {
   description:
     "آموزش زبان آلمانی سطح A2 در آکادمی دویچینو، به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین، با تمرکز بر گرامر، واژگان و مهارت‌های زبان آلمانی.",
   provider: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
-  },
+  "@id": "https://www.deutschino.ir/#organization",
+},
   inLanguage: "de",
   educationalLevel: "A2",
 };

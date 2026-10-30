@@ -24,10 +24,8 @@ const courseSchema = {
   description:
     "آموزش زبان آلمانی A1 از صفر در آکادمی دویچینو؛ کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
   provider: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
-  },
+  "@id": "https://www.deutschino.ir/#organization",
+},
   inLanguage: "de",
   educationalLevel: "A1",
 };

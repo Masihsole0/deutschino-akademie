@@ -26,10 +26,8 @@ const courseSchema = {
   description:
     "آموزش گرامر زبان آلمانی از سطح A1 تا B2 با تمرکز بر یادگیری قواعد، حل تمرین و رفع اشکال در آکادمی دویچینو.",
   provider: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
-  },
+  "@id": "https://www.deutschino.ir/#organization",
+},
   inLanguage: "de",
   educationalLevel: "A1–B2",
 };

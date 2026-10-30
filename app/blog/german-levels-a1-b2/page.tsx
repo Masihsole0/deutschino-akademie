@@ -28,15 +28,15 @@ const articleSchema = {
   description:
     "راهنمای آشنایی با سطح‌های مختلف زبان آلمانی و مهارت‌های مورد انتظار در هر سطح.",
   author: {
-    "@type": "Person",
-    name: "مسیح سلیمانی",
+    "@id": "https://www.deutschino.ir/#instructor",
   },
   publisher: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
+    "@id": "https://www.deutschino.ir/#organization",
   },
-  mainEntityOfPage: pageUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
 };
 
 export default function GermanLevelsPage() {

@@ -29,15 +29,15 @@ const articleSchema = {
   description:
     "راهنمای آمادگی آزمون B1 زبان آلمانی و تقویت چهار مهارت اصلی.",
   author: {
-    "@type": "Person",
-    name: "مسیح سلیمانی",
+    "@id": "https://www.deutschino.ir/#instructor",
   },
   publisher: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
+    "@id": "https://www.deutschino.ir/#organization",
   },
-  mainEntityOfPage: pageUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
 };
 
 export default function GermanB1ExamPreparationPage() {

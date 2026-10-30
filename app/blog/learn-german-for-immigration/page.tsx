@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
   },
+  openGraph: {
+    title: "یادگیری زبان آلمانی برای مهاجرت؛ از کجا شروع کنیم؟",
+    description:
+      "راهنمای شروع یادگیری زبان آلمانی برای افرادی که قصد مهاجرت به آلمان دارند.",
+    url: pageUrl,
+    type: "article",
+    locale: "fa_IR",
+  },
 };
 
 const articleSchema = {
@@ -21,16 +29,17 @@ const articleSchema = {
   headline: "یادگیری زبان آلمانی برای مهاجرت؛ از کجا شروع کنیم؟",
   description:
     "راهنمای شروع یادگیری زبان آلمانی برای افرادی که قصد مهاجرت به آلمان دارند.",
+  inLanguage: "fa-IR",
   author: {
-    "@type": "Person",
-    name: "مسیح سلیمانی",
+    "@id": "https://www.deutschino.ir/#instructor",
   },
   publisher: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
+    "@id": "https://www.deutschino.ir/#organization",
   },
-  mainEntityOfPage: pageUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
 };
 
 export default function LearnGermanForImmigrationPage() {

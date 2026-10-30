@@ -3,13 +3,42 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 
+const pageUrl =
+  "https://www.deutschino.ir/blog/learn-german-from-zero";
+
 export const metadata: Metadata = {
   title: "آموزش زبان آلمانی از صفر؛ از کجا شروع کنیم؟",
   description:
     "اگر می‌خواهید زبان آلمانی را از صفر یاد بگیرید، با مسیر شروع، انتخاب منابع و روش صحیح یادگیری آلمانی آشنا شوید.",
   alternates: {
-    canonical:
-      "https://www.deutschino.ir/blog/learn-german-from-zero",
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: "آموزش زبان آلمانی از صفر؛ از کجا شروع کنیم؟",
+    description:
+      "راهنمای شروع یادگیری زبان آلمانی از پایه، انتخاب منابع و روش صحیح یادگیری.",
+    url: pageUrl,
+    type: "article",
+    locale: "fa_IR",
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "آموزش زبان آلمانی از صفر؛ از کجا شروع کنیم؟",
+  description:
+    "راهنمای شروع یادگیری زبان آلمانی از پایه، انتخاب منابع و روش صحیح یادگیری.",
+  inLanguage: "fa-IR",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+  author: {
+    "@id": "https://www.deutschino.ir/#instructor",
+  },
+  publisher: {
+    "@id": "https://www.deutschino.ir/#organization",
   },
 };
 
@@ -19,6 +48,13 @@ export default function LearnGermanFromZeroPage() {
       <Navbar showLinks={false} />
 
       <main dir="rtl" className="min-h-screen bg-white px-5 py-12">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(articleSchema),
+          }}
+        />
+
         <article className="mx-auto max-w-3xl">
           <Link
             href="/blog"

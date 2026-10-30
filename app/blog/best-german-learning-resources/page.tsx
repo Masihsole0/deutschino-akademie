@@ -29,13 +29,10 @@ const articleSchema = {
   description:
     "معرفی منابع رایگان و کاربردی برای یادگیری زبان آلمانی از سطح مبتدی تا پیشرفته.",
   author: {
-    "@type": "Person",
-    name: "مسیح سلیمانی",
+    "@id": "https://www.deutschino.ir/#instructor",
   },
   publisher: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
+    "@id": "https://www.deutschino.ir/#organization",
   },
   mainEntityOfPage: pageUrl,
 };

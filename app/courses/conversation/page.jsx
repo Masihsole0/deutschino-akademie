@@ -26,10 +26,8 @@ const courseSchema = {
   description:
     "تمرین مکالمه زبان آلمانی در آکادمی دویچینو با تمرکز بر روانی گفتار و استفاده از زبان آلمانی در موقعیت‌های روزمره و کاری؛ به‌صورت حضوری در اصفهان و آنلاین.",
   provider: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
-  },
+  "@id": "https://www.deutschino.ir/#organization",
+},
   inLanguage: "de",
   educationalLevel: "B1",
 };

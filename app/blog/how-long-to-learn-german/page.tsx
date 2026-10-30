@@ -3,13 +3,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 
+const pageUrl =
+  "https://www.deutschino.ir/blog/how-long-to-learn-german";
+
 export const metadata: Metadata = {
   title: "یادگیری زبان آلمانی چقدر طول می‌کشد؟ از A1 تا B2",
   description:
     "مدت زمان یادگیری زبان آلمانی از صفر تا سطح B2 چقدر است؟ با عوامل مؤثر بر سرعت یادگیری و مسیر رسیدن به هر سطح آشنا شوید.",
   alternates: {
-    canonical:
-      "https://www.deutschino.ir/blog/how-long-to-learn-german",
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: "یادگیری زبان آلمانی چقدر طول می‌کشد؟ از A1 تا B2",
+    description:
+      "مدت زمان یادگیری زبان آلمانی و عوامل مؤثر بر پیشرفت از سطح مبتدی تا پیشرفته.",
+    url: pageUrl,
+    type: "article",
+    locale: "fa_IR",
   },
 };
 
@@ -20,16 +30,15 @@ const articleSchema = {
   description:
     "بررسی مدت زمان یادگیری زبان آلمانی و عوامل مؤثر بر پیشرفت از سطح مبتدی تا پیشرفته.",
   inLanguage: "fa-IR",
-  mainEntityOfPage:
-    "https://www.deutschino.ir/blog/how-long-to-learn-german",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
   author: {
-    "@type": "Person",
-    name: "مسیح سلیمانی",
+    "@id": "https://www.deutschino.ir/#instructor",
   },
   publisher: {
-    "@type": "Organization",
-    name: "آکادمی دویچینو",
-    url: "https://www.deutschino.ir",
+    "@id": "https://www.deutschino.ir/#organization",
   },
 };
 
