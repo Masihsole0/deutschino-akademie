@@ -267,7 +267,7 @@ export default function A1Page() {
         >
           <h2
             id="a1-course-guide"
-            className="text-1xl md:text-3xl font-bold mb-6"
+            className="text-2xl md:text-3xl font-bold mb-6"
           >
             آموزش حضوری زبان آلمانی A1 در اصفهان و آنلاین
           </h2>
