@@ -13,33 +13,33 @@ export default function Home() {
   const courses = [
     {
       title: "A1",
-      description: "شروع یادگیری زبان آلمانی از صفر و ساختن پایه‌ای قوی",
+      description: "شروع از صفر",
       href: "/courses/a1",
     },
     {
       title: "A2",
-      description: "تقویت گرامر، واژگان و مکالمه در موقعیت‌های روزمره",
+      description: "ادامه‌ی یادگیری",
       href: "/courses/a2",
     },
     {
       title: "B1",
       description:
-        "تقویت مهارت‌های زبانی برای موقعیت‌های واقعی و اهداف تحصیلی و شغلی",
+        "سطح متوسط",
       href: "/courses/b1",
     },
     {
       title: "B2",
-      description: "تقویت مهارت‌های زبان آلمانی در سطح پیشرفته",
+      description: "سطح پیشرفته",
       href: "/courses/b2",
     },
     {
       title: "کلاس مکالمه",
-      description: "تمرین مکالمه و افزایش توانایی صحبت‌کردن به زبان آلمانی",
+      description: "تقویت مکالمه",
       href: "/courses/conversation",
     },
     {
       title: "گرامر A1 تا B1",
-      description: "یادگیری و تقویت گرامر آلمانی از پایه تا پیشرفته",
+      description: "مرور گرامر",
       href: "/courses/grammar",
     },
   ];
