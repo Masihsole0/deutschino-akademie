@@ -7,6 +7,7 @@ import {
   Headphones,
   Book,
   CircleHelp,
+  Wallet,
 } from "lucide-react";
 
 export const metadata = {
@@ -45,15 +46,15 @@ export default function A1Page() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         {/* Logo */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <Image
             src="/logo.jpg"
             alt="لوگوی آکادمی دویچینو"
             width={120}
             height={120}
-            className="w-auto h-28"
+            className="w-auto h-24"
             priority
           />
         </div>
@@ -65,14 +66,14 @@ export default function A1Page() {
             alt="کتاب‌های آموزش زبان آلمانی سطح A1"
             width={900}
             height={350}
-            className="rounded-2xl shadow-xl object-cover md:max-w-[650px] md:w-full"
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[420px] md:max-w-[500px] h-auto"
             priority
           />
         </div>
 
         {/* Course Introduction */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-12 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold mb-4">
+        <section dir="rtl" className="max-w-4xl mx-auto mt-8 text-center">
+          <h1 className="text-2xl md:text-4xl font-bold mb-3">
             کلاس زبان آلمانی A1 از صفر
           </h1>
 
@@ -85,7 +86,7 @@ export default function A1Page() {
         {/* Course Features */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-8 grid grid-cols-2 md:grid-cols-4 gap-3"
+          className="max-w-4xl mx-auto mt-6 grid grid-cols-2 md:grid-cols-4 gap-3"
         >
           <div className="bg-[#F4F8FF] rounded-xl p-4 text-center">
             <Clock3 size={25} className="mx-auto mb-2 text-[#0A2540]" />
@@ -172,9 +173,7 @@ export default function A1Page() {
                       تومان برای هر جلسه
                     </span>
                   </div>
-                  <span className="text-3xl" aria-label="هزینه">
-                    💼
-                  </span>
+                  <Wallet size={30} />
                 </div>
 
                 <a
@@ -183,7 +182,7 @@ export default function A1Page() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 rounded-xl font-bold transition-colors"
+                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-center py-4 rounded-xl font-bold transition-colors"
                 >
                   ثبت‌نام از طریق واتساپ
                 </a>
@@ -206,9 +205,7 @@ export default function A1Page() {
                       تومان برای هر جلسه
                     </span>
                   </div>
-                  <span className="text-3xl" aria-label="هزینه">
-                    💼
-                  </span>
+                  <Wallet size={30} />
                 </div>
 
                 <a
@@ -217,7 +214,7 @@ export default function A1Page() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-4 rounded-xl font-bold transition-colors"
+                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-center py-4 rounded-xl font-bold transition-colors"
                 >
                   ثبت‌نام از طریق واتساپ
                 </a>
