@@ -16,13 +16,13 @@ export const organizationSchema = {
       },
     },
     {
-      "@type": "EducationalOrganization",
+      "@type": ["EducationalOrganization", "LocalBusiness"],
       "@id": `${websiteUrl}/#organization`,
       name: "آکادمی دویچینو",
       alternateName: "Deutschino Akademie",
       url: websiteUrl,
       description:
-        "آموزش زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی؛ برگزاری کلاس‌های خصوصی و گروهی، آموزش گرامر و مکالمه و دوره‌های زبان آلمانی از سطح A1 تا B2.",
+        "آموزش زبان آلمانی در اصفهان و آنلاین با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی، آموزش گرامر و مکالمه و دوره‌های A1 تا B2.",
       logo: {
         "@type": "ImageObject",
         url: `${websiteUrl}/logo.jpg`,
@@ -31,11 +31,22 @@ export const organizationSchema = {
         "@type": "ImageObject",
         url: `${websiteUrl}/mee.jpg`,
       },
+      telephone: "+989130061984",
       address: {
         "@type": "PostalAddress",
+        streetAddress:
+          "خیابان حکیم نظامی، بعد از چهارراه نظر، میدان کوچک ۱۰، بالای کافه قهوینه",
         addressLocality: "اصفهان",
+        addressRegion: "اصفهان",
         addressCountry: "IR",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 32.635704,
+        longitude: 51.653748,
+      },
+      hasMap:
+        "https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748",
       employee: {
         "@id": `${websiteUrl}/#instructor`,
       },
@@ -49,6 +60,12 @@ export const organizationSchema = {
           name: "ایران",
         },
       ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+989130061984",
+        contactType: "customer service",
+        availableLanguage: ["Persian", "German"],
+      },
     },
     {
       "@type": "Person",
@@ -60,9 +77,16 @@ export const organizationSchema = {
         "@type": "ImageObject",
         url: `${websiteUrl}/mee.jpg`,
       },
-      jobTitle: "مدرس زبان آلمانی",
+      description:
+        "مدرس زبان آلمانی و مدیر آکادمی دویچینو در اصفهان؛ برگزارکننده کلاس‌های حضوری و آنلاین زبان آلمانی از سطح A1 تا B2.",
+      jobTitle: "مدرس زبان آلمانی و مدیر آکادمی دویچینو",
       worksFor: {
         "@id": `${websiteUrl}/#organization`,
+      },
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "telc Deutsch B2",
+        credentialCategory: "Language proficiency certificate",
       },
       knowsAbout: [
         "آموزش زبان آلمانی",
