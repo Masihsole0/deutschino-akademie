@@ -48,40 +48,40 @@ export default function A1Page() {
 
       <div className="max-w-7xl mx-auto px-6 py-6">
         {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <Image
-            src="/logo.jpg"
-            alt="لوگوی آکادمی دویچینو"
-            width={120}
-            height={120}
-            className="w-auto h-24"
-            priority
-          />
-        </div>
+<div className="flex justify-center mb-3 md:mb-6">
+  <Image
+    src="/logo.jpg"
+    alt="لوگوی آکادمی دویچینو"
+    width={120}
+    height={120}
+    className="w-auto h-20 md:h-24"
+    priority
+  />
+</div>
 
-        {/* Banner */}
-        <div className="flex justify-center">
-          <Image
-            src="/books.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی سطح A1"
-            width={900}
-            height={350}
-            className="rounded-2xl shadow-xl object-cover w-full max-w-[420px] md:max-w-[500px] h-auto"
-            priority
-          />
-        </div>
+{/* Banner */}
+<div className="flex justify-center">
+  <Image
+    src="/books.jpg"
+    alt="کتاب‌های آموزش زبان آلمانی سطح A1"
+    width={900}
+    height={350}
+    className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+    priority
+  />
+</div>
 
-        {/* Course Introduction */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-8 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold mb-3">
-            کلاس زبان آلمانی A1 از صفر
-          </h1>
+{/* Course Introduction */}
+<section dir="rtl" className="max-w-4xl mx-auto mt-4 md:mt-8 text-center">
+  <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
+    کلاس زبان آلمانی A1 از صفر
+  </h1>
 
-          <p className="text-base md:text-lg text-gray-600 leading-8">
-            آموزش زبان آلمانی به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین؛
-            مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
-          </p>
-        </section>
+  <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
+    آموزش زبان آلمانی به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین؛
+    مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
+  </p>
+</section>
 
         {/* Course Features */}
         <section
