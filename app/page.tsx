@@ -448,141 +448,152 @@ export default function Home() {
         <Reviews />
       </section>
 
-      {/* FOOTER */}
-      <footer
-        id="contact"
-        className="relative mt-16 scroll-mt-[-30px] overflow-hidden bg-blue-950 text-white"
-      >
-        {/* BACKGROUND IMAGE */}
-        <img
-          src="/footer-bg.png"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-15"
-        />
+      
+{/* FOOTER */}
+<footer
+  id="contact"
+  className="relative mt-16 scroll-mt-[-30px] overflow-hidden bg-blue-950 text-white"
+>
+  {/* BACKGROUND IMAGE */}
+  <img
+    src="/footer-bg.png"
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+    className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-15"
+  />
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-blue-950/60" />
+  {/* DARK OVERLAY */}
+  <div className="absolute inset-0 bg-blue-950/60" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-9">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+  <div className="relative mx-auto max-w-7xl px-6 py-8 md:py-9">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
 
-            {/* ACADEMY INFORMATION */}
-            <div className="order-2 flex flex-col items-center justify-center md:order-2">
-              <div className="flex flex-col items-center gap-3 md:flex-row-reverse">
-                <img
-                  src="/logo.jpg"
-                  alt="لوگوی آکادمی دویچینو"
-                  width={100}
-                  height={100}
-                  loading="lazy"
-                  className="h-20 w-20 object-contain md:h-24 md:w-24"
-                />
+      {/* ACADEMY INFORMATION */}
+      <div className="order-2 flex flex-col items-center justify-center md:order-2">
+        <div className="flex flex-col items-center gap-3 md:flex-row-reverse">
+          <img
+            src="/logo.jpg"
+            alt="لوگوی آکادمی دویچینو"
+            width={100}
+            height={100}
+            loading="lazy"
+            className="h-20 w-20 object-contain md:h-24 md:w-24"
+          />
 
-                <div className="text-center md:text-right">
-                  <h2 className="text-xl font-bold md:text-2xl">
-                    Deutschino Akademie
-                  </h2>
-                  <p className="mt-1 text-sm text-blue-200">
-                    German Language Academy
-                  </p>
-                </div>
-              </div>
-
-              <p className="mt-4 max-w-md text-center text-sm leading-7 text-blue-100 md:text-right">
-                آموزش زبان آلمانی از سطح مقدماتی تا سطح هدف، با تمرکز بر
-                یادگیری کاربردی برای مکالمه، تحصیل، کار و مهاجرت.
-              </p>
-            </div>
-
-            {/* CONTACT INFORMATION */}
-            <div className="order-1 text-right">
-              <h2 className="mb-4 text-xl font-bold">
-                اطلاعات تماس
-              </h2>
-
-              <div className="space-y-4 text-sm leading-7 text-blue-100">
-
-                {/* ADDRESS */}
-                <div>
-                  <p className="mb-1 font-semibold text-white">
-                    📍 آدرس آکادمی دویچینو
-                  </p>
-
-                  <address className="not-italic">
-                    اصفهان، خیابان حکیم نظامی، از سمت پل فلزی، بعد از چهارراه
-                    نظر، اولین کوچه سمت راست (میدان کوچک ۱۰)، بالای کافه
-                    قهوینه، آکادمی دویچینو
-                  </address>
-
-                  {/* GOOGLE MAP */}
-                  <div className="mt-3 w-full max-w-sm overflow-hidden rounded-lg">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d839.9743064287111!2d51.653918485331474!3d32.63556027577545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2s!4v1792160428117!5m2!1sde!2s"
-                      width="100%"
-                      height="150"
-                      style={{ border: 0, pointerEvents: "none" }}
-                      loading="lazy"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      title="موقعیت آکادمی دویچینو"
-                    />
-                  </div>
-
-                  {/* DIRECTIONS */}
-                  <a
-                    href="https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
-                  >
-                    مسیریابی به آکادمی دویچینو
-                  </a>
-                </div>
-
-                {/* PHONE */}
-                <div>
-                  <p className="mb-1 font-semibold text-white">
-                    📞 شماره تماس
-                  </p>
-
-                  <a
-                    href="tel:+989130061984"
-                    dir="ltr"
-                    className="inline-block hover:text-white"
-                  >
-                    09130061984
-                  </a>
-                </div>
-
-                {/* WHATSAPP */}
-                <div>
-                  <p className="mb-1 font-semibold text-white">
-                    💬 مشاوره و ثبت‌نام
-                  </p>
-
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block underline underline-offset-4 transition hover:text-white"
-                  >
-                    پیام در واتساپ
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          {/* COPYRIGHT */}
-          <div className="mt-7 border-t border-blue-800/80 pt-4 text-center text-xs text-blue-300">
-            © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
+          <div className="text-center md:text-right">
+            <h2 className="text-xl font-bold md:text-2xl">
+              Deutschino Akademie
+            </h2>
+            <p className="mt-1 text-sm text-blue-200">
+              German Language Academy
+            </p>
           </div>
         </div>
-      </footer>
 
-      <BackToTop />
-    </main>
+        <p className="mt-4 max-w-md text-center text-sm leading-7 text-blue-100 md:text-right">
+          آموزش زبان آلمانی از سطح مقدماتی تا سطح هدف، با تمرکز بر
+          یادگیری کاربردی برای مکالمه، تحصیل، کار و مهاجرت.
+        </p>
+      </div>
+
+      {/* CONTACT INFORMATION */}
+      <div className="order-1 text-right">
+        <h2 className="mb-4 text-xl font-bold">
+          اطلاعات تماس
+        </h2>
+
+        <div className="space-y-4 text-sm leading-7 text-blue-100">
+
+          {/* ADDRESS */}
+          <div>
+            <p className="mb-1 font-semibold text-white">
+              📍 آدرس آکادمی دویچینو
+            </p>
+
+            <address className="not-italic">
+              اصفهان، خیابان حکیم نظامی، از سمت پل فلزی، بعد از چهارراه
+              نظر، اولین کوچه سمت راست (میدان کوچک ۱۰)، بالای کافه
+              قهوینه، آکادمی دویچینو
+            </address>
+
+            {/* GOOGLE MAP */}
+            <div className="mt-3 w-full max-w-sm overflow-hidden rounded-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d839.9743064287111!2d51.653918485331474!3d32.63556027577545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2s!4v1792160428117!5m2!1sde!2s"
+                width="100%"
+                height="150"
+                style={{ border: 0, pointerEvents: "none" }}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="موقعیت آکادمی دویچینو"
+              />
+            </div>
+
+            {/* DIRECTIONS */}
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=32.635704%2C51.653748"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center justify-center rounded-lg bg-green-700 px-4 py-2 text-sm text-white transition hover:bg-green-800"
+            >
+              مسیریابی به آکادمی دویچینو
+            </a>
+          </div>
+
+          {/* PHONE */}
+          <div>
+            <p className="mb-1 font-semibold text-white">
+              📞 شماره تماس
+            </p>
+
+            <a
+              href="tel:+989130061984"
+              dir="ltr"
+              className="inline-block hover:text-white"
+            >
+              09130061984
+            </a>
+          </div>
+
+          {/* WHATSAPP */}
+          <div>
+            <p className="mb-1 font-semibold text-white">
+              💬 مشاوره و ثبت‌نام
+            </p>
+
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block underline underline-offset-4 transition hover:text-white"
+            >
+              پیام در واتساپ
+            </a>
+          </div>
+
+          {/* BLOG */}
+          <div>
+            <a
+              href="/blog"
+              className="inline-block font-semibold text-blue-200 underline underline-offset-4 transition hover:text-white"
+            >
+              مقالات آموزش زبان آلمانی
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {/* COPYRIGHT */}
+    <div className="mt-7 border-t border-blue-800/80 pt-4 text-center text-xs text-blue-300">
+      © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
+    </div>
+  </div>
+</footer>
+
+<BackToTop />
+</main>
   );
 }
