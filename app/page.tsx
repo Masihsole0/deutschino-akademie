@@ -350,7 +350,7 @@ export default function Home() {
       {/* WHY DEUTSCHINO */}
 <section
   id="why-us"
-  className="scroll-mt-[-20px] bg-blue-900 pb-24 pt-10"
+  className="scroll-mt-[-70px] bg-blue-900 pb-24 pt-10"
 >
   <div className="mx-auto max-w-7xl px-6">
     <div className="mb-10 text-center">
