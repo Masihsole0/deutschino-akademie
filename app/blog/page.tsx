@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "../../components/Navbar";
 
 export const metadata: Metadata = {
   title: "مقالات آموزش زبان آلمانی | آکادمی دویچینو",
