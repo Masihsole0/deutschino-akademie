@@ -113,7 +113,7 @@ export default function BlogPage() {
             </p>
 
             <Link
-              href="/courses"
+              href="/#courses"
               className="mt-6 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#0A2540] transition hover:bg-gray-100"
             >
               مشاهده دوره‌ها
