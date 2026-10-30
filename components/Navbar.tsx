@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* NAVIGATION LINKS */}
         <nav
           aria-label="دسترسی سریع"
-          className="mt-2 flex w-full max-w-3xl flex-wrap items-center justify-center gap-x-5 gap-y-3 border-t border-gray-100 pt-3"
+          className="mt-2 flex w-full max-w-3xl flex-wrap items-center justify-center gap-x-3 gap-y-3 border-t border-gray-100 pt-3"
         >
           <a
             href="#why-us"
@@ -36,6 +36,8 @@ export default function Navbar() {
             چرا دویچینو؟
           </a>
 
+          <span className="h-1 w-1 shrink-0 rounded-full bg-blue-600" aria-hidden="true" />
+
           <a
             href="#about"
             className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
@@ -43,12 +45,16 @@ export default function Navbar() {
             درباره مدرس
           </a>
 
+          <span className="h-1 w-1 shrink-0 rounded-full bg-blue-600" aria-hidden="true" />
+
           <a
             href="#reviews"
             className="text-sm font-medium text-blue-900 transition hover:text-blue-600"
           >
             نظرات زبان‌آموزان
           </a>
+
+          <span className="h-1 w-1 shrink-0 rounded-full bg-blue-600" aria-hidden="true" />
 
           <a
             href="#contact"
