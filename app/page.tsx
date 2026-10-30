@@ -104,7 +104,7 @@ export default function Home() {
 
   <div className="relative z-10 mx-auto w-full max-w-5xl">
     <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-      یادگیری زبان آلمانی در اصفهان و آنلاین
+      یادگیری زبان آلمانی در اصفهان حضوری و آنلاین
     </h1>
 
     <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
