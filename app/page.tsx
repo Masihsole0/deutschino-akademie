@@ -102,12 +102,11 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            یادگیری زبان آلمانی در اصفهان حضوری و آنلاین
+            آموزش حرفه‌ای زبان آلمانی با متد تخصصی به صورت حضوری و آنلاین
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
-            با مسیح سلیمانی؛ کلاس‌های خصوصی و گروهی زبان آلمانی از A1 تا B2
-            در آکادمی دویچینو.
+            کلاس های خصوصی و عمومی از A1 تا B2 با تدریس مسیح سلیمانی
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
