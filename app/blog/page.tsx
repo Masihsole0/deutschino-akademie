@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
 
 export const metadata: Metadata = {
   title: "مقالات آموزش زبان آلمانی | آکادمی دویچینو",
@@ -58,66 +59,68 @@ const articles = [
 
 export default function BlogPage() {
   return (
-    <main dir="rtl" className="min-h-screen bg-gray-50 px-5 py-16">
-      <div className="mx-auto max-w-5xl">
+    <>
+      <Navbar showLinks={false} />
 
-        <header className="mb-12 text-center">
-          <h1 className="text-3xl font-bold leading-relaxed text-gray-900 md:text-4xl">
-            مقالات آموزش زبان آلمانی
-          </h1>
+      <main dir="rtl" className="min-h-screen bg-gray-50 px-5 py-16">
+        <div className="mx-auto max-w-5xl">
+          <header className="mb-12 text-center">
+            <h1 className="text-3xl font-bold leading-relaxed text-gray-900 md:text-4xl">
+              مقالات آموزش زبان آلمانی
+            </h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-gray-600 md:text-base">
-            راهنماها، نکات آموزشی و منابع کاربردی برای یادگیری زبان آلمانی
-            از سطح مبتدی تا پیشرفته.
-          </p>
-        </header>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-gray-600 md:text-base">
+              راهنماها، نکات آموزشی و منابع کاربردی برای یادگیری زبان آلمانی
+              از سطح مبتدی تا پیشرفته.
+            </p>
+          </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => (
-            <article
-              key={article.href}
-              className="flex flex-col rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-blue-200 hover:shadow-sm"
-            >
-              <span className="text-xs font-medium text-blue-800">
-                {article.category}
-              </span>
-
-              <h2 className="mt-3 text-lg font-bold leading-8 text-gray-900">
-                {article.title}
-              </h2>
-
-              <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
-                {article.description}
-              </p>
-
-              <Link
-                href={article.href}
-                className="mt-5 inline-flex items-center text-sm font-semibold text-blue-900 hover:text-blue-700"
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {articles.map((article) => (
+              <article
+                key={article.href}
+                className="flex flex-col rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-blue-200 hover:shadow-sm"
               >
-                مطالعه مقاله ←
-              </Link>
-            </article>
-          ))}
+                <span className="text-xs font-medium text-blue-800">
+                  {article.category}
+                </span>
+
+                <h2 className="mt-3 text-lg font-bold leading-8 text-gray-900">
+                  {article.title}
+                </h2>
+
+                <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">
+                  {article.description}
+                </p>
+
+                <Link
+                  href={article.href}
+                  className="mt-5 inline-flex items-center text-sm font-semibold text-blue-900 hover:text-blue-700"
+                >
+                  مطالعه مقاله ←
+                </Link>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-16 rounded-2xl bg-[#0A2540] px-6 py-10 text-center">
+            <h2 className="text-xl font-bold text-white">
+              می‌خوای زبان آلمانی رو یاد بگیری؟
+            </h2>
+
+            <p className="mt-3 text-sm leading-7 text-gray-200">
+              دوره‌های آموزش زبان آلمانی آکادمی دویچینو رو ببین.
+            </p>
+
+            <Link
+              href="/courses"
+              className="mt-6 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#0A2540] transition hover:bg-gray-100"
+            >
+              مشاهده دوره‌ها
+            </Link>
+          </div>
         </div>
-
-        <div className="mt-16 rounded-2xl bg-[#0A2540] px-6 py-10 text-center">
-          <h2 className="text-xl font-bold text-white">
-            می‌خوای زبان آلمانی رو یاد بگیری؟
-          </h2>
-
-          <p className="mt-3 text-sm leading-7 text-gray-200">
-            دوره‌های آموزش زبان آلمانی آکادمی دویچینو رو ببین.
-          </p>
-
-          <Link
-            href="/courses"
-            className="mt-6 inline-flex rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#0A2540] transition hover:bg-gray-100"
-          >
-            مشاهده دوره‌ها
-          </Link>
-        </div>
-
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
