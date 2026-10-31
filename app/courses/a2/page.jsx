@@ -26,8 +26,8 @@ const courseSchema = {
   description:
     "آموزش زبان آلمانی سطح A2 در آکادمی دویچینو، به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین، با تمرکز بر گرامر، واژگان و مهارت‌های زبان آلمانی.",
   provider: {
-  "@id": "https://www.deutschino.ir/#organization",
-},
+    "@id": "https://www.deutschino.ir/#organization",
+  },
   inLanguage: "de",
   educationalLevel: "A2",
 };
@@ -57,18 +57,6 @@ export default function A2Page() {
           />
         </div>
 
-        {/* Banner */}
-        <div className="flex justify-center">
-          <Image
-            src="/books2.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی سطح A2"
-            width={900}
-            height={350}
-            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
-            priority
-          />
-        </div>
-
         {/* Course Introduction */}
         <section
           dir="rtl"
@@ -84,6 +72,18 @@ export default function A2Page() {
             زبان آلمانی خود را گسترش دهند.
           </p>
         </section>
+
+        {/* Banner */}
+        <div className="flex justify-center">
+          <Image
+            src="/books2.jpg"
+            alt="کتاب‌های آموزش زبان آلمانی سطح A2"
+            width={900}
+            height={350}
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+            priority
+          />
+        </div>
 
         {/* Course Features */}
         <section

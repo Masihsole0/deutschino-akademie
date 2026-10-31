@@ -26,8 +26,8 @@ const courseSchema = {
   description:
     "آموزش زبان آلمانی سطح B1 در آکادمی دویچینو، با کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین، با تمرکز بر گرامر، واژگان، خواندن، شنیدن، صحبت کردن و نوشتن.",
   provider: {
-  "@id": "https://www.deutschino.ir/#organization",
-},
+    "@id": "https://www.deutschino.ir/#organization",
+  },
   inLanguage: "de",
   educationalLevel: "B1",
 };
@@ -57,18 +57,6 @@ export default function B1Page() {
           />
         </div>
 
-        {/* Banner */}
-        <div className="flex justify-center">
-          <Image
-            src="/books3.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی سطح B1"
-            width={900}
-            height={350}
-            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
-            priority
-          />
-        </div>
-
         {/* Course Introduction */}
         <section
           dir="rtl"
@@ -84,6 +72,18 @@ export default function B1Page() {
             ارتباط مستقل‌تر به زبان آلمانی را تقویت کنند.
           </p>
         </section>
+
+        {/* Banner */}
+        <div className="flex justify-center">
+          <Image
+            src="/books3.jpg"
+            alt="کتاب‌های آموزش زبان آلمانی سطح B1"
+            width={900}
+            height={350}
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+            priority
+          />
+        </div>
 
         {/* Course Features */}
         <section
