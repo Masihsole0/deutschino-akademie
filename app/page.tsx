@@ -261,92 +261,102 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT TEACHER SECTION */}
-      <section
-        id="about"
-        className="scroll-mt-[-160px] bg-white px-6 py-24"
-      >
-        <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse">
-          <div className="flex-1 text-center md:text-right">
-            <h2 className="text-3xl font-bold leading-relaxed text-blue-900 md:text-4xl">
-              مسیح سلیمانی؛ مدرس زبان آلمانی در اصفهان
-            </h2>
+{/* ABOUT TEACHER SECTION */}
+<section
+  id="about"
+  className="scroll-mt-[-160px] bg-white px-6 py-24"
+>
+  <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse">
+    <div className="flex-1 text-center md:text-right">
+      <h2 className="text-3xl font-bold leading-relaxed text-blue-900 md:text-4xl">
+        مسیح سلیمانی؛ مدرس زبان آلمانی در اصفهان
+      </h2>
 
-            <div className="mt-6 space-y-4 text-base leading-8 text-gray-600 md:text-lg">
-              <p className="font-semibold text-gray-800">سلام 👋🏻</p>
+      <div className="mt-6 space-y-4 text-base leading-8 text-gray-600 md:text-lg">
+        <p className="font-semibold text-gray-800">سلام 👋🏻</p>
 
-              <p>
-                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی در اصفهان با بیش از
-                ۳ سال تجربه تدریس در آموزشگاه‌های زبان.
-              </p>
+        <p>
+          من مسیح سلیمانی هستم؛ مدرس زبان آلمانی در اصفهان با بیش از
+          ۳ سال تجربه تدریس در آموزشگاه‌های زبان.
+        </p>
 
-              {/* TEACHER CREDENTIALS */}
-              <div
-                dir="rtl"
-                className="grid grid-cols-2 gap-3 py-2 text-center"
-              >
-                <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">۳+</p>
-                  <p className="mt-1 text-sm text-gray-600">سال تجربه تدریس</p>
-                </div>
-
-                <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">۵۱</p>
-                  <p className="mt-1 text-sm text-gray-600">زبان‌آموز</p>
-                </div>
-
-                <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">telc B2</p>
-                  <p className="mt-1 text-sm text-gray-600">مدرک زبان آلمانی</p>
-                </div>
-
-                <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">A1–B2</p>
-                  <p className="mt-1 text-sm text-gray-600">سطوح تدریس</p>
-                </div>
-              </div>
-
-              <p>
-                حدود ۵ سال است که به‌صورت جدی با زبان آلمانی درگیرم و با
-                چالش‌هایی که زبان‌آموزان در مسیر یادگیری این زبان تجربه
-                می‌کنند آشنا هستم. هدفم این است که یادگیری زبان آلمانی را
-                ساده‌تر، کاربردی‌تر و لذت‌بخش‌تر کنم.
-              </p>
-
-              <p>
-                در کلاس‌های من فقط به مطالعه کتاب اکتفا نمی‌کنیم؛ بلکه روی
-                مهارت‌هایی کار می‌کنیم که برای مکالمه و استفاده از زبان
-                آلمانی در موقعیت‌های واقعی اهمیت دارند.
-              </p>
-
-              <p>
-                اگر برای یادگیری زبان آلمانی به برنامه‌ای منظم، بازخورد و
-                پشتیبانی نیاز دارید، می‌توانید برای بررسی شرایط کلاس‌ها با
-                من در ارتباط باشید.
-              </p>
-
-              <a
-                href="tel:+989130061984"
-                aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
-                className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
-              >
-                تماس با مسیح سلیمانی
-              </a>
-            </div>
+        {/* TEACHER CREDENTIALS */}
+        <div
+          dir="rtl"
+          className="grid grid-cols-2 gap-3 py-2 text-center"
+        >
+          <div className="rounded-lg bg-gray-50 px-3 py-3">
+            <p className="text-2xl font-bold text-blue-900">۳+</p>
+            <p className="mt-1 text-sm text-gray-600">سال تجربه تدریس</p>
           </div>
 
-          <div className="shrink-0">
-            <img
-              src="/mee.jpg"
-              alt="مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو اصفهان"
-              width={320}
-              height={320}
-              loading="lazy"
-              className="h-64 w-64 rounded-full border-4 border-blue-900 object-cover shadow-lg md:h-80 md:w-80"
-            />
+          <div className="rounded-lg bg-gray-50 px-3 py-3">
+            <p className="text-2xl font-bold text-blue-900">۵۱</p>
+            <p className="mt-1 text-sm text-gray-600">زبان‌آموز</p>
+          </div>
+
+          <div className="rounded-lg bg-gray-50 px-3 py-3">
+            <p className="text-2xl font-bold text-blue-900">telc B2</p>
+            <p className="mt-1 text-sm text-gray-600">مدرک زبان آلمانی</p>
+          </div>
+
+          <div className="rounded-lg bg-gray-50 px-3 py-3">
+            <p className="text-2xl font-bold text-blue-900">A1–B2</p>
+            <p className="mt-1 text-sm text-gray-600">سطوح تدریس</p>
           </div>
         </div>
-      </section>
+
+        <p>
+          در این سال‌ها با زبان‌آموزان در سطوح مختلف کار کرده‌ام و
+          با چالش‌هایی که در مسیر یادگیری زبان آلمانی، از درک گرامر
+          و یادگیری واژگان تا تقویت مکالمه و آمادگی آزمون، وجود دارد
+          آشنا هستم.
+        </p>
+
+        <p>
+          در کلاس‌های من، یادگیری فقط به مطالعه کتاب محدود نمی‌شود.
+          تلاش می‌کنم مطالب را به شکلی آموزش دهم که بتوانید
+          آموخته‌هایتان را در مکالمات و موقعیت‌های واقعی به کار ببرید.
+          به همین دلیل، در کنار آموزش گرامر و واژگان، روی هر چهار
+          مهارت اصلی زبان آلمانی تمرکز می‌کنیم.
+        </p>
+
+        <p>
+          همچنین آموزش با پایان جلسه تمام نمی‌شود؛ در طول دوره
+          می‌توانید سؤالات خود را مطرح کنید، تمرین‌هایتان را برای
+          بررسی ارسال کنید و خارج از زمان کلاس نیز از پشتیبانی
+          آموزشی بهره‌مند شوید.
+        </p>
+
+        <p>
+          هدف من این است که مسیر یادگیری زبان آلمانی برای شما منظم،
+          کاربردی و متناسب با هدفتان باشد؛ چه قصد شروع از صفر را
+          داشته باشید و چه بخواهید برای تحصیل، کار، مهاجرت یا
+          آزمون‌های زبان آلمانی آماده شوید.
+        </p>
+
+        <a
+          href="tel:+989130061984"
+          aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
+          className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
+        >
+          تماس با مسیح سلیمانی
+        </a>
+      </div>
+    </div>
+
+    <div className="shrink-0">
+      <img
+        src="/mee.jpg"
+        alt="مسیح سلیمانی، مدرس زبان آلمانی در آکادمی دویچینو اصفهان"
+        width={320}
+        height={320}
+        loading="lazy"
+        className="h-64 w-64 rounded-full border-4 border-blue-900 object-cover shadow-lg md:h-80 md:w-80"
+      />
+    </div>
+  </div>
+</section>
 
       {/* WHY DEUTSCHINO */}
 <section
