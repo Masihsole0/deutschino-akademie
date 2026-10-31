@@ -309,84 +309,86 @@ export default function A1Page() {
         {/* FAQ */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-14 md:mt-16"
+          className="max-w-4xl mx-auto mt-14 md:mt-16 border border-gray-200 rounded-xl shadow-sm overflow-hidden"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-6">
-            سؤالات متداول درباره کلاس زبان آلمانی A1
-          </h2>
+          <div className="p-4 md:p-6">
+            <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
+              سؤالات متداول درباره کلاس زبان آلمانی A1
+            </h2>
 
-          <div className="space-y-5 text-gray-700 leading-8">
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                آیا برای شرکت در کلاس A1 باید زبان آلمانی بلد باشم؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                خیر. دوره A1 از پایه شروع می‌شود و برای افرادی مناسب است
-                که هیچ آشنایی قبلی با زبان آلمانی ندارند.
-              </p>
-            </div>
+            <div className="space-y-0 text-gray-700 leading-8">
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  آیا برای شرکت در کلاس A1 باید زبان آلمانی بلد باشم؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  خیر. دوره A1 از پایه شروع می‌شود و برای افرادی مناسب است
+                  که هیچ آشنایی قبلی با زبان آلمانی ندارند.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                کلاس‌های گروهی چند نفره برگزار می‌شوند؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                برای حفظ کیفیت آموزش و فرصت مشارکت زبان‌آموزان،
-                ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.
-              </p>
-            </div>
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  کلاس‌های گروهی چند نفره برگزار می‌شوند؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  برای حفظ کیفیت آموزش و فرصت مشارکت زبان‌آموزان،
+                  ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                شهریه کلاس زبان آلمانی A1 چگونه پرداخت می‌شود؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                پرداخت شهریه در هر دو نوع کلاس خصوصی و گروهی به‌صورت
-                بسته‌های ۱۰ جلسه‌ای انجام می‌شود. هزینه بسته خصوصی
-                ۸٬۹۰۰٬۰۰۰ تومان و هزینه بسته گروهی ۳٬۹۰۰٬۰۰۰ تومان است.
-              </p>
-            </div>
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  شهریه کلاس زبان آلمانی A1 چگونه پرداخت می‌شود؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  پرداخت شهریه در هر دو نوع کلاس خصوصی و گروهی به‌صورت
+                  بسته‌های ۱۰ جلسه‌ای انجام می‌شود. هزینه بسته خصوصی
+                  ۸٬۹۰۰٬۰۰۰ تومان و هزینه بسته گروهی ۳٬۹۰۰٬۰۰۰ تومان است.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                آیا امکان شرکت در کلاس آنلاین وجود دارد؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                بله. دوره زبان آلمانی A1 به‌صورت حضوری در اصفهان
-                و همچنین آنلاین برگزار می‌شود.
-              </p>
-            </div>
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  آیا امکان شرکت در کلاس آنلاین وجود دارد؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  بله. دوره زبان آلمانی A1 به‌صورت حضوری در اصفهان
+                  و همچنین آنلاین برگزار می‌شود.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                آیا خارج از زمان کلاس هم پشتیبانی دارم؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
-                تمرین‌هایتان را برای بررسی ارسال کنید و برای رفع اشکال
-                از پشتیبانی آموزشی بهره‌مند شوید.
-              </p>
-            </div>
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  آیا خارج از زمان کلاس هم پشتیبانی دارم؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
+                  تمرین‌هایتان را برای بررسی ارسال کنید و برای رفع اشکال
+                  از پشتیبانی آموزشی بهره‌مند شوید.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                مدت زمان اتمام دوره A1 چقدر است؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                تعداد جلسات ثابت نیست و با توجه به روند یادگیری،
-                میزان تمرین و پیشرفت زبان‌آموز تعیین می‌شود.
-              </p>
-            </div>
+              <div className="py-4 border-b border-gray-200">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  مدت زمان اتمام دوره A1 چقدر است؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  تعداد جلسات ثابت نیست و با توجه به روند یادگیری،
+                  میزان تمرین و پیشرفت زبان‌آموز تعیین می‌شود.
+                </p>
+              </div>
 
-            <div>
-              <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                چطور می‌توانم برای کلاس A1 ثبت‌نام کنم؟
-              </h3>
-              <p className="text-sm md:text-base mt-1">
-                می‌توانید از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید،
-                درباره کلاس خصوصی یا گروهی مشاوره دریافت کنید و
-                شرایط ثبت‌نام را بررسی کنید.
-              </p>
+              <div className="pt-4">
+                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+                  چطور می‌توانم برای کلاس A1 ثبت‌نام کنم؟
+                </h3>
+                <p className="text-sm md:text-base mt-1">
+                  می‌توانید از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید،
+                  درباره کلاس خصوصی یا گروهی مشاوره دریافت کنید و
+                  شرایط ثبت‌نام را بررسی کنید.
+                </p>
+              </div>
             </div>
           </div>
         </section>
