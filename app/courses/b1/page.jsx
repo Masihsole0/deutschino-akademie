@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import {
   BookOpen,
@@ -74,7 +75,6 @@ export default function B1Page() {
           <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
             کلاس زبان آلمانی B1
           </h1>
-          
         </section>
 
         {/* Banner */}
@@ -103,7 +103,7 @@ export default function B1Page() {
               مدت زمان
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              بدون محدودیت زمانی
+              ۱۰ جلسه ۹۰ دقیقه‌ای
             </p>
           </div>
 
@@ -205,12 +205,12 @@ export default function B1Page() {
                     className="shrink-0 md:w-7 md:h-7"
                   />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۱٬۳۰۰٬۰۰۰
+                    ۱۳٬۰۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای هر جلسه
+                  تومان برای ۱۰ جلسه
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
@@ -243,12 +243,12 @@ export default function B1Page() {
                     className="shrink-0 md:w-7 md:h-7"
                   />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۵۰۰٬۰۰۰
+                    ۵٬۰۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای هر جلسه
+                  تومان برای ۱۰ جلسه
                 </p>
 
                 <p className="text-xs text-gray-600 mb-2">
@@ -272,9 +272,8 @@ export default function B1Page() {
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            هزینه کلاس‌های خصوصی و گروهی به‌صورت جلسه‌ای محاسبه می‌شود.
-            تعداد کل جلسات دوره ثابت نیست و متناسب با روند یادگیری و
-            پیشرفت زبان‌آموز تعیین می‌شود.
+            هزینه دوره خصوصی ۱۰ جلسه‌ای ۱۳٬۰۰۰٬۰۰۰ تومان و دوره گروهی
+            ۱۰ جلسه‌ای ۵٬۰۰۰٬۰۰۰ تومان است. مدت هر جلسه ۹۰ دقیقه است.
           </p>
 
           {/* Free Consultation */}
@@ -334,8 +333,8 @@ export default function B1Page() {
                 هزینه کلاس زبان آلمانی B1 چقدر است؟
               </h3>
               <p className="text-xs md:text-sm text-gray-600 leading-7">
-                هزینه هر جلسه کلاس خصوصی ۱٬۳۰۰٬۰۰۰ تومان و هزینه هر جلسه
-                کلاس گروهی ۵۰۰٬۰۰۰ تومان است.
+                هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۱۳٬۰۰۰٬۰۰۰ تومان و هزینه
+                بسته ۱۰ جلسه‌ای کلاس گروهی ۵٬۰۰۰٬۰۰۰ تومان است.
               </p>
             </div>
 
@@ -365,8 +364,9 @@ export default function B1Page() {
                 مدت زمان اتمام دوره B1 چقدر است؟
               </h3>
               <p className="text-xs md:text-sm text-gray-600 leading-7">
-                دوره محدودیت زمانی مشخصی ندارد و تعداد جلسات با توجه به
-                روند یادگیری، میزان تمرین و پیشرفت زبان‌آموز تعیین می‌شود.
+                هر بسته شامل ۱۰ جلسه ۹۰ دقیقه‌ای است. در صورت نیاز به
+                ادامه آموزش، تعداد جلسات بیشتر با توجه به روند یادگیری
+                و پیشرفت زبان‌آموز تعیین می‌شود.
               </p>
             </div>
 

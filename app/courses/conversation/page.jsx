@@ -33,7 +33,7 @@ const whatsappNumber = "989130061984";
 
 export default function ConversationPage() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "سلام، می‌خواهم برای کلاس مکالمه زبان آلمانی ثبت‌نام کنم."
+    "سلام، می‌خواهم برای ثبت‌نام دوره ۱۰ جلسه‌ای مکالمه زبان آلمانی اطلاعات بیشتری دریافت کنم."
   )}`;
 
   return (
@@ -64,14 +64,9 @@ export default function ConversationPage() {
           className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
         >
           <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
-            کلاس مکالمه زبان آلمانی در اصفهان
+            کلاس مکالمه زبان آلمانی
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-            تمرین هدفمند مکالمه زبان آلمانی به‌صورت حضوری در اصفهان و آنلاین؛
-            مناسب زبان‌آموزانی که می‌خواهند روان‌تر صحبت کنند و آموخته‌های
-            خود را در گفت‌وگوهای روزمره و کاری به کار ببرند.
-          </p>
         </section>
 
         {/* Banner */}
@@ -195,15 +190,17 @@ export default function ConversationPage() {
                     className="shrink-0 md:w-7 md:h-7"
                   />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۹۰۰٬۰۰۰
+                    ۱۰٬۰۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای هر جلسه
+                  تومان برای پکیج ۱۰ جلسه‌ای
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
+                  هر جلسه ۱٬۰۰۰٬۰۰۰ تومان
+                  <br />
                   ۱۰ جلسه ۶۰ دقیقه‌ای
                 </p>
 
@@ -269,8 +266,9 @@ export default function ConversationPage() {
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            مجموع دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است. امکان شرکت در کلاس
-            به‌صورت حضوری در اصفهان و آنلاین وجود دارد.
+            مجموع دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای و هزینه کل آن ۱۰٬۰۰۰٬۰۰۰
+            تومان است. هزینه هر جلسه ۱٬۰۰۰٬۰۰۰ تومان محاسبه می‌شود.
+            امکان شرکت در کلاس به‌صورت حضوری در اصفهان و آنلاین وجود دارد.
           </p>
 
           {/* Free Consultation */}
@@ -349,8 +347,8 @@ export default function ConversationPage() {
                 هزینه کلاس مکالمه زبان آلمانی چقدر است؟
               </h3>
               <p className="text-xs md:text-sm text-gray-600 leading-7">
-                هزینه هر جلسه ۹۰۰٬۰۰۰ تومان است. دوره شامل ۱۰ جلسه
-                ۶۰ دقیقه‌ای خواهد بود.
+                هزینه پکیج ۱۰ جلسه‌ای ۱۰٬۰۰۰٬۰۰۰ تومان است. هزینه هر جلسه
+                ۱٬۰۰۰٬۰۰۰ تومان و مدت هر جلسه ۶۰ دقیقه است.
               </p>
             </div>
 
@@ -426,9 +424,10 @@ export default function ConversationPage() {
           </h2>
 
           <p className="text-sm md:text-base text-gray-600 leading-8">
-            دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است. هزینه هر جلسه ۹۰۰ هزار
-            تومان است. برای پرسیدن سؤال یا ثبت‌نام، از دکمه واتساپ همین
-            صفحه استفاده کنید.
+            دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است. هزینه پکیج ۱۰ جلسه‌ای
+            ۱۰٬۰۰۰٬۰۰۰ تومان است و هزینه هر جلسه ۱٬۰۰۰٬۰۰۰ تومان محاسبه
+            می‌شود. برای پرسیدن سؤال یا ثبت‌نام، از دکمه واتساپ همین صفحه
+            استفاده کنید.
           </p>
         </section>
       </div>

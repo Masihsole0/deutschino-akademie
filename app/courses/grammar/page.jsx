@@ -10,7 +10,7 @@ import {
 export const metadata = {
   title: "کلاس گرامر زبان آلمانی A1 تا B2 در اصفهان | دویچینو",
   description:
-    "کلاس گرامر زبان آلمانی از سطح A1 تا B2 در اصفهان و آنلاین؛ آموزش قواعد، حل تمرین و رفع اشکال در آکادمی دویچینو. هزینه هر جلسه ۱٬۰۰۰٬۰۰۰ تومان.",
+    "کلاس گرامر زبان آلمانی از سطح A1 تا B2 در اصفهان و آنلاین؛ آموزش قواعد، حل تمرین و رفع اشکال در آکادمی دویچینو. هزینه پکیج ۱۰ جلسه‌ای ۱۰٬۰۰۰٬۰۰۰ تومان.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/grammar",
   },
@@ -33,7 +33,7 @@ const whatsappNumber = "989130061984";
 
 export default function GrammarPage() {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "سلام، می‌خواهم برای کلاس گرامر زبان آلمانی A1 تا B2 ثبت‌نام کنم."
+    "سلام، می‌خواهم برای ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس گرامر زبان آلمانی A1 تا B2 اطلاعات بیشتری دریافت کنم."
   )}`;
 
   return (
@@ -67,12 +67,6 @@ export default function GrammarPage() {
             کلاس گرامر زبان آلمانی از A1 تا B2
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-            آموزش قواعد زبان آلمانی، حل تمرین و رفع اشکال متناسب با سطح
-            شما؛ به‌صورت حضوری در اصفهان و آنلاین. در این کلاس مباحث
-            گرامری از سطح A1 تا B2 با مثال‌های کاربردی و تمرین‌های هدفمند
-            بررسی می‌شوند.
-          </p>
         </section>
 
         {/* Banner */}
@@ -182,7 +176,7 @@ export default function GrammarPage() {
           </h2>
 
           <p className="text-xs md:text-sm text-gray-600 text-center mb-4">
-            تعداد جلسات و مباحث آموزشی با توجه به نیاز شما تعیین می‌شود.
+            پکیج شامل ۱۰ جلسه ۹۰ دقیقه‌ای است.
           </p>
 
           <div className="grid grid-cols-2 gap-3 md:gap-5">
@@ -190,7 +184,7 @@ export default function GrammarPage() {
             <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
               <div className="bg-[#F4F8FF] px-2 py-3 md:px-5 md:py-4 text-center">
                 <h3 className="text-sm md:text-lg font-bold">
-                  کلاس گرامر
+                  پکیج کلاس گرامر
                 </h3>
               </div>
 
@@ -201,16 +195,20 @@ export default function GrammarPage() {
                     className="shrink-0 md:w-7 md:h-7"
                   />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۱٬۰۰۰٬۰۰۰
+                    ۱۰٬۰۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای هر جلسه
+                  تومان برای پکیج ۱۰ جلسه‌ای
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
-                  مدت هر جلسه: ۹۰ دقیقه
+                  هر جلسه ۱٬۰۰۰٬۰۰۰ تومان
+                </p>
+
+                <p className="text-xs text-gray-600 mb-3">
+                  ۱۰ جلسه ۹۰ دقیقه‌ای
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
@@ -223,7 +221,7 @@ export default function GrammarPage() {
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
                 >
-                  مشاوره و ثبت‌نام
+                  ثبت‌نام از طریق واتساپ
                 </a>
               </div>
             </div>
@@ -243,7 +241,7 @@ export default function GrammarPage() {
                     className="shrink-0 md:w-7 md:h-7"
                   />
                   <span className="text-xs md:text-sm text-gray-600">
-                    ۹۰ دقیقه
+                    ۱۰ جلسه ۹۰ دقیقه‌ای
                   </span>
                 </div>
 
@@ -280,9 +278,9 @@ export default function GrammarPage() {
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 md:leading-8 mt-5">
+            پکیج شامل ۱۰ جلسه ۹۰ دقیقه‌ای است. هزینه هر جلسه
+            ۱٬۰۰۰٬۰۰۰ تومان و هزینه کل پکیج ۱۰٬۰۰۰٬۰۰۰ تومان است.
             کلاس‌ها به‌صورت حضوری در اصفهان و آنلاین برگزار می‌شوند.
-            تعداد جلسات موردنیاز و مباحث آموزشی با توجه به سطح و نیاز
-            زبان‌آموز مشخص خواهد شد.
           </p>
 
           {/* Free Consultation */}
@@ -344,8 +342,8 @@ export default function GrammarPage() {
                 هزینه کلاس گرامر زبان آلمانی چقدر است؟
               </h3>
               <p className="text-xs md:text-sm text-gray-600 leading-7">
-                هزینه هر جلسه کلاس گرامر ۱٬۰۰۰٬۰۰۰ تومان است و مدت هر
-                جلسه ۹۰ دقیقه خواهد بود.
+                هزینه پکیج ۱۰ جلسه‌ای ۱۰٬۰۰۰٬۰۰۰ تومان است. هزینه هر
+                جلسه ۱٬۰۰۰٬۰۰۰ تومان و مدت هر جلسه ۹۰ دقیقه است.
               </p>
             </div>
 
@@ -371,12 +369,11 @@ export default function GrammarPage() {
 
             <div className="border-b border-gray-200 py-4">
               <h3 className="font-bold text-sm md:text-base mb-2">
-                تعداد جلسات کلاس گرامر چطور مشخص می‌شود؟
+                پکیج کلاس گرامر شامل چند جلسه است؟
               </h3>
               <p className="text-xs md:text-sm text-gray-600 leading-7">
-                تعداد جلسات به سطح فعلی شما، مباحثی که نیاز به یادگیری
-                یا مرور دارند و سرعت پیشرفتتان بستگی دارد و با هماهنگی
-                مدرس تعیین می‌شود.
+                پکیج شامل ۱۰ جلسه است و مدت هر جلسه ۹۰ دقیقه خواهد بود.
+                در صورت نیاز به جلسات بیشتر، می‌توانید با مدرس هماهنگ کنید.
               </p>
             </div>
 
@@ -479,8 +476,8 @@ export default function GrammarPage() {
 
           <p className="text-sm md:text-base text-gray-600 leading-8">
             هزینه هر جلسه کلاس گرامر A1 تا B2 برابر با ۱٬۰۰۰٬۰۰۰ تومان
-            است. تعداد جلسات موردنیاز با توجه به سطح، مباحث انتخابی و
-            هدف زبان‌آموز مشخص می‌شود. برای مشاوره، انتخاب مباحث آموزشی
+            است. پکیج شامل ۱۰ جلسه ۹۰ دقیقه‌ای و هزینه کل آن
+            ۱۰٬۰۰۰٬۰۰۰ تومان است. برای مشاوره، انتخاب مباحث آموزشی
             و ثبت‌نام در کلاس گرامر زبان آلمانی در اصفهان یا آنلاین،
             از طریق واتساپ با آکادمی دویچینو در ارتباط باشید.
           </p>

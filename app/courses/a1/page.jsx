@@ -64,10 +64,6 @@ export default function A1Page() {
             کلاس زبان آلمانی A1 از صفر
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-            آموزش زبان آلمانی به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین؛
-            مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
-          </p>
         </section>
 
         {/* Banner */}

@@ -63,11 +63,6 @@ export default function A2Page() {
             کلاس زبان آلمانی A2
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-            آموزش زبان آلمانی سطح A2 به‌صورت خصوصی و گروهی، حضوری در اصفهان و
-            آنلاین؛ مناسب افرادی که سطح A1 را گذرانده‌اند و می‌خواهند مهارت‌های
-            زبانی خود را گسترش دهند.
-          </p>
         </section>
 
         {/* Banner */}

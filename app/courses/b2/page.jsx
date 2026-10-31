@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import {
   BookOpen,
@@ -32,6 +33,18 @@ const courseSchema = {
 const whatsappNumber = "989130061984";
 
 export default function B2Page() {
+  const privateWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس خصوصی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
+  )}`;
+
+  const groupWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ ساعته کلاس گروهی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
+  )}`;
+
+  const consultationWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس زبان آلمانی B2 پیام می‌دهم."
+  )}`;
+
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -63,11 +76,6 @@ export default function B2Page() {
             کلاس زبان آلمانی B2
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 md:leading-8">
-            آموزش زبان آلمانی سطح B2 به‌صورت خصوصی و گروهی، حضوری در اصفهان و
-            آنلاین؛ مناسب افرادی که سطح B1 را گذرانده‌اند و می‌خواهند توانایی
-            استفاده دقیق‌تر و مستقل‌تر از زبان آلمانی را تقویت کنند.
-          </p>
         </section>
 
         {/* Banner */}
@@ -198,30 +206,26 @@ export default function B2Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه هر جلسه
+                  هزینه پکیج ۱۰ جلسه‌ای
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
                   <Wallet size={21} className="shrink-0 md:w-7 md:h-7" />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۱٬۵۰۰٬۰۰۰
+                    ۱۵٬۰۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان
+                  تومان برای ۱۰ جلسه
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
-                  هر جلسه ۱٬۵۰۰٬۰۰۰ تومان
-                  <br />
-                  ۹۰ دقیقه
+                  هر جلسه ۹۰ دقیقه
                 </p>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم درباره ثبت‌نام کلاس خصوصی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
-                  )}`}
+                  href={privateWhatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -241,36 +245,26 @@ export default function B2Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه هر ترم
+                  هزینه پکیج ۱۰ ساعته
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
                   <Wallet size={21} className="shrink-0 md:w-7 md:h-7" />
                   <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۱۸٬۰۰۰٬۰۰۰
+                    ۶٬۹۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان
+                  تومان برای ۱۰ ساعت
                 </p>
 
-                <p className="text-xs text-gray-600 mb-1">
-                  شهریه یک ترم
-                </p>
-
-                <p className="text-xs text-gray-600 mb-2">
-                  زمان‌بندی هنگام ثبت‌نام
-                </p>
-
-                <p className="text-xs font-semibold text-blue-900 mb-3">
-                  شرایط کلاس هنگام ثبت‌نام اعلام می‌شود
+                <p className="text-xs text-gray-600 mb-3">
+                  هزینه هر ساعت: ۶۹۰٬۰۰۰ تومان
                 </p>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم درباره ثبت‌نام کلاس گروهی زبان آلمانی B2 و شرایط ترم اطلاعات بیشتری دریافت کنم."
-                  )}`}
+                  href={groupWhatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -282,8 +276,8 @@ export default function B2Page() {
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            مدت و تعداد جلسات کلاس خصوصی با هماهنگی مدرس تعیین می‌شود.
-            شرایط و زمان‌بندی کلاس گروهی نیز هنگام ثبت‌نام اعلام خواهد شد.
+            هزینه پکیج ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و هزینه پکیج
+            ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است.
           </p>
 
           {/* Free Consultation Card */}
@@ -297,9 +291,7 @@ export default function B2Page() {
             </p>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس زبان آلمانی B2 پیام می‌دهم."
-              )}`}
+              href={consultationWhatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-white transition-colors"
@@ -345,8 +337,8 @@ export default function B2Page() {
                   هزینه کلاس زبان آلمانی B2 چقدر است؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  هزینه هر جلسه کلاس خصوصی ۱٬۵۰۰٬۰۰۰ تومان و شهریه هر ترم
-                  کلاس گروهی ۱۸٬۰۰۰٬۰۰۰ تومان است.
+                  هزینه پکیج ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و هزینه
+                  پکیج ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است.
                 </p>
               </div>
 
@@ -376,8 +368,8 @@ export default function B2Page() {
                   مدت زمان اتمام دوره B2 چقدر است؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  مدت کلاس خصوصی با هماهنگی مدرس تعیین می‌شود. زمان‌بندی
-                  کلاس گروهی نیز هنگام ثبت‌نام اعلام خواهد شد.
+                  پکیج خصوصی شامل ۱۰ جلسه و پکیج گروهی شامل ۱۰ ساعت آموزش است.
+                  زمان‌بندی برگزاری کلاس‌ها با هماهنگی مدرس تعیین می‌شود.
                 </p>
               </div>
 
