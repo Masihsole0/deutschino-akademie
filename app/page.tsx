@@ -102,7 +102,7 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش حرفه‌ای زبان آلمانی با متد تخصصی 
+            آموزش زبان آلمانی با متد تخصصی 
             <br />
             به صورت حضوری و آنلاین
           </h1>
