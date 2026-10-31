@@ -5,8 +5,6 @@ import {
   Clock3,
   GraduationCap,
   Headphones,
-  Book,
-  CircleHelp,
   Wallet,
 } from "lucide-react";
 
@@ -171,10 +169,10 @@ export default function A2Page() {
                 <div className="flex items-center justify-between gap-1 mb-4 md:mb-5">
                   <div>
                     <p className="text-xl md:text-3xl font-bold text-green-700">
-                      ۹۴۰٬۰۰۰
+                      ۹٬۴۰۰٬۰۰۰
                     </p>
                     <span className="text-xs md:text-sm text-gray-500">
-                      تومان برای هر جلسه
+                      تومان برای بسته ۱۰ جلسه‌ای
                     </span>
                   </div>
                   <Wallet
@@ -183,9 +181,13 @@ export default function A2Page() {
                   />
                 </div>
 
+                <p className="text-xs md:text-sm text-gray-500 mb-3">
+                  هر جلسه ۹۴۰٬۰۰۰ تومان
+                </p>
+
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم برای کلاس خصوصی زبان آلمانی A2 ثبت‌نام کنم."
+                    "سلام، می‌خواهم برای بسته ۱۰ جلسه‌ای کلاس خصوصی زبان آلمانی A2 ثبت‌نام کنم."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -208,10 +210,10 @@ export default function A2Page() {
                 <div className="flex items-center justify-between gap-1 mb-4 md:mb-5">
                   <div>
                     <p className="text-xl md:text-3xl font-bold text-green-700">
-                      ۴۵۰٬۰۰۰
+                      ۴٬۵۰۰٬۰۰۰
                     </p>
                     <span className="text-xs md:text-sm text-gray-500">
-                      تومان برای هر جلسه
+                      تومان برای بسته ۱۰ جلسه‌ای
                     </span>
                   </div>
                   <Wallet
@@ -220,9 +222,13 @@ export default function A2Page() {
                   />
                 </div>
 
+                <p className="text-xs md:text-sm text-gray-500 mb-3">
+                  هر جلسه ۴۵۰٬۰۰۰ تومان
+                </p>
+
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم برای کلاس گروهی زبان آلمانی A2 ثبت‌نام کنم."
+                    "سلام، می‌خواهم برای بسته ۱۰ جلسه‌ای کلاس گروهی زبان آلمانی A2 ثبت‌نام کنم."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -238,6 +244,108 @@ export default function A2Page() {
             تعداد جلسات و مدت دوره ثابت نیست و متناسب با روند یادگیری و پیشرفت
             زبان‌آموز تعیین می‌شود.
           </p>
+
+          {/* Free Consultation */}
+          <div className="mt-6 bg-[#F4F8FF] rounded-2xl p-5 md:p-6 text-center">
+            <h3 className="font-bold text-base md:text-lg mb-2">
+              برای انتخاب کلاس مناسب نیاز به راهنمایی دارید؟
+            </h3>
+
+            <p className="text-sm text-gray-600 leading-7 mb-4">
+              پیش از ثبت‌نام می‌توانید از مشاوره اولیه رایگان ۱۵ دقیقه‌ای
+              استفاده کنید و درباره شرایط کلاس‌ها سؤال بپرسید.
+            </p>
+
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                "سلام، برای دریافت مشاوره اولیه رایگان درباره کلاس زبان آلمانی A2 پیام می‌دهم."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-[#0A2540] text-[#0A2540] hover:bg-white px-6 py-3 rounded-xl font-bold text-sm transition-colors"
+            >
+              دریافت مشاوره رایگان
+            </a>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section dir="rtl" className="max-w-4xl mx-auto mt-14">
+          <h2 className="text-xl md:text-2xl font-bold mb-5">
+            سؤالات متداول کلاس زبان آلمانی A2
+          </h2>
+
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-5 md:p-6">
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                برای شرکت در کلاس A2 چه پیش‌نیازی لازم است؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                برای شروع این دوره، آشنایی با مطالب سطح A1 زبان آلمانی
+                لازم است.
+              </p>
+            </div>
+
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                در دوره A2 از چه کتاب‌هایی استفاده می‌شود؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                منابع آموزشی این دوره شامل کتاب‌های Menschen A2.1 و
+                Menschen A2.2 است.
+              </p>
+            </div>
+
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                کلاس زبان آلمانی A2 به‌صورت خصوصی برگزار می‌شود یا گروهی؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                امکان انتخاب کلاس خصوصی یا گروهی وجود دارد. می‌توانید
+                متناسب با شرایط و نیاز آموزشی خود یکی از این دو روش را انتخاب کنید.
+              </p>
+            </div>
+
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                آیا امکان شرکت در کلاس آنلاین وجود دارد؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                بله، کلاس‌های زبان آلمانی A2 به‌صورت حضوری در اصفهان و
+                آنلاین برگزار می‌شوند.
+              </p>
+            </div>
+
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                آیا خارج از زمان کلاس هم پشتیبانی آموزشی دارم؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                بله، خارج از ساعات کلاس نیز می‌توانید سؤالات خود را مطرح
+                کنید و برای بررسی تمرین‌ها و رفع اشکال از پشتیبانی آموزشی استفاده کنید.
+              </p>
+            </div>
+
+            <div className="py-4 border-b border-gray-200">
+              <h3 className="font-bold mb-2">
+                مدت زمان اتمام دوره A2 چقدر است؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                تعداد جلسات و مدت دوره ثابت نیست و با توجه به روند یادگیری
+                و پیشرفت زبان‌آموز تعیین می‌شود.
+              </p>
+            </div>
+
+            <div className="pt-4">
+              <h3 className="font-bold mb-2">
+                چطور می‌توانم برای کلاس A2 ثبت‌نام کنم؟
+              </h3>
+              <p className="text-sm md:text-base text-gray-600 leading-8">
+                برای دریافت اطلاعات بیشتر و ثبت‌نام می‌توانید از طریق
+                دکمه‌های واتساپ همین صفحه با آکادمی دویچینو ارتباط بگیرید.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* SEO Content */}
