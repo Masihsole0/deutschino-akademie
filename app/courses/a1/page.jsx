@@ -283,8 +283,8 @@ export default function A1Page() {
             روند یادگیری و پیشرفت زبان‌آموز تعیین می‌شود.
           </p>
 
-          {/* Free Consultation */}
-          <div className="text-center mt-5">
+          {/* Free Consultation Card */}
+          <div className="mt-5 rounded-xl bg-[#F4F8FF] p-5 md:p-6 text-center">
             <p className="text-sm md:text-base font-semibold text-[#0A2540] mb-2">
               برای انتخاب کلاس مناسب نیاز به راهنمایی دارید؟
             </p>
@@ -299,7 +299,7 @@ export default function A1Page() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-[#F4F8FF] transition-colors"
+              className="inline-flex items-center justify-center rounded-xl border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-white transition-colors"
             >
               دریافت مشاوره رایگان
             </a>
