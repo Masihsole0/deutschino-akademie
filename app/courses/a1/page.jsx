@@ -55,18 +55,6 @@ export default function A1Page() {
           />
         </div>
 
-        {/* Banner */}
-        <div className="flex justify-center">
-          <Image
-            src="/books.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی سطح A1"
-            width={900}
-            height={350}
-            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
-            priority
-          />
-        </div>
-
         {/* Course Introduction */}
         <section
           dir="rtl"
@@ -81,6 +69,18 @@ export default function A1Page() {
             مناسب افرادی که می‌خواهند یادگیری زبان آلمانی را از ابتدا شروع کنند.
           </p>
         </section>
+
+        {/* Banner */}
+        <div className="flex justify-center">
+          <Image
+            src="/books.jpg"
+            alt="کتاب‌های آموزش زبان آلمانی سطح A1"
+            width={900}
+            height={350}
+            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+            priority
+          />
+        </div>
 
         {/* Course Features */}
         <section
