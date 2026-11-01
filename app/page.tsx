@@ -28,72 +28,33 @@ export default function Home() {
   const courses = [
     {
       title: "A1",
-      description: "شروع از صفر",
+      description: "شروع یادگیری زبان آلمانی از صفر",
       href: "/courses/a1",
     },
     {
       title: "A2",
-      description: "ادامه‌ی یادگیری",
+      description: "تقویت پایه و ادامه مسیر یادگیری",
       href: "/courses/a2",
     },
     {
       title: "B1",
-      description: "سطح متوسط",
+      description: "رسیدن به سطح مستقل در زبان آلمانی",
       href: "/courses/b1",
     },
     {
       title: "B2",
-      description: "سطح پیشرفته",
+      description: "تقویت مهارت‌های پیشرفته زبان",
       href: "/courses/b2",
     },
     {
       title: "کلاس مکالمه",
-      description: "تقویت مکالمه",
+      description: "تمرین صحبت کردن و افزایش اعتمادبه‌نفس",
       href: "/courses/conversation",
     },
     {
       title: "گرامر A1 تا B1",
-      description: "مرور گرامر",
+      description: "یادگیری و تسلط بر قواعد زبان آلمانی",
       href: "/courses/grammar",
-    },
-  ];
-
-  const benefits = [
-    {
-      icon: "👨‍🏫",
-      title: "تدریس مستقیم توسط مدرس",
-      description:
-        "کلاس‌ها توسط خودم برگزار می‌شوند تا مسیر یادگیری و کیفیت آموزش یکپارچه باشد.",
-    },
-    {
-      icon: "📖",
-      title: "جزوه‌های آموزشی",
-      description:
-        "جزوه‌های آموزشی برای کمک به درک بهتر مطالب و مرور درس‌ها در اختیار زبان‌آموزان قرار می‌گیرد.",
-    },
-    {
-      icon: "🗣️",
-      title: "آلمانی کاربردی",
-      description:
-        "در کنار یادگیری کتاب و گرامر، بر مکالمه و استفاده از زبان در موقعیت‌های روزمره تمرکز می‌کنیم.",
-    },
-    {
-      icon: "📈",
-      title: "پشتیبانی و بازخورد",
-      description:
-        "پیشرفت زبان‌آموز بررسی می‌شود و در طول دوره بازخورد و پشتیبانی بین جلسات ارائه می‌شود.",
-    },
-    {
-      icon: "🎯",
-      title: "آموزش متناسب با هدف",
-      description:
-        "مسیر یادگیری با توجه به سطح فعلی و هدف زبان‌آموز، مانند مهاجرت، تحصیل، کار یا مکالمه تنظیم می‌شود.",
-    },
-    {
-      icon: "🚀",
-      title: "تمرکز بر پیشرفت واقعی",
-      description:
-        "هدف کلاس‌ها فقط تمام‌کردن کتاب نیست؛ بلکه استفاده بهتر و مستقل‌تر از زبان آلمانی است.",
     },
   ];
 
@@ -116,13 +77,14 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش زبان آلمانی با متد تخصصی
+            یادگیری زبان آلمانی از A1 تا B2
             <br />
-            به صورت حضوری و آنلاین
+            با آموزش اصولی و کاربردی
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
-            کلاس های خصوصی و عمومی از A1 تا B2 با تدریس مسیح سلیمانی
+            کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین
+            با تدریس مستقیم مسیح سلیمانی
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
@@ -134,7 +96,7 @@ export default function Home() {
               aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
               className="inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700 sm:w-auto"
             >
-              مشاوره و ثبت‌نام در واتساپ
+              دریافت مشاوره رایگان
             </a>
 
             <a
@@ -158,7 +120,7 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 text-sm leading-7 text-gray-600 md:text-base">
-            دوره مناسب خودت رو انتخاب کن
+            از شروع یادگیری تا آمادگی برای سطوح پیشرفته، دوره مناسب خودت را انتخاب کن.
           </p>
 
           <div
@@ -193,73 +155,68 @@ export default function Home() {
           </div>
 
           {/* ADDITIONAL COURSE INFORMATION */}
-          <div className="mx-auto mt-16 max-w-4xl text-right">
+          <div className="mx-auto mt-12 max-w-4xl text-right">
             <h3 className="text-xl font-bold text-blue-900 md:text-2xl">
-              کلاس‌های زبان آلمانی به صورت حضوری و آنلاین
+              کلاس زبان آلمانی حضوری در اصفهان و آنلاین
             </h3>
 
             <p className="mt-4 leading-9 text-gray-700">
-              اگر به دنبال یادگیری زبان آلمانی در اصفهان یا شرکت در کلاس آنلاین
-              هستید، آکادمی دویچینو امکان آشنایی با دوره‌های مختلف زبان آلمانی
-              را برای شما فراهم می‌کند. بسته به سطح فعلی و هدف شما، از یادگیری
-              زبان آلمانی از پایه تا تقویت مکالمه و ادامه مسیر در سطوح بالاتر،
-              می‌توانید دوره مناسب خود را بررسی کنید. انتخاب دوره بر اساس سطح
-              و هدف یادگیری، به شما کمک می‌کند برنامه منظم‌تری برای پیشرفت در
-              زبان آلمانی داشته باشید.
+              در آکادمی دویچینو می‌توانید متناسب با سطح و هدف خود، یادگیری زبان
+              آلمانی را از پایه شروع کنید یا مهارت‌های خود را در سطوح بالاتر
+              تقویت کنید. کلاس‌ها به صورت خصوصی و گروهی، حضوری در اصفهان و
+              آنلاین برگزار می‌شوند و آموزش شامل گرامر، واژگان، شنیداری،
+              خواندن، نوشتن و مکالمه است.
             </p>
 
             <p className="mt-3 leading-9 text-gray-700">
-              اگر در ابتدای مسیر هستید، دوره{" "}
+              برای شروع از صفر،{" "}
               <Link
                 href="/courses/a1"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
-                زبان آلمانی A1
+                دوره زبان آلمانی A1
               </Link>{" "}
-              برای شروع از پایه در نظر گرفته شده است. برای ادامه یادگیری
-              می‌توانید اطلاعات{" "}
+              را انتخاب کنید. اگر قبلاً یادگیری را شروع کرده‌اید، اطلاعات{" "}
               <Link
                 href="/courses/a2"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
                 دوره A2
-              </Link>{" "}
-              و{" "}
+              </Link>
+              ،{" "}
               <Link
                 href="/courses/b1"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
                 دوره B1
               </Link>{" "}
-              و همچنین{" "}
+              و{" "}
               <Link
                 href="/courses/b2"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
                 دوره B2
               </Link>{" "}
-              را ببینید. اگر می‌خواهید گرامر زبان آلمانی را از سطح پایه تا
-              پیشرفته یاد بگیرید، صفحه{" "}
+              را بررسی کنید. همچنین برای تقویت قواعد زبان می‌توانید در{" "}
               <Link
                 href="/courses/grammar"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
-                کلاس گرامر A1 تا B2
+                کلاس گرامر زبان آلمانی
               </Link>{" "}
-              را بررسی کنید. اگر می‌خواهید بیشتر روی صحبت‌کردن تمرکز کنید،
-              صفحه{" "}
+              شرکت کنید و برای بهبود مهارت صحبت کردن،{" "}
               <Link
                 href="/courses/conversation"
                 className="font-semibold text-blue-900 underline underline-offset-4 hover:text-blue-700"
               >
                 کلاس مکالمه زبان آلمانی
               </Link>{" "}
-              را بررسی کنید.
+              را انتخاب کنید.
             </p>
 
             <p className="mt-3 leading-9 text-gray-700">
-              برای اطلاع از شرایط کلاس‌ها و انتخاب دوره مناسب، می‌توانید از
-              طریق واتساپ پیام بدهید.
+              برای انتخاب سطح مناسب و اطلاع از شرایط کلاس‌ها، می‌توانید قبل
+              از ثبت‌نام از مشاوره رایگان استفاده کنید.
             </p>
 
             <div className="mt-6">
@@ -270,7 +227,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800 sm:w-auto"
               >
-                دریافت مشاوره و انتخاب دوره
+                مشاوره و انتخاب دوره
               </a>
             </div>
           </div>
@@ -292,8 +249,9 @@ export default function Home() {
               <p className="font-semibold text-gray-800">سلام 👋🏻</p>
 
               <p>
-                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی در اصفهان با بیش از
-                ۳ سال تجربه تدریس در آموزشگاه‌های زبان.
+                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی با بیش از ۳ سال تجربه
+                تدریس در آموزشگاه‌های زبان. در آکادمی دویچینو از سطح A1 تا B2
+                همراه زبان‌آموزان هستم.
               </p>
 
               {/* TEACHER CREDENTIALS */}
@@ -323,32 +281,20 @@ export default function Home() {
               </div>
 
               <p>
-                در این سال‌ها با زبان‌آموزان در سطوح مختلف کار کرده‌ام و
-                با چالش‌هایی که در مسیر یادگیری زبان آلمانی، از درک گرامر
-                و یادگیری واژگان تا تقویت مکالمه و آمادگی آزمون، وجود دارد
-                آشنا هستم.
+                در کلاس‌ها علاوه بر گرامر و واژگان، روی هر چهار مهارت اصلی
+                زبان آلمانی تمرکز می‌کنیم تا بتوانید آموخته‌های خود را در
+                موقعیت‌های واقعی به کار ببرید.
               </p>
 
               <p>
-                در کلاس‌های من، یادگیری فقط به مطالعه کتاب محدود نمی‌شود.
-                تلاش می‌کنم مطالب را به شکلی آموزش دهم که بتوانید
-                آموخته‌هایتان را در مکالمات و موقعیت‌های واقعی به کار ببرید.
-                به همین دلیل، در کنار آموزش گرامر و واژگان، روی هر چهار
-                مهارت اصلی زبان آلمانی تمرکز می‌کنیم.
+                همچنین با جزوه‌های اختصاصی، تمرین‌های تکمیلی و پشتیبانی
+                آموزشی بین جلسات، در مسیر یادگیری تنها نخواهید بود.
               </p>
 
               <p>
-                همچنین آموزش با پایان جلسه تمام نمی‌شود؛ در طول دوره
-                می‌توانید سؤالات خود را مطرح کنید، تمرین‌هایتان را برای
-                بررسی ارسال کنید و خارج از زمان کلاس نیز از پشتیبانی
-                آموزشی بهره‌مند شوید.
-              </p>
-
-              <p>
-                هدف من این است که مسیر یادگیری زبان آلمانی برای شما منظم،
-                کاربردی و متناسب با هدفتان باشد؛ چه قصد شروع از صفر را
-                داشته باشید و چه بخواهید برای تحصیل، کار، مهاجرت یا
-                آزمون‌های زبان آلمانی آماده شوید.
+                هدف من این است که متناسب با سطح و هدف شما، مسیر یادگیری
+                منظم و کاربردی داشته باشیم؛ چه برای مهاجرت و تحصیل، چه برای
+                کار، آزمون یا مکالمه روزمره.
               </p>
 
               <a
@@ -357,7 +303,7 @@ export default function Home() {
                 aria-label="تماس با مسیح سلیمانی با شماره 09130061984"
                 className="inline-flex items-center justify-center rounded-xl bg-blue-900 px-6 py-3 text-white transition hover:bg-blue-800"
               >
-                تماس با مسیح سلیمانی
+                تماس با مدرس
               </a>
             </div>
           </div>
@@ -387,9 +333,8 @@ export default function Home() {
             </h2>
 
             <p className="mx-auto max-w-3xl text-base leading-9 text-blue-100 md:text-lg">
-              در دویچینو یادگیری زبان آلمانی فقط به حضور در کلاس محدود
-              نمی‌شود؛ با منابع آموزشی متنوع، جزوه‌های اختصاصی، آزمون‌های
-              استاندارد و پشتیبانی مستمر همراه شما هستیم.
+              در دویچینو علاوه بر آموزش در کلاس، با منابع تکمیلی و پشتیبانی
+              آموزشی در مسیر یادگیری زبان آلمانی همراه شما هستیم.
             </p>
 
             <div className="mb-2 mt-8 flex items-center justify-center">
@@ -417,8 +362,8 @@ export default function Home() {
               </h3>
 
               <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
-                استفاده از سه کتاب و منبع آموزشی به‌جای محدود شدن به یک کتاب،
-                برای یادگیری عمیق‌تر زبان آلمانی.
+                استفاده از سه کتاب و منبع آموزشی برای یادگیری عمیق‌تر و
+                تمرین بیشتر.
               </p>
             </article>
 
@@ -432,8 +377,7 @@ export default function Home() {
               </h3>
 
               <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
-                دریافت جزوه‌های آموزشی برای مرور مطالب کلاس، تمرین بیشتر و
-                تثبیت آموخته‌ها.
+                جزوه‌های آموزشی برای مرور درس‌ها، تمرین و تثبیت مطالب کلاس.
               </p>
             </article>
 
@@ -447,8 +391,8 @@ export default function Home() {
               </h3>
 
               <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
-                آشنایی و ارزیابی زبان‌آموزان با نمونه آزمون‌های Goethe و telc
-                در تمام سطوح آموزشی.
+                تمرین با نمونه آزمون‌های استاندارد برای آشنایی با ساختار
+                آزمون‌های زبان آلمانی.
               </p>
             </article>
 
@@ -462,8 +406,7 @@ export default function Home() {
               </h3>
 
               <p className="text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
-                امکان پرسیدن سؤال و دریافت راهنمایی از مدرس حتی خارج از
-                ساعات برگزاری کلاس.
+                امکان پرسیدن سؤال و دریافت راهنمایی آموزشی بین جلسات.
               </p>
             </article>
           </div>
@@ -517,7 +460,7 @@ export default function Home() {
               </div>
 
               <p className="mt-4 max-w-md text-center text-sm leading-7 text-blue-100 md:text-right">
-                آموزش زبان آلمانی از سطح مقدماتی تا سطح هدف، با تمرکز بر
+                آموزش زبان آلمانی از سطح مقدماتی تا پیشرفته، با تمرکز بر
                 یادگیری کاربردی برای مکالمه، تحصیل، کار و مهاجرت.
               </p>
             </div>
