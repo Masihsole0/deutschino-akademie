@@ -66,21 +66,6 @@ export default function A1Page() {
             کلاس زبان آلمانی A1 از صفر
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-7 max-w-2xl mx-auto mb-5">
-            یادگیری زبان آلمانی را از پایه شروع کنید؛ با کلاس‌های خصوصی یا
-            گروهی، آموزش کاربردی و پشتیبانی در طول دوره.
-          </p>
-
-          <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-              generalMessage
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-7 py-3 rounded-xl font-bold text-sm md:text-base transition-colors"
-          >
-            مشاوره و ثبت‌نام A1
-          </a>
         </section>
 
         {/* Banner */}
