@@ -1,8 +1,11 @@
 
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Vazirmatn } from "next/font/google";
 import { organizationSchema } from "./schema";
+
+const GA_ID = "G-D1F86JPJC0";
 
 const vazir = Vazirmatn({
   subsets: ["arabic"],
@@ -16,22 +19,17 @@ const siteDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.deutschino.ir"),
-
   title: siteTitle,
   description: siteDescription,
-
   applicationName: "آکادمی دویچینو",
-
   authors: [
     {
       name: "مسیح سلیمانی",
       url: "https://www.deutschino.ir",
     },
   ],
-
   creator: "مسیح سلیمانی",
   publisher: "آکادمی دویچینو",
-
   robots: {
     index: true,
     follow: true,
@@ -43,7 +41,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   keywords: [
     "آموزش زبان آلمانی اصفهان",
     "مدرس زبان آلمانی اصفهان",
@@ -61,7 +58,6 @@ export const metadata: Metadata = {
     "گرامر آلمانی از پایه",
     "کلاس مکالمه آلمانی",
   ],
-
   openGraph: {
     type: "website",
     locale: "fa_IR",
@@ -76,7 +72,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
@@ -98,6 +93,21 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={vazir.className}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
