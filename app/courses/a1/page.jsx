@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import {
   BookOpen,
@@ -33,6 +32,9 @@ const courseSchema = {
 const whatsappNumber = "989130061984";
 
 export default function A1Page() {
+  const generalMessage =
+    "سلام، برای ثبت‌نام دوره زبان آلمانی A1 و دریافت مشاوره راهنمایی می‌خواهم.";
+
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -60,14 +62,29 @@ export default function A1Page() {
           dir="rtl"
           className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
         >
-          <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
+          <h1 className="text-2xl md:text-4xl font-bold mb-3">
             کلاس زبان آلمانی A1 از صفر
           </h1>
 
+          <p className="text-sm md:text-lg text-gray-600 leading-7 max-w-2xl mx-auto mb-5">
+            یادگیری زبان آلمانی را از پایه شروع کنید؛ با کلاس‌های خصوصی یا
+            گروهی، آموزش کاربردی و پشتیبانی در طول دوره.
+          </p>
+
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              generalMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-7 py-3 rounded-xl font-bold text-sm md:text-base transition-colors"
+          >
+            مشاوره و ثبت‌نام A1
+          </a>
         </section>
 
         {/* Banner */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-6">
           <Image
             src="/books.jpg"
             alt="کتاب‌های آموزش زبان آلمانی سطح A1"
@@ -91,9 +108,7 @@ export default function A1Page() {
             <p className="font-bold text-sm md:text-base mb-1">
               مدت هر جلسه
             </p>
-            <p className="text-xs md:text-sm text-gray-600">
-              ۹۰ دقیقه
-            </p>
+            <p className="text-xs md:text-sm text-gray-600">۹۰ دقیقه</p>
           </div>
 
           <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
@@ -118,7 +133,7 @@ export default function A1Page() {
               پشتیبانی آموزشی
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              پاسخ به سؤالات و بررسی تمرین‌ها
+              رفع اشکال و بررسی تمرین‌ها
             </p>
           </div>
 
@@ -131,29 +146,29 @@ export default function A1Page() {
               منابع آموزشی
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              ۳ کتاب و جزوه
+              ۳ کتاب و جزوه اختصاصی
             </p>
           </div>
         </section>
 
         {/* Learning Outcomes */}
         <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-5">
-            در دوره زبان آلمانی A1 چه چیزهایی یاد می‌گیرید؟
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            در پایان سطح A1 چه مهارت‌هایی خواهید داشت؟
           </h2>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base leading-8">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base leading-8">
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              معرفی خود و دیگران و صحبت درباره اطلاعات شخصی
+              معرفی خود و صحبت درباره اطلاعات شخصی
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              واژگان مربوط به خانواده، کار، خرید و زندگی روزمره
+              مکالمه درباره خانواده، کار و زندگی روزمره
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              یادگیری گرامر پایه و ساخت جمله‌های ساده آلمانی
+              ساخت جمله و استفاده از گرامر پایه
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
@@ -161,7 +176,7 @@ export default function A1Page() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              تمرین مکالمه و درک جمله‌های ساده آلمانی
+              درک مکالمات ساده و تقویت مهارت شنیداری
             </li>
           </ul>
         </section>
@@ -175,8 +190,8 @@ export default function A1Page() {
             هزینه کلاس زبان آلمانی A1
           </h2>
 
-          <p className="text-xs md:text-sm text-gray-600 text-center mb-4">
-            امکان انتخاب کلاس خصوصی یا گروهی متناسب با شرایط شما
+          <p className="text-xs md:text-sm text-gray-600 text-center mb-5">
+            کلاس خصوصی یا گروهی؛ متناسب با شرایط و هدف شما
           </p>
 
           <div className="grid grid-cols-2 gap-3 md:gap-5">
@@ -190,7 +205,7 @@ export default function A1Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه بسته ۱۰ جلسه‌ای
+                  بسته ۱۰ جلسه‌ای
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
@@ -212,13 +227,13 @@ export default function A1Page() {
 
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم درباره ثبت‌نام کلاس خصوصی زبان آلمانی A1 و بسته ۱۰ جلسه‌ای اطلاعات بیشتری دریافت کنم."
+                    "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی A1 پیام می‌دهم. لطفاً راهنمایی‌ام کنید."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
                 >
-                  مشاوره و ثبت‌نام
+                  ثبت‌نام کلاس خصوصی
                 </a>
               </div>
             </div>
@@ -233,7 +248,7 @@ export default function A1Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه بسته ۱۰ جلسه‌ای
+                  بسته ۱۰ جلسه‌ای
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
@@ -251,47 +266,43 @@ export default function A1Page() {
                   هر جلسه ۳۹۰٬۰۰۰ تومان
                 </p>
 
-                <p className="text-xs text-gray-600 mb-2">
-                  ۹۰ دقیقه
-                </p>
+                <p className="text-xs text-gray-600 mb-2">۹۰ دقیقه</p>
 
                 <p className="text-xs font-semibold text-blue-900 mb-3">
-                  ظرفیت کلاس: حداکثر ۶ نفر
+                  حداکثر ۶ نفر
                 </p>
 
                 <a
                   href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، می‌خواهم درباره ثبت‌نام کلاس گروهی زبان آلمانی A1 و ظرفیت کلاس اطلاعات بیشتری دریافت کنم."
+                    "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی A1 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
                 >
-                  مشاوره و ثبت‌نام
+                  ثبت‌نام کلاس گروهی
                 </a>
               </div>
             </div>
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            شهریه کلاس‌های خصوصی و گروهی به‌صورت بسته‌های ۱۰ جلسه‌ای
-            دریافت می‌شود. تعداد کل جلسات دوره ثابت نیست و متناسب با
-            روند یادگیری و پیشرفت زبان‌آموز تعیین می‌شود.
+            شهریه هر دو نوع کلاس به‌صورت بسته‌های ۱۰ جلسه‌ای پرداخت می‌شود.
           </p>
 
           {/* Free Consultation Card */}
           <div className="mt-5 rounded-xl bg-[#F4F8FF] p-5 md:p-6 text-center">
             <p className="text-sm md:text-base font-semibold text-[#0A2540] mb-2">
-              برای انتخاب کلاس مناسب نیاز به راهنمایی دارید؟
+              هنوز برای انتخاب کلاس مطمئن نیستید؟
             </p>
 
             <p className="text-sm text-gray-600 mb-3">
-              پیش از ثبت‌نام می‌توانید از مشاوره اولیه رایگان ۱۵ دقیقه‌ای استفاده کنید.
+              قبل از ثبت‌نام، از مشاوره اولیه رایگان ۱۵ دقیقه‌ای استفاده کنید.
             </p>
 
             <a
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس زبان آلمانی A1 پیام می‌دهم."
+                "سلام، برای دریافت مشاوره اولیه رایگان درباره کلاس زبان آلمانی A1 پیام می‌دهم."
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -308,81 +319,53 @@ export default function A1Page() {
           className="max-w-4xl mx-auto mt-14 md:mt-16 border border-gray-200 rounded-xl shadow-sm overflow-hidden"
         >
           <div className="p-4 md:p-6">
-            <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">
-              سؤالات متداول درباره کلاس زبان آلمانی A1
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              سؤالات متداول
             </h2>
 
             <div className="space-y-0 text-gray-700 leading-8">
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
+              <div className="py-3 border-b border-gray-200">
+                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
                   آیا برای شرکت در کلاس A1 باید زبان آلمانی بلد باشم؟
                 </h3>
-                <p className="text-sm md:text-base mt-1">
-                  خیر. دوره A1 از پایه شروع می‌شود و برای افرادی مناسب است
-                  که هیچ آشنایی قبلی با زبان آلمانی ندارند.
+                <p className="text-sm mt-1">
+                  خیر. آموزش از پایه شروع می‌شود و به هیچ پیش‌نیازی نیاز ندارید.
                 </p>
               </div>
 
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  کلاس‌های گروهی چند نفره برگزار می‌شوند؟
+              <div className="py-3 border-b border-gray-200">
+                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
+                  کلاس‌ها حضوری هستند یا آنلاین؟
                 </h3>
-                <p className="text-sm md:text-base mt-1">
-                  برای حفظ کیفیت آموزش و فرصت مشارکت زبان‌آموزان،
-                  ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.
+                <p className="text-sm mt-1">
+                  امکان شرکت در کلاس به‌صورت حضوری در اصفهان و آنلاین وجود دارد.
                 </p>
               </div>
 
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  شهریه کلاس زبان آلمانی A1 چگونه پرداخت می‌شود؟
+              <div className="py-3 border-b border-gray-200">
+                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
+                  ظرفیت کلاس گروهی چند نفر است؟
                 </h3>
-                <p className="text-sm md:text-base mt-1">
-                  پرداخت شهریه در هر دو نوع کلاس خصوصی و گروهی به‌صورت
-                  بسته‌های ۱۰ جلسه‌ای انجام می‌شود. هزینه بسته خصوصی
-                  ۸٬۹۰۰٬۰۰۰ تومان و هزینه بسته گروهی ۳٬۹۰۰٬۰۰۰ تومان است.
+                <p className="text-sm mt-1">
+                  برای حفظ کیفیت آموزش، ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.
                 </p>
               </div>
 
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  آیا امکان شرکت در کلاس آنلاین وجود دارد؟
+              <div className="py-3 border-b border-gray-200">
+                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
+                  آیا خارج از کلاس هم پشتیبانی دارم؟
                 </h3>
-                <p className="text-sm md:text-base mt-1">
-                  بله. دوره زبان آلمانی A1 به‌صورت حضوری در اصفهان
-                  و همچنین آنلاین برگزار می‌شود.
+                <p className="text-sm mt-1">
+                  بله. می‌توانید سؤالات و تمرین‌های خود را برای بررسی و رفع اشکال ارسال کنید.
                 </p>
               </div>
 
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  آیا خارج از زمان کلاس هم پشتیبانی دارم؟
+              <div className="pt-3">
+                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
+                  چطور می‌توانم ثبت‌نام کنم؟
                 </h3>
-                <p className="text-sm md:text-base mt-1">
-                  بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
-                  تمرین‌هایتان را برای بررسی ارسال کنید و برای رفع اشکال
-                  از پشتیبانی آموزشی بهره‌مند شوید.
-                </p>
-              </div>
-
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  مدت زمان اتمام دوره A1 چقدر است؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  تعداد جلسات ثابت نیست و با توجه به روند یادگیری،
-                  میزان تمرین و پیشرفت زبان‌آموز تعیین می‌شود.
-                </p>
-              </div>
-
-              <div className="pt-4">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  چطور می‌توانم برای کلاس A1 ثبت‌نام کنم؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  می‌توانید از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید،
-                  درباره کلاس خصوصی یا گروهی مشاوره دریافت کنید و
-                  شرایط ثبت‌نام را بررسی کنید.
+                <p className="text-sm mt-1">
+                  از طریق دکمه‌های ثبت‌نام همین صفحه در واتساپ پیام بدهید تا برای انتخاب کلاس و شروع دوره راهنمایی شوید.
                 </p>
               </div>
             </div>
@@ -392,87 +375,47 @@ export default function A1Page() {
         {/* SEO Content */}
         <section
           dir="rtl"
-          className="mt-16 max-w-4xl mx-auto text-right"
+          className="mt-12 max-w-4xl mx-auto text-right"
           aria-labelledby="a1-course-guide"
         >
           <h2
             id="a1-course-guide"
-            className="text-2xl md:text-3xl font-bold mb-6"
+            className="text-xl md:text-2xl font-bold mb-4"
           >
-            آموزش حضوری زبان آلمانی A1 در اصفهان و آنلاین
+            آموزش زبان آلمانی A1 در اصفهان و آنلاین
           </h2>
 
-          <p className="text-base md:text-lg leading-9 mb-5">
-            اگر می‌خواهید یادگیری زبان آلمانی را از صفر شروع کنید، دوره A1
-            آکادمی دویچینو برای آشنایی با واژگان پایه، گرامر مقدماتی و
-            مکالمه‌های روزمره مناسب است. در این سطح یاد می‌گیرید خودتان را
-            معرفی کنید، درباره خانواده و علایق خود صحبت کنید، سؤال‌های ساده
-            بپرسید و در موقعیت‌های روزمره ارتباط برقرار کنید.
+          <p className="text-sm md:text-base leading-8 text-gray-700">
+            دوره زبان آلمانی A1 آکادمی دویچینو برای افرادی طراحی شده است که
+            قصد دارند یادگیری زبان آلمانی را از صفر آغاز کنند. در این دوره،
+            واژگان و گرامر پایه، مکالمات روزمره، معرفی خود و دیگران و مهارت
+            درک جملات ساده را تمرین می‌کنید. امکان شرکت در کلاس خصوصی یا گروهی،
+            به‌صورت حضوری در اصفهان و آنلاین فراهم است. برای اطلاع از شرایط
+            ثبت‌نام و انتخاب کلاس مناسب می‌توانید از طریق واتساپ با آکادمی
+            دویچینو در ارتباط باشید.
+          </p>
+        </section>
+
+        {/* Final Registration CTA */}
+        <section dir="rtl" className="max-w-3xl mx-auto mt-10 mb-8 text-center">
+          <h2 className="text-xl md:text-2xl font-bold mb-3">
+            آماده شروع یادگیری زبان آلمانی هستید؟
+          </h2>
+
+          <p className="text-sm md:text-base text-gray-600 mb-5">
+            برای اطلاع از شرایط کلاس‌ها و شروع ثبت‌نام A1 با ما در ارتباط باشید.
           </p>
 
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس زبان آلمانی A1 به‌صورت خصوصی و گروهی
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در دویچینو می‌توانید با توجه به شرایط و برنامه خود، کلاس خصوصی یا
-            گروهی انتخاب کنید. کلاس خصوصی امکان تمرکز بیشتر بر نیازهای فردی را
-            فراهم می‌کند و در کلاس گروهی فرصت تمرین و تعامل با زبان‌آموزان دیگر
-            را دارید. ظرفیت کلاس‌های گروهی حداکثر ۶ نفر است.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس حضوری آلمانی در اصفهان یا آنلاین
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            کلاس‌های A1 آکادمی دویچینو به‌صورت حضوری در اصفهان و همچنین آنلاین
-            برگزار می‌شوند. بنابراین، چه در اصفهان باشید و چه امکان حضور در
-            کلاس را نداشته باشید، می‌توانید متناسب با شرایط خود یادگیری زبان
-            آلمانی را شروع کنید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            در دوره آلمانی A1 چه چیزهایی یاد می‌گیرید؟
-          </h2>
-
-          <ul className="list-disc pr-6 space-y-2 text-base md:text-lg leading-8">
-            <li>معرفی خود و دیگران و صحبت درباره اطلاعات شخصی</li>
-            <li>واژگان مربوط به خانواده، کار، خرید و زندگی روزمره</li>
-            <li>گرامر پایه و ساخت جمله‌های ساده آلمانی</li>
-            <li>پرسیدن و پاسخ دادن به سؤال‌های متداول</li>
-            <li>تمرین مکالمه و درک جمله‌های ساده آلمانی</li>
-          </ul>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            آیا برای شرکت در دوره A1 به پیش‌نیاز نیاز دارم؟
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            خیر. این دوره برای افرادی طراحی شده است که می‌خواهند زبان آلمانی
-            را از ابتدا شروع کنند و به دانش قبلی زبان آلمانی نیاز ندارند.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            پشتیبانی آموزشی در دوره A1
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در طول دوره، زبان‌آموزان می‌توانند سؤالات خود را خارج از زمان کلاس
-            مطرح کنند، تمرین‌هایشان را برای بررسی ارسال کنند و برای رفع اشکال
-            از پشتیبانی آموزشی بهره‌مند شوند.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            ثبت‌نام کلاس زبان آلمانی A1
-          </h2>
-
-          <p className="text-base md:text-lg leading-9">
-            برای انتخاب کلاس خصوصی یا گروهی و دریافت اطلاعات بیشتر درباره شروع
-            دوره، می‌توانید از طریق دکمه‌های ثبت‌نام همین صفحه با آکادمی
-            دویچینو در ارتباط باشید. همچنین پیش از ثبت‌نام امکان دریافت
-            مشاوره اولیه رایگان ۱۵ دقیقه‌ای وجود دارد.
-          </p>
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              generalMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-8 py-3 rounded-xl font-bold text-sm md:text-base transition-colors"
+          >
+            شروع ثبت‌نام در واتساپ
+          </a>
         </section>
       </div>
     </main>
