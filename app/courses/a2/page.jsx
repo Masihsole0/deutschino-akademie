@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import {
   BookOpen,
@@ -32,6 +33,9 @@ const courseSchema = {
 const whatsappNumber = "989130061984";
 
 export default function A2Page() {
+  const generalMessage =
+    "سلام، برای ثبت‌نام دوره زبان آلمانی A2 و دریافت مشاوره راهنمایی می‌خواهم.";
+
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -62,7 +66,6 @@ export default function A2Page() {
           <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
             کلاس زبان آلمانی A2
           </h1>
-
         </section>
 
         {/* Banner */}
@@ -138,7 +141,7 @@ export default function A2Page() {
         {/* Learning Outcomes */}
         <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
           <h2 className="text-xl md:text-2xl font-bold mb-5">
-            در دوره زبان آلمانی A2 چه چیزهایی یاد می‌گیرید؟
+            در پایان سطح A2 چه مهارت‌هایی خواهید داشت؟
           </h2>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base leading-8">
@@ -152,7 +155,7 @@ export default function A2Page() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              یادگیری گرامر سطح A2 و ساخت جمله‌های پیچیده‌تر
+              استفاده از گرامر سطح A2 و ساخت جمله‌های پیچیده‌تر
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
@@ -334,54 +337,32 @@ export default function A2Page() {
 
               <div className="py-4 border-b border-gray-200">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  شهریه کلاس زبان آلمانی A2 چگونه پرداخت می‌شود؟
+                  شهریه کلاس زبان آلمانی A2 چقدر است؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  پرداخت شهریه در هر دو نوع کلاس خصوصی و گروهی به‌صورت
-                  بسته‌های ۱۰ جلسه‌ای انجام می‌شود. هزینه بسته خصوصی
-                  ۹٬۴۰۰٬۰۰۰ تومان و هزینه بسته گروهی ۴٬۵۰۰٬۰۰۰ تومان است.
+                  هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۹٬۴۰۰٬۰۰۰ تومان و کلاس
+                  گروهی ۴٬۵۰۰٬۰۰۰ تومان است. هر جلسه ۹۰ دقیقه برگزار می‌شود.
                 </p>
               </div>
 
               <div className="py-4 border-b border-gray-200">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  آیا امکان شرکت در کلاس آنلاین وجود دارد؟
+                  کلاس A2 به‌صورت حضوری برگزار می‌شود یا آنلاین؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  بله. دوره زبان آلمانی A2 به‌صورت حضوری در اصفهان
-                  و همچنین آنلاین برگزار می‌شود.
-                </p>
-              </div>
-
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  آیا خارج از زمان کلاس هم پشتیبانی دارم؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
-                  تمرین‌هایتان را برای بررسی ارسال کنید و برای رفع اشکال
-                  از پشتیبانی آموزشی بهره‌مند شوید.
-                </p>
-              </div>
-
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  مدت زمان اتمام دوره A2 چقدر است؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  مدت دوره و تعداد جلسات ثابت نیست و با توجه به روند یادگیری،
-                  میزان تمرین و پیشرفت زبان‌آموز تعیین می‌شود.
+                  دوره زبان آلمانی A2 به‌صورت حضوری در اصفهان و همچنین
+                  آنلاین برگزار می‌شود.
                 </p>
               </div>
 
               <div className="pt-4">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  چطور می‌توانم برای کلاس A2 ثبت‌نام کنم؟
+                  آیا خارج از زمان کلاس هم پشتیبانی آموزشی دارم؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  می‌توانید از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید،
-                  درباره کلاس خصوصی یا گروهی مشاوره دریافت کنید و
-                  شرایط ثبت‌نام را بررسی کنید.
+                  بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
+                  تمرین‌هایتان را برای بررسی ارسال کنید و از پشتیبانی
+                  آموزشی بهره‌مند شوید.
                 </p>
               </div>
             </div>
@@ -392,95 +373,48 @@ export default function A2Page() {
         <section
           dir="rtl"
           className="mt-16 max-w-4xl mx-auto text-right"
-          aria-labelledby="a2-course-guide"
         >
-          <h2
-            id="a2-course-guide"
-            className="text-2xl md:text-3xl font-bold mb-6"
-          >
-            آموزش حضوری زبان آلمانی A2 در اصفهان و آنلاین
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            اگر سطح مقدماتی A1 زبان آلمانی را گذرانده‌اید، دوره A2 آکادمی
-            دویچینو به شما کمک می‌کند دانش زبانی خود را گسترش دهید. در این
-            سطح با واژگان و ساختارهای گرامری بیشتری آشنا می‌شوید و می‌توانید
-            درباره موضوعات روزمره، تجربیات، برنامه‌ها و اتفاقات گذشته صحبت کنید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس زبان آلمانی A2 به‌صورت خصوصی و گروهی
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در دویچینو می‌توانید با توجه به شرایط و برنامه خود، کلاس خصوصی یا
-            گروهی انتخاب کنید. کلاس خصوصی امکان تمرکز بیشتر بر نیازهای فردی را
-            فراهم می‌کند و در کلاس گروهی فرصت تمرین و تعامل با زبان‌آموزان دیگر
-            را دارید. ظرفیت کلاس‌های گروهی حداکثر ۶ نفر است.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس حضوری آلمانی در اصفهان یا آنلاین
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            کلاس‌های A2 آکادمی دویچینو به‌صورت حضوری در اصفهان و همچنین آنلاین
-            برگزار می‌شوند. بنابراین، می‌توانید متناسب با شرایط خود در کلاس
-            شرکت کنید و مهارت‌های زبان آلمانی خود را در سطح A2 تقویت کنید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            در دوره آلمانی A2 چه چیزهایی یاد می‌گیرید؟
-          </h2>
-
-          <ul className="list-disc pr-6 space-y-2 text-base md:text-lg leading-8">
-            <li>صحبت درباره موضوعات روزمره، تجربیات و اتفاقات گذشته</li>
-            <li>گسترش واژگان مربوط به زندگی روزمره، سفر، کار و اوقات فراغت</li>
-            <li>گرامر سطح A2 و ساخت جمله‌های پیچیده‌تر</li>
-            <li>بیان خواسته‌ها، علایق، برنامه‌ها و نظرات شخصی</li>
-            <li>تقویت مهارت شنیدن، خواندن، نوشتن و مکالمه</li>
-          </ul>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            برای شرکت در دوره A2 به چه پیش‌نیازی نیاز دارم؟
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            برای شروع دوره A2 لازم است با مباحث پایه زبان آلمانی در سطح A1
-            آشنا باشید. در این دوره آموخته‌های سطح قبلی را گسترش می‌دهید و
-            برای استفاده مستقل‌تر از زبان آلمانی آماده می‌شوید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            منابع آموزشی دوره A2
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در دوره زبان آلمانی A2 از کتاب‌های Menschen A2.1 و Menschen A2.2
-            استفاده می‌شود. محتوای آموزشی این منابع در کنار تمرین‌های کلاسی
-            به تقویت مهارت‌های زبانی شما کمک می‌کند.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            پشتیبانی آموزشی در دوره A2
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در طول دوره، زبان‌آموزان می‌توانند سؤالات خود را خارج از زمان کلاس
-            مطرح کنند، تمرین‌هایشان را برای بررسی ارسال کنند و برای رفع اشکال
-            از پشتیبانی آموزشی بهره‌مند شوند.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            ثبت‌نام کلاس زبان آلمانی A2
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            آموزش زبان آلمانی A2 در اصفهان و آنلاین
           </h2>
 
           <p className="text-base md:text-lg leading-9">
-            برای انتخاب کلاس خصوصی یا گروهی و دریافت اطلاعات بیشتر درباره شروع
-            دوره، می‌توانید از طریق دکمه‌های ثبت‌نام همین صفحه با آکادمی
-            دویچینو در ارتباط باشید. همچنین پیش از ثبت‌نام امکان دریافت
-            مشاوره اولیه رایگان ۱۵ دقیقه‌ای وجود دارد.
+            اگر سطح A1 زبان آلمانی را گذرانده‌اید، در دوره A2 آکادمی دویچینو
+            می‌توانید دانش زبانی خود را گسترش دهید و برای برقراری ارتباط
+            مستقل‌تر در موقعیت‌های روزمره آماده شوید. در این دوره با استفاده
+            از کتاب‌های Menschen A2.1 و Menschen A2.2، واژگان و گرامر سطح A2
+            را یاد می‌گیرید و مهارت‌های شنیدن، خواندن، نوشتن و مکالمه خود را
+            تقویت می‌کنید. کلاس زبان آلمانی A2 به‌صورت خصوصی و گروهی، حضوری
+            در اصفهان و آنلاین برگزار می‌شود. برای دریافت اطلاعات بیشتر و
+            انتخاب کلاس مناسب می‌توانید از طریق واتساپ با آکادمی دویچینو
+            ارتباط بگیرید.
           </p>
+        </section>
+
+        {/* Final CTA */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-10 md:mt-12 mb-8 text-center"
+        >
+          <h2 className="text-xl md:text-2xl font-bold mb-3">
+            آماده شروع یادگیری زبان آلمانی هستید؟
+          </h2>
+
+          <p className="text-sm md:text-base text-gray-600 leading-8 mb-5">
+            برای دریافت مشاوره و اطلاع از شرایط ثبت‌نام کلاس خصوصی یا گروهی A2
+            با آکادمی دویچینو در ارتباط باشید.
+          </p>
+
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              generalMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-6 py-3 rounded-xl font-bold transition-colors"
+          >
+            شروع ثبت‌نام در واتساپ
+          </a>
         </section>
       </div>
     </main>

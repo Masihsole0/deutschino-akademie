@@ -33,17 +33,8 @@ const courseSchema = {
 const whatsappNumber = "989130061984";
 
 export default function B2Page() {
-  const privateWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس خصوصی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
-  )}`;
-
-  const groupWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ ساعته کلاس گروهی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
-  )}`;
-
-  const consultationWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس زبان آلمانی B2 پیام می‌دهم."
-  )}`;
+  const generalMessage =
+    "سلام، برای ثبت‌نام دوره زبان آلمانی B2 و دریافت مشاوره راهنمایی می‌خواهم.";
 
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
@@ -75,7 +66,6 @@ export default function B2Page() {
           <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
             کلاس زبان آلمانی B2
           </h1>
-
         </section>
 
         {/* Banner */}
@@ -101,7 +91,7 @@ export default function B2Page() {
               className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
             />
             <p className="font-bold text-sm md:text-base mb-1">
-              مدت زمان
+              مدت دوره
             </p>
             <p className="text-xs md:text-sm text-gray-600">
               با هماهنگی مدرس
@@ -117,7 +107,7 @@ export default function B2Page() {
               پیش‌نیاز
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              سطح B1
+              تسلط به سطح B1
             </p>
           </div>
 
@@ -130,7 +120,7 @@ export default function B2Page() {
               پشتیبانی آموزشی
             </p>
             <p className="text-xs md:text-sm text-gray-600">
-              خارج از ساعات کلاس
+              پاسخ به سؤالات و بررسی تمرین‌ها
             </p>
           </div>
 
@@ -151,13 +141,13 @@ export default function B2Page() {
         {/* Learning Outcomes */}
         <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
           <h2 className="text-xl md:text-2xl font-bold mb-5">
-            در دوره زبان آلمانی B2 چه مهارت‌هایی تقویت می‌شوند؟
+            در پایان سطح B2 چه مهارت‌هایی خواهید داشت؟
           </h2>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base leading-8">
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              تقویت گرامر و واژگان سطح B2
+              تقویت گرامر و واژگان پیشرفته سطح B2
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
@@ -173,11 +163,11 @@ export default function B2Page() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              تمرین نوشتن متن‌های منسجم و رسمی‌تر
+              نوشتن متن‌های منسجم و رسمی‌تر
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
-              آمادگی برای استفاده از زبان آلمانی در محیط‌های تحصیلی و کاری
+              استفاده از زبان آلمانی در محیط‌های تحصیلی و کاری
             </li>
           </ul>
         </section>
@@ -206,7 +196,7 @@ export default function B2Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه پکیج ۱۰ جلسه‌ای
+                  هزینه بسته ۱۰ جلسه‌ای
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
@@ -217,15 +207,19 @@ export default function B2Page() {
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای ۱۰ جلسه
+                  تومان
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
-                  هر جلسه ۹۰ دقیقه
+                  هر جلسه ۱٬۵۰۰٬۰۰۰ تومان
+                  <br />
+                  ۹۰ دقیقه
                 </p>
 
                 <a
-                  href={privateWhatsappLink}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس خصوصی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -245,7 +239,7 @@ export default function B2Page() {
 
               <div className="p-3 md:p-5 text-center">
                 <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  هزینه پکیج ۱۰ ساعته
+                  هزینه بسته ۱۰ ساعته
                 </p>
 
                 <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
@@ -256,15 +250,17 @@ export default function B2Page() {
                 </div>
 
                 <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان برای ۱۰ ساعت
+                  تومان
                 </p>
 
                 <p className="text-xs text-gray-600 mb-3">
-                  هزینه هر ساعت: ۶۹۰٬۰۰۰ تومان
+                  هر ساعت ۶۹۰٬۰۰۰ تومان
                 </p>
 
                 <a
-                  href={groupWhatsappLink}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                    "سلام، می‌خواهم درباره ثبت‌نام پکیج ۱۰ ساعته کلاس گروهی زبان آلمانی B2 اطلاعات بیشتری دریافت کنم."
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -276,8 +272,9 @@ export default function B2Page() {
           </div>
 
           <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            هزینه پکیج ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و هزینه پکیج
-            ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است.
+            هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و هزینه
+            بسته ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است. زمان‌بندی
+            برگزاری کلاس‌ها با هماهنگی مدرس تعیین می‌شود.
           </p>
 
           {/* Free Consultation Card */}
@@ -291,7 +288,9 @@ export default function B2Page() {
             </p>
 
             <a
-              href={consultationWhatsappLink}
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس زبان آلمانی B2 پیام می‌دهم."
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-white transition-colors"
@@ -334,11 +333,11 @@ export default function B2Page() {
 
               <div className="py-4 border-b border-gray-200">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  هزینه کلاس زبان آلمانی B2 چقدر است؟
+                  شهریه کلاس زبان آلمانی B2 چقدر است؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  هزینه پکیج ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و هزینه
-                  پکیج ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است.
+                  هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۱۵٬۰۰۰٬۰۰۰ تومان و
+                  هزینه بسته ۱۰ ساعته کلاس گروهی ۶٬۹۰۰٬۰۰۰ تومان است.
                 </p>
               </div>
 
@@ -352,35 +351,14 @@ export default function B2Page() {
                 </p>
               </div>
 
-              <div className="py-4 border-b border-gray-200">
+              <div className="pt-4">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  آیا خارج از زمان کلاس هم پشتیبانی دارم؟
+                  آیا خارج از زمان کلاس هم پشتیبانی آموزشی دارم؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
                   بله. در طول دوره می‌توانید سؤالات خود را مطرح کنید،
                   تمرین‌هایتان را برای بررسی ارسال کنید و برای رفع اشکال
                   از پشتیبانی آموزشی بهره‌مند شوید.
-                </p>
-              </div>
-
-              <div className="py-4 border-b border-gray-200">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  مدت زمان اتمام دوره B2 چقدر است؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  پکیج خصوصی شامل ۱۰ جلسه و پکیج گروهی شامل ۱۰ ساعت آموزش است.
-                  زمان‌بندی برگزاری کلاس‌ها با هماهنگی مدرس تعیین می‌شود.
-                </p>
-              </div>
-
-              <div className="pt-4">
-                <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  چطور می‌توانم برای کلاس B2 ثبت‌نام کنم؟
-                </h3>
-                <p className="text-sm md:text-base mt-1">
-                  می‌توانید از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید،
-                  درباره کلاس خصوصی یا گروهی مشاوره دریافت کنید و
-                  شرایط ثبت‌نام را بررسی کنید.
                 </p>
               </div>
             </div>
@@ -391,87 +369,47 @@ export default function B2Page() {
         <section
           dir="rtl"
           className="mt-16 max-w-4xl mx-auto text-right"
-          aria-labelledby="b2-course-guide"
         >
-          <h2
-            id="b2-course-guide"
-            className="text-2xl md:text-3xl font-bold mb-6"
-          >
-            آموزش حضوری زبان آلمانی B2 در اصفهان و آنلاین
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            آموزش زبان آلمانی B2 در اصفهان و آنلاین
           </h2>
 
-          <p className="text-base md:text-lg leading-9 mb-5">
+          <p className="text-base md:text-lg leading-9">
             اگر سطح B1 زبان آلمانی را گذرانده‌اید، دوره B2 آکادمی دویچینو
             برای تقویت توانایی استفاده مستقل‌تر و دقیق‌تر از زبان آلمانی
             طراحی شده است. در این سطح با ساختارهای گرامری پیشرفته‌تر و
             واژگان گسترده‌تر کار می‌کنید و توانایی خود را در درک و تولید
-            متن‌ها و مکالمه‌های پیچیده‌تر افزایش می‌دهید.
+            متن‌ها و مکالمه‌های پیچیده‌تر افزایش می‌دهید. کلاس زبان آلمانی
+            B2 به‌صورت خصوصی و گروهی، حضوری در اصفهان و آنلاین برگزار
+            می‌شود. برای دریافت اطلاعات بیشتر و انتخاب کلاس مناسب می‌توانید
+            از طریق واتساپ با آکادمی دویچینو ارتباط بگیرید.
           </p>
+        </section>
 
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس زبان آلمانی B2 به‌صورت خصوصی و گروهی
+        {/* Final CTA */}
+        <section
+          dir="rtl"
+          className="max-w-4xl mx-auto mt-10 md:mt-12 mb-8 text-center"
+        >
+          <h2 className="text-xl md:text-2xl font-bold mb-3">
+            آماده شروع یادگیری زبان آلمانی هستید؟
           </h2>
 
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در دویچینو می‌توانید با توجه به شرایط و برنامه خود، کلاس خصوصی یا
-            گروهی انتخاب کنید. کلاس خصوصی امکان تمرکز بیشتر بر نیازهای فردی را
-            فراهم می‌کند و در کلاس گروهی فرصت تمرین و تعامل با زبان‌آموزان دیگر
-            را دارید.
+          <p className="text-sm md:text-base text-gray-600 leading-8 mb-5">
+            برای دریافت مشاوره و اطلاع از شرایط ثبت‌نام کلاس خصوصی یا گروهی B2
+            با آکادمی دویچینو در ارتباط باشید.
           </p>
 
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            کلاس حضوری آلمانی در اصفهان یا آنلاین
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            کلاس‌های B2 آکادمی دویچینو به‌صورت حضوری در اصفهان و همچنین آنلاین
-            برگزار می‌شوند. بنابراین، می‌توانید متناسب با شرایط خود در کلاس
-            شرکت کنید و مهارت‌های زبان آلمانی خود را در سطح B2 تقویت کنید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            در دوره آلمانی B2 چه مهارت‌هایی تقویت می‌شوند؟
-          </h2>
-
-          <ul className="list-disc pr-6 space-y-2 text-base md:text-lg leading-8">
-            <li>تقویت گرامر و واژگان سطح B2</li>
-            <li>تمرین مکالمه و بیان استدلال و دیدگاه</li>
-            <li>درک مکالمه‌ها و فایل‌های صوتی طولانی‌تر</li>
-            <li>خواندن و تحلیل متن‌های پیچیده‌تر</li>
-            <li>تمرین نوشتن متن‌های منسجم و رسمی‌تر</li>
-            <li>آمادگی برای استفاده از زبان آلمانی در محیط‌های تحصیلی و کاری</li>
-          </ul>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            برای شرکت در دوره B2 به چه پیش‌نیازی نیاز دارم؟
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            برای شروع دوره B2 لازم است سطح B1 زبان آلمانی را گذرانده باشید.
-            آشنایی با مباحث این سطح به شما کمک می‌کند محتوای پیشرفته‌تر B2
-            را بهتر دنبال کنید و مهارت‌های زبانی خود را گسترش دهید.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            پشتیبانی آموزشی در دوره B2
-          </h2>
-
-          <p className="text-base md:text-lg leading-9 mb-5">
-            در طول دوره، زبان‌آموزان می‌توانند سؤالات خود را خارج از زمان کلاس
-            مطرح کنند، تمرین‌هایشان را برای بررسی ارسال کنند و برای رفع اشکال
-            از پشتیبانی آموزشی بهره‌مند شوند.
-          </p>
-
-          <h2 className="text-xl md:text-2xl font-bold mt-8 mb-4">
-            ثبت‌نام کلاس زبان آلمانی B2
-          </h2>
-
-          <p className="text-base md:text-lg leading-9">
-            برای انتخاب کلاس خصوصی یا گروهی و دریافت اطلاعات بیشتر درباره شروع
-            دوره، می‌توانید از طریق دکمه‌های ثبت‌نام همین صفحه با آکادمی
-            دویچینو در ارتباط باشید. همچنین پیش از ثبت‌نام امکان دریافت
-            مشاوره اولیه رایگان ۱۵ دقیقه‌ای وجود دارد.
-          </p>
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              generalMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-6 py-3 rounded-xl font-bold transition-colors"
+          >
+            شروع ثبت‌نام در واتساپ
+          </a>
         </section>
       </div>
     </main>
