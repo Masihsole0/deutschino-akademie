@@ -77,9 +77,9 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto w-full max-w-5xl">
           <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            یادگیری زبان آلمانی از A1 تا B2
+            آموزش زبان آلمانی از A1 تا B2
             <br />
-            با آموزش اصولی و کاربردی
+            با متود اصولی و تخصصی
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
@@ -260,12 +260,12 @@ export default function Home() {
                 className="grid grid-cols-2 gap-3 py-2 text-center"
               >
                 <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">۳+</p>
+                  <p className="text-2xl font-bold text-blue-900">۴+</p>
                   <p className="mt-1 text-sm text-gray-600">سال تجربه تدریس</p>
                 </div>
 
                 <div className="rounded-lg bg-gray-50 px-3 py-3">
-                  <p className="text-2xl font-bold text-blue-900">۵۱</p>
+                  <p className="text-2xl font-bold text-blue-900">۱۰۰+</p>
                   <p className="mt-1 text-sm text-gray-600">زبان‌آموز</p>
                 </div>
 
