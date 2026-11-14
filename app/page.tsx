@@ -62,52 +62,61 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section className="relative flex min-h-[600px] flex-col items-center justify-center px-6 py-16 text-center md:py-32">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/germany.jpg')" }}
-          aria-hidden="true"
-        />
+      
+{/* HERO SECTION */}
+<section className="relative flex min-h-[620px] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center md:min-h-[680px] md:py-32">
 
-        <div
-          className="absolute inset-0 bg-black/50 backdrop-blur-[0.5px]"
-          aria-hidden="true"
-        />
+  {/* Background */}
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/germany.jpg')" }}
+    aria-hidden="true"
+  />
 
-        <div className="relative z-10 mx-auto w-full max-w-5xl">
-          <h1 className="text-3xl font-bold leading-relaxed text-white md:text-4xl">
-            آموزش زبان آلمانی از A1 تا B2
-            <br />
-            با متود اصولی و تخصصی
-          </h1>
+  {/* Overlay */}
+  <div
+    className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65"
+    aria-hidden="true"
+  />
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-200 md:text-xl">
-            کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین
-            با تدریس مستقیم مسیح سلیمانی
-          </p>
+  {/* Content */}
+  <div className="relative z-10 mx-auto w-full max-w-5xl">
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-5 sm:flex-row">
-            <a
-              href={whatsappUrl}
-              onClick={() => trackEvent("whatsapp_click", "hero")}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-xl bg-green-800 px-8 py-3 text-base font-semibold text-white transition hover:bg-green-700 sm:w-auto"
-            >
-              دریافت مشاوره رایگان
-            </a>
+    <h1 className="text-3xl font-extrabold leading-[1.6] tracking-tight text-white md:text-5xl md:leading-[1.5]">
+      یادگیری زبان آلمانی،
+      <br />
+      از <span className="text-amber-300">A1 تا B2</span>
+    </h1>
 
-            <a
-              href="#courses"
-              className="text-base font-medium text-white underline underline-offset-8 transition hover:text-gray-200"
-            >
-              مشاهده دوره‌ها ↓
-            </a>
-          </div>
-        </div>
-      </section>
+    <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-gray-100 md:text-lg md:leading-9">
+      زبان آلمانی را اصولی و هدفمند، با تدریس مستقیم مسیح سلیمانی یاد بگیرید.
+      کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
+    </p>
+
+    {/* CTA */}
+    <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
+
+      <a
+        href={whatsappUrl}
+        onClick={() => trackEvent("whatsapp_click", "hero")}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+        className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-green-700 px-9 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:bg-green-600 hover:shadow-xl sm:w-auto"
+      >
+        دریافت مشاوره رایگان
+      </a>
+
+      <a
+        href="#courses"
+        className="inline-flex min-h-12 items-center justify-center text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition-colors duration-300 hover:text-amber-300 hover:decoration-amber-300"
+      >
+        مشاهده دوره‌ها
+      </a>
+
+    </div>
+  </div>
+</section>
 
       {/* COURSES SECTION */}
       <section
