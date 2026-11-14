@@ -245,7 +245,7 @@ export default function Home() {
       {/* ABOUT TEACHER */}
       <section
         id="about"
-        className="scroll-mt-[-130px] bg-white px-6 py-20 md:py-24"
+        className="scroll-mt-[-140px] bg-white px-6 py-20 md:py-24"
       >
         <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse md:gap-16">
 
@@ -265,7 +265,7 @@ export default function Home() {
               </p>
 
               <p>
-                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی با بیش از ۳ سال تجربه
+                من مسیح سلیمانی هستم؛ مدرس زبان آلمانی با بیش از ۴ سال تجربه
                 تدریس در آموزشگاه‌های زبان. در آکادمی دویچینو از سطح A1 تا B2
                 همراه زبان‌آموزان هستم.
               </p>
