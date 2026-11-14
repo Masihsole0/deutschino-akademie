@@ -348,7 +348,7 @@ export default function Home() {
       {/* WHY DEUTSCHINO */}
       <section
         id="why-us"
-        className="scroll-mt-24 bg-gray-50 px-6 py-20 md:py-24"
+        className="scroll-mt-24 bg-blue-900 px-6 py-20 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
 
