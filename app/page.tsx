@@ -75,7 +75,7 @@ export default function Home() {
       icon: "🎯",
       title: "آمادگی آزمون",
       description:
-        "تمرین با نمونه آزمون‌های استاندارد Goethe و telc.",
+        "تمرین با نمونه آزمون‌های استاندارد Goethe و telc و ECL.",
     },
     {
       icon: "💬",
