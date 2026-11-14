@@ -143,7 +143,7 @@ export default function Home() {
       {/* COURSES */}
       <section
         id="courses"
-        className="scroll-mt-[-20px] bg-gray-50 px-5 py-20 md:py-24"
+        className="scroll-mt-[-50px] bg-gray-50 px-5 py-20 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
 
@@ -245,7 +245,7 @@ export default function Home() {
       {/* ABOUT TEACHER */}
       <section
         id="about"
-        className="scroll-mt-[-20px] bg-white px-6 py-20 md:py-24"
+        className="scroll-mt-[-50px] bg-white px-6 py-20 md:py-24"
       >
         <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse md:gap-16">
 
@@ -348,7 +348,7 @@ export default function Home() {
       {/* WHY DEUTSCHINO */}
 <section
   id="why-us"
-  className="scroll-mt-[-20px] bg-blue-900 px-6 py-20 md:py-24"
+  className="scroll-mt-[-40px] bg-blue-900 px-6 py-20 md:py-24"
 >
   <div className="mx-auto max-w-6xl">
 
@@ -395,7 +395,7 @@ export default function Home() {
       {/* REVIEWS */}
       <section
         id="reviews"
-        className="scroll-mt-[-20px] bg-white py-16 md:py-20"
+        className="scroll-mt-[-40px] bg-white py-16 md:py-20"
       >
         <Reviews />
       </section>
@@ -403,7 +403,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer
         id="contact"
-        className="relative scroll-mt-[-20px] overflow-hidden bg-blue-950 text-white"
+        className="relative scroll-mt-[-40px] overflow-hidden bg-blue-950 text-white"
       >
 
         <img
