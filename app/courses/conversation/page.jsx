@@ -1,5 +1,5 @@
-
 import Image from "next/image";
+import Link from "next/link";
 import {
   BookOpen,
   Clock3,
@@ -11,9 +11,18 @@ import {
 export const metadata = {
   title: "کلاس مکالمه زبان آلمانی در اصفهان | دویچینو",
   description:
-    "کلاس مکالمه زبان آلمانی در اصفهان و آنلاین؛ تمرین صحبت‌کردن، افزایش روانی گفتار و تقویت مکالمه در موقعیت‌های روزمره و کاری در آکادمی دویچینو.",
+    "کلاس مکالمه زبان آلمانی در اصفهان و آنلاین با تمرکز بر روانی گفتار، افزایش اعتمادبه‌نفس و تمرین مکالمه در موقعیت‌های روزمره و کاری در آکادمی دویچینو.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/conversation",
+  },
+  openGraph: {
+    title: "کلاس مکالمه زبان آلمانی در اصفهان | دویچینو",
+    description:
+      "تمرین مکالمه زبان آلمانی برای زبان‌آموزان سطح B1؛ حضوری در اصفهان و آنلاین در آکادمی دویچینو.",
+    url: "https://www.deutschino.ir/courses/conversation",
+    siteName: "Deutschino",
+    locale: "fa_IR",
+    type: "website",
   },
 };
 
@@ -22,12 +31,38 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره مکالمه زبان آلمانی",
   description:
-    "تمرین مکالمه زبان آلمانی در آکادمی دویچینو با تمرکز بر روانی گفتار و استفاده از زبان آلمانی در موقعیت‌های روزمره و کاری؛ به‌صورت حضوری در اصفهان و آنلاین.",
+    "دوره مکالمه زبان آلمانی در آکادمی دویچینو با تمرکز بر تقویت روانی گفتار، گسترش واژگان و استفاده از زبان آلمانی در موقعیت‌های روزمره، اجتماعی و کاری؛ مناسب زبان‌آموزان سطح B1 و به‌صورت حضوری در اصفهان و آنلاین.",
+  url: "https://www.deutschino.ir/courses/conversation",
   provider: {
     "@id": "https://www.deutschino.ir/#organization",
   },
   inLanguage: "de",
   educationalLevel: "B1",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "صفحه اصلی",
+      item: "https://www.deutschino.ir",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "دوره‌های آموزشی",
+      item: "https://www.deutschino.ir/courses",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "کلاس مکالمه زبان آلمانی",
+      item: "https://www.deutschino.ir/courses/conversation",
+    },
+  ],
 };
 
 const whatsappNumber = "989130061984";
@@ -36,12 +71,23 @@ export default function ConversationPage() {
   const generalMessage =
     "سلام، می‌خواهم برای ثبت‌نام دوره ۱۰ جلسه‌ای مکالمه زبان آلمانی اطلاعات بیشتری دریافت کنم.";
 
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    generalMessage
+  )}`;
+
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(courseSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
@@ -63,13 +109,23 @@ export default function ConversationPage() {
           dir="rtl"
           className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
         >
-          <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-3">
-            کلاس مکالمه زبان آلمانی
+          <h1 className="text-2xl md:text-4xl font-bold mb-3">
+            کلاس مکالمه زبان آلمانی در اصفهان
           </h1>
+
+          <p className="text-sm md:text-lg leading-8 text-gray-600">
+            اگر با گرامر و واژگان زبان آلمانی آشنا هستید اما هنگام صحبت‌کردن
+            مکث می‌کنید یا برای بیان منظورتان به دنبال کلمات مناسب می‌گردید،
+            کلاس مکالمه آلمانی می‌تواند به تقویت مهارت گفتاری شما کمک کند.
+            در دوره مکالمه آکادمی دویچینو، با تمرین گفت‌وگو و صحبت درباره
+            موضوعات مختلف، روانی گفتار و اعتمادبه‌نفس خود را افزایش می‌دهید.
+            این دوره برای زبان‌آموزان سطح B1 طراحی شده و به‌صورت حضوری در
+            اصفهان و آنلاین برگزار می‌شود.
+          </p>
         </section>
 
         {/* Banner */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5 md:mt-6">
           <Image
             src="/conv.jpg"
             alt="کلاس مکالمه زبان آلمانی در آکادمی دویچینو"
@@ -144,23 +200,27 @@ export default function ConversationPage() {
             در کلاس مکالمه آلمانی چه مهارت‌هایی تقویت می‌شوند؟
           </h2>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base leading-8">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm md:text-base leading-8">
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
               تمرین گفت‌وگو درباره موضوعات روزمره و آشنا
             </li>
+
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
               بیان نظرها، تجربه‌ها و برنامه‌های شخصی به زبان آلمانی
             </li>
+
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
               گسترش واژگان و استفاده از عبارت‌های پرکاربرد
             </li>
+
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
               تقویت روانی گفتار و ساختن جمله هنگام صحبت‌کردن
             </li>
+
             <li className="flex items-start gap-2">
               <span className="text-green-600">✓</span>
               تمرین مکالمه در موقعیت‌های اجتماعی و کاری
@@ -213,9 +273,7 @@ export default function ConversationPage() {
                 </p>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    generalMessage
-                  )}`}
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -265,9 +323,7 @@ export default function ConversationPage() {
                 </div>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    generalMessage
-                  )}`}
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
@@ -325,7 +381,8 @@ export default function ConversationPage() {
                 </h3>
                 <p className="text-sm md:text-base mt-1">
                   پیش‌نیاز اعلام‌شده برای این دوره، سطح B1 زبان آلمانی است.
-                  اگر درباره سطح خود مطمئن نیستید، پیش از ثبت‌نام مشورت بگیرید.
+                  اگر درباره سطح خود مطمئن نیستید، پیش از ثبت‌نام می‌توانید
+                  برای دریافت راهنمایی و مشاوره اقدام کنید.
                 </p>
               </div>
 
@@ -340,12 +397,12 @@ export default function ConversationPage() {
 
               <div className="py-4 border-b border-gray-200">
                 <h3 className="font-bold text-base md:text-lg text-[#0A2540]">
-                  در کلاس مکالمه چه موضوعاتی تمرین می‌شوند؟
+                  در کلاس مکالمه از چه منابعی استفاده می‌شود؟
                 </h3>
                 <p className="text-sm md:text-base mt-1">
-                  گفت‌وگو درباره موضوعات روزمره، بیان نظرها و تجربه‌های شخصی،
-                  گسترش واژگان و تمرین مکالمه در موقعیت‌های اجتماعی و کاری
-                  از محورهای این دوره هستند.
+                  یکی از منابع آموزشی این دوره کتاب Hören Sprechen B1 است.
+                  در کنار آن، تمرین‌های گفتاری و موضوعات متناسب با سطح زبان‌آموز
+                  برای تقویت مهارت مکالمه استفاده می‌شوند.
                 </p>
               </div>
 
@@ -380,15 +437,80 @@ export default function ConversationPage() {
             کلاس مکالمه زبان آلمانی در اصفهان و آنلاین
           </h2>
 
-          <p className="text-base md:text-lg leading-9">
-            اگر گرامر و واژگان زبان آلمانی را می‌دانید اما هنگام صحبت‌کردن
-            مکث می‌کنید یا برای پیدا کردن کلمات مناسب مشکل دارید، تمرین
-            هدفمند مکالمه می‌تواند به شما کمک کند. در دوره مکالمه آکادمی
-            دویچینو، با تمرین گفت‌وگو درباره موضوعات روزمره و کاری، بیان
-            نظرها و تجربه‌های شخصی و استفاده از عبارت‌های پرکاربرد، روانی
-            گفتار خود را تقویت می‌کنید. این کلاس برای زبان‌آموزان دارای
-            سطح B1 طراحی شده و به‌صورت حضوری در اصفهان و آنلاین برگزار
-            می‌شود.
+          <p className="text-sm md:text-base leading-9 text-gray-700 mb-6">
+            شرکت در کلاس مکالمه زبان آلمانی به زبان‌آموزان کمک می‌کند
+            دانسته‌های گرامری و واژگان خود را در گفت‌وگوهای واقعی به کار
+            بگیرند. در دوره مکالمه آکادمی دویچینو، تمرکز اصلی بر صحبت‌کردن،
+            ساختن جمله، بیان نظرها و تجربه‌های شخصی و استفاده از عبارت‌های
+            پرکاربرد زبان آلمانی است. این دوره برای زبان‌آموزانی طراحی شده
+            است که سطح B1 را دارند و می‌خواهند مهارت گفتاری خود را تقویت کنند.
+          </p>
+
+          <h2 className="text-lg md:text-xl font-bold mb-3">
+            تمرین مکالمه برای موقعیت‌های روزمره و کاری
+          </h2>
+
+          <p className="text-sm md:text-base leading-9 text-gray-700 mb-6">
+            در طول دوره، زبان‌آموزان درباره موضوعات مختلف صحبت می‌کنند،
+            نظرها و دیدگاه‌های خود را بیان می‌کنند و برای گفت‌وگو در
+            موقعیت‌های اجتماعی و کاری آماده‌تر می‌شوند. گسترش دایره واژگان،
+            استفاده درست از عبارت‌ها و تمرین پاسخ‌دادن به پرسش‌ها از بخش‌های
+            مهم این کلاس است.
+          </p>
+
+          <h2 className="text-lg md:text-xl font-bold mb-3">
+            کلاس مکالمه آلمانی حضوری در اصفهان و آنلاین
+          </h2>
+
+          <p className="text-sm md:text-base leading-9 text-gray-700 mb-6">
+            کلاس مکالمه زبان آلمانی در آکادمی دویچینو به دو شکل حضوری در
+            اصفهان و آنلاین برگزار می‌شود. بنابراین زبان‌آموزان می‌توانند
+            متناسب با شرایط و محل زندگی خود، شیوه مناسب شرکت در کلاس را
+            انتخاب کنند. دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است و در کنار تمرین
+            مکالمه، امکان استفاده از پشتیبانی آموزشی خارج از ساعات کلاس
+            نیز وجود دارد.
+          </p>
+
+          <h2 className="text-lg md:text-xl font-bold mb-3">
+            منابع آموزشی کلاس مکالمه زبان آلمانی
+          </h2>
+
+          <p className="text-sm md:text-base leading-9 text-gray-700 mb-6">
+            در این دوره از کتاب Hören Sprechen B1 به‌عنوان یکی از منابع
+            آموزشی استفاده می‌شود. تمرین‌های شنیداری و گفتاری این منبع
+            در کنار فعالیت‌های کلاسی به زبان‌آموز کمک می‌کنند مهارت
+            درک گفتار و توانایی صحبت‌کردن خود را تقویت کند.
+          </p>
+
+          <h2 className="text-lg md:text-xl font-bold mb-3">
+            هزینه و شرایط ثبت‌نام کلاس مکالمه
+          </h2>
+
+          <p className="text-sm md:text-base leading-9 text-gray-700 mb-6">
+            دوره مکالمه زبان آلمانی دویچینو در قالب پکیج ۱۰ جلسه‌ای ارائه
+            می‌شود. هزینه این پکیج ۱۰٬۰۰۰٬۰۰۰ تومان است و هر جلسه ۶۰ دقیقه
+            زمان دارد. پیش از ثبت‌نام نیز می‌توانید از مشاوره اولیه رایگان
+            ۱۵ دقیقه‌ای برای بررسی سطح زبان و آشنایی بیشتر با دوره استفاده
+            کنید.
+          </p>
+
+          <h2 className="text-lg md:text-xl font-bold mb-3">
+            ثبت‌نام در کلاس مکالمه آکادمی دویچینو
+          </h2>
+
+          <p className="text-sm md:text-base leading-9 text-gray-700">
+            اگر سطح B1 زبان آلمانی را دارید و می‌خواهید در صحبت‌کردن
+            روان‌تر و مطمئن‌تر شوید، می‌توانید برای دریافت اطلاعات بیشتر
+            و ثبت‌نام در کلاس مکالمه با آکادمی دویچینو در ارتباط باشید.
+            همچنین اگر قصد دارید دانش زبانی خود را در قالب یک دوره
+            ساختارمند ادامه دهید، می‌توانید صفحه{" "}
+            <Link
+              href="/courses/b1"
+              className="text-blue-700 font-semibold hover:underline"
+            >
+              کلاس زبان آلمانی B1
+            </Link>{" "}
+            را نیز مشاهده کنید.
           </p>
         </section>
 
@@ -407,9 +529,7 @@ export default function ConversationPage() {
           </p>
 
           <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-              generalMessage
-            )}`}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-6 py-3 rounded-xl font-bold transition-colors"
