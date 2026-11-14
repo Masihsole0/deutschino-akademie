@@ -143,7 +143,7 @@ export default function Home() {
       {/* COURSES */}
       <section
         id="courses"
-        className="scroll-mt-[-100px] bg-gray-50 px-5 py-20 md:py-24"
+        className="scroll-mt-[-110px] bg-gray-50 px-5 py-20 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
 
@@ -245,7 +245,7 @@ export default function Home() {
       {/* ABOUT TEACHER */}
       <section
         id="about"
-        className="scroll-mt-[-110px] bg-white px-6 py-20 md:py-24"
+        className="scroll-mt-[-130px] bg-white px-6 py-20 md:py-24"
       >
         <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse md:gap-16">
 
@@ -395,7 +395,7 @@ export default function Home() {
       {/* REVIEWS */}
       <section
         id="reviews"
-        className="scroll-mt-[-80px] bg-white py-16 md:py-20"
+        className="scroll-mt-[-90px] bg-white py-16 md:py-20"
       >
         <Reviews />
       </section>
