@@ -130,12 +130,12 @@ export default function Home() {
             </a>
 
             <a
-              href="#courses"
-              className="inline-flex min-h-12 items-center justify-center text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
-            >
-              مشاهده دوره‌ها
-            </a>
-
+  href="#courses"
+  className="inline-flex min-h-12 items-center justify-center gap-2 text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
+>
+  <span>مشاهده دوره‌ها</span>
+  <span className="text-lg no-underline" aria-hidden="true">↓</span>
+</a>
           </div>
         </div>
       </section>

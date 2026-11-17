@@ -6,7 +6,6 @@ import {
   Clock3,
   GraduationCap,
   Headphones,
-  Wallet,
 } from "lucide-react";
 
 export const metadata = {
@@ -68,6 +67,85 @@ const breadcrumbSchema = {
 
 const whatsappNumber = "989130061984";
 
+const features = [
+  {
+    icon: Clock3,
+    title: "مدت هر جلسه",
+    description: "۹۰ دقیقه",
+  },
+  {
+    icon: GraduationCap,
+    title: "پیش‌نیاز",
+    description: "تسلط به سطح A1",
+  },
+  {
+    icon: Headphones,
+    title: "پشتیبانی آموزشی",
+    description: "رفع اشکال و بررسی تمرین‌ها",
+  },
+  {
+    icon: BookOpen,
+    title: "منابع آموزشی",
+    description: "Menschen A2.1 و A2.2",
+  },
+];
+
+const outcomes = [
+  "صحبت درباره موضوعات روزمره، تجربیات و اتفاقات گذشته",
+  "گسترش واژگان مربوط به زندگی روزمره، سفر، کار و اوقات فراغت",
+  "استفاده از گرامر سطح A2 و ساخت جمله‌های پیچیده‌تر",
+  "بیان خواسته‌ها، علایق، برنامه‌ها و نظرات شخصی",
+  "تقویت مهارت شنیدن، خواندن، نوشتن و مکالمه",
+  "برقراری ارتباط مستقل‌تر در موقعیت‌های آشنای روزمره",
+];
+
+const faqs = [
+  {
+    question: "برای شرکت در کلاس A2 چه پیش‌نیازی لازم است؟",
+    answer:
+      "برای شرکت در دوره A2 لازم است سطح A1 زبان آلمانی را گذرانده باشید و با مباحث پایه این زبان آشنایی داشته باشید.",
+  },
+  {
+    question: "در دوره A2 از چه منابعی استفاده می‌شود؟",
+    answer:
+      "منابع آموزشی این دوره شامل کتاب‌های Menschen A2.1 و Menschen A2.2 است.",
+  },
+  {
+    question: "شهریه کلاس زبان آلمانی A2 چقدر است؟",
+    answer:
+      "هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۹٬۴۰۰٬۰۰۰ تومان و کلاس گروهی ۴٬۵۰۰٬۰۰۰ تومان است. هر جلسه ۹۰ دقیقه برگزار می‌شود.",
+  },
+  {
+    question: "کلاس‌های زبان آلمانی دویچینو در کدام منطقه اصفهان برگزار می‌شوند؟",
+    answer:
+      "کلاس‌های حضوری آکادمی دویچینو در محدوده حکیم نظامی اصفهان برگزار می‌شوند. امکان شرکت در دوره به‌صورت آنلاین نیز وجود دارد.",
+  },
+  {
+    question: "ظرفیت کلاس گروهی A2 چند نفر است؟",
+    answer:
+      "برای حفظ کیفیت آموزش، ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.",
+  },
+  {
+    question: "آیا خارج از کلاس هم پشتیبانی آموزشی دارم؟",
+    answer:
+      "بله. می‌توانید سؤالات و تمرین‌های خود را برای بررسی و رفع اشکال ارسال کنید و در طول دوره از پشتیبانی آموزشی بهره‌مند شوید.",
+  },
+  {
+    question: "تفاوت کلاس خصوصی و گروهی A2 چیست؟",
+    answer:
+      "در کلاس خصوصی آموزش متناسب با شرایط و سرعت یادگیری شما پیش می‌رود. کلاس گروهی با ظرفیت حداکثر ۶ نفر برگزار می‌شود و فرصت تمرین مکالمه با زبان‌آموزان دیگر را فراهم می‌کند.",
+  },
+  {
+    question: "چطور می‌توانم در دوره A2 ثبت‌نام کنم؟",
+    answer:
+      "از طریق دکمه‌های ثبت‌نام همین صفحه در واتساپ پیام بدهید تا برای انتخاب کلاس و شروع دوره راهنمایی شوید.",
+  },
+];
+
+function whatsappLink(message) {
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
 export default function A2Page() {
   const generalMessage =
     "سلام، برای ثبت‌نام دوره زبان آلمانی A2 و دریافت مشاوره راهنمایی می‌خواهم.";
@@ -91,14 +169,16 @@ export default function A2Page() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6">
         {/* Logo */}
         <div className="flex justify-center mb-3 md:mb-6">
-          <Image
-            src="/logo.jpg"
-            alt="لوگوی آکادمی آموزش زبان آلمانی دویچینو"
-            width={120}
-            height={120}
-            className="w-auto h-20 md:h-24"
-            priority
-          />
+          <Link href="/" aria-label="صفحه اصلی آکادمی دویچینو">
+            <Image
+              src="/logo.jpg"
+              alt="لوگوی آکادمی آموزش زبان آلمانی دویچینو"
+              width={120}
+              height={120}
+              className="w-auto h-20 md:h-24"
+              priority
+            />
+          </Link>
         </div>
 
         {/* Course Introduction */}
@@ -126,7 +206,7 @@ export default function A2Page() {
             alt="کتاب‌ها و منابع آموزش زبان آلمانی سطح A2، Menschen A2.1 و A2.2"
             width={900}
             height={350}
-            className="rounded-2xl shadow-xl object-cover w-full max-w-[260px] md:max-w-[500px] h-auto"
+            className="rounded-xl object-cover w-full max-w-[260px] md:max-w-[380px] h-auto"
             priority
           />
         </div>
@@ -134,57 +214,26 @@ export default function A2Page() {
         {/* Course Features */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-4 md:mt-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3"
+          className="max-w-4xl mx-auto mt-6 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
-          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
-            <Clock3
-              size={22}
-              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
-            />
-            <p className="font-bold text-sm md:text-base mb-1">
-              مدت هر جلسه
-            </p>
-            <p className="text-xs md:text-sm text-gray-600">۹۰ دقیقه</p>
-          </div>
+          {features.map((feature) => {
+            const Icon = feature.icon;
 
-          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
-            <GraduationCap
-              size={22}
-              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
-            />
-            <p className="font-bold text-sm md:text-base mb-1">
-              پیش‌نیاز
-            </p>
-            <p className="text-xs md:text-sm text-gray-600">
-              تسلط به سطح A1
-            </p>
-          </div>
-
-          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
-            <Headphones
-              size={22}
-              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
-            />
-            <p className="font-bold text-sm md:text-base mb-1">
-              پشتیبانی آموزشی
-            </p>
-            <p className="text-xs md:text-sm text-gray-600">
-              رفع اشکال و بررسی تمرین‌ها
-            </p>
-          </div>
-
-          <div className="bg-[#F4F8FF] rounded-xl p-3 md:p-4 text-center">
-            <BookOpen
-              size={22}
-              className="mx-auto mb-1 md:mb-2 text-[#0A2540]"
-            />
-            <p className="font-bold text-sm md:text-base mb-1">
-              منابع آموزشی
-            </p>
-            <p className="text-xs md:text-sm text-gray-600">
-              Menschen A2.1 و A2.2
-            </p>
-          </div>
+            return (
+              <div key={feature.title} className="text-center py-2">
+                <Icon
+                  size={23}
+                  className="mx-auto mb-2 text-[#0A2540]"
+                />
+                <p className="font-bold text-sm md:text-base mb-1">
+                  {feature.title}
+                </p>
+                <p className="text-xs md:text-sm text-gray-600 leading-6">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </section>
 
         {/* Learning Outcomes */}
@@ -194,30 +243,12 @@ export default function A2Page() {
           </h2>
 
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base leading-8">
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              صحبت درباره موضوعات روزمره، تجربیات و اتفاقات گذشته
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              گسترش واژگان مربوط به زندگی روزمره، سفر، کار و اوقات فراغت
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              استفاده از گرامر سطح A2 و ساخت جمله‌های پیچیده‌تر
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              بیان خواسته‌ها، علایق، برنامه‌ها و نظرات شخصی
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              تقویت مهارت شنیدن، خواندن، نوشتن و مکالمه
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-green-600">✓</span>
-              برقراری ارتباط مستقل‌تر در موقعیت‌های آشنای روزمره
-            </li>
+            {outcomes.map((outcome) => (
+              <li key={outcome} className="flex items-start gap-2">
+                <span className="text-green-600">✓</span>
+                <span>{outcome}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
@@ -234,97 +265,79 @@ export default function A2Page() {
             کلاس خصوصی یا گروهی؛ متناسب با شرایط و هدف شما
           </p>
 
-          <div className="grid grid-cols-2 gap-3 md:gap-5">
+          <div className="grid grid-cols-2 gap-4 md:gap-8">
             {/* Private */}
-            <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-[#F4F8FF] px-2 py-3 md:px-5 md:py-4 text-center">
-                <h3 className="text-sm md:text-xl font-bold">
-                  کلاس خصوصی A2
-                </h3>
-              </div>
+            <div className="border border-gray-200 rounded-xl p-3 md:p-5 text-center">
+              <h3 className="text-sm md:text-lg font-bold mb-3">
+                کلاس خصوصی A2
+              </h3>
 
-              <div className="p-3 md:p-5 text-center">
-                <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  بسته ۱۰ جلسه‌ای
-                </p>
+              <p className="text-xs text-gray-500 mb-2">
+                بسته ۱۰ جلسه‌ای
+              </p>
 
-                <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
-                  <Wallet size={21} className="shrink-0 md:w-7 md:h-7" />
-                  <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۹٬۴۰۰٬۰۰۰
-                  </p>
-                </div>
+              <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
+                ۹٬۴۰۰٬۰۰۰
+              </p>
 
-                <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان
-                </p>
+              <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
 
-                <p className="text-xs text-gray-600 mb-3">
-                  هر جلسه ۹۴۰٬۰۰۰ تومان
-                  <br />
-                  ۹۰ دقیقه
-                </p>
+              <p className="text-xs text-gray-600 leading-7 mb-4">
+                هر جلسه ۹۴۰٬۰۰۰ تومان
+                <br />
+                ۹۰ دقیقه
+              </p>
 
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی A2 پیام می‌دهم. لطفاً راهنمایی‌ام کنید."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ثبت‌نام کلاس خصوصی زبان آلمانی A2 در واتساپ"
-                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
-                >
-                  ثبت‌نام کلاس خصوصی
-                </a>
-              </div>
+              <a
+                href={whatsappLink(
+                  "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی A2 پیام می‌دهم. لطفاً راهنمایی‌ام کنید."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ثبت‌نام کلاس خصوصی زبان آلمانی A2 در واتساپ"
+                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
+              >
+                ثبت‌نام کلاس خصوصی
+              </a>
             </div>
 
             {/* Group */}
-            <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-              <div className="bg-[#F4F8FF] px-2 py-3 md:px-5 md:py-4 text-center">
-                <h3 className="text-sm md:text-xl font-bold">
-                  کلاس گروهی A2
-                </h3>
-              </div>
+            <div className="border border-gray-200 rounded-xl p-3 md:p-5 text-center">
+              <h3 className="text-sm md:text-lg font-bold mb-3">
+                کلاس گروهی A2
+              </h3>
 
-              <div className="p-3 md:p-5 text-center">
-                <p className="text-xs md:text-sm text-gray-500 mb-2">
-                  بسته ۱۰ جلسه‌ای
-                </p>
+              <p className="text-xs text-gray-500 mb-2">
+                بسته ۱۰ جلسه‌ای
+              </p>
 
-                <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
-                  <Wallet size={21} className="shrink-0 md:w-7 md:h-7" />
-                  <p className="text-lg md:text-2xl font-bold text-green-700">
-                    ۴٬۵۰۰٬۰۰۰
-                  </p>
-                </div>
+              <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
+                ۴٬۵۰۰٬۰۰۰
+              </p>
 
-                <p className="text-[11px] md:text-sm text-gray-500 mb-3">
-                  تومان
-                </p>
+              <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
 
-                <p className="text-xs text-gray-600 mb-1">
-                  هر جلسه ۴۵۰٬۰۰۰ تومان
-                </p>
+              <p className="text-xs text-gray-600 leading-7 mb-2">
+                هر جلسه ۴۵۰٬۰۰۰ تومان
+                <br />
+                ۹۰ دقیقه
+              </p>
 
-                <p className="text-xs text-gray-600 mb-2">۹۰ دقیقه</p>
+              <p className="text-xs font-semibold text-[#0A2540] mb-3">
+                حداکثر ۶ نفر
+              </p>
 
-                <p className="text-xs font-semibold text-blue-900 mb-3">
-                  حداکثر ۶ نفر
-                </p>
-
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                    "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی A2 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="ثبت‌نام کلاس گروهی زبان آلمانی A2 در واتساپ"
-                  className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm text-center py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
-                >
-                  ثبت‌نام کلاس گروهی
-                </a>
-              </div>
+              <a
+                href={whatsappLink(
+                  "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی A2 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ثبت‌نام کلاس گروهی زبان آلمانی A2 در واتساپ"
+                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
+              >
+                ثبت‌نام کلاس گروهی
+              </a>
             </div>
           </div>
 
@@ -334,9 +347,9 @@ export default function A2Page() {
             زبان‌آموز تعیین می‌شود.
           </p>
 
-          {/* Free Consultation Card */}
-          <div className="mt-5 rounded-xl bg-[#F4F8FF] p-5 md:p-6 text-center">
-            <p className="text-sm md:text-base font-semibold text-[#0A2540] mb-2">
+          {/* Free Consultation */}
+          <div className="mt-6 text-center">
+            <p className="text-sm md:text-base font-semibold mb-2">
               هنوز برای انتخاب کلاس مطمئن نیستید؟
             </p>
 
@@ -345,13 +358,13 @@ export default function A2Page() {
             </p>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+              href={whatsappLink(
                 "سلام، برای دریافت مشاوره اولیه رایگان درباره کلاس زبان آلمانی A2 پیام می‌دهم."
-              )}`}
+              )}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="دریافت مشاوره رایگان درباره دوره A2"
-              className="inline-flex items-center justify-center rounded-xl border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-white transition-colors"
+              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-[#F4F8FF] transition-colors"
             >
               دریافت مشاوره رایگان
             </a>
@@ -361,94 +374,31 @@ export default function A2Page() {
         {/* FAQ */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-14 md:mt-16 border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+          className="max-w-4xl mx-auto mt-14 md:mt-16"
         >
-          <div className="p-4 md:p-6">
-            <h2 className="text-xl md:text-2xl font-bold mb-4">
-              سؤالات متداول درباره کلاس زبان آلمانی A2
-            </h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            سؤالات متداول درباره کلاس زبان آلمانی A2
+          </h2>
 
-            <div className="space-y-0 text-gray-700 leading-8">
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  برای شرکت در کلاس A2 چه پیش‌نیازی لازم است؟
-                </h3>
-                <p className="text-sm mt-1">
-                  برای شرکت در دوره A2 لازم است سطح A1 زبان آلمانی را گذرانده
-                  باشید و با مباحث پایه این زبان آشنایی داشته باشید.
-                </p>
-              </div>
+          <div className="divide-y divide-gray-200">
+            {faqs.map((faq, index) => (
+              <details
+                key={faq.question}
+                open={index === 0}
+                className="py-3 group"
+              >
+                <summary className="cursor-pointer list-none flex items-center justify-between gap-3 font-bold text-sm md:text-base text-[#0A2540]">
+                  <span>{faq.question}</span>
+                  <span className="text-lg transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
 
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  در دوره A2 از چه منابعی استفاده می‌شود؟
-                </h3>
-                <p className="text-sm mt-1">
-                  منابع آموزشی این دوره شامل کتاب‌های Menschen A2.1 و
-                  Menschen A2.2 است.
+                <p className="text-sm text-gray-700 leading-8 mt-3">
+                  {faq.answer}
                 </p>
-              </div>
-
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  شهریه کلاس زبان آلمانی A2 چقدر است؟
-                </h3>
-                <p className="text-sm mt-1">
-                  هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۹٬۴۰۰٬۰۰۰ تومان و کلاس
-                  گروهی ۴٬۵۰۰٬۰۰۰ تومان است. هر جلسه ۹۰ دقیقه برگزار می‌شود.
-                </p>
-              </div>
-
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  کلاس‌های زبان آلمانی دویچینو در کدام منطقه اصفهان برگزار می‌شوند؟
-                </h3>
-                <p className="text-sm mt-1">
-                  کلاس‌های حضوری آکادمی دویچینو در محدوده حکیم نظامی اصفهان
-                  برگزار می‌شوند. امکان شرکت در دوره به‌صورت آنلاین نیز وجود دارد.
-                </p>
-              </div>
-
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  ظرفیت کلاس گروهی A2 چند نفر است؟
-                </h3>
-                <p className="text-sm mt-1">
-                  برای حفظ کیفیت آموزش، ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.
-                </p>
-              </div>
-
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  آیا خارج از کلاس هم پشتیبانی آموزشی دارم؟
-                </h3>
-                <p className="text-sm mt-1">
-                  بله. می‌توانید سؤالات و تمرین‌های خود را برای بررسی و رفع اشکال
-                  ارسال کنید و در طول دوره از پشتیبانی آموزشی بهره‌مند شوید.
-                </p>
-              </div>
-
-              <div className="py-3 border-b border-gray-200">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  تفاوت کلاس خصوصی و گروهی A2 چیست؟
-                </h3>
-                <p className="text-sm mt-1">
-                  در کلاس خصوصی آموزش متناسب با شرایط و سرعت یادگیری شما پیش
-                  می‌رود. کلاس گروهی با ظرفیت حداکثر ۶ نفر برگزار می‌شود و
-                  فرصت تمرین مکالمه با زبان‌آموزان دیگر را فراهم می‌کند.
-                </p>
-              </div>
-
-              <div className="pt-3">
-                <h3 className="font-bold text-sm md:text-base text-[#0A2540]">
-                  چطور می‌توانم در دوره A2 ثبت‌نام کنم؟
-                </h3>
-                <p className="text-sm mt-1">
-                  از طریق دکمه‌های ثبت‌نام همین صفحه در واتساپ پیام بدهید تا
-                  برای انتخاب کلاس و شروع دوره راهنمایی شوید.
-                </p>
-              </div>
-            </div>
+              </details>
+            ))}
           </div>
         </section>
 
@@ -585,9 +535,7 @@ export default function A2Page() {
           </p>
 
           <a
-            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-              generalMessage
-            )}`}
+            href={whatsappLink(generalMessage)}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="شروع ثبت‌نام دوره زبان آلمانی A2 در واتساپ"
