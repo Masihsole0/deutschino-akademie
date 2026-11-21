@@ -313,13 +313,13 @@ export default function B1Page() {
               </p>
 
               <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
-                ۵٬۰۰۰٬۰۰۰
+                ۶٬۰۰۰٬۰۰۰
               </p>
 
               <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
 
               <p className="text-xs text-gray-600 leading-7 mb-2">
-                هر جلسه ۵۰۰٬۰۰۰ تومان
+                هر جلسه ۶۰۰٬۰۰۰ تومان
                 <br />
                 ۹۰ دقیقه
               </p>

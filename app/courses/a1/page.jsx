@@ -332,14 +332,14 @@ export default function A1Page() {
                   <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
                   <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
-                    ۳٬۹۰۰٬۰۰۰
+                    ۴٬۹۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="mb-3 text-xs text-gray-500">تومان</p>
 
                 <p className="mb-1 text-xs text-gray-600">
-                  هر جلسه ۳۹۰٬۰۰۰ تومان
+                  هر جلسه ۴۹۰٬۰۰۰ تومان
                 </p>
 
                 <p className="mb-2 text-xs text-gray-600">

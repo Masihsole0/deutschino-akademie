@@ -312,13 +312,13 @@ export default function A2Page() {
               </p>
 
               <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
-                ۴٬۵۰۰٬۰۰۰
+                ۵٬۵۰۰٬۰۰۰
               </p>
 
               <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
 
               <p className="text-xs text-gray-600 leading-7 mb-2">
-                هر جلسه ۴۵۰٬۰۰۰ تومان
+                هر جلسه ۵۵۰٬۰۰۰ تومان
                 <br />
                 ۹۰ دقیقه
               </p>
