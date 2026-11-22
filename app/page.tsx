@@ -44,7 +44,7 @@ function TrustSignals() {
   useEffect(() => {
     if (!started) return;
 
-    const duration = 1000;
+    const duration = 1500;
     let startTime: number | null = null;
     let animationFrame: number;
 
