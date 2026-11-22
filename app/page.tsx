@@ -90,6 +90,7 @@ export default function Home() {
       <Navbar />
 
       
+
 {/* HERO */}
 <section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-12 text-center md:min-h-[650px] md:py-14">
 
@@ -121,32 +122,32 @@ export default function Home() {
     <div
       aria-label="اطلاعات و اعتبار مدرس زبان آلمانی"
       dir="rtl"
-      className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+      className="mx-auto mt-5 grid max-w-3xl grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
     >
-      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
-        <p className="text-2xl font-bold text-blue-950">۴+</p>
-        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+      <div className="rounded-lg border border-gray-200 bg-white/95 px-2 py-2 text-center">
+        <p className="text-xl font-bold text-blue-950">۴+</p>
+        <p className="mt-1 text-xs leading-5 text-gray-600">
           سال تجربه تدریس
         </p>
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
-        <p className="text-2xl font-bold text-blue-950">۱۰۰+</p>
-        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+      <div className="rounded-lg border border-gray-200 bg-white/95 px-2 py-2 text-center">
+        <p className="text-xl font-bold text-blue-950">۱۰۰+</p>
+        <p className="mt-1 text-xs leading-5 text-gray-600">
           زبان‌آموز
         </p>
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
-        <p className="text-2xl font-bold text-blue-950">telc B2</p>
-        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+      <div className="rounded-lg border border-gray-200 bg-white/95 px-2 py-2 text-center">
+        <p className="text-xl font-bold text-blue-950">telc B2</p>
+        <p className="mt-1 text-xs leading-5 text-gray-600">
           مدرک زبان آلمانی
         </p>
       </div>
 
-      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
-        <p className="text-2xl font-bold text-blue-950">A1–B2</p>
-        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+      <div className="rounded-lg border border-gray-200 bg-white/95 px-2 py-2 text-center">
+        <p className="text-xl font-bold text-blue-950">A1–B2</p>
+        <p className="mt-1 text-xs leading-5 text-gray-600">
           سطوح تدریس
         </p>
       </div>
