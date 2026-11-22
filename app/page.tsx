@@ -89,95 +89,94 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-24 text-center md:min-h-[650px]">
+      
+{/* HERO */}
+<section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-12 text-center md:min-h-[650px] md:py-14">
 
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/germany.jpg')" }}
-          aria-hidden="true"
-        />
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/germany.jpg')" }}
+    aria-hidden="true"
+  />
 
-        <div
-          className="absolute inset-0 bg-black/60"
-          aria-hidden="true"
-        />
+  <div
+    className="absolute inset-0 bg-black/60"
+    aria-hidden="true"
+  />
 
-        <div className="relative z-10 mx-auto w-full max-w-4xl">
+  <div className="relative z-10 mx-auto w-full max-w-4xl">
 
-          <h1 className="text-3xl font-extrabold leading-[1.7] tracking-tight text-white md:text-5xl md:leading-[1.6]">
-            یادگیری زبان آلمانی،
-            <br />
-            از <span className="text-amber-300">A1 تا B2</span>
-          </h1>
+    <h1 className="text-3xl font-extrabold leading-[1.7] tracking-tight text-white md:text-5xl md:leading-[1.6]">
+      یادگیری زبان آلمانی،
+      <br />
+      از <span className="text-amber-300">A1 تا B2</span>
+    </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-100 md:text-lg md:leading-9">
-            زبان آلمانی را اصولی و هدفمند، با تدریس مستقیم مسیح سلیمانی یاد بگیرید.
-            کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
-          </p>
+    <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-100 md:text-lg md:leading-9">
+      زبان آلمانی را اصولی و هدفمند، با تدریس مستقیم مسیح سلیمانی یاد بگیرید.
+      کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
+    </p>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-5 sm:flex-row">
+    {/* TRUST SIGNALS */}
+    <div
+      aria-label="اطلاعات و اعتبار مدرس زبان آلمانی"
+      dir="rtl"
+      className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+    >
+      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
+        <p className="text-2xl font-bold text-blue-950">۴+</p>
+        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+          سال تجربه تدریس
+        </p>
+      </div>
 
-            <a
-              href={whatsappUrl}
-              onClick={() => trackEvent("whatsapp_click", "hero")}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-              className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-green-700 px-9 py-4 text-base font-bold text-white transition hover:bg-green-600 sm:w-auto"
-            >
-              دریافت مشاوره رایگان
-            </a>
+      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
+        <p className="text-2xl font-bold text-blue-950">۱۰۰+</p>
+        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+          زبان‌آموز
+        </p>
+      </div>
 
-            <a
-  href="#courses"
-  className="inline-flex min-h-12 items-center justify-center gap-2 text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
->
-  <span>مشاهده دوره‌ها</span>
-  <span className="text-lg no-underline" aria-hidden="true">↓</span>
-</a>
-          </div>
-        </div>
-      </section>
+      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
+        <p className="text-2xl font-bold text-blue-950">telc B2</p>
+        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+          مدرک زبان آلمانی
+        </p>
+      </div>
 
-      {/* TRUST SIGNALS */}
-      <section
-        aria-label="اطلاعات و اعتبار مدرس زبان آلمانی"
-        className="bg-white px-5 py-10 md:py-12"
+      <div className="rounded-xl border border-gray-200 bg-white/95 px-3 py-3 text-center">
+        <p className="text-2xl font-bold text-blue-950">A1–B2</p>
+        <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
+          سطوح تدریس
+        </p>
+      </div>
+    </div>
+
+    {/* CTA */}
+    <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row">
+
+      <a
+        href={whatsappUrl}
+        onClick={() => trackEvent("whatsapp_click", "hero")}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+        className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-green-700 px-9 py-4 text-base font-bold text-white transition hover:bg-green-600 sm:w-auto"
       >
-        <div
-          dir="rtl"
-          className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
-        >
-          <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-5 text-center">
-            <p className="text-2xl font-bold text-blue-950">۴+</p>
-            <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
-              سال تجربه تدریس
-            </p>
-          </div>
+        دریافت مشاوره رایگان
+      </a>
 
-          <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-5 text-center">
-            <p className="text-2xl font-bold text-blue-950">۱۰۰+</p>
-            <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
-              زبان‌آموز
-            </p>
-          </div>
+      <a
+        href="#courses"
+        className="inline-flex min-h-12 items-center justify-center gap-2 text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
+      >
+        <span>مشاهده دوره‌ها</span>
+        <span className="text-lg no-underline" aria-hidden="true">↓</span>
+      </a>
 
-          <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-5 text-center">
-            <p className="text-2xl font-bold text-blue-950">telc B2</p>
-            <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
-              مدرک زبان آلمانی
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-gray-200 bg-gray-50 px-3 py-5 text-center">
-            <p className="text-2xl font-bold text-blue-950">A1–B2</p>
-            <p className="mt-1 text-xs leading-6 text-gray-600 sm:text-sm">
-              سطوح تدریس
-            </p>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* COURSES */}
       <section
