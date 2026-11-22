@@ -93,37 +93,25 @@ function TrustSignals() {
       }
     }, 120);
 
-    // نمایش مرحله‌ای سطوح زبان
-    const levelSteps = [
-      "A1",
-      "A1-",
-      "A1-A2",
-      "A1-A2-",
-      "A1-A2-B1",
-      "A1-A2-B1-",
-      "A1-A2-B1-B2",
-    ];
-
-    let levelIndex = 0;
+    // تایپ شدن عبارت A1-B2
+    const levelsText = "A1-B2";
+    let levelsIndex = 0;
 
     const levelsTypingTimer = setInterval(() => {
-      setLevels(levelSteps[levelIndex]);
-      levelIndex++;
+      levelsIndex++;
 
-      if (levelIndex >= levelSteps.length) {
+      setLevels(
+        levelsText.slice(0, levelsIndex)
+      );
+
+      if (levelsIndex >= levelsText.length) {
         clearInterval(levelsTypingTimer);
       }
-    }, 250);
-
-    // تبدیل عبارت کامل به A1-B2
-    const levelsFinalTimer = setTimeout(() => {
-      setLevels("A1-B2");
-    }, levelSteps.length * 250 + 500);
+    }, 120);
 
     return () => {
       clearInterval(typingTimer);
       clearInterval(levelsTypingTimer);
-      clearTimeout(levelsFinalTimer);
     };
   }, [started]);
 
