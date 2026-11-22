@@ -19,7 +19,7 @@ function TrustSignals() {
   const [started, setStarted] = useState(false);
   const [years, setYears] = useState(1);
   const [students, setStudents] = useState(1);
-  const [levels, setLevels] = useState("A1-A2-B1-B2");
+  const [levels, setLevels] = useState("");
   const [certificate, setCertificate] = useState("");
 
   useEffect(() => {
@@ -77,27 +77,53 @@ function TrustSignals() {
   useEffect(() => {
     if (!started) return;
 
-    // تبدیل نمایش سطح‌ها به A1-B2 بعد از یک ثانیه
-    const levelsTimer = setTimeout(() => {
-      setLevels("A1-B2");
-    }, 1000);
-
-    // تایپ شدن حرف‌به‌حرف عبارت telc B2
-    const text = "telc B2";
-    let index = 0;
+    // تایپ شدن عبارت telc B2
+    const certificateText = "telc B2";
+    let certificateIndex = 0;
 
     const typingTimer = setInterval(() => {
-      index++;
-      setCertificate(text.slice(0, index));
+      certificateIndex++;
 
-      if (index >= text.length) {
+      setCertificate(
+        certificateText.slice(0, certificateIndex)
+      );
+
+      if (certificateIndex >= certificateText.length) {
         clearInterval(typingTimer);
       }
     }, 120);
 
+    // نمایش مرحله‌ای سطوح زبان
+    const levelSteps = [
+      "A1",
+      "A1-",
+      "A1-A2",
+      "A1-A2-",
+      "A1-A2-B1",
+      "A1-A2-B1-",
+      "A1-A2-B1-B2",
+    ];
+
+    let levelIndex = 0;
+
+    const levelsTypingTimer = setInterval(() => {
+      setLevels(levelSteps[levelIndex]);
+      levelIndex++;
+
+      if (levelIndex >= levelSteps.length) {
+        clearInterval(levelsTypingTimer);
+      }
+    }, 250);
+
+    // تبدیل عبارت کامل به A1-B2
+    const levelsFinalTimer = setTimeout(() => {
+      setLevels("A1-B2");
+    }, levelSteps.length * 250 + 500);
+
     return () => {
-      clearTimeout(levelsTimer);
       clearInterval(typingTimer);
+      clearInterval(levelsTypingTimer);
+      clearTimeout(levelsFinalTimer);
     };
   }, [started]);
 
