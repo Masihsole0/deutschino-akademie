@@ -19,6 +19,8 @@ function TrustSignals() {
   const [started, setStarted] = useState(false);
   const [years, setYears] = useState(1);
   const [students, setStudents] = useState(1);
+  const [levels, setLevels] = useState("A1-A2-B1-B2");
+  const [certificate, setCertificate] = useState("");
 
   useEffect(() => {
     const element = containerRef.current;
@@ -72,6 +74,33 @@ function TrustSignals() {
     return () => cancelAnimationFrame(animationFrame);
   }, [started]);
 
+  useEffect(() => {
+    if (!started) return;
+
+    // تبدیل نمایش سطح‌ها به A1-B2 بعد از یک ثانیه
+    const levelsTimer = setTimeout(() => {
+      setLevels("A1-B2");
+    }, 1000);
+
+    // تایپ شدن حرف‌به‌حرف عبارت telc B2
+    const text = "telc B2";
+    let index = 0;
+
+    const typingTimer = setInterval(() => {
+      index++;
+      setCertificate(text.slice(0, index));
+
+      if (index >= text.length) {
+        clearInterval(typingTimer);
+      }
+    }, 120);
+
+    return () => {
+      clearTimeout(levelsTimer);
+      clearInterval(typingTimer);
+    };
+  }, [started]);
+
   return (
     <div
       ref={containerRef}
@@ -98,14 +127,18 @@ function TrustSignals() {
       </div>
 
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">telc B2</p>
+        <p className="text-lg font-bold text-blue-950">
+          {certificate}
+        </p>
         <p className="text-[11px] leading-4 text-gray-600">
           مدرک زبان آلمانی
         </p>
       </div>
 
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">A1–B2</p>
+        <p className="text-lg font-bold text-blue-950">
+          {levels}
+        </p>
         <p className="text-[11px] leading-4 text-gray-600">
           سطوح تدریس
         </p>
