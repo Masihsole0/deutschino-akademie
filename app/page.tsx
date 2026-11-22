@@ -42,7 +42,7 @@ function TrustSignals() {
   useEffect(() => {
     if (!started) return;
 
-    const duration = 2000;
+    const duration = 1000;
     let startTime: number | null = null;
     let animationFrame: number;
 
