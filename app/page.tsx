@@ -91,7 +91,7 @@ function TrustSignals() {
       if (certificateIndex >= certificateText.length) {
         clearInterval(typingTimer);
       }
-    }, 120);
+    }, 1500 / certificateText.length);
 
     // تایپ شدن عبارت A1-B2
     const levelsText = "A1-B2";
@@ -107,7 +107,7 @@ function TrustSignals() {
       if (levelsIndex >= levelsText.length) {
         clearInterval(levelsTypingTimer);
       }
-    }, 120);
+    }, 1500 / certificateText.length);
 
     return () => {
       clearInterval(typingTimer);
