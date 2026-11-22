@@ -1,6 +1,7 @@
 
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Reviews from "@/components/reviews";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -10,6 +11,107 @@ declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
   }
+}
+
+function TrustSignals() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const [started, setStarted] = useState(false);
+  const [years, setYears] = useState(1);
+  const [students, setStudents] = useState(1);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+
+    const duration = 2000;
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (startTime === null) {
+        startTime = timestamp;
+      }
+
+      const progress = Math.min(
+        (timestamp - startTime) / duration,
+        1
+      );
+
+      setYears(Math.min(4, Math.floor(1 + 3 * progress)));
+      setStudents(Math.min(100, Math.floor(1 + 99 * progress)));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setYears(4);
+        setStudents(100);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [started]);
+
+  return (
+    <div
+      ref={containerRef}
+      aria-label="اطلاعات و اعتبار مدرس زبان آلمانی"
+      dir="rtl"
+      className="mx-auto mt-5 grid max-w-3xl grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
+    >
+      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
+        <p className="text-lg font-bold text-blue-950">
+          {years}+
+        </p>
+        <p className="text-[11px] leading-4 text-gray-600">
+          سال تجربه تدریس
+        </p>
+      </div>
+
+      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
+        <p className="text-lg font-bold text-blue-950">
+          {students}+
+        </p>
+        <p className="text-[11px] leading-4 text-gray-600">
+          زبان‌آموز
+        </p>
+      </div>
+
+      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
+        <p className="text-lg font-bold text-blue-950">telc B2</p>
+        <p className="text-[11px] leading-4 text-gray-600">
+          مدرک زبان آلمانی
+        </p>
+      </div>
+
+      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
+        <p className="text-lg font-bold text-blue-950">A1–B2</p>
+        <p className="text-[11px] leading-4 text-gray-600">
+          سطوح تدریس
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default function Home() {
@@ -89,96 +191,61 @@ export default function Home() {
     <main className="min-h-screen overflow-x-hidden bg-white">
       <Navbar />
 
-      
+      {/* HERO */}
+      <section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-12 text-center md:min-h-[650px] md:py-14">
 
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/germany.jpg')" }}
+          aria-hidden="true"
+        />
 
-{/* HERO */}
-<section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-12 text-center md:min-h-[650px] md:py-14">
+        <div
+          className="absolute inset-0 bg-black/60"
+          aria-hidden="true"
+        />
 
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{ backgroundImage: "url('/germany.jpg')" }}
-    aria-hidden="true"
-  />
+        <div className="relative z-10 mx-auto w-full max-w-4xl">
 
-  <div
-    className="absolute inset-0 bg-black/60"
-    aria-hidden="true"
-  />
+          <h1 className="text-3xl font-extrabold leading-[1.7] tracking-tight text-white md:text-5xl md:leading-[1.6]">
+            یادگیری زبان آلمانی،
+            <br />
+            از <span className="text-amber-300">A1 تا B2</span>
+          </h1>
 
-  <div className="relative z-10 mx-auto w-full max-w-4xl">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-100 md:text-lg md:leading-9">
+            زبان آلمانی را اصولی و هدفمند، با تدریس مستقیم مسیح سلیمانی یاد بگیرید.
+            کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
+          </p>
 
-    <h1 className="text-3xl font-extrabold leading-[1.7] tracking-tight text-white md:text-5xl md:leading-[1.6]">
-      یادگیری زبان آلمانی،
-      <br />
-      از <span className="text-amber-300">A1 تا B2</span>
-    </h1>
+          {/* TRUST SIGNALS */}
+          <TrustSignals />
 
-    <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-gray-100 md:text-lg md:leading-9">
-      زبان آلمانی را اصولی و هدفمند، با تدریس مستقیم مسیح سلیمانی یاد بگیرید.
-      کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
-    </p>
+          {/* CTA */}
+          <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row">
 
-    {/* TRUST SIGNALS */}
-    <div
-      aria-label="اطلاعات و اعتبار مدرس زبان آلمانی"
-      dir="rtl"
-      className="mx-auto mt-5 grid max-w-3xl grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
-    >
-      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">۴+</p>
-        <p className="text-[11px] leading-4 text-gray-600">
-          سال تجربه تدریس
-        </p>
-      </div>
+            <a
+              href={whatsappUrl}
+              onClick={() => trackEvent("whatsapp_click", "hero")}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
+              className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-green-700 px-9 py-4 text-base font-bold text-white transition hover:bg-green-600 sm:w-auto"
+            >
+              دریافت مشاوره رایگان
+            </a>
 
-      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">۱۰۰+</p>
-        <p className="text-[11px] leading-4 text-gray-600">
-          زبان‌آموز
-        </p>
-      </div>
+            <a
+              href="#courses"
+              className="inline-flex min-h-12 items-center justify-center gap-2 text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
+            >
+              <span>مشاهده دوره‌ها</span>
+              <span className="text-lg no-underline" aria-hidden="true">↓</span>
+            </a>
 
-      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">telc B2</p>
-        <p className="text-[11px] leading-4 text-gray-600">
-          مدرک زبان آلمانی
-        </p>
-      </div>
-
-      <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">A1–B2</p>
-        <p className="text-[11px] leading-4 text-gray-600">
-          سطوح تدریس
-        </p>
-      </div>
-    </div>
-
-    {/* CTA */}
-    <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row">
-
-      <a
-        href={whatsappUrl}
-        onClick={() => trackEvent("whatsapp_click", "hero")}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="مشاوره و ثبت‌نام کلاس زبان آلمانی در واتساپ"
-        className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-green-700 px-9 py-4 text-base font-bold text-white transition hover:bg-green-600 sm:w-auto"
-      >
-        دریافت مشاوره رایگان
-      </a>
-
-      <a
-        href="#courses"
-        className="inline-flex min-h-12 items-center justify-center gap-2 text-base font-medium text-white underline decoration-white/60 underline-offset-8 transition hover:text-amber-300"
-      >
-        <span>مشاهده دوره‌ها</span>
-        <span className="text-lg no-underline" aria-hidden="true">↓</span>
-      </a>
-
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       {/* COURSES */}
       <section
