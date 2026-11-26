@@ -1,18 +1,25 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  BookOpen,
+  Clock3,
+  GraduationCap,
+  Headphones,
+  Wallet,
+} from "lucide-react";
 
 export const metadata = {
-  title: "کلاس مکالمه زبان آلمانی در اصفهان | دویچینو",
+  title: "کلاس مکالمه زبان آلمانی در اصفهان | خصوصی و گروهی | دویچینو",
   description:
-    "کلاس مکالمه زبان آلمانی در اصفهان و آنلاین با تمرکز بر روانی گفتار، افزایش اعتمادبه‌نفس و تمرین مکالمه در موقعیت‌های روزمره و کاری در آکادمی دویچینو.",
+    "کلاس مکالمه زبان آلمانی در اصفهان و آنلاین برای سطح B1؛ با تدریس مستقیم مسیح سلیمانی، تمرین گفت‌وگو و مشاوره رایگان در آکادمی دویچینو.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/conversation",
   },
   openGraph: {
-    title: "کلاس مکالمه زبان آلمانی در اصفهان | دویچینو",
+    title: "کلاس مکالمه زبان آلمانی در اصفهان | آکادمی دویچینو",
     description:
-      "تمرین مکالمه زبان آلمانی برای زبان‌آموزان سطح B1؛ حضوری در اصفهان و آنلاین در آکادمی دویچینو.",
+      "تقویت مکالمه زبان آلمانی با کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
     url: "https://www.deutschino.ir/courses/conversation",
     siteName: "Deutschino",
     locale: "fa_IR",
@@ -25,7 +32,7 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره مکالمه زبان آلمانی",
   description:
-    "دوره مکالمه زبان آلمانی در آکادمی دویچینو با تمرکز بر تقویت روانی گفتار، گسترش واژگان و استفاده از زبان آلمانی در موقعیت‌های روزمره، اجتماعی و کاری؛ مناسب زبان‌آموزان سطح B1 و به‌صورت حضوری در اصفهان و آنلاین.",
+    "دوره مکالمه زبان آلمانی برای زبان‌آموزان سطح B1 با تمرکز بر روانی گفتار، گسترش واژگان و استفاده از زبان آلمانی در موقعیت‌های روزمره، اجتماعی و کاری؛ به‌صورت حضوری در اصفهان و آنلاین.",
   url: "https://www.deutschino.ir/courses/conversation",
   provider: {
     "@id": "https://www.deutschino.ir/#organization",
@@ -42,13 +49,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "صفحه اصلی",
-      item: "https://www.deutschino.ir",
+      item: "https://www.deutschino.ir/",
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "دوره‌های آموزشی",
-      item: "https://www.deutschino.ir/courses",
+      name: "دوره‌های زبان آلمانی",
+      item: "https://www.deutschino.ir/#courses",
     },
     {
       "@type": "ListItem",
@@ -61,30 +68,37 @@ const breadcrumbSchema = {
 
 const whatsappNumber = "989130061984";
 
+const whatsappLink = (message) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 const features = [
   {
+    icon: Clock3,
     title: "مدت هر جلسه",
     description: "۶۰ دقیقه",
   },
   {
+    icon: GraduationCap,
     title: "پیش‌نیاز",
     description: "سطح B1",
   },
   {
-    title: "پشتیبانی آموزشی",
-    description: "خارج از ساعات کلاس",
-  },
-  {
+    icon: BookOpen,
     title: "منابع آموزشی",
     description: "Hören Sprechen B1",
+  },
+  {
+    icon: Headphones,
+    title: "پشتیبانی",
+    description: "رفع اشکال خارج از کلاس",
   },
 ];
 
 const outcomes = [
   "تمرین گفت‌وگو درباره موضوعات روزمره و آشنا",
-  "بیان نظرها، تجربه‌ها و برنامه‌های شخصی به زبان آلمانی",
+  "بیان نظرها، تجربه‌ها و برنامه‌های شخصی به آلمانی",
   "گسترش واژگان و استفاده از عبارت‌های پرکاربرد",
-  "تقویت روانی گفتار و ساختن جمله هنگام صحبت‌کردن",
+  "تقویت روانی گفتار و جمله‌سازی هنگام صحبت‌کردن",
   "تمرین مکالمه در موقعیت‌های اجتماعی و کاری",
 ];
 
@@ -92,44 +106,31 @@ const faqs = [
   {
     question: "پیش‌نیاز شرکت در کلاس مکالمه چیست؟",
     answer:
-      "پیش‌نیاز اعلام‌شده برای این دوره، سطح B1 زبان آلمانی است. اگر درباره سطح خود مطمئن نیستید، پیش از ثبت‌نام می‌توانید برای دریافت راهنمایی و مشاوره اقدام کنید.",
+      "پیش‌نیاز این دوره سطح B1 زبان آلمانی است. اگر درباره سطح خود مطمئن نیستید، می‌توانید پیش از ثبت‌نام مشاوره بگیرید.",
   },
   {
-    question: "دوره مکالمه چند جلسه است؟",
+    question: "کلاس‌ها حضوری هستند یا آنلاین؟",
     answer:
-      "این دوره شامل ۱۰ جلسه است و مدت هر جلسه ۶۰ دقیقه خواهد بود.",
+      "هر دو امکان وجود دارد؛ کلاس حضوری در محدوده حکیم نظامی اصفهان برگزار می‌شود.",
   },
   {
-    question: "در کلاس مکالمه از چه منابعی استفاده می‌شود؟",
+    question: "ظرفیت کلاس گروهی چقدر است؟",
     answer:
-      "یکی از منابع آموزشی این دوره کتاب Hören Sprechen B1 است. در کنار آن، تمرین‌های گفتاری و موضوعات متناسب با سطح زبان‌آموز برای تقویت مهارت مکالمه استفاده می‌شوند.",
+      "برای حفظ کیفیت تمرین و تعامل، هر گروه حداکثر ۶ زبان‌آموز دارد.",
   },
   {
-    question: "کلاس مکالمه حضوری است یا آنلاین؟",
+    question: "چه کسی کلاس مکالمه را تدریس می‌کند؟",
     answer:
-      "امکان شرکت در کلاس به‌صورت حضوری در اصفهان و آنلاین وجود دارد.",
+      "تمام کلاس‌های خصوصی و گروهی مستقیماً توسط مسیح سلیمانی برگزار می‌شوند.",
   },
   {
-    question: "هزینه کلاس مکالمه زبان آلمانی چقدر است؟",
+    question: "چطور در دوره مکالمه ثبت‌نام کنم؟",
     answer:
-      "هزینه پکیج ۱۰ جلسه‌ای ۱۰٬۰۰۰٬۰۰۰ تومان است. هزینه هر جلسه ۱٬۰۰۰٬۰۰۰ تومان و مدت هر جلسه ۶۰ دقیقه است.",
+      "از طریق دکمه ثبت‌نام در واتساپ پیام بدهید تا درباره زمان‌بندی و شروع دوره راهنمایی شوید.",
   },
 ];
 
-function whatsappLink(message) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
-
 export default function ConversationPage() {
-  const generalMessage =
-    "سلام، می‌خواهم برای ثبت‌نام دوره ۱۰ جلسه‌ای مکالمه زبان آلمانی اطلاعات بیشتری دریافت کنم.";
-
-  const whatsappUrl = whatsappLink(generalMessage);
-
-  const consultationUrl = whatsappLink(
-    "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس مکالمه زبان آلمانی پیام می‌دهم."
-  );
-
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -146,84 +147,116 @@ export default function ConversationPage() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 py-4 md:px-6 md:py-6">
+      <div className="mx-auto max-w-7xl px-4 py-5 md:px-6 md:py-7">
+
         {/* Logo */}
-        <div className="mb-3 flex justify-center md:mb-6">
-          <Link href="/" aria-label="صفحه اصلی آکادمی دویچینو">
+        <div className="mb-5 flex justify-center md:mb-8">
+          <Link href="/" aria-label="صفحه اصلی دویچینو">
             <Image
               src="/logo.jpg"
               alt="لوگوی آکادمی دویچینو"
               width={120}
               height={120}
-              className="h-20 w-auto md:h-24"
+              className="h-16 w-auto md:h-20"
               priority
             />
           </Link>
         </div>
 
-        {/* Course Introduction */}
+        {/* Introduction */}
         <section
           dir="rtl"
-          className="mx-auto mt-4 max-w-4xl text-center md:mt-8"
+          className="mx-auto mt-3 max-w-4xl text-center md:mt-6"
         >
-          <h1 className="mb-3 text-2xl font-bold md:text-4xl">
-            کلاس مکالمه زبان آلمانی در اصفهان
+          <h1 className="mb-3 text-2xl font-bold leading-relaxed md:text-4xl">
+            کلاس مکالمه زبان آلمانی در اصفهان؛ روان‌تر صحبت کنید
           </h1>
 
-          <p className="text-sm leading-8 text-gray-600 md:text-base">
-            اگر با گرامر و واژگان زبان آلمانی آشنا هستید اما هنگام صحبت‌کردن
-            مکث می‌کنید یا برای بیان منظورتان به دنبال کلمات مناسب می‌گردید،
-            کلاس مکالمه آلمانی می‌تواند به تقویت مهارت گفتاری شما کمک کند.
-            در دوره مکالمه آکادمی دویچینو، با تمرین گفت‌وگو و صحبت درباره
-            موضوعات مختلف، روانی گفتار و اعتمادبه‌نفس خود را افزایش می‌دهید.
-            این دوره برای زبان‌آموزان سطح B1 طراحی شده و به‌صورت حضوری در
-            اصفهان و آنلاین برگزار می‌شود.
+          <p className="mx-auto max-w-3xl text-sm leading-8 text-gray-600 md:text-base">
+            اگر با گرامر و واژگان آلمانی آشنا هستید اما هنگام صحبت‌کردن
+            مکث می‌کنید، این دوره به شما کمک می‌کند با تمرین گفت‌وگو،
+            روانی گفتار و اعتمادبه‌نفس خود را افزایش دهید.
+            کلاس برای زبان‌آموزان سطح B1 و به‌صورت حضوری و آنلاین برگزار می‌شود.
           </p>
         </section>
 
         {/* Banner */}
-        <div className="mt-6 flex justify-center">
+        <div className="mt-6 flex justify-center md:mt-8">
           <Image
             src="/conv.jpg"
             alt="کلاس مکالمه زبان آلمانی در آکادمی دویچینو"
             width={900}
             height={350}
-            className="h-auto w-full max-w-[260px] rounded-xl object-cover md:max-w-[380px]"
+            className="h-auto w-full max-w-[220px] rounded-xl object-cover md:max-w-[380px]"
             priority
           />
         </div>
 
-        {/* Course Features */}
+        {/* Features */}
         <section
           dir="rtl"
-          className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-4 md:gap-6"
+          className="mx-auto mt-7 grid max-w-4xl grid-cols-2 gap-x-4 gap-y-5 border-y border-gray-100 py-5 md:mt-8 md:grid-cols-4 md:gap-5"
         >
-          {features.map((feature) => (
-            <div key={feature.title} className="text-center">
-              <p className="mb-1 text-sm font-bold md:text-base">
-                {feature.title}
-              </p>
-              <p className="text-xs leading-6 text-gray-600 md:text-sm">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+          {features.map((feature) => {
+            const Icon = feature.icon;
+
+            return (
+              <div
+                key={feature.title}
+                className="flex flex-col items-center text-center"
+              >
+                <Icon
+                  size={21}
+                  strokeWidth={1.7}
+                  className="mb-2 text-[#0A2540]"
+                />
+
+                <p className="mb-1 text-sm font-semibold">
+                  {feature.title}
+                </p>
+
+                <p className="text-xs leading-6 text-gray-500">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </section>
 
         {/* Learning Outcomes */}
-        <section dir="rtl" className="mx-auto mt-10 max-w-4xl md:mt-12">
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl md:mt-12"
+        >
           <h2 className="mb-4 text-xl font-bold md:text-2xl">
-            در کلاس مکالمه آلمانی چه مهارت‌هایی تقویت می‌شوند؟
+            در کلاس مکالمه چه مهارت‌هایی تقویت می‌شوند؟
           </h2>
 
-          <ul className="grid grid-cols-1 gap-2 text-sm leading-8 md:grid-cols-2 md:text-base">
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-sm leading-8 text-gray-700 md:grid-cols-2 md:text-base">
             {outcomes.map((outcome) => (
               <li key={outcome} className="flex items-start gap-2">
-                <span className="text-green-600">✓</span>
+                <span className="mt-1 text-[#0A2540]">✓</span>
                 <span>{outcome}</span>
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* Teaching Advantage */}
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl rounded-xl bg-[#F7F9FC] p-5 md:mt-12 md:p-7"
+        >
+          <h2 className="text-lg font-bold md:text-xl">
+            تمرین مکالمه با مسیح سلیمانی
+          </h2>
+
+          <p className="mt-2 text-sm leading-8 text-gray-600 md:text-base">
+            تمام کلاس‌های خصوصی و گروهی را خودم برگزار می‌کنم.
+            در این دوره با استفاده از کتاب Hören Sprechen B1،
+            تمرین‌های گفتاری و موضوعات متنوع، فرصت بیشتری برای صحبت‌کردن
+            و استفاده عملی از زبان آلمانی خواهید داشت.
+          </p>
         </section>
 
         {/* Pricing */}
@@ -232,111 +265,73 @@ export default function ConversationPage() {
           className="mx-auto mt-10 max-w-3xl md:mt-14"
         >
           <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
-            هزینه کلاس مکالمه زبان آلمانی
+            هزینه دوره مکالمه زبان آلمانی
           </h2>
 
-          <p className="mb-5 text-center text-xs text-gray-600 md:text-sm">
-            دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است.
+          <p className="mb-5 text-center text-xs text-gray-500 md:text-sm">
+            بسته ۱۰ جلسه‌ای؛ هر جلسه ۶۰ دقیقه
           </p>
 
-          <div className="grid grid-cols-2 gap-3 md:gap-5">
-            {/* Course Price */}
-            <div className="rounded-xl border border-gray-200 p-3 text-center md:p-5">
-              <h3 className="mb-3 text-sm font-bold md:text-xl">
-                دوره مکالمه
-              </h3>
-
-              <p className="mb-2 text-xs text-gray-500 md:text-sm">
-                هزینه پکیج ۱۰ جلسه‌ای
-              </p>
-
-              <p className="text-lg font-bold md:text-2xl">
-                ۱۰٬۰۰۰٬۰۰۰
-              </p>
-
-              <p className="mb-3 text-xs text-gray-500 md:text-sm">
-                تومان برای ۱۰ جلسه
-              </p>
-
-              <p className="mb-4 text-xs leading-7 text-gray-600">
-                هر جلسه ۶۰ دقیقه
-                <br />
-                هر جلسه ۱٬۰۰۰٬۰۰۰ تومان
-              </p>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="مشاوره و ثبت‌نام دوره مکالمه زبان آلمانی"
-                className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-xs font-bold text-white transition-colors hover:bg-[#12385c] md:text-sm"
-              >
-                مشاوره و ثبت‌نام
-              </a>
-            </div>
-
-            {/* Course Details */}
-            <div className="rounded-xl border border-gray-200 p-3 text-center md:p-5">
-              <h3 className="mb-3 text-sm font-bold md:text-xl">
-                مشخصات دوره
-              </h3>
-
-              <div className="mb-3">
-                <p className="text-xs text-gray-600 md:text-sm">
-                  تعداد جلسات
-                </p>
-                <p className="mt-1 font-bold">۱۰ جلسه</p>
+          <div className="mx-auto grid max-w-md grid-cols-1 gap-3 md:gap-5">
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <div className="border-b border-gray-100 px-2 py-3 text-center md:py-4">
+                <h3 className="text-sm font-bold md:text-lg">
+                  دوره مکالمه
+                </h3>
               </div>
 
-              <div className="mb-3">
-                <p className="text-xs text-gray-600 md:text-sm">
-                  مدت هر جلسه
+              <div className="p-4 text-center md:p-5">
+                <p className="mb-2 text-xs text-gray-500">
+                  ۱۰ جلسه
                 </p>
-                <p className="mt-1 font-bold">۶۰ دقیقه</p>
-              </div>
 
-              <div className="mb-4">
-                <p className="text-xs text-gray-600 md:text-sm">
-                  سطح مورد نیاز
+                <div className="mb-1 flex items-center justify-center gap-1">
+                  <Wallet size={19} className="shrink-0 text-[#0A2540]" />
+
+                  <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
+                    ۱۰٬۰۰۰٬۰۰۰
+                  </p>
+                </div>
+
+                <p className="mb-3 text-xs text-gray-500">تومان</p>
+
+                <p className="mb-4 text-xs leading-6 text-gray-600">
+                  هر جلسه ۱٬۰۰۰٬۰۰۰ تومان
                 </p>
-                <p className="mt-1 font-bold">B1</p>
-              </div>
 
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="دریافت اطلاعات دوره مکالمه زبان آلمانی"
-                className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-xs font-bold text-white transition-colors hover:bg-[#12385c] md:text-sm"
-              >
-                مشاوره و ثبت‌نام
-              </a>
+                <a
+                  href={whatsappLink(
+                    "سلام، برای ثبت‌نام دوره ۱۰ جلسه‌ای مکالمه زبان آلمانی پیام می‌دهم. لطفاً درباره زمان‌بندی کلاس راهنمایی‌ام کنید."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ثبت‌نام دوره مکالمه زبان آلمانی"
+                  className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
+                >
+                  مشاوره و ثبت‌نام
+                </a>
+              </div>
             </div>
           </div>
 
-          <p className="mt-4 text-center text-xs leading-7 text-gray-600 md:text-sm">
-            هزینه پکیج ۱۰ جلسه‌ای مکالمه زبان آلمانی ۱۰٬۰۰۰٬۰۰۰ تومان
-            است. هر جلسه ۶۰ دقیقه برگزار می‌شود و هزینه هر جلسه
-            ۱٬۰۰۰٬۰۰۰ تومان محاسبه می‌شود.
-          </p>
-
-          {/* Free Consultation */}
-          <div className="mt-5 rounded-xl bg-[#F4F8FF] p-5 text-center md:p-6">
-            <p className="mb-2 text-sm font-semibold text-[#0A2540] md:text-base">
+          {/* Consultation */}
+          <div className="mt-5 rounded-xl bg-[#F7F9FC] px-4 py-5 text-center md:py-6">
+            <p className="mb-2 text-sm font-bold text-[#0A2540] md:text-base">
               برای شروع کلاس مکالمه نیاز به راهنمایی دارید؟
             </p>
 
-            <p className="mb-3 text-sm text-gray-600">
-              پیش از ثبت‌نام می‌توانید برای بررسی سطح زبان و آشنایی با دوره،
-              از مشاوره اولیه رایگان ۱۵ دقیقه‌ای استفاده کنید.
+            <p className="mb-3 text-xs text-gray-600 md:text-sm">
+              قبل از ثبت‌نام، ۱۵ دقیقه مشاوره رایگان دریافت کنید.
             </p>
 
             <a
-              href={consultationUrl}
+              href={whatsappLink(
+                "سلام، برای دریافت مشاوره رایگان درباره کلاس مکالمه زبان آلمانی پیام می‌دهم."
+              )}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="دریافت مشاوره رایگان درباره کلاس مکالمه"
-              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] transition-colors hover:bg-white"
+              aria-label="دریافت مشاوره رایگان دوره مکالمه"
+              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2 text-xs font-semibold text-[#0A2540] transition-colors hover:bg-white md:text-sm"
             >
               دریافت مشاوره رایگان
             </a>
@@ -346,19 +341,28 @@ export default function ConversationPage() {
         {/* FAQ */}
         <section
           dir="rtl"
-          className="mx-auto mt-14 max-w-4xl md:mt-16"
+          className="mx-auto mt-12 max-w-4xl md:mt-14"
         >
           <h2 className="mb-4 text-xl font-bold md:text-2xl">
-            سؤالات متداول درباره کلاس مکالمه زبان آلمانی
+            سؤالات متداول
           </h2>
 
-          <div className="divide-y divide-gray-200 border-y border-gray-200">
+          <div className="divide-y divide-gray-100 border-y border-gray-100">
             {faqs.map((faq, index) => (
-              <details key={faq.question} className="py-3" open={index === 0}>
-                <summary className="cursor-pointer text-sm font-bold leading-7 text-[#0A2540] md:text-base">
-                  {faq.question}
+              <details
+                key={faq.question}
+                className="group py-3"
+                open={index === 0}
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold leading-7 text-[#0A2540] marker:hidden md:text-base">
+                  <span>{faq.question}</span>
+
+                  <span className="shrink-0 text-lg font-normal text-gray-400 transition-transform group-open:rotate-45">
+                    +
+                  </span>
                 </summary>
-                <p className="mt-2 text-sm leading-8 text-gray-700">
+
+                <p className="mt-2 pr-1 text-sm leading-8 text-gray-600">
                   {faq.answer}
                 </p>
               </details>
@@ -369,113 +373,63 @@ export default function ConversationPage() {
         {/* SEO Content */}
         <section
           dir="rtl"
-          className="mx-auto mt-12 max-w-4xl text-right"
+          className="mx-auto mt-10 max-w-4xl text-right md:mt-12"
         >
-          <h2 className="mb-4 text-xl font-bold md:text-2xl">
+          <h2 className="mb-3 text-xl font-bold md:text-2xl">
             کلاس مکالمه زبان آلمانی در اصفهان و آنلاین
           </h2>
 
-          <p className="mb-6 text-sm leading-8 text-gray-700 md:text-base">
-            شرکت در کلاس مکالمه زبان آلمانی به زبان‌آموزان کمک می‌کند
-            دانسته‌های گرامری و واژگان خود را در گفت‌وگوهای واقعی به کار
-            بگیرند. در دوره مکالمه آکادمی دویچینو، تمرکز اصلی بر صحبت‌کردن،
-            ساختن جمله، بیان نظرها و تجربه‌های شخصی و استفاده از عبارت‌های
-            پرکاربرد زبان آلمانی است. این دوره برای زبان‌آموزانی طراحی شده
-            است که سطح B1 را دارند و می‌خواهند مهارت گفتاری خود را تقویت کنند.
+          <p className="text-sm leading-8 text-gray-600 md:text-base">
+            دوره مکالمه آلمانی دویچینو برای زبان‌آموزان سطح B1 طراحی شده
+            است که می‌خواهند دانسته‌های خود را در گفت‌وگوهای واقعی به کار
+            بگیرند. تمرین صحبت درباره موضوعات روزمره، بیان نظرها و تجربه‌ها،
+            گسترش واژگان و استفاده از عبارت‌های کاربردی بخش اصلی این دوره است.
+            کلاس‌ها حضوری در محدوده حکیم نظامی اصفهان و به‌صورت آنلاین برگزار
+            می‌شوند.
           </p>
 
-          <h3 className="mb-3 text-lg font-bold md:text-xl">
-            تمرین مکالمه برای موقعیت‌های روزمره و کاری
-          </h3>
-
-          <p className="mb-6 text-sm leading-8 text-gray-700 md:text-base">
-            در طول دوره، زبان‌آموزان درباره موضوعات مختلف صحبت می‌کنند،
-            نظرها و دیدگاه‌های خود را بیان می‌کنند و برای گفت‌وگو در
-            موقعیت‌های اجتماعی و کاری آماده‌تر می‌شوند. گسترش دایره واژگان،
-            استفاده درست از عبارت‌ها و تمرین پاسخ‌دادن به پرسش‌ها از بخش‌های
-            مهم این کلاس است.
-          </p>
-
-          <h3 className="mb-3 text-lg font-bold md:text-xl">
-            کلاس مکالمه آلمانی حضوری در اصفهان و آنلاین
-          </h3>
-
-          <p className="mb-6 text-sm leading-8 text-gray-700 md:text-base">
-            کلاس مکالمه زبان آلمانی در آکادمی دویچینو به دو شکل حضوری در
-            اصفهان و آنلاین برگزار می‌شود. بنابراین زبان‌آموزان می‌توانند
-            متناسب با شرایط و محل زندگی خود، شیوه مناسب شرکت در کلاس را
-            انتخاب کنند. دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است و در کنار تمرین
-            مکالمه، امکان استفاده از پشتیبانی آموزشی خارج از ساعات کلاس
-            نیز وجود دارد.
-          </p>
-
-          <h3 className="mb-3 text-lg font-bold md:text-xl">
-            منابع آموزشی کلاس مکالمه زبان آلمانی
-          </h3>
-
-          <p className="mb-6 text-sm leading-8 text-gray-700 md:text-base">
-            در این دوره از کتاب Hören Sprechen B1 به‌عنوان یکی از منابع
-            آموزشی استفاده می‌شود. تمرین‌های شنیداری و گفتاری این منبع
-            در کنار فعالیت‌های کلاسی به زبان‌آموز کمک می‌کنند مهارت
-            درک گفتار و توانایی صحبت‌کردن خود را تقویت کند.
-          </p>
-
-          <h3 className="mb-3 text-lg font-bold md:text-xl">
-            هزینه و شرایط ثبت‌نام کلاس مکالمه
-          </h3>
-
-          <p className="mb-6 text-sm leading-8 text-gray-700 md:text-base">
-            دوره مکالمه زبان آلمانی دویچینو در قالب پکیج ۱۰ جلسه‌ای ارائه
-            می‌شود. هزینه این پکیج ۱۰٬۰۰۰٬۰۰۰ تومان است و هر جلسه ۶۰ دقیقه
-            زمان دارد. پیش از ثبت‌نام نیز می‌توانید از مشاوره اولیه رایگان
-            ۱۵ دقیقه‌ای برای بررسی سطح زبان و آشنایی بیشتر با دوره استفاده
-            کنید.
-          </p>
-
-          <h3 className="mb-3 text-lg font-bold md:text-xl">
-            ثبت‌نام در کلاس مکالمه آکادمی دویچینو
-          </h3>
-
-          <p className="text-sm leading-8 text-gray-700 md:text-base">
-            اگر سطح B1 زبان آلمانی را دارید و می‌خواهید در صحبت‌کردن
-            روان‌تر و مطمئن‌تر شوید، می‌توانید برای دریافت اطلاعات بیشتر
-            و ثبت‌نام در کلاس مکالمه با آکادمی دویچینو در ارتباط باشید.
-            همچنین اگر قصد دارید دانش زبانی خود را در قالب یک دوره
-            ساختارمند ادامه دهید، می‌توانید صفحه{" "}
+          <p className="mt-3 text-sm leading-8 text-gray-600 md:text-base">
+            این دوره شامل ۱۰ جلسه ۶۰ دقیقه‌ای است و از کتاب
+            Hören Sprechen B1 در کنار تمرین‌های گفتاری استفاده می‌شود.
+            تمام جلسات مستقیماً توسط مسیح سلیمانی تدریس می‌شوند و ظرفیت
+            کلاس گروهی حداکثر ۶ نفر است. اگر می‌خواهید دانش زبانی خود را
+            در قالب یک دوره ساختارمند ادامه دهید، صفحه{" "}
             <Link
               href="/courses/b1"
-              className="font-semibold text-blue-700 hover:underline"
+              className="font-semibold text-[#0A2540] underline underline-offset-4"
             >
               کلاس زبان آلمانی B1
             </Link>{" "}
-            را نیز مشاهده کنید.
+            را نیز ببینید.
           </p>
         </section>
 
         {/* Final CTA */}
         <section
           dir="rtl"
-          className="mx-auto mb-8 mt-10 max-w-4xl text-center md:mt-12"
+          className="mx-auto mb-8 mt-10 max-w-3xl border-t border-gray-100 pt-8 text-center md:mt-12"
         >
-          <h2 className="mb-3 text-xl font-bold md:text-2xl">
+          <h2 className="mb-2 text-xl font-bold md:text-2xl">
             آماده تقویت مکالمه زبان آلمانی خود هستید؟
           </h2>
 
-          <p className="mb-5 text-sm leading-8 text-gray-600 md:text-base">
-            برای دریافت اطلاعات بیشتر و ثبت‌نام در دوره مکالمه زبان آلمانی
-            با آکادمی دویچینو در ارتباط باشید.
+          <p className="mb-4 text-sm leading-7 text-gray-600">
+            برای اطلاع از زمان شروع کلاس و ثبت‌نام پیام بدهید.
           </p>
 
           <a
-            href={whatsappUrl}
+            href={whatsappLink(
+              "سلام، برای ثبت‌نام دوره مکالمه زبان آلمانی در آکادمی دویچینو پیام می‌دهم."
+            )}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="شروع ثبت‌نام دوره مکالمه زبان آلمانی در واتساپ"
-            className="inline-flex items-center justify-center rounded-xl bg-[#0A2540] px-6 py-3 font-bold text-white transition-colors hover:bg-[#12385c]"
+            aria-label="شروع ثبت‌نام دوره مکالمه در واتساپ"
+            className="inline-flex items-center justify-center rounded-lg bg-[#0A2540] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#12385c] md:text-base"
           >
-            شروع ثبت‌نام در واتساپ
+            شروع ثبت‌نام
           </a>
         </section>
+
       </div>
     </main>
   );

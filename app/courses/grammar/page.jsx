@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -5,6 +6,7 @@ import {
   Clock3,
   GraduationCap,
   Headphones,
+  Wallet,
 } from "lucide-react";
 
 export const metadata = {
@@ -55,11 +57,17 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "صفحه اصلی",
-      item: "https://www.deutschino.ir",
+      item: "https://www.deutschino.ir/",
     },
     {
       "@type": "ListItem",
       position: 2,
+      name: "دوره‌های زبان آلمانی",
+      item: "https://www.deutschino.ir/#courses",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
       name: "کلاس گرامر زبان آلمانی",
       item: "https://www.deutschino.ir/courses/grammar",
     },
@@ -67,6 +75,9 @@ const breadcrumbSchema = {
 };
 
 const whatsappNumber = "989130061984";
+
+const whatsappLink = (message) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 const features = [
   {
@@ -80,14 +91,14 @@ const features = [
     description: "A1 تا B2",
   },
   {
-    icon: Headphones,
-    title: "پشتیبانی آموزشی",
-    description: "خارج از ساعات کلاس",
-  },
-  {
     icon: BookOpen,
     title: "منبع آموزشی",
     description: "Grammatik Aktiv",
+  },
+  {
+    icon: Headphones,
+    title: "پشتیبانی",
+    description: "رفع اشکال خارج از کلاس",
   },
 ];
 
@@ -107,19 +118,19 @@ const faqs = [
       "بله. لازم نیست تمام مباحث A1 تا B2 را از ابتدا بخوانید. محتوای کلاس با توجه به سطح فعلی، نقاط ضعف و نیاز آموزشی شما انتخاب می‌شود.",
   },
   {
-    question: "در کلاس گرامر از چه منبعی استفاده می‌شود؟",
-    answer:
-      "از منابع آموزشی متناسب با سطح زبان‌آموز، از جمله Grammatik Aktiv، برای آموزش قواعد و حل تمرین استفاده می‌شود.",
-  },
-  {
-    question: "هزینه کلاس گرامر زبان آلمانی چقدر است؟",
-    answer:
-      "هزینه پکیج ۱۰ جلسه‌ای ۱۰٬۰۰۰٬۰۰۰ تومان است. هزینه هر جلسه ۱٬۰۰۰٬۰۰۰ تومان و مدت هر جلسه ۹۰ دقیقه است.",
-  },
-  {
     question: "کلاس‌ها حضوری برگزار می‌شوند یا آنلاین؟",
     answer:
       "امکان شرکت در کلاس به‌صورت حضوری در اصفهان و همچنین آنلاین وجود دارد.",
+  },
+  {
+    question: "در کلاس گرامر از چه منبعی استفاده می‌شود؟",
+    answer:
+      "از کتاب Grammatik Aktiv و منابع تکمیلی متناسب با سطح زبان‌آموز برای آموزش قواعد و حل تمرین استفاده می‌شود.",
+  },
+  {
+    question: "چه کسی کلاس گرامر را تدریس می‌کند؟",
+    answer:
+      "تمام کلاس‌های خصوصی و گروهی مستقیماً توسط مسیح سلیمانی برگزار می‌شوند.",
   },
   {
     question: "آیا خارج از ساعات کلاس هم می‌توانم سؤال بپرسم؟",
@@ -129,20 +140,6 @@ const faqs = [
 ];
 
 export default function GrammarPage() {
-  const generalMessage =
-    "سلام، می‌خواهم برای ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس گرامر زبان آلمانی A1 تا B2 اطلاعات بیشتری دریافت کنم.";
-
-  const consultationMessage =
-    "سلام، برای دریافت مشاوره اولیه رایگان ۱۵ دقیقه‌ای درباره کلاس گرامر زبان آلمانی پیام می‌دهم.";
-
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    generalMessage
-  )}`;
-
-  const consultationLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    consultationMessage
-  )}`;
-
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -159,69 +156,75 @@ export default function GrammarPage() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6">
+      <div className="mx-auto max-w-7xl px-4 py-5 md:px-6 md:py-7">
+
         {/* Logo */}
-        <div className="flex justify-center mb-3 md:mb-6">
+        <div className="mb-5 flex justify-center md:mb-8">
           <Link href="/" aria-label="صفحه اصلی آکادمی دویچینو">
             <Image
               src="/logo.jpg"
               alt="لوگوی آکادمی دویچینو"
               width={120}
               height={120}
-              className="w-auto h-20 md:h-24"
+              className="h-16 w-auto md:h-20"
               priority
             />
           </Link>
         </div>
 
-        {/* Course Introduction */}
+        {/* Introduction */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
+          className="mx-auto mt-3 max-w-4xl text-center md:mt-6"
         >
-          <h1 className="text-2xl md:text-4xl font-bold mb-4">
+          <h1 className="mb-3 text-2xl font-bold leading-relaxed md:text-4xl">
             کلاس گرامر زبان آلمانی از A1 تا B2
           </h1>
 
-          <p className="text-sm md:text-lg text-gray-600 leading-8">
-            در کلاس گرامر آکادمی دویچینو، قواعد زبان آلمانی متناسب با سطح
-            و نیاز شما آموزش داده می‌شوند. از مباحث پایه مانند صرف افعال،
-            آرتیکل‌ها و ساختار جمله تا قواعد پیشرفته‌تر سطوح B1 و B2؛
-            همراه با حل تمرین، بررسی اشتباهات و رفع اشکال. کلاس‌ها به‌صورت
-            حضوری در اصفهان و آنلاین برگزار می‌شوند.
+          <p className="mx-auto max-w-3xl text-sm leading-8 text-gray-600 md:text-base">
+            قواعد زبان آلمانی را متناسب با سطح و نیاز خود یاد بگیرید؛
+            از مباحث پایه مانند صرف افعال و آرتیکل‌ها تا ساختارهای
+            پیشرفته‌تر B1 و B2. همراه با حل تمرین، بررسی اشتباهات
+            و رفع اشکال در کلاس‌های حضوری اصفهان و آنلاین.
           </p>
         </section>
 
         {/* Banner */}
-        <div className="flex justify-center mt-5 md:mt-6">
+        <div className="mt-6 flex justify-center md:mt-8">
           <Image
             src="/books5.jpg"
-            alt="منابع آموزشی کلاس گرامر زبان آلمانی A1 تا B2 در آکادمی دویچینو"
+            alt="منابع آموزشی کلاس گرامر زبان آلمانی"
             width={900}
             height={350}
-            className="object-cover w-full max-w-[260px] md:max-w-[380px] h-auto rounded-xl"
+            className="h-auto w-full max-w-[220px] rounded-xl object-cover md:max-w-[380px]"
             priority
           />
         </div>
 
-        {/* Course Features */}
+        {/* Features */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-6 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="mx-auto mt-7 grid max-w-4xl grid-cols-2 gap-x-4 gap-y-5 border-y border-gray-100 py-5 md:mt-8 md:grid-cols-4 md:gap-5"
         >
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
-              <div key={feature.title} className="text-center py-3">
+              <div
+                key={feature.title}
+                className="flex flex-col items-center text-center"
+              >
                 <Icon
-                  size={23}
-                  className="mx-auto mb-2 text-[#0A2540]"
+                  size={21}
+                  strokeWidth={1.7}
+                  className="mb-2 text-[#0A2540]"
                 />
-                <p className="font-bold text-sm md:text-base mb-1">
+
+                <p className="mb-1 text-sm font-semibold">
                   {feature.title}
                 </p>
-                <p className="text-xs md:text-sm text-gray-600">
+
+                <p className="text-xs leading-6 text-gray-500">
                   {feature.description}
                 </p>
               </div>
@@ -230,128 +233,114 @@ export default function GrammarPage() {
         </section>
 
         {/* Learning Outcomes */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-5">
-            در کلاس گرامر آلمانی چه مباحثی آموزش داده می‌شود؟
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl md:mt-12"
+        >
+          <h2 className="mb-4 text-xl font-bold md:text-2xl">
+            در کلاس گرامر چه مباحثی آموزش داده می‌شود؟
           </h2>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm md:text-base leading-8">
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-sm leading-8 text-gray-700 md:grid-cols-2 md:text-base">
             {outcomes.map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <span className="text-green-600 shrink-0">✓</span>
+                <span className="mt-1 text-[#0A2540]">✓</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </section>
 
+        {/* Teaching Advantage */}
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl rounded-xl bg-[#F7F9FC] p-5 md:mt-12 md:p-7"
+        >
+          <h2 className="text-lg font-bold md:text-xl">
+            آموزش مستقیم با مسیح سلیمانی
+          </h2>
+
+          <p className="mt-2 text-sm leading-8 text-gray-600 md:text-base">
+            تمام کلاس‌های خصوصی و گروهی را خودم برگزار می‌کنم.
+            در این دوره، مباحث گرامری را با مثال‌های کاربردی،
+            حل تمرین و بررسی اشتباهات رایج یاد می‌گیرید تا بتوانید
+            قواعد را در جمله‌سازی و استفاده واقعی از زبان آلمانی به کار ببرید.
+          </p>
+        </section>
+
         {/* Pricing */}
         <section
           dir="rtl"
-          className="max-w-3xl mx-auto mt-10 md:mt-14"
+          className="mx-auto mt-10 max-w-3xl md:mt-14"
         >
-          <h2 className="text-xl md:text-2xl font-bold text-center mb-2">
+          <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
             هزینه کلاس گرامر زبان آلمانی
           </h2>
 
-          <p className="text-xs md:text-sm text-gray-600 text-center mb-5">
-            پکیج شامل ۱۰ جلسه ۹۰ دقیقه‌ای است.
+          <p className="mb-5 text-center text-xs text-gray-500 md:text-sm">
+            بسته ۱۰ جلسه‌ای؛ هر جلسه ۹۰ دقیقه
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Grammar Package */}
-            <div className="border border-gray-200 rounded-xl p-4 md:p-5 text-center">
-              <h3 className="text-base md:text-lg font-bold mb-4">
-                پکیج کلاس گرامر
-              </h3>
-
-              <p className="text-sm text-gray-500 mb-2">
-                هزینه پکیج ۱۰ جلسه‌ای
-              </p>
-
-              <p className="text-2xl md:text-3xl font-bold mb-1">
-                ۱۰٬۰۰۰٬۰۰۰
-              </p>
-
-              <p className="text-xs md:text-sm text-gray-500 mb-4">
-                تومان برای ۱۰ جلسه
-              </p>
-
-              <div className="text-sm text-gray-600 leading-8 mb-4">
-                <p>هر جلسه ۹۰ دقیقه</p>
-                <p>هر جلسه ۱٬۰۰۰٬۰۰۰ تومان</p>
+          <div className="mx-auto grid max-w-md grid-cols-1 gap-3 md:gap-5">
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <div className="border-b border-gray-100 px-2 py-3 text-center md:py-4">
+                <h3 className="text-sm font-bold md:text-lg">
+                  پکیج کلاس گرامر
+                </h3>
               </div>
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-sm text-center py-3 px-2 rounded-lg font-bold transition-colors"
-              >
-                مشاوره و ثبت‌نام
-              </a>
-            </div>
+              <div className="p-4 text-center md:p-5">
+                <p className="mb-2 text-xs text-gray-500">
+                  ۱۰ جلسه
+                </p>
 
-            {/* Course Details */}
-            <div className="border border-gray-200 rounded-xl p-4 md:p-5 text-center">
-              <h3 className="text-base md:text-lg font-bold mb-4">
-                مشخصات دوره
-              </h3>
+                <div className="mb-1 flex items-center justify-center gap-1">
+                  <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Clock3 size={19} />
-                <span className="text-sm text-gray-600">
-                  ۱۰ جلسه ۹۰ دقیقه‌ای
-                </span>
+                  <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
+                    ۱۰٬۰۰۰٬۰۰۰
+                  </p>
+                </div>
+
+                <p className="mb-3 text-xs text-gray-500">تومان</p>
+
+                <p className="mb-4 text-xs leading-6 text-gray-600">
+                  هر جلسه ۱٬۰۰۰٬۰۰۰ تومان
+                </p>
+
+                <a
+                  href={whatsappLink(
+                    "سلام، برای ثبت‌نام پکیج ۱۰ جلسه‌ای کلاس گرامر زبان آلمانی A1 تا B2 اطلاعات بیشتری می‌خواهم."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ثبت‌نام کلاس گرامر زبان آلمانی"
+                  className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
+                >
+                  مشاوره و ثبت‌نام
+                </a>
               </div>
-
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <GraduationCap size={19} />
-                <span className="text-sm text-gray-600">
-                  سطح A1 تا B2
-                </span>
-              </div>
-
-              <div className="flex items-center justify-center gap-2 mb-5">
-                <BookOpen size={19} />
-                <span className="text-sm text-gray-600">
-                  مباحث متناسب با سطح شما
-                </span>
-              </div>
-
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-sm text-center py-3 px-2 rounded-lg font-bold transition-colors"
-              >
-                مشاوره و ثبت‌نام
-              </a>
             </div>
           </div>
 
-          <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-5">
-            پکیج شامل ۱۰ جلسه ۹۰ دقیقه‌ای است. هزینه هر جلسه
-            ۱٬۰۰۰٬۰۰۰ تومان و هزینه کل پکیج ۱۰٬۰۰۰٬۰۰۰ تومان است.
-            مباحث آموزشی با توجه به سطح و نیاز زبان‌آموز انتخاب می‌شوند.
-          </p>
-
-          {/* Free Consultation */}
-          <div className="mt-6 text-center">
-            <p className="text-sm md:text-base font-semibold mb-2">
-              برای انتخاب مباحث گرامری مناسب خودتان نیاز به راهنمایی دارید؟
+          {/* Consultation */}
+          <div className="mt-5 rounded-xl bg-[#F7F9FC] px-4 py-5 text-center md:py-6">
+            <p className="mb-2 text-sm font-bold text-[#0A2540] md:text-base">
+              نمی‌دانید از کدام مباحث گرامری شروع کنید؟
             </p>
 
-            <p className="text-sm text-gray-600 leading-7 mb-4">
-              پیش از ثبت‌نام می‌توانید برای بررسی سطح و انتخاب مسیر آموزشی
-              مناسب از مشاوره اولیه رایگان ۱۵ دقیقه‌ای استفاده کنید.
+            <p className="mb-3 text-xs text-gray-600 md:text-sm">
+              پیش از ثبت‌نام، ۱۵ دقیقه مشاوره رایگان دریافت کنید.
             </p>
 
             <a
-              href={consultationLink}
+              href={whatsappLink(
+                "سلام، برای دریافت مشاوره رایگان درباره کلاس گرامر زبان آلمانی پیام می‌دهم."
+              )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-gray-50 transition-colors"
+              aria-label="دریافت مشاوره رایگان کلاس گرامر"
+              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2 text-xs font-semibold text-[#0A2540] transition-colors hover:bg-white md:text-sm"
             >
               دریافت مشاوره رایگان
             </a>
@@ -361,27 +350,28 @@ export default function GrammarPage() {
         {/* FAQ */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-14 md:mt-16"
+          className="mx-auto mt-12 max-w-4xl md:mt-14"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-5">
-            سؤالات متداول درباره کلاس گرامر زبان آلمانی
+          <h2 className="mb-4 text-xl font-bold md:text-2xl">
+            سؤالات متداول
           </h2>
 
-          <div className="divide-y divide-gray-200 border-y border-gray-200">
+          <div className="divide-y divide-gray-100 border-y border-gray-100">
             {faqs.map((faq, index) => (
               <details
                 key={faq.question}
-                className="py-4 group"
+                className="group py-3"
                 open={index === 0}
               >
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-4 font-bold text-sm md:text-base text-[#0A2540]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold leading-7 text-[#0A2540] marker:hidden md:text-base">
                   <span>{faq.question}</span>
-                  <span className="text-xl font-normal text-gray-500 group-open:rotate-45 transition-transform">
+
+                  <span className="shrink-0 text-lg font-normal text-gray-400 transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
 
-                <p className="text-sm md:text-base text-gray-600 leading-8 mt-3">
+                <p className="mt-2 pr-1 text-sm leading-8 text-gray-600">
                   {faq.answer}
                 </p>
               </details>
@@ -392,59 +382,62 @@ export default function GrammarPage() {
         {/* SEO Content */}
         <section
           dir="rtl"
-          className="mt-16 max-w-4xl mx-auto text-right"
+          className="mx-auto mt-10 max-w-4xl text-right md:mt-12"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            کلاس گرامر زبان آلمانی از A1 تا B2 در اصفهان و آنلاین
+          <h2 className="mb-3 text-xl font-bold md:text-2xl">
+            کلاس گرامر زبان آلمانی A1 تا B2 در اصفهان و آنلاین
           </h2>
 
-          <p className="text-sm md:text-base leading-9 text-gray-700">
-            اگر در یادگیری قواعد زبان آلمانی مشکل دارید، هنگام جمله‌سازی
-            اشتباه می‌کنید یا می‌خواهید گرامر را اصولی‌تر یاد بگیرید،
-            کلاس گرامر آکادمی دویچینو می‌تواند به شما کمک کند. در این
-            کلاس، قواعد متناسب با سطح شما از A1 تا B2 آموزش داده می‌شوند.
-            با استفاده از منبع Grammatik Aktiv، حل تمرین و بررسی مثال‌های
-            کاربردی، فرصت پیدا می‌کنید آموخته‌های خود را بهتر تثبیت کنید.
-            کلاس‌ها به‌صورت حضوری در اصفهان و آنلاین برگزار می‌شوند و
-            مباحث آموزشی بر اساس سطح فعلی و نیاز شما انتخاب خواهند شد.
+          <p className="text-sm leading-8 text-gray-600 md:text-base">
+            کلاس گرامر آلمانی دویچینو برای زبان‌آموزانی طراحی شده است
+            که می‌خواهند قواعد زبان را بهتر یاد بگیرند و در جمله‌سازی
+            اشتباهات کمتری داشته باشند. مباحث آموزشی از سطح A1 تا B2
+            و متناسب با سطح فعلی و نیاز شما انتخاب می‌شوند. با استفاده
+            از کتاب Grammatik Aktiv، حل تمرین و مثال‌های کاربردی،
+            قواعد را بهتر درک می‌کنید و در استفاده از زبان آلمانی به کار می‌برید.
           </p>
 
-          <p className="text-sm md:text-base leading-9 mt-4 text-gray-700">
-            اگر در کنار تقویت گرامر، قصد دارید مهارت‌های زبانی خود را
-            به‌صورت کامل‌تر تقویت کنید، می‌توانید{" "}
+          <p className="mt-3 text-sm leading-8 text-gray-600 md:text-base">
+            این دوره شامل ۱۰ جلسه ۹۰ دقیقه‌ای است و کلاس‌ها به‌صورت
+            حضوری در محدوده حکیم نظامی اصفهان و آنلاین برگزار می‌شوند.
+            اگر قصد دارید در کنار گرامر، مهارت‌های دیگر زبان آلمانی را
+            نیز تقویت کنید، می‌توانید{" "}
             <Link
               href="/courses/a1"
-              className="text-[#0A2540] font-bold underline underline-offset-4"
+              className="font-semibold text-[#0A2540] underline underline-offset-4"
             >
               دوره‌های آموزش زبان آلمانی دویچینو
             </Link>{" "}
-            را نیز بررسی کنید.
+            را بررسی کنید.
           </p>
         </section>
 
         {/* Final CTA */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-10 md:mt-12 mb-8 text-center"
+          className="mx-auto mb-8 mt-10 max-w-3xl border-t border-gray-100 pt-8 text-center md:mt-12"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-3">
+          <h2 className="mb-2 text-xl font-bold md:text-2xl">
             آماده تقویت گرامر زبان آلمانی خود هستید؟
           </h2>
 
-          <p className="text-sm md:text-base text-gray-600 leading-8 mb-5">
-            برای دریافت مشاوره و اطلاع از شرایط ثبت‌نام کلاس گرامر
-            از سطح A1 تا B2 با آکادمی دویچینو در ارتباط باشید.
+          <p className="mb-4 text-sm leading-7 text-gray-600">
+            برای دریافت مشاوره و اطلاع از شرایط ثبت‌نام پیام بدهید.
           </p>
 
           <a
-            href={whatsappLink}
+            href={whatsappLink(
+              "سلام، برای ثبت‌نام کلاس گرامر زبان آلمانی در آکادمی دویچینو پیام می‌دهم."
+            )}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-6 py-3 rounded-lg font-bold transition-colors"
+            aria-label="شروع ثبت‌نام کلاس گرامر در واتساپ"
+            className="inline-flex items-center justify-center rounded-lg bg-[#0A2540] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#12385c] md:text-base"
           >
-            شروع ثبت‌نام در واتساپ
+            شروع ثبت‌نام
           </a>
         </section>
+
       </div>
     </main>
   );

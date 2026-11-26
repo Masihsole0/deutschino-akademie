@@ -6,19 +6,20 @@ import {
   Clock3,
   GraduationCap,
   Headphones,
+  Wallet,
 } from "lucide-react";
 
 export const metadata = {
   title: "کلاس زبان آلمانی B1 در اصفهان | خصوصی و گروهی | دویچینو",
   description:
-    "ثبت‌نام کلاس زبان آلمانی B1 در اصفهان؛ دوره خصوصی و گروهی با کتاب‌های Menschen B1.1 و B1.2، حضوری در محدوده حکیم نظامی و آنلاین، همراه با پشتیبانی آموزشی و مشاوره اولیه رایگان در آکادمی دویچینو.",
+    "آموزش زبان آلمانی B1 در اصفهان و آنلاین؛ کلاس خصوصی و گروهی با تدریس مستقیم مسیح سلیمانی، منابع آموزشی و مشاوره رایگان.",
   alternates: {
     canonical: "https://www.deutschino.ir/courses/b1",
   },
   openGraph: {
     title: "کلاس زبان آلمانی B1 در اصفهان | آکادمی دویچینو",
     description:
-      "آموزش زبان آلمانی سطح B1 در کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین. آشنایی با شرایط دوره، منابع آموزشی و ثبت‌نام.",
+      "تقویت مهارت‌های زبان آلمانی با کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
     url: "https://www.deutschino.ir/courses/b1",
     siteName: "Deutschino",
     locale: "fa_IR",
@@ -31,7 +32,7 @@ const courseSchema = {
   "@type": "Course",
   name: "دوره آموزش زبان آلمانی B1",
   description:
-    "دوره آموزش زبان آلمانی سطح B1 در آکادمی دویچینو؛ شامل آموزش واژگان، گرامر، مکالمه و مهارت‌های چهارگانه زبان آلمانی با استفاده از کتاب‌های Menschen B1.1 و B1.2. امکان شرکت در کلاس خصوصی و گروهی به‌صورت حضوری در اصفهان و آنلاین.",
+    "آموزش زبان آلمانی سطح B1 با تمرکز بر گرامر، واژگان، مکالمه و چهار مهارت اصلی؛ با استفاده از کتاب‌های Menschen B1.1 و B1.2، به‌صورت خصوصی و گروهی در اصفهان و آنلاین.",
   url: "https://www.deutschino.ir/courses/b1",
   inLanguage: "de",
   educationalLevel: "B1",
@@ -67,6 +68,9 @@ const breadcrumbSchema = {
 
 const whatsappNumber = "989130061984";
 
+const whatsappLink = (message) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 const features = [
   {
     icon: Clock3,
@@ -79,77 +83,55 @@ const features = [
     description: "تسلط به سطح A2",
   },
   {
-    icon: Headphones,
-    title: "پشتیبانی آموزشی",
-    description: "رفع اشکال و بررسی تمرین‌ها",
-  },
-  {
     icon: BookOpen,
     title: "منابع آموزشی",
     description: "Menschen B1.1 و B1.2",
   },
+  {
+    icon: Headphones,
+    title: "پشتیبانی",
+    description: "رفع اشکال بین جلسات",
+  },
 ];
 
 const outcomes = [
-  "صحبت درباره تجربیات، اتفاقات و موضوعات مختلف زندگی",
-  "بیان نظرات، دلایل و دیدگاه‌های شخصی به زبان آلمانی",
-  "گسترش واژگان و استفاده از گرامر کاربردی سطح B1",
-  "درک مکالمات و متون مرتبط با موضوعات روزمره و اجتماعی",
-  "نوشتن متن‌ها، نامه‌ها و پیام‌های کاربردی",
-  "برقراری ارتباط مستقل‌تر در موقعیت‌های متنوع زندگی",
+  "صحبت درباره تجربیات و موضوعات مختلف زندگی",
+  "بیان نظرات، دلایل و دیدگاه‌های شخصی",
+  "استفاده از گرامر و واژگان کاربردی سطح B1",
+  "درک مکالمات و متون متنوع‌تر آلمانی",
+  "نوشتن نامه‌ها و متن‌های کاربردی",
+  "ارتباط مستقل‌تر در موقعیت‌های روزمره و اجتماعی",
 ];
 
 const faqs = [
   {
     question: "برای شرکت در کلاس B1 چه پیش‌نیازی لازم است؟",
     answer:
-      "برای شرکت در دوره B1 لازم است سطح A2 زبان آلمانی را گذرانده باشید و با مباحث پایه و متوسط این زبان آشنایی داشته باشید.",
+      "برای شرکت در دوره B1 باید سطح A2 زبان آلمانی را گذرانده باشید و با مباحث پایه و متوسط این زبان آشنایی داشته باشید.",
   },
   {
-    question: "در دوره B1 از چه منابعی استفاده می‌شود؟",
+    question: "کلاس‌ها حضوری هستند یا آنلاین؟",
     answer:
-      "منابع آموزشی این دوره شامل کتاب‌های Menschen B1.1 و Menschen B1.2 است.",
+      "هر دو امکان وجود دارد؛ کلاس حضوری در محدوده حکیم نظامی اصفهان برگزار می‌شود.",
   },
   {
-    question: "شهریه کلاس زبان آلمانی B1 چقدر است؟",
+    question: "ظرفیت کلاس گروهی چقدر است؟",
     answer:
-      "هزینه بسته ۱۰ جلسه‌ای کلاس خصوصی ۱۳٬۰۰۰٬۰۰۰ تومان و کلاس گروهی ۵٬۰۰۰٬۰۰۰ تومان است. هر جلسه ۹۰ دقیقه برگزار می‌شود.",
+      "برای حفظ کیفیت آموزش، هر گروه حداکثر ۶ زبان‌آموز دارد.",
   },
   {
-    question: "کلاس‌های زبان آلمانی دویچینو در کدام منطقه اصفهان برگزار می‌شوند؟",
+    question: "چه کسی کلاس‌های B1 را تدریس می‌کند؟",
     answer:
-      "کلاس‌های حضوری آکادمی دویچینو در محدوده حکیم نظامی اصفهان برگزار می‌شوند. امکان شرکت در دوره به‌صورت آنلاین نیز وجود دارد.",
+      "تمام کلاس‌های خصوصی و گروهی مستقیماً توسط مسیح سلیمانی برگزار می‌شوند.",
   },
   {
-    question: "ظرفیت کلاس گروهی B1 چند نفر است؟",
+    question: "چطور در دوره B1 ثبت‌نام کنم؟",
     answer:
-      "برای حفظ کیفیت آموزش، ظرفیت هر کلاس گروهی حداکثر ۶ نفر است.",
-  },
-  {
-    question: "آیا خارج از کلاس هم پشتیبانی آموزشی دارم؟",
-    answer:
-      "بله. می‌توانید سؤالات و تمرین‌های خود را برای بررسی و رفع اشکال ارسال کنید و در طول دوره از پشتیبانی آموزشی بهره‌مند شوید.",
-  },
-  {
-    question: "تفاوت کلاس خصوصی و گروهی B1 چیست؟",
-    answer:
-      "در کلاس خصوصی آموزش متناسب با شرایط و سرعت یادگیری شما پیش می‌رود. کلاس گروهی با ظرفیت حداکثر ۶ نفر برگزار می‌شود و فرصت تمرین مکالمه با زبان‌آموزان دیگر را فراهم می‌کند.",
-  },
-  {
-    question: "چطور می‌توانم در دوره B1 ثبت‌نام کنم؟",
-    answer:
-      "از طریق دکمه‌های ثبت‌نام همین صفحه در واتساپ پیام بدهید تا برای انتخاب کلاس و شروع دوره راهنمایی شوید.",
+      "از طریق دکمه ثبت‌نام در واتساپ پیام بدهید تا درباره زمان شروع و انتخاب کلاس راهنمایی شوید.",
   },
 ];
 
-function whatsappLink(message) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
-
 export default function B1Page() {
-  const generalMessage =
-    "سلام، برای ثبت‌نام دوره زبان آلمانی B1 و دریافت مشاوره راهنمایی می‌خواهم.";
-
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -166,70 +148,74 @@ export default function B1Page() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6">
+      <div className="mx-auto max-w-7xl px-4 py-5 md:px-6 md:py-7">
+
         {/* Logo */}
-        <div className="flex justify-center mb-3 md:mb-6">
-          <Link href="/" aria-label="صفحه اصلی آکادمی دویچینو">
+        <div className="mb-5 flex justify-center md:mb-8">
+          <Link href="/" aria-label="صفحه اصلی دویچینو">
             <Image
               src="/logo.jpg"
-              alt="لوگوی آکادمی آموزش زبان آلمانی دویچینو"
+              alt="لوگوی آکادمی دویچینو"
               width={120}
               height={120}
-              className="w-auto h-20 md:h-24"
+              className="h-16 w-auto md:h-20"
               priority
             />
           </Link>
         </div>
 
-        {/* Course Introduction */}
+        {/* Introduction */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-4 md:mt-8 text-center"
+          className="mx-auto mt-3 max-w-4xl text-center md:mt-6"
         >
-          <h1 className="text-2xl md:text-4xl font-bold mb-3">
+          <h1 className="mb-3 text-2xl font-bold leading-relaxed md:text-4xl">
             کلاس زبان آلمانی B1 در اصفهان؛ تقویت مهارت‌های ارتباطی
           </h1>
 
-          <p className="text-sm md:text-base leading-8 text-gray-700">
-            اگر سطح A2 زبان آلمانی را گذرانده‌اید، دوره B1 آکادمی دویچینو
-            به شما کمک می‌کند دانش زبانی خود را گسترش دهید و برای برقراری
-            ارتباط مستقل‌تر آماده شوید. این دوره به‌صورت خصوصی و گروهی،
-            حضوری در اصفهان و آنلاین برگزار می‌شود و مهارت‌های مکالمه،
-            شنیداری، خواندن و نوشتن را در کنار واژگان و گرامر سطح B1
-            پوشش می‌دهد.
+          <p className="mx-auto max-w-3xl text-sm leading-8 text-gray-600 md:text-base">
+            توانایی خود را برای استفاده مستقل‌تر از زبان آلمانی تقویت کنید.
+            آموزش خصوصی و گروهی، حضوری در اصفهان و آنلاین،
+            با تدریس مستقیم مسیح سلیمانی.
           </p>
         </section>
 
         {/* Banner */}
-        <div className="flex justify-center mt-6">
+        <div className="mt-6 flex justify-center md:mt-8">
           <Image
             src="/books3.jpg"
-            alt="کتاب‌ها و منابع آموزش زبان آلمانی سطح B1، Menschen B1.1 و B1.2"
+            alt="کتاب‌های آموزش زبان آلمانی Menschen B1.1 و B1.2"
             width={900}
             height={350}
-            className="rounded-xl object-cover w-full max-w-[260px] md:max-w-[380px] h-auto"
+            className="h-auto w-full max-w-[220px] rounded-xl object-cover md:max-w-[380px]"
             priority
           />
         </div>
 
-        {/* Course Features */}
+        {/* Features */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-6 md:mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="mx-auto mt-7 grid max-w-4xl grid-cols-2 gap-x-4 gap-y-5 border-y border-gray-100 py-5 md:mt-8 md:grid-cols-4 md:gap-5"
         >
           {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
-              <div key={feature.title} className="text-center py-2">
+              <div
+                key={feature.title}
+                className="flex flex-col items-center text-center"
+              >
                 <Icon
-                  size={23}
-                  className="mx-auto mb-2 text-[#0A2540]"
+                  size={21}
+                  strokeWidth={1.7}
+                  className="mb-2 text-[#0A2540]"
                 />
-                <p className="font-bold text-sm md:text-base mb-1">
+
+                <p className="mb-1 text-sm font-semibold">
                   {feature.title}
                 </p>
-                <p className="text-xs md:text-sm text-gray-600 leading-6">
+
+                <p className="text-xs leading-6 text-gray-500">
                   {feature.description}
                 </p>
               </div>
@@ -238,134 +224,161 @@ export default function B1Page() {
         </section>
 
         {/* Learning Outcomes */}
-        <section dir="rtl" className="max-w-4xl mx-auto mt-10 md:mt-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            در پایان سطح B1 چه مهارت‌هایی خواهید داشت؟
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl md:mt-12"
+        >
+          <h2 className="mb-4 text-xl font-bold md:text-2xl">
+            بعد از B1 چه چیزهایی یاد می‌گیرید؟
           </h2>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base leading-8">
+          <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-sm leading-8 text-gray-700 md:grid-cols-2 md:text-base">
             {outcomes.map((outcome) => (
               <li key={outcome} className="flex items-start gap-2">
-                <span className="text-green-600">✓</span>
+                <span className="mt-1 text-[#0A2540]">✓</span>
                 <span>{outcome}</span>
               </li>
             ))}
           </ul>
         </section>
 
+        {/* Teaching Advantage */}
+        <section
+          dir="rtl"
+          className="mx-auto mt-10 max-w-4xl rounded-xl bg-[#F7F9FC] p-5 md:mt-12 md:p-7"
+        >
+          <h2 className="text-lg font-bold md:text-xl">
+            آموزش مستقیم با مسیح سلیمانی
+          </h2>
+
+          <p className="mt-2 text-sm leading-8 text-gray-600 md:text-base">
+            تمام کلاس‌های خصوصی و گروهی را خودم برگزار می‌کنم.
+            در طول دوره، علاوه بر کتاب‌های آموزشی، از جزوه‌های اختصاصی،
+            تمرین‌های تکمیلی و نمونه سؤالات آزمون‌های Goethe، telc و ECL
+            استفاده می‌کنیم.
+          </p>
+        </section>
+
         {/* Pricing */}
         <section
           dir="rtl"
-          className="max-w-3xl mx-auto mt-10 md:mt-14"
+          className="mx-auto mt-10 max-w-3xl md:mt-14"
         >
-          <h2 className="text-xl md:text-2xl font-bold text-center mb-2">
-            هزینه کلاس زبان آلمانی B1
+          <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
+            هزینه دوره B1
           </h2>
 
-          <p className="text-xs md:text-sm text-gray-600 text-center mb-5">
-            کلاس خصوصی یا گروهی؛ متناسب با شرایط و هدف شما
+          <p className="mb-5 text-center text-xs text-gray-500 md:text-sm">
+            بسته‌های ۱۰ جلسه‌ای؛ هر جلسه ۹۰ دقیقه
           </p>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-8">
+          <div className="grid grid-cols-2 gap-3 md:gap-5">
+
             {/* Private */}
-            <div className="border border-gray-200 rounded-xl p-3 md:p-5 text-center">
-              <h3 className="text-sm md:text-lg font-bold mb-3">
-                کلاس خصوصی B1
-              </h3>
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <div className="border-b border-gray-100 px-2 py-3 text-center md:py-4">
+                <h3 className="text-sm font-bold md:text-lg">
+                  کلاس خصوصی
+                </h3>
+              </div>
 
-              <p className="text-xs text-gray-500 mb-2">
-                بسته ۱۰ جلسه‌ای
-              </p>
+              <div className="p-3 text-center md:p-5">
+                <p className="mb-2 text-xs text-gray-500">
+                  ۱۰ جلسه
+                </p>
 
-              <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
-                ۱۳٬۰۰۰٬۰۰۰
-              </p>
+                <div className="mb-1 flex items-center justify-center gap-1">
+                  <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
-              <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
+                  <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
+                    ۱۳٬۰۰۰٬۰۰۰
+                  </p>
+                </div>
 
-              <p className="text-xs text-gray-600 leading-7 mb-4">
-                هر جلسه ۱٬۳۰۰٬۰۰۰ تومان
-                <br />
-                ۹۰ دقیقه
-              </p>
+                <p className="mb-3 text-xs text-gray-500">تومان</p>
 
-              <a
-                href={whatsappLink(
-                  "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی B1 پیام می‌دهم. لطفاً راهنمایی‌ام کنید."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ثبت‌نام کلاس خصوصی زبان آلمانی B1 در واتساپ"
-                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
-              >
-                ثبت‌نام کلاس خصوصی
-              </a>
+                <p className="mb-4 text-xs leading-6 text-gray-600">
+                  هر جلسه ۱٬۳۰۰٬۰۰۰ تومان
+                </p>
+
+                <a
+                  href={whatsappLink(
+                    "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی B1 پیام می‌دهم. لطفاً درباره زمان‌بندی کلاس راهنمایی‌ام کنید."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ثبت‌نام کلاس خصوصی B1"
+                  className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
+                >
+                  ثبت‌نام خصوصی
+                </a>
+              </div>
             </div>
 
             {/* Group */}
-            <div className="border border-gray-200 rounded-xl p-3 md:p-5 text-center">
-              <h3 className="text-sm md:text-lg font-bold mb-3">
-                کلاس گروهی B1
-              </h3>
+            <div className="overflow-hidden rounded-xl border border-gray-200">
+              <div className="border-b border-gray-100 px-2 py-3 text-center md:py-4">
+                <h3 className="text-sm font-bold md:text-lg">
+                  کلاس گروهی
+                </h3>
+              </div>
 
-              <p className="text-xs text-gray-500 mb-2">
-                بسته ۱۰ جلسه‌ای
-              </p>
+              <div className="p-3 text-center md:p-5">
+                <p className="mb-2 text-xs text-gray-500">
+                  ۱۰ جلسه
+                </p>
 
-              <p className="text-lg md:text-2xl font-bold text-[#0A2540]">
-                ۶٬۰۰۰٬۰۰۰
-              </p>
+                <div className="mb-1 flex items-center justify-center gap-1">
+                  <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
-              <p className="text-xs text-gray-500 mt-1 mb-3">تومان</p>
+                  <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
+                    ۶٬۰۰۰٬۰۰۰
+                  </p>
+                </div>
 
-              <p className="text-xs text-gray-600 leading-7 mb-2">
-                هر جلسه ۶۰۰٬۰۰۰ تومان
-                <br />
-                ۹۰ دقیقه
-              </p>
+                <p className="mb-3 text-xs text-gray-500">تومان</p>
 
-              <p className="text-xs font-semibold text-[#0A2540] mb-3">
-                حداکثر ۶ نفر
-              </p>
+                <p className="mb-1 text-xs text-gray-600">
+                  هر جلسه ۶۰۰ هزار تومان
+                </p>
 
-              <a
-                href={whatsappLink(
-                  "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی B1 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ثبت‌نام کلاس گروهی زبان آلمانی B1 در واتساپ"
-                className="block w-full bg-[#0A2540] hover:bg-[#12385c] text-white text-xs md:text-sm py-2.5 md:py-3 px-1 rounded-lg font-bold transition-colors"
-              >
-                ثبت‌نام کلاس گروهی
-              </a>
+                <p className="mb-3 text-xs font-semibold text-[#0A2540]">
+                  حداکثر ۶ نفر
+                </p>
+
+                <a
+                  href={whatsappLink(
+                    "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی B1 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ثبت‌نام کلاس گروهی B1"
+                  className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
+                >
+                  ثبت‌نام گروهی
+                </a>
+              </div>
             </div>
           </div>
 
-          <p className="text-xs md:text-sm text-gray-600 text-center leading-7 mt-4">
-            شهریه هر دو نوع کلاس به‌صورت بسته‌های ۱۰ جلسه‌ای پرداخت می‌شود.
-            تعداد کل جلسات دوره ثابت نیست و متناسب با روند یادگیری و پیشرفت
-            زبان‌آموز تعیین می‌شود.
-          </p>
-
-          {/* Free Consultation */}
-          <div className="mt-6 text-center">
-            <p className="text-sm md:text-base font-semibold mb-2">
+          {/* Consultation */}
+          <div className="mt-5 rounded-xl bg-[#F7F9FC] px-4 py-5 text-center md:py-6">
+            <p className="mb-2 text-sm font-bold text-[#0A2540] md:text-base">
               هنوز برای انتخاب کلاس مطمئن نیستید؟
             </p>
 
-            <p className="text-sm text-gray-600 mb-3">
-              قبل از ثبت‌نام، از مشاوره اولیه رایگان ۱۵ دقیقه‌ای استفاده کنید.
+            <p className="mb-3 text-xs text-gray-600 md:text-sm">
+              قبل از ثبت‌نام، ۱۵ دقیقه مشاوره رایگان دریافت کنید.
             </p>
 
             <a
               href={whatsappLink(
-                "سلام، برای دریافت مشاوره اولیه رایگان درباره کلاس زبان آلمانی B1 پیام می‌دهم."
+                "سلام، برای دریافت مشاوره رایگان درباره دوره B1 پیام می‌دهم."
               )}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="دریافت مشاوره رایگان درباره دوره B1"
-              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2.5 text-sm font-bold text-[#0A2540] hover:bg-[#F4F8FF] transition-colors"
+              aria-label="دریافت مشاوره رایگان دوره B1"
+              className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2 text-xs font-semibold text-[#0A2540] transition-colors hover:bg-white md:text-sm"
             >
               دریافت مشاوره رایگان
             </a>
@@ -375,27 +388,28 @@ export default function B1Page() {
         {/* FAQ */}
         <section
           dir="rtl"
-          className="max-w-4xl mx-auto mt-14 md:mt-16"
+          className="mx-auto mt-12 max-w-4xl md:mt-14"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            سؤالات متداول درباره کلاس زبان آلمانی B1
+          <h2 className="mb-4 text-xl font-bold md:text-2xl">
+            سؤالات متداول
           </h2>
 
-          <div className="divide-y divide-gray-200">
+          <div className="divide-y divide-gray-100 border-y border-gray-100">
             {faqs.map((faq, index) => (
               <details
                 key={faq.question}
+                className="group py-3"
                 open={index === 0}
-                className="py-3 group"
               >
-                <summary className="cursor-pointer list-none flex items-center justify-between gap-3 font-bold text-sm md:text-base text-[#0A2540]">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold leading-7 text-[#0A2540] marker:hidden md:text-base">
                   <span>{faq.question}</span>
-                  <span className="text-lg transition-transform group-open:rotate-45">
+
+                  <span className="shrink-0 text-lg font-normal text-gray-400 transition-transform group-open:rotate-45">
                     +
                   </span>
                 </summary>
 
-                <p className="text-sm text-gray-700 leading-8 mt-3">
+                <p className="mt-2 pr-1 text-sm leading-8 text-gray-600">
                   {faq.answer}
                 </p>
               </details>
@@ -406,145 +420,66 @@ export default function B1Page() {
         {/* SEO Content */}
         <section
           dir="rtl"
-          className="mt-12 max-w-4xl mx-auto text-right"
-          aria-labelledby="b1-course-guide"
+          className="mx-auto mt-10 max-w-4xl text-right md:mt-12"
         >
-          <h2
-            id="b1-course-guide"
-            className="text-xl md:text-2xl font-bold mb-4"
-          >
-            کلاس زبان آلمانی B1 در اصفهان و آنلاین
+          <h2 className="mb-3 text-xl font-bold md:text-2xl">
+            آموزش زبان آلمانی B1 در اصفهان و آنلاین
           </h2>
 
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            اگر سطح A2 زبان آلمانی را گذرانده‌اید و به دنبال ادامه یادگیری
-            زبان آلمانی در اصفهان هستید، دوره B1 آکادمی دویچینو برای گسترش
-            دانش زبانی و تقویت توانایی برقراری ارتباط مستقل‌تر طراحی شده است.
-            در این سطح با واژگان بیشتر، ساختارهای گرامری جدید و موضوعات
-            متنوع‌تر آشنا می‌شوید. کلاس‌ها به‌صورت خصوصی و گروهی برگزار
-            می‌شوند و می‌توانید با توجه به شرایط خود، کلاس حضوری در اصفهان
-            یا دوره آنلاین را انتخاب کنید.
+          <p className="text-sm leading-8 text-gray-600 md:text-base">
+            دوره B1 آکادمی دویچینو برای افرادی طراحی شده که سطح A2
+            زبان آلمانی را گذرانده‌اند و می‌خواهند مهارت‌های خود را
+            گسترش دهند. در این سطح با واژگان بیشتر، ساختارهای گرامری
+            جدید و موضوعات متنوع‌تر آشنا می‌شوید. کلاس زبان آلمانی
+            در اصفهان به‌صورت حضوری در محدوده حکیم نظامی برگزار می‌شود
+            و امکان شرکت آنلاین نیز وجود دارد.
           </p>
 
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            در دوره B1 زبان آلمانی چه چیزهایی یاد می‌گیرید؟
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            در سطح B1، توانایی شما در استفاده از زبان آلمانی در موقعیت‌های
-            متنوع روزمره، اجتماعی و کاری گسترش پیدا می‌کند. موضوعاتی مانند
-            بیان تجربیات، صحبت درباره برنامه‌ها، توضیح مشکلات، بیان نظرات
-            و ارائه دلایل در این سطح تمرین می‌شوند. همچنین با گرامر سطح B1
-            و ساخت جمله‌های پیچیده‌تر آشنا خواهید شد. هدف این است که بتوانید
-            منظور خود را با جزئیات بیشتری بیان کنید و مکالمات و متون متنوع‌تری
-            را درک کنید.
-          </p>
-
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            کلاس خصوصی و گروهی زبان آلمانی B1 در اصفهان
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            در آکادمی دویچینو امکان انتخاب بین کلاس خصوصی و گروهی زبان
-            آلمانی B1 وجود دارد. کلاس خصوصی برای افرادی مناسب است که
-            ترجیح می‌دهند با برنامه و سرعت متناسب با شرایط خود پیش بروند.
-            در کلاس گروهی، تعداد زبان‌آموزان حداکثر ۶ نفر است تا فرصت
-            مشارکت و تمرین مکالمه برای همه فراهم باشد. هر جلسه ۹۰ دقیقه
-            طول می‌کشد و شهریه دوره‌ها در بسته‌های ۱۰ جلسه‌ای محاسبه می‌شود.
-          </p>
-
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            محل برگزاری کلاس‌های حضوری دویچینو در اصفهان
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            کلاس‌های حضوری آموزش زبان آلمانی آکادمی دویچینو در محدوده
-            حکیم نظامی اصفهان برگزار می‌شوند. اگر در اصفهان زندگی می‌کنید
-            و به دنبال کلاس زبان آلمانی در این محدوده هستید، می‌توانید
-            برای اطلاع از شرایط حضور، آدرس دقیق و زمان‌بندی کلاس‌ها از
-            طریق واتساپ با آکادمی در ارتباط باشید. برای افرادی که امکان
-            حضور در کلاس را ندارند نیز دوره آنلاین در نظر گرفته شده است.
-          </p>
-
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            منابع آموزشی و پشتیبانی در طول دوره B1
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            در دوره B1 آکادمی دویچینو از کتاب‌های Menschen B1.1 و
-            Menschen B1.2 به‌عنوان منابع آموزشی استفاده می‌شود. در کنار
-            مطالعه کتاب، تمرین مهارت‌های چهارگانه، به‌ویژه شنیدن و صحبت
-            کردن، بخش مهمی از فرایند یادگیری است. همچنین زبان‌آموزان
-            می‌توانند خارج از زمان کلاس سؤالات و تمرین‌های خود را برای
-            بررسی و رفع اشکال مطرح کنند.
-          </p>
-
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            مدرس دوره B1 آکادمی دویچینو
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700 mb-5">
-            دوره‌های زبان آلمانی دویچینو با تدریس مسیح سلیمانی برگزار
-            می‌شوند. در این دوره تلاش می‌شود آموزش گرامر و واژگان در کنار
-            تمرین مکالمه و کاربرد عملی زبان پیش برود تا زبان‌آموز بتواند
-            آموخته‌های خود را در موقعیت‌های مختلف به کار ببرد.
-          </p>
-
-          <h3 className="text-lg md:text-xl font-bold mb-2">
-            بعد از پایان سطح B1 چه مسیری پیش رو دارید؟
-          </h3>
-
-          <p className="text-sm md:text-base leading-8 text-gray-700">
-            پس از یادگیری مباحث سطح B1، می‌توانید مسیر آموزش زبان آلمانی
-            خود را با سطح B2 ادامه دهید و برای برقراری ارتباط در موقعیت‌های
-            پیچیده‌تر و استفاده مستقل‌تر از زبان آلمانی آماده شوید. اگر هدف
-            شما تقویت مهارت صحبت کردن است، شرکت در دوره‌های مکالمه زبان
-            آلمانی نیز می‌تواند در کنار مسیر آموزشی به شما کمک کند.
-          </p>
-
-          <div className="text-sm md:text-base leading-8 mt-3">
+          <p className="mt-3 text-sm leading-8 text-gray-600 md:text-base">
+            پس از پایان B1 می‌توانید یادگیری را در{" "}
             <Link
               href="/courses/b2"
-              className="text-blue-800 underline underline-offset-4"
+              className="font-semibold text-[#0A2540] underline underline-offset-4"
             >
-              آشنایی با کلاس زبان آلمانی B2
-            </Link>
-            {" "}
-            و{" "}
+              دوره B2
+            </Link>{" "}
+            ادامه دهید یا برای تقویت مهارت صحبت کردن در{" "}
             <Link
               href="/courses/conversation"
-              className="text-blue-800 underline underline-offset-4"
+              className="font-semibold text-[#0A2540] underline underline-offset-4"
             >
-              دوره مکالمه زبان آلمانی
-            </Link>
-            {" "}
-            را نیز ببینید.
-          </div>
+              کلاس مکالمه زبان آلمانی
+            </Link>{" "}
+            شرکت کنید.
+          </p>
         </section>
 
-        {/* Final Registration CTA */}
+        {/* Final CTA */}
         <section
           dir="rtl"
-          className="max-w-3xl mx-auto mt-10 mb-8 text-center"
+          className="mx-auto mb-8 mt-10 max-w-3xl border-t border-gray-100 pt-8 text-center md:mt-12"
         >
-          <h2 className="text-xl md:text-2xl font-bold mb-3">
-            آماده ادامه یادگیری زبان آلمانی هستید؟
+          <h2 className="mb-2 text-xl font-bold md:text-2xl">
+            ادامه یادگیری آلمانی از همین‌جا
           </h2>
 
-          <p className="text-sm md:text-base text-gray-600 mb-5">
-            برای اطلاع از شرایط کلاس‌ها و شروع ثبت‌نام B1 با ما در ارتباط باشید.
+          <p className="mb-4 text-sm leading-7 text-gray-600">
+            برای اطلاع از زمان شروع کلاس و ثبت‌نام پیام بدهید.
           </p>
 
           <a
-            href={whatsappLink(generalMessage)}
+            href={whatsappLink(
+              "سلام، برای ثبت‌نام دوره زبان آلمانی B1 در آکادمی دویچینو پیام می‌دهم."
+            )}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="شروع ثبت‌نام دوره زبان آلمانی B1 در واتساپ"
-            className="inline-flex items-center justify-center bg-[#0A2540] hover:bg-[#12385c] text-white px-8 py-3 rounded-xl font-bold text-sm md:text-base transition-colors"
+            aria-label="شروع ثبت‌نام دوره B1 در واتساپ"
+            className="inline-flex items-center justify-center rounded-lg bg-[#0A2540] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#12385c] md:text-base"
           >
-            شروع ثبت‌نام در واتساپ
+            شروع ثبت‌نام
           </a>
         </section>
+
       </div>
     </main>
   );
