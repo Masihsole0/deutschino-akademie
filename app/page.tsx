@@ -278,46 +278,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY DEUTSCHINO */}
-      <section
-        id="why-us"
-        className="scroll-mt-[-40px] bg-blue-900 px-6 py-20 md:py-24"
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold text-white md:text-3xl">
-              چرا آکادمی دویچینو؟
-            </h2>
+      
+{/* WHY DEUTSCHINO */}
+<section
+  id="why-us"
+  className="scroll-mt-[-40px] bg-white px-6 py-20 md:py-24"
+>
+  <div className="mx-auto max-w-6xl">
 
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-blue-100 md:text-base">
-              از تدریس مستقیم مدرس تا مسیر آموزشی هدفمند؛
-              در دویچینو می‌دانید چه کسی و چگونه به شما آموزش می‌دهد.
-            </p>
+    <div className="mb-12 text-center">
+      <h2 className="text-2xl font-bold text-blue-950 md:text-3xl">
+        چرا آکادمی دویچینو؟
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-gray-600 md:text-base">
+        از تدریس مستقیم مدرس تا مسیر آموزشی هدفمند؛
+        در دویچینو می‌دانید چه کسی و چگونه به شما آموزش می‌دهد.
+      </p>
+    </div>
+
+    <div
+      dir="rtl"
+      className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5"
+    >
+      {benefits.map((benefit) => (
+        <article
+          key={benefit.title}
+          className="rounded-xl border border-blue-800 bg-blue-900 p-4 text-center transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:shadow-lg sm:rounded-2xl sm:p-6"
+        >
+          <div className="mb-4 text-3xl">
+            {benefit.icon}
           </div>
 
-          <div
-            dir="rtl"
-            className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5"
-          >
-            {benefits.map((benefit) => (
-              <article
-                key={benefit.title}
-                className="rounded-xl border border-white/20 bg-white p-4 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:rounded-2xl sm:p-6"
-              >
-                <div className="mb-4 text-3xl">{benefit.icon}</div>
+          <h3 className="text-sm font-bold text-white sm:text-lg">
+            {benefit.title}
+          </h3>
 
-                <h3 className="text-sm font-bold text-blue-950 sm:text-lg">
-                  {benefit.title}
-                </h3>
+          <p className="mt-3 text-xs leading-7 text-blue-100 sm:text-sm sm:leading-8">
+            {benefit.description}
+          </p>
+        </article>
+      ))}
+    </div>
 
-                <p className="mt-3 text-xs leading-7 text-gray-600 sm:text-sm sm:leading-8">
-                  {benefit.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* COURSES */}
       <section
