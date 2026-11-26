@@ -77,37 +77,29 @@ function TrustSignals() {
   useEffect(() => {
     if (!started) return;
 
-    // تایپ شدن عبارت telc B2
     const certificateText = "telc B2";
     let certificateIndex = 0;
 
     const typingTimer = setInterval(() => {
       certificateIndex++;
-
-      setCertificate(
-        certificateText.slice(0, certificateIndex)
-      );
+      setCertificate(certificateText.slice(0, certificateIndex));
 
       if (certificateIndex >= certificateText.length) {
         clearInterval(typingTimer);
       }
     }, 1500 / certificateText.length);
 
-    // تایپ شدن عبارت A1-B2
     const levelsText = "A1-B2";
     let levelsIndex = 0;
 
     const levelsTypingTimer = setInterval(() => {
       levelsIndex++;
-
-      setLevels(
-        levelsText.slice(0, levelsIndex)
-      );
+      setLevels(levelsText.slice(0, levelsIndex));
 
       if (levelsIndex >= levelsText.length) {
         clearInterval(levelsTypingTimer);
       }
-    }, 1500 / certificateText.length);
+    }, 1500 / levelsText.length);
 
     return () => {
       clearInterval(typingTimer);
@@ -123,36 +115,28 @@ function TrustSignals() {
       className="mx-auto mt-5 grid max-w-3xl grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3"
     >
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">
-          {years}+
-        </p>
+        <p className="text-lg font-bold text-blue-950">{years}+</p>
         <p className="text-[11px] leading-4 text-gray-600">
           سال تجربه تدریس
         </p>
       </div>
 
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">
-          {students}+
-        </p>
+        <p className="text-lg font-bold text-blue-950">{students}+</p>
         <p className="text-[11px] leading-4 text-gray-600">
           زبان‌آموز
         </p>
       </div>
 
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">
-          {certificate}
-        </p>
+        <p className="text-lg font-bold text-blue-950">{certificate}</p>
         <p className="text-[11px] leading-4 text-gray-600">
           مدرک زبان آلمانی
         </p>
       </div>
 
       <div className="rounded-md border border-gray-200 bg-white/95 px-2 py-1.5 text-center">
-        <p className="text-lg font-bold text-blue-950">
-          {levels}
-        </p>
+        <p className="text-lg font-bold text-blue-950">{levels}</p>
         <p className="text-[11px] leading-4 text-gray-600">
           سطوح تدریس
         </p>
@@ -178,31 +162,37 @@ export default function Home() {
     {
       title: "A1",
       description: "شروع از صفر؛ یادگیری پایه‌ای گرامر، واژگان و مکالمه",
+      price: "شهریه از ۳,۹۰۰,۰۰۰ تومان",
       href: "/courses/a1",
     },
     {
       title: "A2",
       description: "تقویت پایه زبان و توانایی ارتباط در موقعیت‌های روزمره",
+      price: "شهریه از ۵,۵۰۰,۰۰۰ تومان",
       href: "/courses/a2",
     },
     {
       title: "B1",
       description: "رسیدن به سطح مستقل و تقویت چهار مهارت اصلی زبان آلمانی",
+      price: "شهریه از ۶,۰۰۰,۰۰۰ تومان",
       href: "/courses/b1",
     },
     {
       title: "B2",
       description: "تسلط بیشتر بر زبان آلمانی و آمادگی برای موقعیت‌های پیشرفته",
+      price: "شهریه از ۶,۹۰۰,۰۰۰ تومان",
       href: "/courses/b2",
     },
     {
       title: "کلاس مکالمه",
       description: "تقویت روان صحبت کردن و استفاده کاربردی از زبان آلمانی",
+      price: "پکیج ۱۰ جلسه: ۱۰ میلیون تومان",
       href: "/courses/conversation",
     },
     {
       title: "کلاس گرامر",
-      description: "یادگیری و تثبیت قواعد زبان آلمانی از سطح A1 تا B1",
+      description: "یادگیری و تثبیت قواعد زبان آلمانی از سطح A1 تا B2",
+      price: "پکیج ۱۰ جلسه: ۱۰ میلیون تومان",
       href: "/courses/grammar",
     },
   ];
@@ -240,7 +230,6 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative flex min-h-[590px] items-center justify-center overflow-hidden px-6 py-12 text-center md:min-h-[650px] md:py-14">
-
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/germany.jpg')" }}
@@ -253,7 +242,6 @@ export default function Home() {
         />
 
         <div className="relative z-10 mx-auto w-full max-w-4xl">
-
           <h1 className="text-3xl font-extrabold leading-[1.7] tracking-tight text-white md:text-5xl md:leading-[1.6]">
             یادگیری زبان آلمانی،
             <br />
@@ -265,12 +253,9 @@ export default function Home() {
             کلاس‌های خصوصی و گروهی، حضوری در اصفهان و آنلاین.
           </p>
 
-          {/* TRUST SIGNALS */}
           <TrustSignals />
 
-          {/* CTA */}
           <div className="mt-6 flex flex-col items-center justify-center gap-5 sm:flex-row">
-
             <a
               href={whatsappUrl}
               onClick={() => trackEvent("whatsapp_click", "hero")}
@@ -289,7 +274,47 @@ export default function Home() {
               <span>مشاهده دوره‌ها</span>
               <span className="text-lg no-underline" aria-hidden="true">↓</span>
             </a>
+          </div>
+        </div>
+      </section>
 
+      {/* WHY DEUTSCHINO */}
+      <section
+        id="why-us"
+        className="scroll-mt-[-40px] bg-blue-900 px-6 py-20 md:py-24"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-bold text-white md:text-3xl">
+              چرا آکادمی دویچینو؟
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-blue-100 md:text-base">
+              از تدریس مستقیم مدرس تا مسیر آموزشی هدفمند؛
+              در دویچینو می‌دانید چه کسی و چگونه به شما آموزش می‌دهد.
+            </p>
+          </div>
+
+          <div
+            dir="rtl"
+            className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5"
+          >
+            {benefits.map((benefit) => (
+              <article
+                key={benefit.title}
+                className="rounded-xl border border-white/20 bg-white p-4 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:rounded-2xl sm:p-6"
+              >
+                <div className="mb-4 text-3xl">{benefit.icon}</div>
+
+                <h3 className="text-sm font-bold text-blue-950 sm:text-lg">
+                  {benefit.title}
+                </h3>
+
+                <p className="mt-3 text-xs leading-7 text-gray-600 sm:text-sm sm:leading-8">
+                  {benefit.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -300,7 +325,6 @@ export default function Home() {
         className="scroll-mt-[-110px] bg-gray-50 px-5 py-20 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
-
           <div className="mb-10 text-center md:mb-12">
             <h2 className="text-2xl font-bold text-blue-950 md:text-3xl">
               دوره‌های زبان آلمانی
@@ -328,6 +352,10 @@ export default function Home() {
                   {course.description}
                 </p>
 
+                <p className="mt-3 text-sm font-bold leading-7 text-blue-900">
+                  {course.price}
+                </p>
+
                 <Link
                   href={course.href}
                   className="mt-5 inline-flex min-h-10 items-center justify-center rounded-lg bg-blue-950 px-3 py-2 text-sm font-medium text-white transition hover:bg-blue-800 sm:rounded-xl sm:py-3"
@@ -340,7 +368,6 @@ export default function Home() {
 
           {/* SEO CONTENT */}
           <div className="mx-auto mt-12 max-w-4xl text-right">
-
             <h3 className="text-xl font-bold text-blue-950 md:text-2xl">
               کلاس زبان آلمانی حضوری در اصفهان و آنلاین
             </h3>
@@ -392,7 +419,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -402,9 +428,7 @@ export default function Home() {
         className="scroll-mt-[-140px] bg-white px-6 py-20 md:py-24"
       >
         <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-10 md:flex-row-reverse md:gap-16">
-
           <div className="flex-1 text-center md:text-right">
-
             <h2 className="text-2xl font-bold leading-relaxed text-blue-950 md:text-3xl">
               مسیح سلیمانی
               <span className="block text-lg font-medium text-gray-500 md:mt-2">
@@ -413,7 +437,6 @@ export default function Home() {
             </h2>
 
             <div className="mt-4 space-y-4 text-sm leading-8 text-gray-600 md:text-base md:leading-9">
-
               <p className="font-semibold text-gray-800">
                 سلام، خوش اومدی 👋
               </p>
@@ -447,7 +470,6 @@ export default function Home() {
               >
                 تماس با مدرس
               </a>
-
             </div>
           </div>
 
@@ -461,54 +483,6 @@ export default function Home() {
               className="h-64 w-64 rounded-full object-cover shadow-md md:h-80 md:w-80"
             />
           </div>
-
-        </div>
-      </section>
-
-      {/* WHY DEUTSCHINO */}
-      <section
-        id="why-us"
-        className="scroll-mt-[-40px] bg-blue-900 px-6 py-20 md:py-24"
-      >
-        <div className="mx-auto max-w-6xl">
-
-          <div className="mb-12 text-center">
-
-            <h2 className="text-2xl font-bold text-white md:text-3xl">
-              چرا آکادمی دویچینو؟
-            </h2>
-
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-blue-100 md:text-base">
-              از تدریس مستقیم مدرس تا مسیر آموزشی هدفمند؛
-              در دویچینو می‌دانید چه کسی و چگونه به شما آموزش می‌دهد.
-            </p>
-
-          </div>
-
-          <div
-            dir="rtl"
-            className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-5"
-          >
-            {benefits.map((benefit) => (
-              <article
-                key={benefit.title}
-                className="rounded-xl border border-white/20 bg-white p-4 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:rounded-2xl sm:p-6"
-              >
-                <div className="mb-4 text-3xl">
-                  {benefit.icon}
-                </div>
-
-                <h3 className="text-sm font-bold text-blue-950 sm:text-lg">
-                  {benefit.title}
-                </h3>
-
-                <p className="mt-3 text-xs leading-7 text-gray-600 sm:text-sm sm:leading-8">
-                  {benefit.description}
-                </p>
-              </article>
-            ))}
-          </div>
-
         </div>
       </section>
 
@@ -525,7 +499,6 @@ export default function Home() {
         id="contact"
         className="relative scroll-mt-[-80px] overflow-hidden bg-blue-950 text-white"
       >
-
         <img
           src="/footer-bg.png"
           alt=""
@@ -537,19 +510,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-blue-950/75" />
 
         <div className="relative mx-auto max-w-6xl px-6 py-12">
-
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
 
             {/* CONTACT */}
             <div dir="rtl" className="text-right">
-
               <h2 className="mb-6 text-xl font-bold">
                 اطلاعات تماس
               </h2>
 
               <div className="space-y-5 text-sm leading-8 text-blue-100">
-
-                {/* ADDRESS */}
                 <div>
                   <p className="mb-2 font-semibold text-white">
                     آدرس آکادمی
@@ -583,7 +552,6 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* PHONE */}
                 <div>
                   <p className="mb-1 font-semibold text-white">
                     شماره تماس
@@ -598,7 +566,6 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* WHATSAPP */}
                 <div>
                   <p className="mb-1 font-semibold text-white">
                     مشاوره و ثبت‌نام
@@ -614,15 +581,12 @@ export default function Home() {
                     پیام در واتساپ
                   </a>
                 </div>
-
               </div>
             </div>
 
             {/* ACADEMY */}
             <div className="flex flex-col items-center justify-center md:items-start">
-
               <div className="flex flex-col items-center gap-3 md:flex-row-reverse">
-
                 <img
                   src="/logo.jpg"
                   alt="لوگوی آکادمی دویچینو"
@@ -641,7 +605,6 @@ export default function Home() {
                     German Language Academy
                   </p>
                 </div>
-
               </div>
 
               <p className="mt-5 max-w-md text-center text-sm leading-8 text-blue-100 md:text-right">
@@ -655,16 +618,13 @@ export default function Home() {
               >
                 مقالات آموزش زبان آلمانی
               </Link>
-
             </div>
-
           </div>
 
           {/* COPYRIGHT */}
           <div className="mt-10 border-t border-white/10 pt-5 text-center text-xs text-blue-200">
             © 2026 Deutschino Akademie | تمامی حقوق محفوظ است.
           </div>
-
         </div>
       </footer>
 
