@@ -10,17 +10,17 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "کلاس زبان آلمانی A2 در اصفهان | خصوصی و گروهی | دویچینو",
+  title: "کلاس زبان آلمانی A1 در اصفهان | خصوصی و گروهی | دویچینو",
   description:
-    "آموزش زبان آلمانی A2 در اصفهان و آنلاین؛ کلاس خصوصی و گروهی با تدریس مستقیم مسیح سلیمانی، کتاب‌های Menschen و مشاوره رایگان.",
+    "آموزش زبان آلمانی A1 از صفر در اصفهان و آنلاین؛ کلاس خصوصی و گروهی با تدریس مستقیم مسیح سلیمانی، منابع اختصاصی و مشاوره رایگان.",
   alternates: {
-    canonical: "https://www.deutschino.ir/courses/a2",
+    canonical: "https://www.deutschino.ir/courses/a1",
   },
   openGraph: {
-    title: "کلاس زبان آلمانی A2 در اصفهان | آکادمی دویچینو",
+    title: "کلاس زبان آلمانی A1 در اصفهان | آکادمی دویچینو",
     description:
-      "ادامه یادگیری زبان آلمانی با کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
-    url: "https://www.deutschino.ir/courses/a2",
+      "شروع زبان آلمانی از صفر با کلاس خصوصی و گروهی، حضوری در اصفهان و آنلاین.",
+    url: "https://www.deutschino.ir/courses/a1",
     siteName: "Deutschino",
     locale: "fa_IR",
     type: "website",
@@ -30,12 +30,12 @@ export const metadata = {
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
-  name: "دوره آموزش زبان آلمانی A2",
+  name: "دوره آموزش زبان آلمانی A1",
   description:
-    "آموزش زبان آلمانی سطح A2 با تمرکز بر گرامر، واژگان، مکالمه و چهار مهارت اصلی؛ با استفاده از کتاب‌های Menschen A2.1 و A2.2، به‌صورت خصوصی و گروهی در اصفهان و آنلاین.",
-  url: "https://www.deutschino.ir/courses/a2",
+    "آموزش زبان آلمانی از سطح صفر با تمرکز بر گرامر، واژگان، مکالمه و چهار مهارت اصلی؛ به‌صورت خصوصی و گروهی در اصفهان و آنلاین.",
+  url: "https://www.deutschino.ir/courses/a1",
   inLanguage: "de",
-  educationalLevel: "A2",
+  educationalLevel: "A1",
   provider: {
     "@id": "https://www.deutschino.ir/#organization",
   },
@@ -60,8 +60,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "کلاس زبان آلمانی A2",
-      item: "https://www.deutschino.ir/courses/a2",
+      name: "کلاس زبان آلمانی A1",
+      item: "https://www.deutschino.ir/courses/a1",
     },
   ],
 };
@@ -80,12 +80,12 @@ const features = [
   {
     icon: GraduationCap,
     title: "پیش‌نیاز",
-    description: "تسلط به سطح A1",
+    description: "بدون نیاز به دانش قبلی",
   },
   {
     icon: BookOpen,
     title: "منابع آموزشی",
-    description: "Menschen A2.1 و A2.2",
+    description: "۳ کتاب و جزوه اختصاصی",
   },
   {
     icon: Headphones,
@@ -95,19 +95,19 @@ const features = [
 ];
 
 const outcomes = [
-  "صحبت درباره تجربیات و اتفاقات گذشته",
-  "مکالمه درباره سفر، کار و زندگی روزمره",
-  "استفاده از گرامر و ساختارهای سطح A2",
-  "بیان علایق، خواسته‌ها و برنامه‌های شخصی",
-  "درک مکالمات متنوع‌تر آلمانی",
-  "تقویت مهارت شنیدن، خواندن و نوشتن",
+  "معرفی خود و صحبت درباره اطلاعات شخصی",
+  "مکالمه درباره خانواده، کار و زندگی روزمره",
+  "ساخت جمله و استفاده از گرامر پایه",
+  "درک مکالمات ساده آلمانی",
+  "خواندن و نوشتن متن‌های کوتاه",
+  "پرسیدن و پاسخ دادن به سؤال‌های متداول",
 ];
 
 const faqs = [
   {
-    question: "برای شرکت در کلاس A2 چه پیش‌نیازی لازم است؟",
+    question: "آیا برای شروع A1 باید آلمانی بلد باشم؟",
     answer:
-      "برای شرکت در دوره A2 باید سطح A1 زبان آلمانی را گذرانده باشید و با مباحث پایه این زبان آشنایی داشته باشید.",
+      "خیر. دوره از صفر شروع می‌شود و به هیچ پیش‌نیازی نیاز ندارید.",
   },
   {
     question: "کلاس‌ها حضوری هستند یا آنلاین؟",
@@ -120,18 +120,18 @@ const faqs = [
       "برای حفظ کیفیت آموزش، هر گروه حداکثر ۶ زبان‌آموز دارد.",
   },
   {
-    question: "چه کسی کلاس‌های A2 را تدریس می‌کند؟",
+    question: "چه کسی کلاس‌ها را تدریس می‌کند؟",
     answer:
       "تمام کلاس‌های خصوصی و گروهی مستقیماً توسط مسیح سلیمانی برگزار می‌شوند.",
   },
   {
-    question: "چطور در دوره A2 ثبت‌نام کنم؟",
+    question: "چطور ثبت‌نام کنم؟",
     answer:
       "از طریق دکمه ثبت‌نام در واتساپ پیام بدهید تا درباره زمان شروع و انتخاب کلاس راهنمایی شوید.",
   },
 ];
 
-export default function A2Page() {
+export default function A1Page() {
   return (
     <main className="min-h-screen bg-white text-[#0A2540]">
       <script
@@ -170,11 +170,11 @@ export default function A2Page() {
           className="mx-auto mt-3 max-w-4xl text-center md:mt-6"
         >
           <h1 className="mb-3 text-2xl font-bold leading-relaxed md:text-4xl">
-            کلاس زبان آلمانی A2 در اصفهان؛ ادامه مسیر یادگیری
+            کلاس زبان آلمانی A1 در اصفهان؛ شروع از صفر
           </h1>
 
           <p className="mx-auto max-w-3xl text-sm leading-8 text-gray-600 md:text-base">
-            دانش زبانی خود را فراتر از سطح مقدماتی ببرید.
+            اولین قدم یادگیری زبان آلمانی را اصولی بردارید.
             آموزش خصوصی و گروهی، حضوری در اصفهان و آنلاین،
             با تدریس مستقیم مسیح سلیمانی.
           </p>
@@ -183,8 +183,8 @@ export default function A2Page() {
         {/* Banner */}
         <div className="mt-6 flex justify-center md:mt-8">
           <Image
-            src="/books2.jpg"
-            alt="کتاب‌های آموزش زبان آلمانی Menschen A2.1 و A2.2"
+            src="/books.jpg"
+            alt="کتاب‌ها و منابع آموزش زبان آلمانی A1"
             width={900}
             height={350}
             className="h-auto w-full max-w-[220px] rounded-xl object-cover md:max-w-[380px]"
@@ -229,7 +229,7 @@ export default function A2Page() {
           className="mx-auto mt-10 max-w-4xl md:mt-12"
         >
           <h2 className="mb-4 text-xl font-bold md:text-2xl">
-            بعد از A2 چه چیزهایی یاد می‌گیرید؟
+            بعد از A1 چه چیزهایی یاد می‌گیرید؟
           </h2>
 
           <ul className="grid grid-cols-1 gap-x-8 gap-y-2 text-sm leading-8 text-gray-700 md:grid-cols-2 md:text-base">
@@ -253,9 +253,9 @@ export default function A2Page() {
 
           <p className="mt-2 text-sm leading-8 text-gray-600 md:text-base">
             تمام کلاس‌های خصوصی و گروهی را خودم برگزار می‌کنم.
-            در طول دوره، علاوه بر کتاب‌های Menschen A2.1 و A2.2،
-            از جزوه‌های اختصاصی، تمرین‌های تکمیلی و نمونه سؤالات
-            آزمون‌های Goethe، telc و ECL استفاده می‌کنیم.
+            در طول دوره، علاوه بر کتاب‌های آموزشی، از جزوه‌های اختصاصی،
+            تمرین‌های تکمیلی و نمونه سؤالات آزمون‌های Goethe، telc و ECL
+            استفاده می‌کنیم.
           </p>
         </section>
 
@@ -265,7 +265,7 @@ export default function A2Page() {
           className="mx-auto mt-10 max-w-3xl md:mt-14"
         >
           <h2 className="mb-2 text-center text-xl font-bold md:text-2xl">
-            هزینه دوره A2
+            هزینه دوره A1
           </h2>
 
           <p className="mb-5 text-center text-xs text-gray-500 md:text-sm">
@@ -291,23 +291,23 @@ export default function A2Page() {
                   <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
                   <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
-                    ۹٬۴۰۰٬۰۰۰
+                    ۸٬۹۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="mb-3 text-xs text-gray-500">تومان</p>
 
                 <p className="mb-4 text-xs leading-6 text-gray-600">
-                  هر جلسه ۹۴۰ هزار تومان
+                  هر جلسه ۸۹۰ هزار تومان
                 </p>
 
                 <a
                   href={whatsappLink(
-                    "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی A2 پیام می‌دهم. لطفاً درباره زمان‌بندی کلاس راهنمایی‌ام کنید."
+                    "سلام، برای ثبت‌نام کلاس خصوصی زبان آلمانی A1 پیام می‌دهم. لطفاً درباره زمان‌بندی کلاس راهنمایی‌ام کنید."
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="ثبت‌نام کلاس خصوصی A2"
+                  aria-label="ثبت‌نام کلاس خصوصی A1"
                   className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
                 >
                   ثبت‌نام خصوصی
@@ -332,14 +332,14 @@ export default function A2Page() {
                   <Wallet size={19} className="shrink-0 text-[#0A2540]" />
 
                   <p className="text-lg font-bold text-[#0A2540] md:text-2xl">
-                    ۵٬۵۰۰٬۰۰۰
+                    ۳٬۹۰۰٬۰۰۰
                   </p>
                 </div>
 
                 <p className="mb-3 text-xs text-gray-500">تومان</p>
 
                 <p className="mb-1 text-xs text-gray-600">
-                  هر جلسه ۵۵۰ هزار تومان
+                  هر جلسه ۳۹۰ هزار تومان
                 </p>
 
                 <p className="mb-3 text-xs font-semibold text-[#0A2540]">
@@ -348,11 +348,11 @@ export default function A2Page() {
 
                 <a
                   href={whatsappLink(
-                    "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی A2 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
+                    "سلام، برای ثبت‌نام کلاس گروهی زبان آلمانی A1 پیام می‌دهم. لطفاً درباره زمان شروع و ظرفیت کلاس راهنمایی‌ام کنید."
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="ثبت‌نام کلاس گروهی A2"
+                  aria-label="ثبت‌نام کلاس گروهی A1"
                   className="block w-full rounded-lg bg-[#0A2540] px-1 py-2.5 text-center text-xs font-semibold text-white transition-colors hover:bg-[#12385c] md:text-sm"
                 >
                   ثبت‌نام گروهی
@@ -373,11 +373,11 @@ export default function A2Page() {
 
             <a
               href={whatsappLink(
-                "سلام، برای دریافت مشاوره رایگان درباره دوره A2 پیام می‌دهم."
+                "سلام، برای دریافت مشاوره رایگان درباره دوره A1 پیام می‌دهم."
               )}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="دریافت مشاوره رایگان دوره A2"
+              aria-label="دریافت مشاوره رایگان دوره A1"
               className="inline-flex items-center justify-center rounded-lg border border-[#0A2540] px-5 py-2 text-xs font-semibold text-[#0A2540] transition-colors hover:bg-white md:text-sm"
             >
               دریافت مشاوره رایگان
@@ -423,25 +423,24 @@ export default function A2Page() {
           className="mx-auto mt-10 max-w-4xl text-right md:mt-12"
         >
           <h2 className="mb-3 text-xl font-bold md:text-2xl">
-            آموزش زبان آلمانی A2 در اصفهان و آنلاین
+            آموزش زبان آلمانی A1 در اصفهان و آنلاین
           </h2>
 
           <p className="text-sm leading-8 text-gray-600 md:text-base">
-            دوره A2 آکادمی دویچینو برای افرادی طراحی شده که سطح A1
-            زبان آلمانی را گذرانده‌اند و می‌خواهند مهارت‌های خود را
-            گسترش دهند. در این سطح با واژگان بیشتر، ساختارهای گرامری
-            جدید و مکالمات متنوع‌تر آشنا می‌شوید. کلاس زبان آلمانی
-            در اصفهان به‌صورت حضوری در محدوده حکیم نظامی برگزار می‌شود
-            و امکان شرکت آنلاین نیز وجود دارد.
+            دوره A1 آکادمی دویچینو برای افرادی طراحی شده که می‌خواهند
+            یادگیری زبان آلمانی را از پایه شروع کنند. در این سطح با
+            واژگان پرکاربرد، ساختار جمله، گرامر مقدماتی و مکالمات روزمره
+            آشنا می‌شوید. کلاس زبان آلمانی در اصفهان به‌صورت حضوری در
+            محدوده حکیم نظامی برگزار می‌شود و امکان شرکت آنلاین نیز وجود دارد.
           </p>
 
           <p className="mt-3 text-sm leading-8 text-gray-600 md:text-base">
-            پس از پایان A2 می‌توانید یادگیری را در{" "}
+            پس از پایان A1 می‌توانید یادگیری را در{" "}
             <Link
-              href="/courses/b1"
+              href="/courses/a2"
               className="font-semibold text-[#0A2540] underline underline-offset-4"
             >
-              دوره B1
+              دوره A2
             </Link>{" "}
             ادامه دهید یا برای تقویت مهارت صحبت کردن در{" "}
             <Link
@@ -460,7 +459,7 @@ export default function A2Page() {
           className="mx-auto mb-8 mt-10 max-w-3xl border-t border-gray-100 pt-8 text-center md:mt-12"
         >
           <h2 className="mb-2 text-xl font-bold md:text-2xl">
-            ادامه یادگیری آلمانی از همین‌جا
+            شروع یادگیری آلمانی از همین‌جا
           </h2>
 
           <p className="mb-4 text-sm leading-7 text-gray-600">
@@ -469,11 +468,11 @@ export default function A2Page() {
 
           <a
             href={whatsappLink(
-              "سلام، برای ثبت‌نام دوره زبان آلمانی A2 در آکادمی دویچینو پیام می‌دهم."
+              "سلام، برای ثبت‌نام دوره زبان آلمانی A1 در آکادمی دویچینو پیام می‌دهم."
             )}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="شروع ثبت‌نام دوره A2 در واتساپ"
+            aria-label="شروع ثبت‌نام دوره A1 در واتساپ"
             className="inline-flex items-center justify-center rounded-lg bg-[#0A2540] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#12385c] md:text-base"
           >
             شروع ثبت‌نام
