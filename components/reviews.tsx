@@ -94,6 +94,13 @@ export default function Reviews() {
   const activeIndexRef = useRef(0);
   const hasRandomizedRef = useRef(false);
 
+  // اطلاعات مربوط به حرکت ماوس یا انگشت
+  const swipeRef = useRef<{
+    pointerId: number;
+    startX: number;
+    startY: number;
+  } | null>(null);
+
   // دریافت نظرات از API سایت
   useEffect(() => {
     let isMounted = true;
@@ -242,6 +249,76 @@ export default function Reviews() {
     setExpandedReview(null);
   };
 
+  // شروع حرکت انگشت یا ماوس
+  const handlePointerDown = (
+    event: React.PointerEvent<HTMLDivElement>
+  ) => {
+    if (reviews.length <= 1) return;
+
+    // فقط کلیک اصلی ماوس
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+
+    // جلوگیری از تداخل با دکمه‌ها و ورودی‌ها
+    const target = event.target as HTMLElement;
+
+    if (
+      target.closest(
+        "button, input, textarea, select, a, label"
+      )
+    ) {
+      return;
+    }
+
+    swipeRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+    };
+
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  // پایان حرکت و تشخیص جهت کشیدن
+  const handlePointerUp = (
+    event: React.PointerEvent<HTMLDivElement>
+  ) => {
+    const swipe = swipeRef.current;
+
+    if (!swipe || swipe.pointerId !== event.pointerId) {
+      return;
+    }
+
+    swipeRef.current = null;
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+
+    const deltaX = event.clientX - swipe.startX;
+    const deltaY = event.clientY - swipe.startY;
+
+    // حداقل فاصله حرکت و تشخیص حرکت افقی
+    if (
+      Math.abs(deltaX) < 55 ||
+      Math.abs(deltaX) <= Math.abs(deltaY) * 1.2
+    ) {
+      return;
+    }
+
+    if (deltaX < 0) {
+      nextReview();
+    } else {
+      prevReview();
+    }
+  };
+
+  // لغو حرکت
+  const handlePointerCancel = () => {
+    swipeRef.current = null;
+  };
+
   // ثبت نظر از طریق API سرور
   const submitReview = async () => {
     if (isSubmitting) return;
@@ -372,7 +449,13 @@ export default function Reviews() {
         نظرات زبان‌آموزان
       </h2>
 
-      <div className="relative flex flex-row-reverse justify-center items-center h-[380px] md:h-80">
+      <div
+        className="relative flex flex-row-reverse justify-center items-center h-[380px] md:h-80 cursor-grab active:cursor-grabbing"
+        style={{ touchAction: "pan-y" }}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
+      >
         {isLoadingReviews ? (
           <p className="text-gray-500">در حال بارگذاری نظرات...</p>
         ) : reviews.length === 0 ? (
